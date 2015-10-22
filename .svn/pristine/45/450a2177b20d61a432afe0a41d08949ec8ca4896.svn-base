@@ -1,0 +1,73 @@
+COMM  A single-crystal infrared spectroscopic and X-ray diffraction study of
+! Current global Chi2 (Bragg contrib.) =      3.840    
+! Files => DAT-file: dsmo.dat,  PCR-file: dsmo
+!Job Npr Nph Nba Nex Nsc Nor Dum Iwg Ilo Ias Res Ste Nre Cry Uni Cor Opt Aut
+   0   5   1   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+!
+!Ipr Ppl Ioc Mat Pcr Ls1 Ls2 Ls3 NLI Prf Ins Rpa Sym Hkl Fou Sho Ana
+   0   0   1   0   1   0   4   0   0   3  10  -1   0   0   2   0   0
+!
+! Lambda1  Lambda2    Ratio    Bkpos    Wdt    Cthm     muR   AsyLim   Rpolarz  2nd-muR -> Patt# 1
+ 1.540560 1.544390  0.50000   40.000  8.0000  0.9100  0.0000   60.00    0.0000  0.0000
+!
+!NCY  Eps  R_at  R_an  R_pr  R_gl     Thmin       Step       Thmax    PSD    Sent0
+ 10  0.10  1.00  1.00  1.00  1.00     10.1200   0.020006   120.0000   0.000   0.000
+!
+! Excluded regions (LowT  HighT) for Pattern#  1
+        1.00       16.00
+      100.00      160.00
+! 
+!
+      19    !Number of refined parameters
+!
+!  Zero    Code    SyCos    Code   SySin    Code  Lambda     Code MORE ->Patt# 1
+ -0.03649   51.0  0.00000    0.0  0.00000    0.0 0.000000    0.00   0
+!   Background coefficients/codes  for Pattern#  1  (Polynomial of 6th degree)
+     118.079     -31.191      82.257    -301.422     322.337    -103.212
+      131.00      141.00      151.00      161.00      171.00      181.00
+!-------------------------------------------------------------------------------
+!  Data for PHASE number:   1  ==> Current R_Bragg for Pattern#  1:     3.76
+!-------------------------------------------------------------------------------
+ A single-crystal infrared spectroscopic and X-ray diffraction study of
+!
+!Nat Dis Ang Pr1 Pr2 Pr3 Jbt Irf Isy Str Furth       ATZ    Nvk Npr More
+   5   0   0 1.0 1.0 1.0   0   0   0   0   0        911.985   0   7   0
+!
+P b n m                  <--Space group symbol
+!Atom   Typ       X        Y        Z     Biso       Occ     In Fin N_t Spc /Codes
+!    beta11   beta22   beta33   beta12   beta13   beta23  /Codes
+Mn1    Mn      0.00000  0.50000  0.00000  0.00000   0.50976   0   0   2    0  
+                  0.00     0.00     0.00     0.00      0.00
+     -0.00135 -0.00051  0.00244 -0.00357 -0.00076   0.00055
+         0.00     0.00     0.00     0.00     0.00      0.00
+Dy1    Dy     -0.00269  0.02575  0.25000  0.00000   0.25000   0   0   2    0  
+                 71.00    61.00     0.00     0.00      0.00
+      0.00464  0.01256  0.00067  0.00827  0.00000   0.00000
+         0.00     0.00     0.00     0.00     0.00      0.00
+Sr1    Sr     -0.00269  0.02575  0.25000  0.00000   0.25000   0   0   2    0  
+                 71.00    61.00     0.00     0.00      0.00
+      0.00170 -0.00157  0.00448  0.00238  0.00010   0.00000
+         0.00     0.00     0.00     0.00     0.00      0.00
+O1     O       0.54275 -0.01293  0.25000  0.00000   0.50979   0   0   2    0  
+                121.00   111.00     0.00     0.00      0.00
+      0.14614  0.05808  0.00503 -0.06796  0.00000   0.00000
+         0.00     0.00     0.00     0.00     0.00      0.00
+O2     O       0.26767  0.27736  0.03511  0.00000   1.08348   0   0   2    0  
+                 81.00    91.00   101.00     0.00      0.00
+     -0.00296  0.01656 -0.00130  0.00214  0.00532  -0.00208
+         0.00     0.00     0.00     0.00     0.00      0.00
+!-------> Profile Parameters for Pattern #  1
+!  Scale        Shape1      Bov      Str1      Str2      Str3   Strain-Model
+ 0.10079E-02   0.00000  -0.01929   0.00000   0.00000   0.00000       0
+     0.00000     0.000     0.000     0.000     0.000     0.000
+!       U         V          W           X          Y        GauSiz   LorSiz Size-Model
+   0.074878  -0.076233   0.011952   0.121103   0.037900   0.021289   0.000000    0
+      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+!     a          b         c        alpha      beta       gamma      #Cell Info
+   5.402012   5.414935   7.628317  90.000000  90.000000  90.000000   
+    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+!  Pref1    Pref2      Asy1     Asy2     Asy3     Asy4      S_L      D_L
+ -0.01862  0.10000 -0.34772 -0.01415  0.80027  0.10335  0.00000  0.00000
+   191.00     0.00    41.00    31.00    21.00    11.00     0.00     0.00
+!  2Th1/TOF1    2Th2/TOF2  Pattern to plot
+      16.000     100.000       1

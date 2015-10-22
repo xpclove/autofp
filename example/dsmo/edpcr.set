@@ -1,0 +1,11 @@
+! External ASCII Editor for EdPCR
+  Editor = 
+ 
+! Executable Fullprof program
+  Fullprof = wfp2k
+ 
+! Last Directory Worked
+  LastDirectory = I:\baiduyun\dsmo\dsmo
+ 
+! External Programs
+ 

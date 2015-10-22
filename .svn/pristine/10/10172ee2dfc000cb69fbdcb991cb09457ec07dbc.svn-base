@@ -1,0 +1,137 @@
+  PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
+
+            --------------------------------
+            SYMMETRY INFORMATION ON PHASE: 1
+            --------------------------------
+
+
+ => Symmetry information on space group: P n m a             
+ -> The multiplicity of the general position is:   8
+ -> The space group is Centric (-1 at origin)   
+ -> Lattice type  P: { 000 }                                       
+ -> Reduced set of symmetry operators:
+
+  No.  IT   Symmetry symbol    Rotation part     Associated Translation
+   1: ( 1)   1            -->     ( x, y, z) + {  0.0000  0.0000  0.0000}
+   2: ( 4)   2 ( x, 0, 0) -->     ( x,-y,-z) + {  0.5000  0.5000  0.5000}
+   3: ( 3)   2 ( 0, y, 0) -->     (-x, y,-z) + {  0.0000  0.5000  0.0000}
+   4: ( 2)   2 ( 0, 0, z) -->     (-x,-y, z) + {  0.5000  0.0000  0.5000}
+
+
+        Information on Space Group: 
+        --------------------------- 
+
+ =>  Number of Space group:  62
+ => Hermann-Mauguin Symbol: P n m a
+ =>            Hall Symbol: -P 2ac 2n
+ =>   Table Setting Choice: 
+ =>           Setting Type: IT (Generated from Hermann-Mauguin symbol)
+ =>         Crystal System: Orthorhombic
+ =>             Laue Class: mmm
+ =>            Point Group: mmm
+ =>        Bravais Lattice: P
+ =>         Lattice Symbol: oP
+ => Reduced Number of S.O.:   4
+ =>   General multiplicity:   8
+ =>         Centrosymmetry: Centric (-1 at origin)
+ => Generators (exc. -1&L):   2
+ =>        Asymmetric unit:  0.000 <= x <=  0.500
+                             0.000 <= y <=  0.250
+                             0.000 <= z <=  1.000
+ => Centring vectors:  0
+                                                                                                    
+
+ => List of all Symmetry Operators and Symmetry Symbols
+
+ => SYMM(  1): x,y,z                             Symbol: 1
+ => SYMM(  2): x+1/2,-y+1/2,-z+1/2               Symbol: 2 (1/2,0,0) x,1/4,1/4
+ => SYMM(  3): -x,y+1/2,-z                       Symbol: 2 (0,1/2,0) 0,y,0
+ => SYMM(  4): -x+1/2,-y,z+1/2                   Symbol: 2 (0,0,1/2) 1/4,0,z
+ => SYMM(  5): -x,-y,-z                          Symbol: -1 0,0,0
+ => SYMM(  6): -x+1/2,y+1/2,z+1/2                Symbol: n (0,1/2,1/2) 1/4,y,z
+ => SYMM(  7): x,-y+1/2,z                        Symbol: m x,1/4,z
+ => SYMM(  8): x+1/2,y,-z+1/2                    Symbol: a x,y,1/4
+
+ => Special Wyckoff Positions for P n m a
+ 
+    Multp     Site        Representative Coordinates (centring translations excluded)
+      4       c              x,1/4,z             x+1/2,1/4,-z+1/2    -x,3/4,-z                               
+                             -x+1/2,3/4,z+1/2                                                                
+ 
+      4       b              0,0,1/2             1/2,1/2,0           0,1/2,1/2                               
+                             1/2,0,0                                                                         
+ 
+      4       a              0,0,0               1/2,1/2,1/2         0,1/2,0                                 
+                             1/2,0,1/2                                                                       
+ 
+
+       -------------------------------------------------
+       INFORMATION ON SITE SYMMETRY OF ATOMS IN PHASE: 1
+       -------------------------------------------------
+
+
+  -> Information on Atom: Pb     at position:    0.18749   0.25000   0.16719  Multiplicity:   4
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  x,-y+1/2,z                    m x,1/4,z 
+     Codes for atom coordinates  (Automatic Constraints):  171.0000    0.0000  181.0000
+     Codes for anisotropic betas (Automatic Constraints):    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+     --> Complete orbit of the atom: Pb    
+
+         Pb(  1)     0.18749  0.25000  0.16719    x,y,z
+         Pb(  2)     0.68749  0.25000  0.33281    x+1/2,-y+1/2,-z+1/2
+         Pb(  3)     0.81251  0.75000  0.83281    -x,y+1/2,-z
+         Pb(  4)     0.31251  0.75000  0.66719    -x+1/2,-y,z+1/2
+
+  -> Information on Atom: S      at position:    0.06541   0.25000   0.68339  Multiplicity:   4
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  x,-y+1/2,z                    m x,1/4,z 
+     Codes for atom coordinates  (Automatic Constraints):  191.0000    0.0000  201.0000
+     Codes for anisotropic betas (Automatic Constraints):    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+     --> Complete orbit of the atom: S     
+
+         S(  1)      0.06541  0.25000  0.68339    x,y,z
+         S(  2)      0.56541  0.25000  0.81661    x+1/2,-y+1/2,-z+1/2
+         S(  3)      0.93459  0.75000  0.31661    -x,y+1/2,-z
+         S(  4)      0.43459  0.75000  0.18339    -x+1/2,-y,z+1/2
+
+  -> Information on Atom: O1     at position:    0.90767   0.25000   0.59529  Multiplicity:   4
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  x,-y+1/2,z                    m x,1/4,z 
+     Codes for atom coordinates  (Automatic Constraints):  211.0000    0.0000  221.0000
+     Codes for anisotropic betas (Automatic Constraints):    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+     --> Complete orbit of the atom: O1    
+
+         O1(  1)     0.90767  0.25000  0.59529    x,y,z
+         O1(  2)     0.40767  0.25000  0.90471    x+1/2,-y+1/2,-z+1/2
+         O1(  3)     0.09233  0.75000  0.40471    -x,y+1/2,-z
+         O1(  4)     0.59233  0.75000  0.09529    -x+1/2,-y,z+1/2
+
+  -> Information on Atom: O2     at position:    0.19376   0.25000   0.54321  Multiplicity:   4
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  x,-y+1/2,z                    m x,1/4,z 
+     Codes for atom coordinates  (Automatic Constraints):  231.0000    0.0000  241.0000
+     Codes for anisotropic betas (Automatic Constraints):    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+     --> Complete orbit of the atom: O2    
+
+         O2(  1)     0.19376  0.25000  0.54321    x,y,z
+         O2(  2)     0.69376  0.25000  0.95679    x+1/2,-y+1/2,-z+1/2
+         O2(  3)     0.80624  0.75000  0.45679    -x,y+1/2,-z
+         O2(  4)     0.30624  0.75000  0.04321    -x+1/2,-y,z+1/2
+
+  -> Information on Atom: O3     at position:    0.08103   0.02708   0.80905  Multiplicity:   8
+     The above atom is in a general position (no constraints in atom positions)
+
+     --> Complete orbit of the atom: O3    
+
+         O3(  1)     0.08103  0.02708  0.80905    x,y,z
+         O3(  2)     0.58103  0.47292  0.69095    x+1/2,-y+1/2,-z+1/2
+         O3(  3)     0.91897  0.52708  0.19095    -x,y+1/2,-z
+         O3(  4)     0.41897  0.97292  0.30905    -x+1/2,-y,z+1/2
+         O3(  5)     0.91897  0.97292  0.19095    -x,-y,-z
+         O3(  6)     0.41897  0.52708  0.30905    -x+1/2,y+1/2,z+1/2
+         O3(  7)     0.08103  0.47292  0.80905    x,-y+1/2,z
+         O3(  8)     0.58103  0.02708  0.69095    x+1/2,y,-z+1/2

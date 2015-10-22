@@ -1,0 +1,37 @@
+  ! Template file to be used with the program FOURIER
+  ! Title of the job
+Titl   Tb2BaCoO5 Measured at RT in U. La Laguna Dept. Fisica Fundamental
+
+  ! Cell parameters
+Cell      3.7560    5.8238   11.5518   90.0000   90.0000   90.0000
+
+  ! Atoms in the asymmetric unit 
+Atom  Ba       0.50000   0.50000   0.00000   1.00000
+Atom  Tb       0.50000   0.00000   0.20342   1.00000
+Atom  Co       0.00000   0.00000   0.00000   1.00000
+Atom  O1       0.00000   0.23401   0.14804   1.00000
+Atom  O2       0.50000   0.00000   0.00000   1.00000
+
+  ! Space group symbol
+Spgr I m m m             
+
+  ! Type of Fourier synthesis 
+Fourier Fobs 
+
+  ! Name of the Fourier-reflection file
+File  fou tbbaco.fou
+
+  ! Format of the Fourier-reflection file
+Form    h k l fo fc phase
+
+  ! List distances
+List   dist  0.6  2.6
+
+  ! Standard output binary file
+File   bin
+
+  ! Peak search 
+Scan   5
+
+  ! End of file
+End 

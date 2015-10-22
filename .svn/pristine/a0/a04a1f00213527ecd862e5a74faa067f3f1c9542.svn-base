@@ -1,0 +1,43 @@
+
+
+        **********************************************************
+        ** PROGRAM FullProf.2k (Version 5.40 - Mar2014-ILL JRC) **
+        **********************************************************
+                       M U L T I -- P A T T E R N                 
+            Rietveld, Profile Matching & Integrated Intensity     
+                 Refinement of X-ray and/or Neutron Data
+
+
+    Date: 08/10/2014  Time: 22:00:36.050                              
+
+ => PCR file code: dsmo
+ => DAT file code: dsmo                 -> Relative contribution: 1.0000                                                            
+ => Title:   A single-crystal infrared spectroscopic and X-ray diffraction study of
+
+ ==> CONDITIONS OF THIS RUN FOR PATTERN No.:  1
+
+    Bragg-Brentano(X-rays) or Debye-Scherrer geometry(Neutrons)
+ => The    7th default profile function was selected
+
+ => Data supplied in free format for pattern:  1
+ => Wavelengths:  1.54056 1.54439
+ => Cos(Monochromator angle)=   0.9100
+ => Absorption correction (AC), muR-eff =   0.0000  0.0000
+ => Base of peaks: 2.0*HW*    8.00
+ =>-------> Pattern#  1
+ => Crystal Structure Refinement for phase: 1
+ => The density (volumic mass) of phase 1 is:    6.775 g/cm3
+
+     -----------------------------------------------------
+     BRAGG R-Factors and weight fractions for Pattern #  1
+     -----------------------------------------------------
+
+ => Phase:  1       A single-crystal infrared spectroscopic and X-ray diffraction study of
+ => Bragg R-factor:   0.00       Vol:  223.140( 0.000)  Fract(%):  100.00( 0.00)
+ => Rf-factor=  0.00             ATZ:         910.454   Brindley:  1.0000
+
+ 
+              CPU Time:     0.375 seconds
+                            0.006 minutes
+
+ => Run finished at:     Date: 08/10/2014  Time: 22:00:36.425                              

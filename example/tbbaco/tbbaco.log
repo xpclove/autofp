@@ -1,0 +1,57 @@
+ =>         **********************************************************
+ =>         ** PROGRAM FullProf.2k (Version 5.40 - Mar2014-ILL JRC) **
+ =>         **********************************************************
+ =>                        M U L T I -- P A T T E R N
+ =>             Rietveld, Profile Matching & Integrated Intensity
+ =>                  Refinement of X-ray and/or Neutron Data
+ =>                  (Multi_Pattern: WindowsConsole-version)
+  
+  
+ => START Date:30/04/2014  Time => 00:34:56.893
+ => Reading control file *.PCR ...
+ => Reading intensity file of pattern  1  tbbaco
+    => Generating reflections for pattern:       1
+ =>                          Phase number:       1
+ => End of preliminary calculations !
+  
+    ===================>>> CYCLE:       1
+  
+ =>  Control file *.pcr: tbbaco
+ =>  Pattern:   1  tbbaco
+ => Ordering reflections contributing to each point for pattern:       1
+ =>  Calculation of Yi for all points + Normal Matrix & Vector...
+ => Calculation for pattern:       1
+ =>  Solving L.S. equations...
+ => Writing results for cycle       1
+ => R-Factors:   10.1      13.6     Chi2:  6.78     DW-Stat.:  0.4703   Patt#:  1
+ => Expected :            5.24                                1.9239
+ => Conventional Rietveld R-factors for Pattern:       1
+ => Rp:  17.0     Rwp:  19.6     Rexp:    7.54                        Chi2:  6.78
+    => Global user-weigthed Chi2 (Bragg contrib.):          7.2425
+    => ---------> Pattern#       1
+    => Phase:       1
+    =>    Bragg R-factor:          8.8878
+    =>    RF-factor     :          5.7347
+  
+ => Convergence reached at this CYCLE !!!!: CYCLE No.       1
+ => R-Factors:   10.1      13.6     Chi2:  6.78     DW-Stat.:  0.4703   Patt#:  1
+ => Expected :            5.24                                1.9239
+ => Conventional Rietveld R-factors for Pattern:       1
+ => Rp:  17.0     Rwp:  19.6     Rexp:    7.54                        Chi2:  6.78
+    => Global user-weigthed Chi2 (Bragg contrib.):          7.2425
+    => ---------> Pattern#       1
+    => Phase:       1
+    =>    Bragg R-factor:          8.8878
+    =>    RF-factor     :          5.7347
+ =>  Normal end, final calculations and writing...
+  
+  
+ =>               CPU Time:     0.219 seconds
+ =>                             0.004 minutes
+  
+ => END   Date:30/04/2014  Time => 00:34:57.104
+  
+ => Data Files :
+ =>             - tbbaco.dat
+ => PCR  File  : tbbaco
+ =>  END

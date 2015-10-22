@@ -1,0 +1,6 @@
+[main]
+	run.loadOC(F:\prf2origin\prf2origin\origin\script\prf_one.cpp, 16);
+	test();
+
+
+
