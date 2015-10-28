@@ -2,13 +2,8 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-<<<<<<< .mine
-# Created: Wed Oct 28 23:27:00 2015
-#      by: PyQt4 UI code generator 4.10.3
-=======
 # Created: Wed Oct 28 23:28:37 2015
 #      by: PyQt4 UI code generator 4.11.2
->>>>>>> .r269
 #
 # WARNING! All changes made in this file will be lost!
 
