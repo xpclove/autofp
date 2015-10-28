@@ -14,6 +14,7 @@ class setting:
     rm_tmp_done=False
     origin_path="";
     setjson={};
+    fp2k_path="./fp2k"
     output={"Hkl":False,
             "Cif":False,
             "Fou":False
@@ -46,6 +47,8 @@ class setting:
         self.show_rwp=self.setjson["show_rwp"]
         self.show_log_FP=self.setjson["show_log_FP"]
         self.AsymLim=self.setjson["AsymLim"]
+        self.eps=self.setjson["eps"]
+        self.fp2k_path=self.setjson["fp2k_path"]
         self.origin_path=self.setjson["origin_path"]
         return
     def save_setting(self,path="setting.txt"):

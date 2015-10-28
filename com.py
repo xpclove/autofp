@@ -13,7 +13,7 @@ cycle=1
 run_mode=1;
 des=False;Rwplist=[];wait=0;
 autofp_running=False;
-origin_path=setting.run_set.origin_path
+origin_path=setting.run_set.origin_path;root_path="./"
 mode="ui"
 text_style={"normal":"<font color=blue>",
             "ok":"<font color=green>",

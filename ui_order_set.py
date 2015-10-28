@@ -7,6 +7,8 @@ from run import Run
 from paramlist import ParamList
 import paramgroup
 from auto import autorun
+import os
+import com
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -27,12 +29,17 @@ class Ui_order(QtGui.QDialog):
         QtCore.QObject.connect(self.button_up,QtCore.SIGNAL(_fromUtf8("clicked()")),self.up)  
         QtCore.QObject.connect(self.button_down,QtCore.SIGNAL(_fromUtf8("clicked()")),self.down)  
         QtCore.QObject.connect(self.buttonreset,QtCore.SIGNAL(_fromUtf8("clicked()")),self.reset)  
+        QtCore.QObject.connect(self.ui.button_configure,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_configure)  
+        QtCore.QObject.connect(self.ui.button_save,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_save)  
         self.init(0)
     def init(self,job):
         self.Pg=paramgroup.Pgs[job]
         self.list=self.Pg.Param_Order_Group_Name
         self.order=range(0,len(self.list))
         self.update_table()
+        self.set_save()
+    def set_configure(self):
+        os.system("notepad "+os.path.join(com.root_path,"setting.txt"))
     def reset(self):
         self.order=range(0,len(self.list))
         self.update_table()
@@ -62,3 +69,10 @@ class Ui_order(QtGui.QDialog):
         self.order[next]=self.order[current_rowcount]
         self.order[current_rowcount]=tmp
         self.update_table()
+    def set_save(self):
+        com.run_set.load_setting(path=os.path.join(com.root_path,"setting.txt"))
+        self.ui.text_origin_path.setText(com.run_set.origin_path)
+        self.ui.text_asylim.setText(str(com.run_set.AsymLim))
+        self.ui.spinbox_ncy.setValue(com.run_set.NCY)
+        self.ui.spinbox_eps.setValue(com.run_set.eps*100)
+        self.ui.text_fp2k_path.setText(com.run_set.fp2k_path)

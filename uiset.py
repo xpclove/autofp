@@ -166,7 +166,7 @@ class Ui(QtGui.QMainWindow):
         table_index=self.run.params.get_param_group(param_index)
         tablep=self.table[table_index]
         qr=QtGui.QCheckBox()
-	qr.setStyleSheet("QCheckBox::indicator { width:32px; height:32px; }");
+	qr.setStyleSheet("QCheckBox::indicator { width:16px; height:16px; }");
 	if self.run.params.get_phase(param_index)==self.table_phase:
 	    rowcount = tablep.rowCount()
 	    tablep.insertRow(rowcount)
