@@ -1,8 +1,0 @@
-# Mode		:	Action
-refine xray				: 	import xray_order
-refine neturon_cw 		: import neturon_cw_order
-refine neturon_tof		:	import neturon_tof_order
-FP error					: backup
-FP divergence				: backup
-
-

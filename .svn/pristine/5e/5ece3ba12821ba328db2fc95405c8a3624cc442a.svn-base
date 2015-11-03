@@ -1,2 +1,0 @@
-F:\OriginLabOriginPro\Origin9.exe -rs run.section(F:\prf2origin\prf2origin\origin\script\try.ogs,main)
-I:\baiduyun\OriginLabOriginPro\Origin9_64.exe -RS run.LoadOC(F:\paper\autofp\src\release_3\prf2origin\prf2origin\origin\script\prf_one.cpp,16);test()
