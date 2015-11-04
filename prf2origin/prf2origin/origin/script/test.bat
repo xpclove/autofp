@@ -1,0 +1,2 @@
+start %3 -RS run.LoadOC(%2\prf_one.cpp,16);stringarray aa;aa.Add(%1);test(aa)
+:: start I:\baiduyun\OriginLabOriginPro\Origin9_64.exe -RS run.LoadOC(%2\prf_one.cpp,16);stringarray aa;aa.Add(%1);test(aa)
