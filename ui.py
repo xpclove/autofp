@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'new.ui'
 #
-# Created: Mon Sep 28 12:32:50 2015
+# Created: Wed Nov 04 15:47:00 2015
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -304,7 +304,8 @@ class Ui_Form(object):
         self.text_path.setReadOnly(True)
         self.text_path.setObjectName(_fromUtf8("text_path"))
         self.check_show_rwp = QtGui.QCheckBox(self.widget)
-        self.check_show_rwp.setGeometry(QtCore.QRect(100, 480, 111, 20))
+        self.check_show_rwp.setGeometry(QtCore.QRect(80, 480, 141, 16))
+        self.check_show_rwp.setCheckable(True)
         self.check_show_rwp.setChecked(True)
         self.check_show_rwp.setObjectName(_fromUtf8("check_show_rwp"))
         self.check_show_fp = QtGui.QCheckBox(self.widget)

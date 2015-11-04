@@ -712,14 +712,17 @@ p, li { white-space: pre-wrap; }
     <widget class="QCheckBox" name="check_show_rwp">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>80</x>
        <y>480</y>
-       <width>111</width>
-       <height>20</height>
+       <width>141</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="text">
       <string>Show Rwp curve</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>

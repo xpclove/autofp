@@ -39,6 +39,7 @@ class Ui_order(QtGui.QDialog):
         self.update_table()
         self.set_save()
     def set_configure(self):
+        edit="notepad"
         os.system("notepad "+os.path.join(com.root_path,"setting.txt"))
     def reset(self):
         self.order=range(0,len(self.list))
