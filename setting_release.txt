@@ -1,0 +1,8 @@
+{
+ "show_rwp": true, 
+ "show_log_FP": true, 
+ "AsymLim": 60, 
+ "eps": 0.1,
+ "fp2k_path": "fp2k",
+ "origin_path": "C:\\OriginLabOriginPro\\Origin9_64.exe"
+}
