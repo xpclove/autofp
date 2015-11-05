@@ -73,6 +73,7 @@ class Ui_order(QtGui.QDialog):
     def set_save(self):
         com.run_set.load_setting(path=os.path.join(com.root_path,"setting.txt"))
         self.ui.text_origin_path.setText(com.run_set.origin_path)
+        com.origin_path=com.run_set.origin_path
         self.ui.text_asylim.setText(str(com.run_set.AsymLim))
         self.ui.spinbox_ncy.setValue(com.run_set.NCY)
         self.ui.spinbox_eps.setValue(com.run_set.eps*100)
