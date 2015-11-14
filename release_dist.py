@@ -16,6 +16,7 @@ if __name__ == "__main__":
     shutil.copy("msvcr90.dll","autofp_pkg/dist/")
     shutil.copy("autofp.ico","autofp_pkg/dist/")
     shutil.copy("setting_release.txt","autofp_pkg/dist/setting.txt")
+    shutil.copy("setting_release.txt","autofp_pkg/dist/setting_default.txt")
     shutil.copytree("prf2origin/prf2origin/origin","autofp_pkg/dist/prf2origin/prf2origin/origin")
     t=time.time()
     print("copy autofp_pkg to autofp_date ... ")

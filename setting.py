@@ -1,6 +1,7 @@
 import os
 import run
-import json 
+import json
+import re
 ########################################################################
 class setting:
     """"""
@@ -24,7 +25,6 @@ class setting:
     def __init__(self):
         """Constructor"""
     def load_setting(self,path="setting.txt"):
-        setting_file=open(path,"r")
         '''
         context_set=setting_file.readlines()
         context=[]
@@ -42,8 +42,19 @@ class setting:
         self.AsymLim=(int)(context[i]);i+=1;
         self.origin_path=context[i];i+=1;
         '''
-        self.setjson=json.load(setting_file)
-        setting_file.close()
+        try:
+            setting_file=open(path,"r")
+            setstr=setting_file.read()
+            setstr=re.sub(r"\b\\\b",r"\\\\",setstr)
+            setstr=re.sub(r":\\\b",r":\\\\",setstr)
+            self.setjson=json.loads(setstr)
+            setting_file.close()
+        except Exception,e:
+            print "setting.txt error! load setting_default.txt."
+            path="setting_default.txt"
+            setting_file=open(path,"r")
+            self.setjson=json.load(setting_file)
+            setting_file.close()            
         self.show_rwp=self.setjson["show_rwp"]
         self.show_log_FP=self.setjson["show_log_FP"]
         self.AsymLim=self.setjson["AsymLim"]

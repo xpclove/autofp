@@ -205,7 +205,7 @@ class Ui(QtGui.QMainWindow):
 	self.write("weight of phase [phase1, phase2, phase3 ... ]:",style="ok")
 	wp=com.wphase.get_w(self.run)
 	self.write(str(wp),style="ok")
-	self.write(" ")
+	self.write("AutoFP version: v_"+com.run_set.setjson["version"])
 	if com.run_set.output["Cif"]==True:
 	    rpa_raw=self.run.fit.get("Rpa")
 	    self.run.fit.set("Rpa",-1)
