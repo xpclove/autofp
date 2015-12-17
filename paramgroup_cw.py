@@ -4,15 +4,17 @@ Param_Group=[
     ["Pattern"],
     ["Atom"],
     ["AtomicDisplacementFactor"],
-    ["StrainParameter","PreferOrient","AsymmetryParameter","SpecialReflection"]
+    ["StrainParameter","PreferOrient","AsymmetryParameter","SpecialReflection"],
+    ["Atom_Occ"]
     ]
 Param_Order_Group_Name=[
                         "Scale",
                         "a b c",
+                        "simple background",
                         "Zero",
                         "Atom",
                         "Asym",
-                        "Back",
+                        "complex background",
                         "U,V,W",
                         "Y,X",
                         "D_HG2,D_HL,Shift",
@@ -21,6 +23,7 @@ Param_Order_Group_Name=[
 Param_Order_Group=[
     ["Scale"],
     ["a-Pha","b-P","c-P"],
+    ["BACK[0]"],
     ["Zero"],
     ["X-Atom","Y-Atom","Z-Atom"],
     ["PA","Biso-Atom",],

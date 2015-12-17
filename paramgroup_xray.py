@@ -2,9 +2,10 @@ import re
 Param_Order_Group=[
     ["Scale"],
     ["Transparency","Zero"],
-    ["BACK"],
+    ["BACK[0]","BACK[1]"],
     ["a-Pha","b-P","c-P"],
     ["W-Pr"],
+    ["BACK"],
     ["V-Pr", "U-Pr"],
     ["PA"],
     ["Y-Pr","X-Pr"],
@@ -34,8 +35,9 @@ Param_Group=[
 Param_Order_Group_Name=[
                         "scale",
                         "zero",
-                        "background" , 
+                        "simple background" , 
                         "a b c",
+                        "complex background" ,
                         "W",
                         "V,U",
                         "Asym",

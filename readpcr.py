@@ -9,7 +9,7 @@ ss="./test/pbso_cw_back/pbso4a.pcr"
 sp="./test/pbso_cw/pbso4a.pcr"
 pf="./test/pf/y2o3_2.pcr"
 pp="./test/cvo/cvo.pcr"
-s=ss
+s=pp
 r=pcrFileHelper()
 r.readFromPcrFile(s)
 params=r.fit.getParamList()
