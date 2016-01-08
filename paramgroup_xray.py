@@ -10,10 +10,10 @@ Param_Order_Group=[
     ["PA"],
     ["Y-Pr","X-Pr"],
     ["X-Atom","Y-Atom","Z-Atom"],
-    ["Pref","Bov", 
-    "Biso-Atom",
-    "GausS","1G",
-    "Occ-Atom",],
+    ["Pref","Bov"], 
+    ["Biso-Atom"],
+    ["GausS","1G"],
+    ["Occ-Atom"],
     ["B1","B2","B3"],
     ["PA",
     "S_L","D_L",
@@ -21,8 +21,8 @@ Param_Order_Group=[
     #"LorSiz","SZ",
     #"Sycos","Transparency",
     #"Str",
-    "BCK"
-    ]
+    ],
+    ["BCK"]
     ]
 Param_Group=[
     ["Profile","Background","Contribution","Phase"],
@@ -37,15 +37,20 @@ Param_Order_Group_Name=[
                         "zero",
                         "simple background" , 
                         "a b c",
-                        "complex background" ,
                         "W",
+                        "complex background" ,
                         "V,U",
                         "Asym",
                         "Y,X",
                         "Atom x y z",
-                        "Pref,Occ",
+                        "Pref,Bov",
+                        "Biso-Atom",
+                        "GausS,1G",
+                        "Occ-Atom",
                         "Tempeture factors",
-                        "S_L,D_L, neutron_cw_mode"]
+                        "S_L,D_L",
+                        "manual background "
+]
 
 Param_Num_Order=range(0,len(Param_Order_Group))
 #for the alias count

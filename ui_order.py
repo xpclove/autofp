@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-# Created: Wed Oct 28 23:28:37 2015
+# Created: Thu Jan 07 23:21:46 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -125,7 +125,7 @@ class Ui_Order(object):
         self.spinbox_ncy = QtGui.QSpinBox(self.tab_2)
         self.spinbox_ncy.setGeometry(QtCore.QRect(340, 30, 111, 22))
         self.spinbox_ncy.setMinimum(0)
-        self.spinbox_ncy.setMaximum(100)
+        self.spinbox_ncy.setMaximum(100000)
         self.spinbox_ncy.setProperty("value", 10)
         self.spinbox_ncy.setObjectName(_fromUtf8("spinbox_ncy"))
         self.button_save = QtGui.QPushButton(self.tab_2)
@@ -199,15 +199,15 @@ class Ui_Order(object):
         self.text_fp2k_path.setHtml(_translate("Order", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:8.83019pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">./fp2k.exe</span></p></body></html>", None))
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">./fp2k.exe</p></body></html>", None))
         self.label_3.setText(_translate("Order", "fp2k path:", None))
         self.text_origin_path.setToolTip(_translate("Order", "<html><head/><body><p>the path of fp2k.exe</p></body></html>", None))
         self.text_origin_path.setHtml(_translate("Order", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:8.83019pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt;\">origin.exe</span></p></body></html>", None))
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">origin.exe</p></body></html>", None))
         self.label_5.setText(_translate("Order", "Origin path:", None))
         self.button_configure.setText(_translate("Order", "configure", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), _translate("Order", "system", None))
