@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-# Created: Thu Jan 07 23:21:46 2016
+# Created: Fri Jan 08 22:43:20 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,19 +26,19 @@ except AttributeError:
 class Ui_Order(object):
     def setupUi(self, Order):
         Order.setObjectName(_fromUtf8("Order"))
-        Order.resize(584, 558)
+        Order.resize(584, 556)
         Order.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
         Order.setStyleSheet(_fromUtf8(""))
         Order.setSizeGripEnabled(False)
         Order.setModal(False)
         self.tabWidget = QtGui.QTabWidget(Order)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 591, 611))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 20, 591, 500))
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
         self.tab = QtGui.QWidget()
         self.tab.setObjectName(_fromUtf8("tab"))
         self.table = QtGui.QTableWidget(self.tab)
-        self.table.setGeometry(QtCore.QRect(0, 0, 441, 531))
-        self.table.setMinimumSize(QtCore.QSize(441, 511))
+        self.table.setGeometry(QtCore.QRect(0, 0, 441, 471))
+        self.table.setMinimumSize(QtCore.QSize(441, 450))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.table.setFont(font)
@@ -66,6 +66,9 @@ class Ui_Order(object):
         self.buttonreset = QtGui.QPushButton(self.tab)
         self.buttonreset.setGeometry(QtCore.QRect(490, 430, 81, 21))
         self.buttonreset.setObjectName(_fromUtf8("buttonreset"))
+        self.button_configure_s = QtGui.QPushButton(self.tab)
+        self.button_configure_s.setGeometry(QtCore.QRect(490, 330, 82, 25))
+        self.button_configure_s.setObjectName(_fromUtf8("button_configure_s"))
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
@@ -128,10 +131,6 @@ class Ui_Order(object):
         self.spinbox_ncy.setMaximum(100000)
         self.spinbox_ncy.setProperty("value", 10)
         self.spinbox_ncy.setObjectName(_fromUtf8("spinbox_ncy"))
-        self.button_save = QtGui.QPushButton(self.tab_2)
-        self.button_save.setGeometry(QtCore.QRect(430, 490, 111, 21))
-        self.button_save.setInputMethodHints(QtCore.Qt.ImhDialableCharactersOnly|QtCore.Qt.ImhDigitsOnly|QtCore.Qt.ImhEmailCharactersOnly|QtCore.Qt.ImhFormattedNumbersOnly|QtCore.Qt.ImhLowercaseOnly|QtCore.Qt.ImhUppercaseOnly|QtCore.Qt.ImhUrlCharactersOnly)
-        self.button_save.setObjectName(_fromUtf8("button_save"))
         self.tabWidget.addTab(self.tab_2, _fromUtf8(""))
         self.tab_3 = QtGui.QWidget()
         self.tab_3.setEnabled(True)
@@ -174,6 +173,10 @@ class Ui_Order(object):
         self.checkBox_fou.setObjectName(_fromUtf8("checkBox_fou"))
         self.tab_widget.addTab(self.tab_4, _fromUtf8(""))
         self.tabWidget.addTab(self.tab_3, _fromUtf8(""))
+        self.button_save = QtGui.QPushButton(Order)
+        self.button_save.setGeometry(QtCore.QRect(460, 530, 111, 21))
+        self.button_save.setInputMethodHints(QtCore.Qt.ImhDialableCharactersOnly|QtCore.Qt.ImhDigitsOnly|QtCore.Qt.ImhEmailCharactersOnly|QtCore.Qt.ImhFormattedNumbersOnly|QtCore.Qt.ImhLowercaseOnly|QtCore.Qt.ImhUppercaseOnly|QtCore.Qt.ImhUrlCharactersOnly)
+        self.button_save.setObjectName(_fromUtf8("button_save"))
 
         self.retranslateUi(Order)
         self.tabWidget.setCurrentIndex(0)
@@ -187,7 +190,8 @@ class Ui_Order(object):
         Order.setWindowTitle(_translate("Order", "Setting", None))
         self.button_up.setText(_translate("Order", "Up", None))
         self.button_down.setText(_translate("Order", "Down", None))
-        self.buttonreset.setText(_translate("Order", "reset", None))
+        self.buttonreset.setText(_translate("Order", "Reset", None))
+        self.button_configure_s.setText(_translate("Order", "configure", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Order", "Order", None))
         self.text_asylim.setToolTip(_translate("Order", "<html><head/><body><p><span style=\" color:#000000;\">defined by &quot;Asylim in *.PCR&quot;</span></p></body></html>", None))
         self.text_asylim.setText(_translate("Order", "60", None))
@@ -213,11 +217,11 @@ class Ui_Order(object):
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), _translate("Order", "system", None))
         self.label_4.setText(_translate("Order", "NCY", None))
         self.spinbox_ncy.setToolTip(_translate("Order", "<html><head/><body><p><span style=\" color:#000000;\">defined by &quot;NCY in PCR&quot;</span></p><p><span style=\" color:#000000;\">It means that fp2k run NCY times each time</span></p></body></html>", None))
-        self.button_save.setText(_translate("Order", "reload setting", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Order", "Parameters", None))
         self.checkBox_hkl.setText(_translate("Order", "Hkl", None))
         self.checkBox_cif.setText(_translate("Order", "Cif", None))
         self.checkBox_fou.setText(_translate("Order", "Fou", None))
         self.tab_widget.setTabText(self.tab_widget.indexOf(self.tab_4), _translate("Order", "output", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Order", "Output", None))
+        self.button_save.setText(_translate("Order", "reload setting", None))
 

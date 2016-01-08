@@ -1,5 +1,5 @@
 AutoFP is an auto tools for FullProf Rietveld refinement released under GPL v3 LICENSE.
-AutoFP (http://pmedia.shu.edu.cn/autofp/)
+AutoFP (http://pmedia.shu.edu.cn/autofp/ or http://autofp.sinaapp.com/)
 Authors: Xiaopeng Cui, etc
 Email: autofp@163.com
 Shanghai University, Department of Physics 

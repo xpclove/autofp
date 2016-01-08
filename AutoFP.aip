@@ -20,10 +20,10 @@
     <ROW Property="AiPreferFastOem" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="CTRLS" Value="3"/>
     <ROW Property="Manufacturer" Value="Shanghai University"/>
-    <ROW Property="ProductCode" Value="1033:{9582A338-05F6-4116-A14F-48209BAF9809} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{7643474E-211F-42D2-87E5-DEDA8EA08C5A} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="AutoFP"/>
-    <ROW Property="ProductVersion" Value="0.1.114" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.1.120" Type="32"/>
     <ROW Property="REBOOT" MultiBuildValue="DefaultBuild:ReallySuppress"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
@@ -1286,7 +1286,7 @@
     <ROW File="search.tcl" Component_="anilabel.tcl" FileName="search.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\search.tcl" SelfReg="false" NextFile="spin.tcl"/>
     <ROW File="select.pyd" Component_="autofp.ico" FileName="select.pyd" Attributes="0" SourcePath="AutoFP\dist\select.pyd" SelfReg="false" NextFile="sip.pyd"/>
     <ROW File="setting.txt" Component_="autofp.ico" FileName="setting.txt" Attributes="0" SourcePath="AutoFP\dist\setting.txt" SelfReg="false" NextFile="setting_default.txt"/>
-    <ROW File="setting_default.txt" Component_="autofp.ico" FileName="SETTIN~1.TXT|setting_default.txt" Attributes="0" SourcePath="AutoFP\dist\setting_default.txt" SelfReg="false"/>
+    <ROW File="setting_default.txt" Component_="autofp.ico" FileName="SETTIN~1.TXT|setting_default.txt" Attributes="0" SourcePath="AutoFP\dist\setting_default.txt" SelfReg="false" NextFile="strategy.py"/>
     <ROW File="sh.msg" Component_="af.msg" FileName="sh.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\sh.msg" SelfReg="false" NextFile="sk.msg"/>
     <ROW File="shautofp.exe" Component_="shautofp.exe" FileName="shautofp.exe" Attributes="0" SourcePath="AutoFP\dist\shautofp.exe" SelfReg="false" NextFile="autofp.bat" DigSign="true"/>
     <ROW File="shiftjis.enc" Component_="ascii.enc" FileName="shiftjis.enc" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\encoding\shiftjis.enc" SelfReg="false" NextFile="symbol.enc"/>
@@ -1319,6 +1319,8 @@
     <ROW File="stock_zoomin.xpm" Component_="back.png" FileName="STOCK_~7.XPM|stock_zoom-in.xpm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\stock_zoom-in.xpm" SelfReg="false" NextFile="stock_zoomout.ppm"/>
     <ROW File="stock_zoomout.ppm" Component_="back.png" FileName="STOCK_~8.PPM|stock_zoom-out.ppm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\stock_zoom-out.ppm" SelfReg="false" NextFile="stock_zoomout.xpm"/>
     <ROW File="stock_zoomout.xpm" Component_="back.png" FileName="STOCK_~8.XPM|stock_zoom-out.xpm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\stock_zoom-out.xpm" SelfReg="false" NextFile="subplots.png"/>
+    <ROW File="strategy.py" Component_="autofp.ico" FileName="strategy.py" Attributes="0" SourcePath="AutoFP\dist\strategy.py" SelfReg="false" NextFile="strategy.py.default"/>
+    <ROW File="strategy.py.default" Component_="autofp.ico" FileName="STRATE~1.DEF|strategy.py.default" Attributes="0" SourcePath="AutoFP\dist\strategy.py.default" SelfReg="false"/>
     <ROW File="style.tcl" Component_="anilabel.tcl" FileName="style.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\style.tcl" SelfReg="false" NextFile="tclIndex_1"/>
     <ROW File="subplots.png" Component_="back.png" FileName="subplots.png" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\subplots.png" SelfReg="false" NextFile="subplots.ppm"/>
     <ROW File="subplots.ppm" Component_="back.png" FileName="subplots.ppm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\subplots.ppm" SelfReg="false" NextFile="subplots.xpm"/>
@@ -1580,7 +1582,7 @@
     <ROW XmlAttribute="xsischemaLocation" XmlElement="swidsoftware_identification_tag" Name="xsi:schemaLocation" Flags="14" Order="3" Value="http://standards.iso.org/iso/19770/-2/2008/schema.xsd software_identification_tag.xsd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
-    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="114"/>
+    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="120"/>
     <ROW XmlElement="swidentitlement_required_indicator" ParentElement="swidsoftware_identification_tag" Name="swid:entitlement_required_indicator" Condition="1" Order="0" Flags="14" Text="false"/>
     <ROW XmlElement="swidmajor" ParentElement="swidnumeric" Name="swid:major" Condition="1" Order="0" Flags="14" Text="0"/>
     <ROW XmlElement="swidminor" ParentElement="swidnumeric" Name="swid:minor" Condition="1" Order="1" Flags="14" Text="1"/>

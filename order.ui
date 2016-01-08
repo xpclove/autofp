@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>584</width>
-    <height>558</height>
+    <height>556</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -29,9 +29,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>20</y>
      <width>591</width>
-     <height>611</height>
+     <height>500</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -47,13 +47,13 @@
        <x>0</x>
        <y>0</y>
        <width>441</width>
-       <height>531</height>
+       <height>471</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
        <width>441</width>
-       <height>511</height>
+       <height>450</height>
       </size>
      </property>
      <property name="font">
@@ -143,7 +143,20 @@
       </rect>
      </property>
      <property name="text">
-      <string>reset</string>
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_configure_s">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>330</y>
+       <width>82</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>configure</string>
      </property>
     </widget>
    </widget>
@@ -372,22 +385,6 @@ p, li { white-space: pre-wrap; }
       <number>10</number>
      </property>
     </widget>
-    <widget class="QPushButton" name="button_save">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>490</y>
-       <width>111</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="inputMethodHints">
-      <set>Qt::ImhDialableCharactersOnly|Qt::ImhDigitsOnly|Qt::ImhEmailCharactersOnly|Qt::ImhFormattedNumbersOnly|Qt::ImhLowercaseOnly|Qt::ImhUppercaseOnly|Qt::ImhUrlCharactersOnly</set>
-     </property>
-     <property name="text">
-      <string>reload setting</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <property name="enabled">
@@ -490,6 +487,22 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="button_save">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>530</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDialableCharactersOnly|Qt::ImhDigitsOnly|Qt::ImhEmailCharactersOnly|Qt::ImhFormattedNumbersOnly|Qt::ImhLowercaseOnly|Qt::ImhUppercaseOnly|Qt::ImhUrlCharactersOnly</set>
+   </property>
+   <property name="text">
+    <string>reload setting</string>
+   </property>
   </widget>
  </widget>
  <resources/>

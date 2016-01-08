@@ -29,10 +29,13 @@ class Ui_order(QtGui.QDialog):
         QtCore.QObject.connect(self.button_up,QtCore.SIGNAL(_fromUtf8("clicked()")),self.up)  
         QtCore.QObject.connect(self.button_down,QtCore.SIGNAL(_fromUtf8("clicked()")),self.down)  
         QtCore.QObject.connect(self.buttonreset,QtCore.SIGNAL(_fromUtf8("clicked()")),self.reset)  
-        QtCore.QObject.connect(self.ui.button_configure,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_configure)  
+        QtCore.QObject.connect(self.ui.button_configure,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_configure)
+        QtCore.QObject.connect(self.ui.button_configure_s,QtCore.SIGNAL(_fromUtf8("clicked()")),self.configure_strategy)
+        
         QtCore.QObject.connect(self.ui.button_save,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_save)  
         self.init(0)
     def init(self,job):
+        self.job=job
         self.Pg=paramgroup.Pgs[job]
         self.list=self.Pg.Param_Order_Group_Name
         self.order=range(0,len(self.list))
@@ -41,6 +44,9 @@ class Ui_order(QtGui.QDialog):
     def set_configure(self):
         edit="notepad"
         os.system("notepad "+os.path.join(com.root_path,"setting.txt"))
+    def configure_strategy(self):
+        edit="notepad"
+        os.system("notepad "+os.path.join(com.root_path,"strategy.py"))        
     def reset(self):
         self.order=range(0,len(self.list))
         self.update_table()
@@ -78,3 +84,8 @@ class Ui_order(QtGui.QDialog):
         self.ui.spinbox_ncy.setValue(com.run_set.NCY)
         self.ui.spinbox_eps.setValue(com.run_set.eps*100)
         self.ui.text_fp2k_path.setText(com.run_set.fp2k_path)
+        paramgroup.load_strategy()
+        self.Pg=paramgroup.Pgs[self.job]
+        self.list=self.Pg.Param_Order_Group_Name
+        self.order=range(0,len(self.list))
+        self.update_table()        

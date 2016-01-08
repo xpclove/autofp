@@ -1,4 +1,6 @@
 import re
+import com
+import os
 import paramgroup_xray
 import paramgroup_cw
 import paramgroup_tof
@@ -7,6 +9,19 @@ Pgs=[
      paramgroup_cw,
      paramgroup_tof
      ]
+def load_strategy(sfilemodule=os.path.join(com.root_path,"strategy.py")):
+    global Pgs;print os.path.abspath(sfilemodule)
+    files=open(sfilemodule);con=files.read();exec(con);
+    s_xray=strategy["xray"];
+    print s_xray.keys()
+    group=s_xray["param_group"]
+    order=s_xray["param_order"]
+    Pgs[0].Param_Order_Group_Name=[]
+    Pgs[0].Param_Order_Group=[]
+    for item in order:
+        Pgs[0].Param_Order_Group_Name.append(item)
+        Pgs[0].Param_Order_Group.append(group[item])
+    return 0
 Param_Group=[
     ["Profile","Background","Contribution","Phase"],
     ["Pattern"],
