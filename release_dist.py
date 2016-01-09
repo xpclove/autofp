@@ -19,6 +19,7 @@ if __name__ == "__main__":
     shutil.copy("setting_release.txt","autofp_pkg/dist/setting_default.txt")
     shutil.copy("strategy.py","autofp_pkg/dist/strategy.py")
     shutil.copy("strategy.py","autofp_pkg/dist/strategy.py.default")
+    shutil.copytree("strategy","autofp_pkg/dist/strategy")
     shutil.copytree("prf2origin/prf2origin/origin","autofp_pkg/dist/prf2origin/prf2origin/origin")
     t=time.time()
     print("copy autofp_pkg to autofp_date ... ")

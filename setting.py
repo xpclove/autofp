@@ -20,7 +20,7 @@ class setting:
             "Cif":False,
             "Fou":False
            }
-
+    show_rwp_limit=0;
     #----------------------------------------------------------------------
     def __init__(self):
         """Constructor"""
@@ -57,6 +57,7 @@ class setting:
             setting_file.close()            
         self.show_rwp=self.setjson["show_rwp"]
         self.show_log_FP=self.setjson["show_log_FP"]
+        self.NCY=self.setjson["NCY"]
         self.AsymLim=self.setjson["AsymLim"]
         self.eps=self.setjson["eps"]
         self.fp2k_path=self.setjson["fp2k_path"]

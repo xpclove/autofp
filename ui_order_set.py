@@ -46,7 +46,7 @@ class Ui_order(QtGui.QDialog):
         os.system("notepad "+os.path.join(com.root_path,"setting.txt"))
     def configure_strategy(self):
         edit="notepad"
-        os.system("notepad "+os.path.join(com.root_path,"strategy.py"))        
+        os.system("notepad "+os.path.join(com.root_path,"strategy/"+"strategy_"+paramgroup.Pgs_type[self.job]+".py"))        
     def reset(self):
         self.order=range(0,len(self.list))
         self.update_table()

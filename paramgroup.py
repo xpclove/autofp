@@ -9,18 +9,25 @@ Pgs=[
      paramgroup_cw,
      paramgroup_tof
      ]
-def load_strategy(sfilemodule=os.path.join(com.root_path,"strategy.py")):
-    global Pgs;print os.path.abspath(sfilemodule)
-    files=open(sfilemodule);con=files.read();exec(con);
-    s_xray=strategy["xray"];
-    print s_xray.keys()
-    group=s_xray["param_group"]
-    order=s_xray["param_order"]
-    Pgs[0].Param_Order_Group_Name=[]
-    Pgs[0].Param_Order_Group=[]
-    for item in order:
-        Pgs[0].Param_Order_Group_Name.append(item)
-        Pgs[0].Param_Order_Group.append(group[item])
+Pgs_key={
+    "xray":0,"neutron_cw":1,"neutron_tof":2
+};Pgs_type=["xray","neutron_cw","neutron_tof"];
+def load_strategy(sfolder=os.path.join(com.root_path,"strategy")):
+    global Pgs;print os.path.abspath(sfolder)
+    for key in Pgs_key:
+        sfilemodule=os.path.join(sfolder,"strategy_"+key+".py")
+        files=open(sfilemodule);con=files.read();exec(con);
+        s_xray=strategy[key];
+        print s_xray.keys()
+        group=s_xray["param_group"]
+        order=s_xray["param_order"]
+        n=Pgs_key[key];
+        Pgs[n].Param_Order_Group_Name=[]
+        Pgs[n].Param_Order_Group=[]
+        for item in order:
+            Pgs[n].Param_Order_Group_Name.append(item)
+            Pgs[n].Param_Order_Group.append(group[item])
+        Pgs[n].Param_Num_Order=range(0,len(Pgs[n].Param_Order_Group))
     return 0
 Param_Group=[
     ["Profile","Background","Contribution","Phase"],
