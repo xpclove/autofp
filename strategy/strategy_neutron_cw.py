@@ -24,7 +24,7 @@ strategy={
             'Biso-Atom':         ["Biso-Atom"],
             'GausS,1G':          ["GausS","1G"],
             'Occ-Atom':          ["Occ-Atom"],
-            'Tempeture factors': ["B1","B2","B3"],
+            'Anisotropic Thermal factors': ["B1","B2","B3"],
             'S_L,D_L':           ["PA", "S_L","D_L"],
             'instrument':        [#"Sysin",             #"Displacement",
                                   #"LorSiz",            #"SZ",
@@ -50,7 +50,7 @@ strategy={
             "GausS,1G",
             "instrument",
             "Occ-Atom",
-            "Tempeture factors",
+            "Anisotropic Thermal factors",
             "manual background"            
         ]
         }
