@@ -20,10 +20,10 @@
     <ROW Property="AiPreferFastOem" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="CTRLS" Value="3"/>
     <ROW Property="Manufacturer" Value="Shanghai University"/>
-    <ROW Property="ProductCode" Value="1033:{F378D717-ACA1-4DB4-8E93-B8BC4B642822} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{8F6E73C0-F3E1-4DA9-8894-5A3EB84635EB} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="AutoFP"/>
-    <ROW Property="ProductVersion" Value="0.1.128" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.1.131" Type="32"/>
     <ROW Property="REBOOT" MultiBuildValue="DefaultBuild:ReallySuppress"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
@@ -98,64 +98,68 @@
     <ROW Directory="tzdata_Dir" Directory_Parent="tcl8.5_Dir" DefaultDir="tzdata"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="ACT" ComponentId="{F65A2F74-86FB-4A8E-85DD-C9C23A094EAE}" Directory_="Australia_Dir" Attributes="0" KeyPath="ACT" Type="0"/>
+    <ROW Component="ACT" ComponentId="{68E9C386-1107-4EEC-9C45-BB3004AECA65}" Directory_="Australia_Dir" Attributes="0" KeyPath="ACT" Type="0"/>
     <ROW Component="AI_CustomARPName" ComponentId="{EBE5666D-A2A1-45FC-8E8E-EF75714114E2}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="APPDIR" ComponentId="{2BCE9F6C-3823-49CC-A3F5-640519CF38F9}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="AST4" ComponentId="{21D6372B-2C65-4EDC-ADB4-A2074F57BDF4}" Directory_="SystemV_Dir" Attributes="0" KeyPath="AST4" Type="0"/>
-    <ROW Component="Abidjan" ComponentId="{31C27859-C298-458B-9090-9D003B67999D}" Directory_="Africa_Dir" Attributes="0" KeyPath="Abidjan" Type="0"/>
-    <ROW Component="Acre" ComponentId="{752FF6B1-543F-44D3-810A-8981F5366987}" Directory_="Brazil_Dir" Attributes="0" KeyPath="Acre" Type="0"/>
-    <ROW Component="Adak" ComponentId="{E97701F7-59DA-4510-B9DA-F4C5D1C105B2}" Directory_="America_Dir" Attributes="0" KeyPath="Adak" Type="0"/>
-    <ROW Component="Aden" ComponentId="{9D41E3A8-3E7B-4CD0-A980-6C5C7B6661BC}" Directory_="Asia_Dir" Attributes="0" KeyPath="Aden" Type="0"/>
-    <ROW Component="Alaska" ComponentId="{95142C72-FC76-4E2F-A193-FC50CA45EFB7}" Directory_="US_Dir" Attributes="0" KeyPath="Alaska" Type="0"/>
-    <ROW Component="Amsterdam" ComponentId="{3511FA26-ED55-4990-A949-94EBEA7801A1}" Directory_="Europe_Dir" Attributes="0" KeyPath="Amsterdam" Type="0"/>
-    <ROW Component="Antananarivo" ComponentId="{B01008FA-80EC-43EE-A91A-228284ED929A}" Directory_="Indian_Dir" Attributes="0" KeyPath="Antananarivo" Type="0"/>
-    <ROW Component="Apia" ComponentId="{09662745-3F3A-44A6-930F-AC438B443AFC}" Directory_="Pacific_Dir" Attributes="0" KeyPath="Apia" Type="0"/>
-    <ROW Component="Atlantic" ComponentId="{4A31AC9F-6F66-47E2-A202-8512A1710A13}" Directory_="Canada_Dir" Attributes="0" KeyPath="Atlantic" Type="0"/>
+    <ROW Component="AST4" ComponentId="{96794D6A-BD6A-458B-BF82-CE21C41A16BF}" Directory_="SystemV_Dir" Attributes="0" KeyPath="AST4" Type="0"/>
+    <ROW Component="Abidjan" ComponentId="{01598D2C-07AD-430A-BBC0-FE0C2487499D}" Directory_="Africa_Dir" Attributes="0" KeyPath="Abidjan" Type="0"/>
+    <ROW Component="Acre" ComponentId="{D1BF1247-D888-4D26-834A-04F62F09F5CE}" Directory_="Brazil_Dir" Attributes="0" KeyPath="Acre" Type="0"/>
+    <ROW Component="Adak" ComponentId="{E704D236-AFD3-493C-B403-124206495798}" Directory_="America_Dir" Attributes="0" KeyPath="Adak" Type="0"/>
+    <ROW Component="Aden" ComponentId="{109A0C6B-C957-48F3-852C-DD21F04F7F1B}" Directory_="Asia_Dir" Attributes="0" KeyPath="Aden" Type="0"/>
+    <ROW Component="Alaska" ComponentId="{AA52D54B-E69A-4956-B311-2C06C27AF0ED}" Directory_="US_Dir" Attributes="0" KeyPath="Alaska" Type="0"/>
+    <ROW Component="Amsterdam" ComponentId="{7FE9E7B6-7F8F-4DEF-8948-EA4EB5844C9B}" Directory_="Europe_Dir" Attributes="0" KeyPath="Amsterdam" Type="0"/>
+    <ROW Component="Antananarivo" ComponentId="{A5042D3F-3D09-4CEE-94F8-19CC608718BB}" Directory_="Indian_Dir" Attributes="0" KeyPath="Antananarivo" Type="0"/>
+    <ROW Component="Apia" ComponentId="{3A12D88F-38A2-4EE5-A92C-15A78AEFC03C}" Directory_="Pacific_Dir" Attributes="0" KeyPath="Apia" Type="0"/>
+    <ROW Component="Atlantic" ComponentId="{3FF62784-3CC9-4B05-B953-7BD1640719E6}" Directory_="Canada_Dir" Attributes="0" KeyPath="Atlantic" Type="0"/>
     <ROW Component="AutoFP" ComponentId="{4F1D2AF8-EC54-4005-BD17-5600D8B26E9D}" Directory_="AutoFP_1_Dir" Attributes="0"/>
-    <ROW Component="Azores" ComponentId="{0E67F8E9-0665-41FE-8FA0-3EAFAB7442CF}" Directory_="Atlantic_Dir" Attributes="0" KeyPath="Azores" Type="0"/>
-    <ROW Component="BajaNorte" ComponentId="{15B5A659-9845-4DEF-9F80-054817C20373}" Directory_="Mexico_Dir" Attributes="0" KeyPath="BajaNorte" Type="0"/>
-    <ROW Component="Beulah" ComponentId="{5E9A951C-8269-482E-8C38-6DEC9244E955}" Directory_="North_Dakota_Dir" Attributes="0" KeyPath="Beulah" Type="0"/>
-    <ROW Component="Buenos_Aires" ComponentId="{CF0FBFC6-FC1D-460A-A4D8-54AA1800F2FE}" Directory_="Argentina_Dir" Attributes="0" KeyPath="Buenos_Aires" Type="0"/>
-    <ROW Component="CET" ComponentId="{246CE560-CB6F-44BD-AA66-FE57DC4F6FF4}" Directory_="tzdata_Dir" Attributes="0" KeyPath="CET" Type="0"/>
-    <ROW Component="Casey" ComponentId="{7232DEA0-2EEA-41AB-9824-941D31251BDD}" Directory_="Antarctica_Dir" Attributes="0" KeyPath="Casey" Type="0"/>
-    <ROW Component="Code" ComponentId="{179F57AE-DE2E-40DB-86C9-E2E3BA577952}" Directory_="script_Dir" Attributes="0" KeyPath="Code" Type="0"/>
-    <ROW Component="Continental" ComponentId="{D3A13707-95BF-459D-9C42-9AF5E34D68E1}" Directory_="Chile_Dir" Attributes="0" KeyPath="Continental" Type="0"/>
-    <ROW Component="CourierBold.afm" ComponentId="{4313900E-15FB-477F-AFAE-24552D6788FC}" Directory_="pdfcorefonts_Dir" Attributes="0" KeyPath="CourierBold.afm" Type="0"/>
-    <ROW Component="GMT" ComponentId="{D2DB2AF5-B4EE-4C69-B6DB-598D3BDECBD9}" Directory_="Etc_Dir" Attributes="0" KeyPath="GMT" Type="0"/>
-    <ROW Component="Indianapolis" ComponentId="{AF809A7B-967D-4FD8-9F04-3659BB535447}" Directory_="Indiana_Dir" Attributes="0" KeyPath="Indianapolis" Type="0"/>
-    <ROW Component="Longyearbyen" ComponentId="{A629B96B-9DA4-4C5E-A4EC-70E09EBF04C1}" Directory_="Arctic_Dir" Attributes="0" KeyPath="Longyearbyen" Type="0"/>
-    <ROW Component="Louisville" ComponentId="{1EF59397-22E2-42DF-8DF4-F704EA8C7B76}" Directory_="Kentucky_Dir" Attributes="0" KeyPath="Louisville" Type="0"/>
+    <ROW Component="Azores" ComponentId="{CAA4FDE0-C7D9-450E-BE40-D1C8A1A1D65F}" Directory_="Atlantic_Dir" Attributes="0" KeyPath="Azores" Type="0"/>
+    <ROW Component="BajaNorte" ComponentId="{BF0DC135-74A2-437E-A014-15AEA9CEC268}" Directory_="Mexico_Dir" Attributes="0" KeyPath="BajaNorte" Type="0"/>
+    <ROW Component="Beulah" ComponentId="{22126EBE-7C69-43CB-A83C-72E0B504F20A}" Directory_="North_Dakota_Dir" Attributes="0" KeyPath="Beulah" Type="0"/>
+    <ROW Component="Buenos_Aires" ComponentId="{9FAE882F-9605-420D-A363-0DE4D2BCE56D}" Directory_="Argentina_Dir" Attributes="0" KeyPath="Buenos_Aires" Type="0"/>
+    <ROW Component="CET" ComponentId="{C5BE1CC2-F6BD-4F65-9A37-05A2C3B64B18}" Directory_="tzdata_Dir" Attributes="0" KeyPath="CET" Type="0"/>
+    <ROW Component="CRYPT32.dll" ComponentId="{CDA382A7-6491-4E0F-B3C0-0DDF037CFBB4}" Directory_="dist_Dir" Attributes="0" KeyPath="CRYPT32.dll"/>
+    <ROW Component="Casey" ComponentId="{5B131C1C-8266-4D14-B69D-D080C90E9FFF}" Directory_="Antarctica_Dir" Attributes="0" KeyPath="Casey" Type="0"/>
+    <ROW Component="Code" ComponentId="{37DCE91B-2F31-41B9-A7B0-BF30970FF4CA}" Directory_="script_Dir" Attributes="0" KeyPath="Code" Type="0"/>
+    <ROW Component="Continental" ComponentId="{9D57B83D-1B56-43AC-8010-03F4BD352ED0}" Directory_="Chile_Dir" Attributes="0" KeyPath="Continental" Type="0"/>
+    <ROW Component="CourierBold.afm" ComponentId="{F3187483-4357-4DF8-8FF3-88B1C5D9CD9F}" Directory_="pdfcorefonts_Dir" Attributes="0" KeyPath="CourierBold.afm" Type="0"/>
+    <ROW Component="GMT" ComponentId="{5B152B6C-5997-4759-B45C-85D84E9C31AF}" Directory_="Etc_Dir" Attributes="0" KeyPath="GMT" Type="0"/>
+    <ROW Component="Indianapolis" ComponentId="{CF18E94D-87D4-48BF-A68E-720E38D9CDCE}" Directory_="Indiana_Dir" Attributes="0" KeyPath="Indianapolis" Type="0"/>
+    <ROW Component="Longyearbyen" ComponentId="{BD421822-8572-4E40-AF0E-59150CA9C453}" Directory_="Arctic_Dir" Attributes="0" KeyPath="Longyearbyen" Type="0"/>
+    <ROW Component="Louisville" ComponentId="{2E765637-D14A-4E9D-BC15-9BC6DEC73CAD}" Directory_="Kentucky_Dir" Attributes="0" KeyPath="Louisville" Type="0"/>
+    <ROW Component="MPR.dll" ComponentId="{AC8888D4-BCC0-47F4-BB2E-E1FC0DF79D08}" Directory_="dist_Dir" Attributes="0" KeyPath="MPR.dll"/>
     <ROW Component="ProductInformation" ComponentId="{30FCC103-FCFF-479D-B73A-0A2F2CEE6B8A}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="QtCore4.dll" ComponentId="{5C973A2C-2187-4EA5-A42A-4C5F9E4B196E}" Directory_="dist_Dir" Attributes="0" KeyPath="QtCore4.dll"/>
-    <ROW Component="QtGui4.dll" ComponentId="{EC632874-6349-4546-805B-2F188E51B49C}" Directory_="dist_Dir" Attributes="0" KeyPath="QtGui4.dll"/>
-    <ROW Component="af.msg" ComponentId="{BB9F8E59-033B-46D1-B2B7-2586255AC34C}" Directory_="msgs_Dir" Attributes="0" KeyPath="af.msg" Type="0"/>
-    <ROW Component="altTheme.tcl" ComponentId="{96989229-5649-4846-8736-89C52D7DD579}" Directory_="ttk_Dir" Attributes="0" KeyPath="altTheme.tcl" Type="0"/>
-    <ROW Component="anilabel.tcl" ComponentId="{554BA545-F1B9-4821-8AA3-1741065F42DA}" Directory_="demos_Dir" Attributes="0" KeyPath="anilabel.tcl" Type="0"/>
-    <ROW Component="ascii.enc" ComponentId="{CDDF588E-791C-4FF6-B75C-69E9B1AAD6FB}" Directory_="encoding_Dir" Attributes="0" KeyPath="ascii.enc" Type="0"/>
-    <ROW Component="auto.tcl" ComponentId="{3F70B645-CD28-4DB8-B1C7-6293842C1B63}" Directory_="tcl8.5_Dir" Attributes="0" KeyPath="auto.tcl" Type="0"/>
+    <ROW Component="QtCore4.dll" ComponentId="{05AC2EC1-E87C-4168-B0DB-66CDC41B611B}" Directory_="dist_Dir" Attributes="0" KeyPath="QtCore4.dll"/>
+    <ROW Component="QtGui4.dll" ComponentId="{BB273068-BD05-45FB-B3A2-F765ADA07AE5}" Directory_="dist_Dir" Attributes="0" KeyPath="QtGui4.dll"/>
+    <ROW Component="af.msg" ComponentId="{95E4954B-E36E-4588-B703-825C1D976E3C}" Directory_="msgs_Dir" Attributes="0" KeyPath="af.msg" Type="0"/>
+    <ROW Component="altTheme.tcl" ComponentId="{27299011-C18B-4294-B704-60D7F2663802}" Directory_="ttk_Dir" Attributes="0" KeyPath="altTheme.tcl" Type="0"/>
+    <ROW Component="anilabel.tcl" ComponentId="{677EF3B6-7E98-4EAB-B8C2-18F02ADFB5B8}" Directory_="demos_Dir" Attributes="0" KeyPath="anilabel.tcl" Type="0"/>
+    <ROW Component="ascii.enc" ComponentId="{1DAC9BC4-56F7-442A-92BD-3EC8486BABB9}" Directory_="encoding_Dir" Attributes="0" KeyPath="ascii.enc" Type="0"/>
+    <ROW Component="auto.tcl" ComponentId="{FB140A4B-0E27-4B07-8826-A8AC9DE7C638}" Directory_="tcl8.5_Dir" Attributes="0" KeyPath="auto.tcl" Type="0"/>
     <ROW Component="autofp.bat" ComponentId="{5C8C2D8B-2581-435B-9A8F-F739BEF35E2D}" Directory_="shell_Dir" Attributes="0" KeyPath="autofp.bat" Type="0"/>
     <ROW Component="autofp.exe" ComponentId="{65716703-9CF7-4B63-8D93-7D2E973339F9}" Directory_="dist_Dir" Attributes="0" KeyPath="autofp.exe"/>
     <ROW Component="autofp.ico" ComponentId="{0B1D94D8-142F-4599-87C9-64CFB34A0C7A}" Directory_="dist_Dir" Attributes="0" KeyPath="autofp.ico" Type="0"/>
-    <ROW Component="back.png" ComponentId="{1BEC4A63-8076-4F70-9C0C-7A19259CE2F2}" Directory_="images_Dir" Attributes="0" KeyPath="back.png" Type="0"/>
-    <ROW Component="bgerror.tcl" ComponentId="{518585F7-3BE0-4EAD-8AE2-BE839D7B9402}" Directory_="tk8.5_Dir" Attributes="0" KeyPath="bgerror.tcl" Type="0"/>
-    <ROW Component="bmh.mplstyle" ComponentId="{714C6F44-24DF-4D1F-9520-A30EFABF3B20}" Directory_="stylelib_Dir" Attributes="0" KeyPath="bmh.mplstyle" Type="0"/>
-    <ROW Component="cmb10.ttf" ComponentId="{09E832B5-4103-4B4B-84BF-6057F9806F91}" Directory_="ttf_Dir" Attributes="0" KeyPath="COPYRIGHT.TXT" Type="0"/>
-    <ROW Component="cmex10.afm" ComponentId="{3A1241F6-0FC6-43D3-8D39-74C4ED825BE0}" Directory_="afm_Dir" Attributes="0" KeyPath="cmex10.afm" Type="0"/>
+    <ROW Component="back.png" ComponentId="{7351904E-15F9-4A39-AAD9-5A7C84B0A2D6}" Directory_="images_Dir" Attributes="0" KeyPath="back.png" Type="0"/>
+    <ROW Component="bgerror.tcl" ComponentId="{553A8B6B-C9A6-44B0-8B6F-22CB1C4DEE12}" Directory_="tk8.5_Dir" Attributes="0" KeyPath="bgerror.tcl" Type="0"/>
+    <ROW Component="bmh.mplstyle" ComponentId="{CE059270-8498-4C26-B766-49823F922966}" Directory_="stylelib_Dir" Attributes="0" KeyPath="bmh.mplstyle" Type="0"/>
+    <ROW Component="cmb10.ttf" ComponentId="{E060F440-A881-44CD-9620-34FED64B1261}" Directory_="ttf_Dir" Attributes="0" KeyPath="COPYRIGHT.TXT" Type="0"/>
+    <ROW Component="cmex10.afm" ComponentId="{F3D40D89-FA63-4237-8CFB-F986C3FDFFD7}" Directory_="afm_Dir" Attributes="0" KeyPath="cmex10.afm" Type="0"/>
     <ROW Component="convert.exe" ComponentId="{610273BF-99B1-482F-9AB8-07DD1E79A16C}" Directory_="dist_Dir" Attributes="0" KeyPath="convert.exe"/>
-    <ROW Component="cs.msg" ComponentId="{0A4969FA-F406-492A-9563-303F062EC73C}" Directory_="msgs_1_Dir" Attributes="0" KeyPath="cs.msg_1" Type="0"/>
-    <ROW Component="doc" ComponentId="{6F92A852-6C6E-4775-B0D5-B594B75EC375}" Directory_="doc_Dir" Attributes="0"/>
-    <ROW Component="earth.gif" ComponentId="{811BA08D-5201-4BE8-BC39-5038F9B087AA}" Directory_="images_1_Dir" Attributes="0" KeyPath="earth.gif" Type="0"/>
+    <ROW Component="cs.msg" ComponentId="{C19369A6-9626-4E70-B732-5D5A2FE46BB0}" Directory_="msgs_1_Dir" Attributes="0" KeyPath="cs.msg_1" Type="0"/>
+    <ROW Component="doc" ComponentId="{6DC38C7B-CC08-43D2-92E4-0B11FF359CEF}" Directory_="doc_Dir" Attributes="0"/>
+    <ROW Component="earth.gif" ComponentId="{781C6B18-C142-4A94-AF3E-2EE391BAEEA0}" Directory_="images_1_Dir" Attributes="0" KeyPath="earth.gif" Type="0"/>
     <ROW Component="ffmpeg.exe" ComponentId="{7661C153-117D-4CA5-85DD-BE14C676A236}" Directory_="dist_Dir" Attributes="0" KeyPath="ffmpeg.exe"/>
     <ROW Component="fp2k.exe" ComponentId="{64269A6B-ECD3-4BA2-92F0-4EF6102FAE4F}" Directory_="dist_Dir" Attributes="0" KeyPath="fp2k.exe"/>
-    <ROW Component="http.tcl" ComponentId="{AB3BB191-1988-433D-9756-A3CE8C9D9DE3}" Directory_="http1.0_Dir" Attributes="0" KeyPath="http.tcl" Type="0"/>
-    <ROW Component="lineprops.glade" ComponentId="{2BDA3212-EA42-4284-AD7E-39C7E741BA68}" Directory_="mpldata_Dir" Attributes="0" KeyPath="lineprops.glade" Type="0"/>
-    <ROW Component="logo.eps" ComponentId="{6F431387-BBD7-4411-9C37-F298800CA4E1}" Directory_="images_2_Dir" Attributes="0" KeyPath="logo.eps" Type="0"/>
-    <ROW Component="msvcp90.dll" ComponentId="{F3CE0951-8CF4-4A1C-9E70-CF94D045AFFA}" Directory_="dist_Dir" Attributes="0" KeyPath="msvcp90.dll"/>
-    <ROW Component="msvcr90.dll" ComponentId="{3EF7536F-3319-498E-AAC5-F61F2C553E36}" Directory_="dist_Dir" Attributes="0" KeyPath="msvcr90.dll"/>
-    <ROW Component="optparse.tcl" ComponentId="{09C2F258-ACCB-49B0-A979-3C73449C4144}" Directory_="opt0.4_Dir" Attributes="0" KeyPath="optparse.tcl" Type="0"/>
-    <ROW Component="prf.opj" ComponentId="{28160B13-681B-45EC-9D6E-E464E6151421}" Directory_="template_Dir" Attributes="0" KeyPath="prf.opj" Type="0"/>
-    <ROW Component="prf_one.cpp" ComponentId="{76BC20F7-B431-4501-BA73-72171E9F02E8}" Directory_="OringC_Dir" Attributes="0" KeyPath="prf_one.cpp" Type="0"/>
-    <ROW Component="python27.dll" ComponentId="{7819B12B-08BE-40E9-B62D-E45B1AD4E6D5}" Directory_="dist_Dir" Attributes="0" KeyPath="python27.dll"/>
+    <ROW Component="http.tcl" ComponentId="{0D4D7A36-DB1F-494E-AD32-F8FCD17C4EAC}" Directory_="http1.0_Dir" Attributes="0" KeyPath="http.tcl" Type="0"/>
+    <ROW Component="lineprops.glade" ComponentId="{7AF740A5-0BA8-4448-8A49-E79A79BBEE5B}" Directory_="mpldata_Dir" Attributes="0" KeyPath="lineprops.glade" Type="0"/>
+    <ROW Component="logo.eps" ComponentId="{8C00734E-3D24-487A-B8A9-ABA2905B270F}" Directory_="images_2_Dir" Attributes="0" KeyPath="logo.eps" Type="0"/>
+    <ROW Component="msvcp90.dll" ComponentId="{E9590C6A-D251-4BC5-B105-73C714E7B0D4}" Directory_="dist_Dir" Attributes="0" KeyPath="msvcp90.dll"/>
+    <ROW Component="msvcr90.dll" ComponentId="{8D9961F5-8BA4-487D-B459-80BF005370D8}" Directory_="dist_Dir" Attributes="0" KeyPath="msvcr90.dll"/>
+    <ROW Component="optparse.tcl" ComponentId="{DAE6AA3E-3E60-439D-AA42-308E8CD65262}" Directory_="opt0.4_Dir" Attributes="0" KeyPath="optparse.tcl" Type="0"/>
+    <ROW Component="prf.opj" ComponentId="{7B8B25AF-A855-45ED-9550-EA58274CE426}" Directory_="template_Dir" Attributes="0" KeyPath="prf.opj" Type="0"/>
+    <ROW Component="prf_one.cpp" ComponentId="{E42A1477-E2B3-414B-BCFF-51684FDAD575}" Directory_="OringC_Dir" Attributes="0" KeyPath="prf_one.cpp" Type="0"/>
+    <ROW Component="python27.dll" ComponentId="{B432C18A-46B7-44A0-ABFD-1F2364261C18}" Directory_="dist_Dir" Attributes="0" KeyPath="python27.dll"/>
+    <ROW Component="pythoncom27.dll" ComponentId="{8A5E93E4-368A-4BD8-87E1-B65AABAE840C}" Directory_="dist_Dir" Attributes="0" KeyPath="pythoncom27.dll"/>
+    <ROW Component="pywintypes27.dll" ComponentId="{B5F2FBBE-4891-4FDC-99A6-241ED2B6EF5A}" Directory_="dist_Dir" Attributes="0" KeyPath="pywintypes27.dll"/>
     <ROW Component="qgif4.dll" ComponentId="{CFA35533-25ED-4A3B-91F5-027FF779B3B3}" Directory_="imageformats_Dir" Attributes="0" KeyPath="qgif4.dll"/>
     <ROW Component="qico4.dll" ComponentId="{EE1A73AE-F57E-4B39-B07F-EDE5CB46AA79}" Directory_="imageformats_Dir" Attributes="0" KeyPath="qico4.dll"/>
     <ROW Component="qjpeg4.dll" ComponentId="{8B8E055E-D63D-4EDF-B7B7-977ABF87C8E8}" Directory_="imageformats_Dir" Attributes="0" KeyPath="qjpeg4.dll"/>
@@ -166,13 +170,13 @@
     <ROW Component="readme.txt" ComponentId="{05E82288-89F5-4011-AC05-9BECB357ECC5}" Directory_="AutoFP_Dir" Attributes="0" KeyPath="readme.txt_3" Type="0"/>
     <ROW Component="regid.199509.com.example" ComponentId="{E544B62F-D73E-41E9-AFF9-CE3E0E02F43F}" Directory_="regid.199509.com.example_Dir" Attributes="0"/>
     <ROW Component="shautofp.exe" ComponentId="{E7EF5474-327B-4411-8365-D5E4ABE06FF0}" Directory_="dist_Dir" Attributes="0" KeyPath="shautofp.exe"/>
-    <ROW Component="strategy.py" ComponentId="{A5EA8E15-0EC7-434E-86BE-CB5CA3BBBF0A}" Directory_="strategy_Dir" Attributes="0" KeyPath="strategy.py_1" Type="0"/>
-    <ROW Component="tcl85.dll" ComponentId="{1E333474-7925-4428-BF13-EA5570CFD440}" Directory_="dist_Dir" Attributes="0" KeyPath="tcl85.dll"/>
-    <ROW Component="tk85.dll" ComponentId="{E4ED9965-735B-4D15-81A5-65B52A992A00}" Directory_="dist_Dir" Attributes="0" KeyPath="tk85.dll"/>
+    <ROW Component="strategy.py" ComponentId="{55DB5BD0-53CE-45A0-B059-465CE331B556}" Directory_="strategy_Dir" Attributes="0" KeyPath="strategy.py" Type="0"/>
+    <ROW Component="tcl85.dll" ComponentId="{202C3C1C-9627-4BEC-9825-E8D94F1960F9}" Directory_="dist_Dir" Attributes="0" KeyPath="tcl85.dll"/>
+    <ROW Component="tk85.dll" ComponentId="{9A7E6848-27A8-4EBF-BF37-9A7B67BC3354}" Directory_="dist_Dir" Attributes="0" KeyPath="tk85.dll"/>
     <ROW Component="w9xpopen.exe" ComponentId="{A5A07F95-4A31-4E6B-A63D-06F2D032113C}" Directory_="dist_Dir" Attributes="0" KeyPath="w9xpopen.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="ACT AI_CustomARPName APPDIR AST4 Abidjan Acre Adak Aden Alaska Amsterdam Antananarivo Apia Atlantic AutoFP Azores BajaNorte Beulah Buenos_Aires CET Casey Code Continental CourierBold.afm GMT Indianapolis Longyearbyen Louisville ProductInformation QtCore4.dll QtGui4.dll af.msg altTheme.tcl anilabel.tcl ascii.enc auto.tcl autofp.bat autofp.exe autofp.ico back.png bgerror.tcl bmh.mplstyle cmb10.ttf cmex10.afm convert.exe cs.msg doc earth.gif ffmpeg.exe fp2k.exe http.tcl lineprops.glade logo.eps msvcp90.dll msvcr90.dll optparse.tcl prf.opj prf_one.cpp python27.dll qgif4.dll qico4.dll qjpeg4.dll qmng4.dll qsvg4.dll qtga4.dll qtiff4.dll readme.txt regid.199509.com.example shautofp.exe strategy.py tcl85.dll tk85.dll w9xpopen.exe"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="ACT AI_CustomARPName APPDIR AST4 Abidjan Acre Adak Aden Alaska Amsterdam Antananarivo Apia Atlantic AutoFP Azores BajaNorte Beulah Buenos_Aires CET CRYPT32.dll Casey Code Continental CourierBold.afm GMT Indianapolis Longyearbyen Louisville MPR.dll ProductInformation QtCore4.dll QtGui4.dll af.msg altTheme.tcl anilabel.tcl ascii.enc auto.tcl autofp.bat autofp.exe autofp.ico back.png bgerror.tcl bmh.mplstyle cmb10.ttf cmex10.afm convert.exe cs.msg doc earth.gif ffmpeg.exe fp2k.exe http.tcl lineprops.glade logo.eps msvcp90.dll msvcr90.dll optparse.tcl prf.opj prf_one.cpp python27.dll pythoncom27.dll pywintypes27.dll qgif4.dll qico4.dll qjpeg4.dll qmng4.dll qsvg4.dll qtga4.dll qtiff4.dll readme.txt regid.199509.com.example shautofp.exe strategy.py tcl85.dll tk85.dll w9xpopen.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -257,6 +261,7 @@
     <ROW File="Busingen" Component_="Amsterdam" FileName="Busingen" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\Europe\Busingen" SelfReg="false" NextFile="Chisinau"/>
     <ROW File="CET" Component_="CET" FileName="CET" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\CET" SelfReg="false" NextFile="Continental"/>
     <ROW File="COPYRIGHT.TXT" Component_="cmb10.ttf" FileName="COPYRI~1.TXT|COPYRIGHT.TXT" Attributes="0" SourcePath="AutoFP\dist\mpl-data\fonts\ttf\COPYRIGHT.TXT" SelfReg="false" NextFile="LICENSE_STIX"/>
+    <ROW File="CRYPT32.dll" Component_="CRYPT32.dll" FileName="CRYPT32.dll" Attributes="0" SourcePath="AutoFP\dist\CRYPT32.dll" SelfReg="false" NextFile="library.zip"/>
     <ROW File="CST6" Component_="AST4" FileName="CST6" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\SystemV\CST6" SelfReg="false" NextFile="CST6CDT_1"/>
     <ROW File="CST6CDT" Component_="CET" FileName="CST6CDT" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\CST6CDT" SelfReg="false" NextFile="Cuba"/>
     <ROW File="CST6CDT_1" Component_="AST4" FileName="CST6CDT" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\SystemV\CST6CDT" SelfReg="false" NextFile="EST5"/>
@@ -514,6 +519,7 @@
     <ROW File="Lusaka" Component_="Abidjan" FileName="Lusaka" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\Africa\Lusaka" SelfReg="false" NextFile="Malabo"/>
     <ROW File="Luxembourg" Component_="Amsterdam" FileName="LUXEMB~1|Luxembourg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\Europe\Luxembourg" SelfReg="false" NextFile="Madrid"/>
     <ROW File="MET" Component_="CET" FileName="MET" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\MET" SelfReg="false" NextFile="BajaNorte"/>
+    <ROW File="MPR.dll" Component_="MPR.dll" FileName="MPR.dll" Attributes="0" SourcePath="AutoFP\dist\MPR.dll" SelfReg="false" NextFile="msvcp90.dll"/>
     <ROW File="MST" Component_="CET" FileName="MST" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\MST" SelfReg="false" NextFile="MST7MDT"/>
     <ROW File="MST7" Component_="AST4" FileName="MST7" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\SystemV\MST7" SelfReg="false" NextFile="MST7MDT_1"/>
     <ROW File="MST7MDT" Component_="CET" FileName="MST7MDT" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\MST7MDT" SelfReg="false" NextFile="Navajo"/>
@@ -604,7 +610,7 @@
     <ROW File="PRC" Component_="CET" FileName="PRC" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\PRC" SelfReg="false" NextFile="PST8PDT"/>
     <ROW File="PRF.otw" Component_="prf.opj" FileName="PRF.otw" Attributes="0" SourcePath="AutoFP\dist\prf2origin\prf2origin\origin\template\PRF.otw" SelfReg="false" NextFile="PRF_IMG.emf"/>
     <ROW File="PRF_IMG.emf" Component_="prf.opj" FileName="PRF_IMG.emf" Attributes="0" SourcePath="AutoFP\dist\prf2origin\prf2origin\origin\template\PRF_IMG.emf" SelfReg="false" NextFile="PRF_IMG.otp"/>
-    <ROW File="PRF_IMG.otp" Component_="prf.opj" FileName="PRF_IMG.otp" Attributes="0" SourcePath="AutoFP\dist\prf2origin\prf2origin\origin\template\PRF_IMG.otp" SelfReg="false" NextFile="setting.txt"/>
+    <ROW File="PRF_IMG.otp" Component_="prf.opj" FileName="PRF_IMG.otp" Attributes="0" SourcePath="AutoFP\dist\prf2origin\prf2origin\origin\template\PRF_IMG.otp" SelfReg="false" NextFile="pyexpat.pyd"/>
     <ROW File="PST8" Component_="AST4" FileName="PST8" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\SystemV\PST8" SelfReg="false" NextFile="PST8PDT_1"/>
     <ROW File="PST8PDT" Component_="CET" FileName="PST8PDT" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\PST8PDT" SelfReg="false" NextFile="ROC"/>
     <ROW File="PST8PDT_1" Component_="AST4" FileName="PST8PDT" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\SystemV\PST8PDT" SelfReg="false" NextFile="YST9"/>
@@ -829,7 +835,8 @@
     <ROW File="_multiprocessing.pyd" Component_="autofp.ico" FileName="_MULTI~1.PYD|_multiprocessing.pyd" Attributes="0" SourcePath="AutoFP\dist\_multiprocessing.pyd" SelfReg="false" NextFile="_socket.pyd"/>
     <ROW File="_socket.pyd" Component_="autofp.ico" FileName="_socket.pyd" Attributes="0" SourcePath="AutoFP\dist\_socket.pyd" SelfReg="false" NextFile="_ssl.pyd"/>
     <ROW File="_ssl.pyd" Component_="autofp.ico" FileName="_ssl.pyd" Attributes="0" SourcePath="AutoFP\dist\_ssl.pyd" SelfReg="false" NextFile="_tkinter.pyd"/>
-    <ROW File="_tkinter.pyd" Component_="autofp.ico" FileName="_tkinter.pyd" Attributes="0" SourcePath="AutoFP\dist\_tkinter.pyd" SelfReg="false" NextFile="Code"/>
+    <ROW File="_tkinter.pyd" Component_="autofp.ico" FileName="_tkinter.pyd" Attributes="0" SourcePath="AutoFP\dist\_tkinter.pyd" SelfReg="false" NextFile="_win32sysloader.pyd"/>
+    <ROW File="_win32sysloader.pyd" Component_="autofp.ico" FileName="_WIN32~1.PYD|_win32sysloader.pyd" Attributes="0" SourcePath="AutoFP\dist\_win32sysloader.pyd" SelfReg="false"/>
     <ROW File="af.msg" Component_="af.msg" FileName="af.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\af.msg" SelfReg="false" NextFile="af_za.msg"/>
     <ROW File="af_za.msg" Component_="af.msg" FileName="af_za.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\af_za.msg" SelfReg="false" NextFile="ar.msg"/>
     <ROW File="altTheme.tcl" Component_="altTheme.tcl" FileName="altTheme.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\ttk\altTheme.tcl" SelfReg="false" NextFile="aquaTheme.tcl"/>
@@ -864,7 +871,7 @@
     <ROW File="button.tcl" Component_="bgerror.tcl" FileName="button.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\button.tcl" SelfReg="false" NextFile="choosedir.tcl"/>
     <ROW File="button.tcl_1" Component_="anilabel.tcl" FileName="button.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\button.tcl" SelfReg="false" NextFile="check.tcl"/>
     <ROW File="button.tcl_2" Component_="altTheme.tcl" FileName="button.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\ttk\button.tcl" SelfReg="false" NextFile="clamTheme.tcl"/>
-    <ROW File="bz2.pyd" Component_="autofp.ico" FileName="bz2.pyd" Attributes="0" SourcePath="AutoFP\dist\bz2.pyd" SelfReg="false" NextFile="library.zip"/>
+    <ROW File="bz2.pyd" Component_="autofp.ico" FileName="bz2.pyd" Attributes="0" SourcePath="AutoFP\dist\bz2.pyd" SelfReg="false" NextFile="CRYPT32.dll"/>
     <ROW File="ca.msg" Component_="af.msg" FileName="ca.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\ca.msg" SelfReg="false" NextFile="cs.msg"/>
     <ROW File="check.tcl" Component_="anilabel.tcl" FileName="check.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\check.tcl" SelfReg="false" NextFile="clrpick.tcl_1"/>
     <ROW File="choosedir.tcl" Component_="bgerror.tcl" FileName="CHOOSE~1.TCL|choosedir.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\choosedir.tcl" SelfReg="false" NextFile="clrpick.tcl"/>
@@ -1033,7 +1040,7 @@
     <ROW File="gl_es.msg" Component_="af.msg" FileName="gl_es.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\gl_es.msg" SelfReg="false" NextFile="gv.msg"/>
     <ROW File="goldberg.tcl" Component_="anilabel.tcl" FileName="goldberg.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\goldberg.tcl" SelfReg="false" NextFile="hello"/>
     <ROW File="gray25.xbm" Component_="earth.gif" FileName="gray25.xbm" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\images\gray25.xbm" SelfReg="false" NextFile="letters.xbm"/>
-    <ROW File="grayscale.mplstyle" Component_="bmh.mplstyle" FileName="GRAYSC~1.MPL|grayscale.mplstyle" Attributes="0" SourcePath="AutoFP\dist\mpl-data\stylelib\grayscale.mplstyle" SelfReg="false" NextFile="msvcp90.dll"/>
+    <ROW File="grayscale.mplstyle" Component_="bmh.mplstyle" FileName="GRAYSC~1.MPL|grayscale.mplstyle" Attributes="0" SourcePath="AutoFP\dist\mpl-data\stylelib\grayscale.mplstyle" SelfReg="false" NextFile="MPR.dll"/>
     <ROW File="gv.msg" Component_="af.msg" FileName="gv.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\gv.msg" SelfReg="false" NextFile="gv_gb.msg"/>
     <ROW File="gv_gb.msg" Component_="af.msg" FileName="gv_gb.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\gv_gb.msg" SelfReg="false" NextFile="he.msg"/>
     <ROW File="hand.png" Component_="back.png" FileName="hand.png" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\hand.png" SelfReg="false" NextFile="hand.ppm"/>
@@ -1183,7 +1190,7 @@
     <ROW File="numpy.lib._compiled_base.pyd" Component_="autofp.ico" FileName="NUMPYL~1.PYD|numpy.lib._compiled_base.pyd" Attributes="0" SourcePath="AutoFP\dist\numpy.lib._compiled_base.pyd" SelfReg="false" NextFile="numpy.linalg.lapack_lite.pyd"/>
     <ROW File="numpy.linalg._umath_linalg.pyd" Component_="autofp.ico" FileName="NUMPYL~3.PYD|numpy.linalg._umath_linalg.pyd" Attributes="0" SourcePath="AutoFP\dist\numpy.linalg._umath_linalg.pyd" SelfReg="false" NextFile="numpy.random.mtrand.pyd"/>
     <ROW File="numpy.linalg.lapack_lite.pyd" Component_="autofp.ico" FileName="NUMPYL~2.PYD|numpy.linalg.lapack_lite.pyd" Attributes="0" SourcePath="AutoFP\dist\numpy.linalg.lapack_lite.pyd" SelfReg="false" NextFile="numpy.linalg._umath_linalg.pyd"/>
-    <ROW File="numpy.random.mtrand.pyd" Component_="autofp.ico" FileName="NUMPYR~1.PYD|numpy.random.mtrand.pyd" Attributes="0" SourcePath="AutoFP\dist\numpy.random.mtrand.pyd" SelfReg="false" NextFile="pyexpat.pyd"/>
+    <ROW File="numpy.random.mtrand.pyd" Component_="autofp.ico" FileName="NUMPYR~1.PYD|numpy.random.mtrand.pyd" Attributes="0" SourcePath="AutoFP\dist\numpy.random.mtrand.pyd" SelfReg="false" NextFile="Code"/>
     <ROW File="obsolete.tcl" Component_="bgerror.tcl" FileName="obsolete.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\obsolete.tcl" SelfReg="false" NextFile="optMenu.tcl"/>
     <ROW File="optMenu.tcl" Component_="bgerror.tcl" FileName="optMenu.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\optMenu.tcl" SelfReg="false" NextFile="palette.tcl"/>
     <ROW File="optparse.tcl" Component_="optparse.tcl" FileName="optparse.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\opt0.4\optparse.tcl" SelfReg="false" NextFile="pkgIndex.tcl_1"/>
@@ -1256,7 +1263,9 @@
     <ROW File="pwrdLogo200.gif" Component_="logo.eps" FileName="PWRDLO~4.GIF|pwrdLogo200.gif" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\images\pwrdLogo200.gif" SelfReg="false" NextFile="pwrdLogo75.gif"/>
     <ROW File="pwrdLogo75.gif" Component_="logo.eps" FileName="PWRDLO~5.GIF|pwrdLogo75.gif" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\images\pwrdLogo75.gif" SelfReg="false" NextFile="README_1"/>
     <ROW File="pyexpat.pyd" Component_="autofp.ico" FileName="pyexpat.pyd" Attributes="0" SourcePath="AutoFP\dist\pyexpat.pyd" SelfReg="false" NextFile="PyQt4.QtCore.pyd"/>
-    <ROW File="python27.dll" Component_="python27.dll" FileName="python27.dll" Attributes="0" SourcePath="AutoFP\dist\python27.dll" SelfReg="false" NextFile="QtCore4.dll"/>
+    <ROW File="python27.dll" Component_="python27.dll" FileName="python27.dll" Attributes="0" SourcePath="AutoFP\dist\python27.dll" SelfReg="false" NextFile="pythoncom27.dll"/>
+    <ROW File="pythoncom27.dll" Component_="pythoncom27.dll" FileName="PYTHON~1.DLL|pythoncom27.dll" Attributes="0" SourcePath="AutoFP\dist\pythoncom27.dll" SelfReg="false" NextFile="pywintypes27.dll"/>
+    <ROW File="pywintypes27.dll" Component_="pywintypes27.dll" FileName="PYWINT~1.DLL|pywintypes27.dll" Attributes="0" SourcePath="AutoFP\dist\pywintypes27.dll" SelfReg="false" NextFile="QtCore4.dll"/>
     <ROW File="pzcmi8a.afm" Component_="cmex10.afm" FileName="pzcmi8a.afm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\fonts\afm\pzcmi8a.afm" SelfReg="false" NextFile="pzdr.afm"/>
     <ROW File="pzdr.afm" Component_="cmex10.afm" FileName="pzdr.afm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\fonts\afm\pzdr.afm" SelfReg="false" NextFile="CourierBold.afm"/>
     <ROW File="qgif4.dll" Component_="qgif4.dll" FileName="qgif4.dll" Attributes="0" SourcePath="imageformats\qgif4.dll" SelfReg="false" NextFile="qico4.dll"/>
@@ -1286,13 +1295,13 @@
     <ROW File="scrlbar.tcl" Component_="bgerror.tcl" FileName="scrlbar.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\scrlbar.tcl" SelfReg="false" NextFile="spinbox.tcl"/>
     <ROW File="scrollbar.tcl" Component_="altTheme.tcl" FileName="SCROLL~1.TCL|scrollbar.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\ttk\scrollbar.tcl" SelfReg="false" NextFile="sizegrip.tcl"/>
     <ROW File="search.tcl" Component_="anilabel.tcl" FileName="search.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\search.tcl" SelfReg="false" NextFile="spin.tcl"/>
-    <ROW File="select.pyd" Component_="autofp.ico" FileName="select.pyd" Attributes="0" SourcePath="AutoFP\dist\select.pyd" SelfReg="false" NextFile="sip.pyd"/>
+    <ROW File="select.pyd" Component_="autofp.ico" FileName="select.pyd" Attributes="0" SourcePath="AutoFP\dist\select.pyd" SelfReg="false" NextFile="setting.txt"/>
     <ROW File="setting.txt" Component_="autofp.ico" FileName="setting.txt" Attributes="0" SourcePath="AutoFP\dist\setting.txt" SelfReg="false" NextFile="setting_default.txt"/>
-    <ROW File="setting_default.txt" Component_="autofp.ico" FileName="SETTIN~1.TXT|setting_default.txt" Attributes="0" SourcePath="AutoFP\dist\setting_default.txt" SelfReg="false" NextFile="strategy.py"/>
+    <ROW File="setting_default.txt" Component_="autofp.ico" FileName="SETTIN~1.TXT|setting_default.txt" Attributes="0" SourcePath="AutoFP\dist\setting_default.txt" SelfReg="false" NextFile="sip.pyd"/>
     <ROW File="sh.msg" Component_="af.msg" FileName="sh.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\sh.msg" SelfReg="false" NextFile="sk.msg"/>
     <ROW File="shautofp.exe" Component_="shautofp.exe" FileName="shautofp.exe" Attributes="0" SourcePath="AutoFP\dist\shautofp.exe" SelfReg="false" NextFile="autofp.bat" DigSign="true"/>
     <ROW File="shiftjis.enc" Component_="ascii.enc" FileName="shiftjis.enc" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\encoding\shiftjis.enc" SelfReg="false" NextFile="symbol.enc"/>
-    <ROW File="sip.pyd" Component_="autofp.ico" FileName="sip.pyd" Attributes="0" SourcePath="AutoFP\dist\sip.pyd" SelfReg="false" NextFile="auto.tcl"/>
+    <ROW File="sip.pyd" Component_="autofp.ico" FileName="sip.pyd" Attributes="0" SourcePath="AutoFP\dist\sip.pyd" SelfReg="false" NextFile="strategy.py"/>
     <ROW File="sizegrip.tcl" Component_="altTheme.tcl" FileName="sizegrip.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\ttk\sizegrip.tcl" SelfReg="false" NextFile="spinbox.tcl_1"/>
     <ROW File="sk.msg" Component_="af.msg" FileName="sk.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\sk.msg" SelfReg="false" NextFile="sl.msg"/>
     <ROW File="sl.msg" Component_="af.msg" FileName="sl.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\sl.msg" SelfReg="false" NextFile="sq.msg"/>
@@ -1321,12 +1330,12 @@
     <ROW File="stock_zoomin.xpm" Component_="back.png" FileName="STOCK_~7.XPM|stock_zoom-in.xpm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\stock_zoom-in.xpm" SelfReg="false" NextFile="stock_zoomout.ppm"/>
     <ROW File="stock_zoomout.ppm" Component_="back.png" FileName="STOCK_~8.PPM|stock_zoom-out.ppm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\stock_zoom-out.ppm" SelfReg="false" NextFile="stock_zoomout.xpm"/>
     <ROW File="stock_zoomout.xpm" Component_="back.png" FileName="STOCK_~8.XPM|stock_zoom-out.xpm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\stock_zoom-out.xpm" SelfReg="false" NextFile="subplots.png"/>
-    <ROW File="strategy.py" Component_="autofp.ico" FileName="strategy.py" Attributes="0" SourcePath="AutoFP\dist\strategy.py" SelfReg="false" NextFile="strategy.py.default"/>
-    <ROW File="strategy.py.default" Component_="autofp.ico" FileName="STRATE~1.DEF|strategy.py.default" Attributes="0" SourcePath="AutoFP\dist\strategy.py.default" SelfReg="false" NextFile="strategy.py_1"/>
-    <ROW File="strategy.py_1" Component_="strategy.py" FileName="strategy.py" Attributes="0" SourcePath="AutoFP\dist\strategy\strategy.py" SelfReg="false" NextFile="strategy_neutron_cw.py"/>
+    <ROW File="strategy.py" Component_="strategy.py" FileName="strategy.py" Attributes="0" SourcePath="AutoFP\dist\strategy\strategy.py" SelfReg="false" NextFile="strategy_neutron_cw.py"/>
+    <ROW File="strategy.py.default" Component_="autofp.ico" FileName="STRATE~1.DEF|strategy.py.default" Attributes="0" SourcePath="AutoFP\dist\strategy.py.default" SelfReg="false" NextFile="auto.tcl"/>
+    <ROW File="strategy.py_1" Component_="autofp.ico" FileName="strategy.py" Attributes="0" SourcePath="AutoFP\dist\strategy.py" SelfReg="false" NextFile="strategy.py.default"/>
     <ROW File="strategy_neutron_cw.py" Component_="strategy.py" FileName="STRATE~1.PY|strategy_neutron_cw.py" Attributes="0" SourcePath="AutoFP\dist\strategy\strategy_neutron_cw.py" SelfReg="false" NextFile="strategy_neutron_tof.py"/>
     <ROW File="strategy_neutron_tof.py" Component_="strategy.py" FileName="STRATE~2.PY|strategy_neutron_tof.py" Attributes="0" SourcePath="AutoFP\dist\strategy\strategy_neutron_tof.py" SelfReg="false" NextFile="strategy_xray.py"/>
-    <ROW File="strategy_xray.py" Component_="strategy.py" FileName="STRATE~3.PY|strategy_xray.py" Attributes="0" SourcePath="AutoFP\dist\strategy\strategy_xray.py" SelfReg="false"/>
+    <ROW File="strategy_xray.py" Component_="strategy.py" FileName="STRATE~3.PY|strategy_xray.py" Attributes="0" SourcePath="AutoFP\dist\strategy\strategy_xray.py" SelfReg="false" NextFile="strategy.py_1"/>
     <ROW File="style.tcl" Component_="anilabel.tcl" FileName="style.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\style.tcl" SelfReg="false" NextFile="tclIndex_1"/>
     <ROW File="subplots.png" Component_="back.png" FileName="subplots.png" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\subplots.png" SelfReg="false" NextFile="subplots.ppm"/>
     <ROW File="subplots.ppm" Component_="back.png" FileName="subplots.ppm" Attributes="0" SourcePath="AutoFP\dist\mpl-data\images\subplots.ppm" SelfReg="false" NextFile="subplots.xpm"/>
@@ -1377,7 +1386,7 @@
     <ROW File="ttkscale.tcl" Component_="anilabel.tcl" FileName="ttkscale.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\ttkscale.tcl" SelfReg="false" NextFile="twind.tcl"/>
     <ROW File="twind.tcl" Component_="anilabel.tcl" FileName="twind.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\twind.tcl" SelfReg="false" NextFile="unicodeout.tcl"/>
     <ROW File="uk.msg" Component_="af.msg" FileName="uk.msg" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\msgs\uk.msg" SelfReg="false" NextFile="vi.msg"/>
-    <ROW File="unicodedata.pyd" Component_="autofp.ico" FileName="UNICOD~1.PYD|unicodedata.pyd" Attributes="0" SourcePath="AutoFP\dist\unicodedata.pyd" SelfReg="false" NextFile="_ctypes.pyd"/>
+    <ROW File="unicodedata.pyd" Component_="autofp.ico" FileName="UNICOD~1.PYD|unicodedata.pyd" Attributes="0" SourcePath="AutoFP\dist\unicodedata.pyd" SelfReg="false" NextFile="win32api.pyd"/>
     <ROW File="unicodeout.tcl" Component_="anilabel.tcl" FileName="UNICOD~1.TCL|unicodeout.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\unicodeout.tcl" SelfReg="false" NextFile="vscale.tcl"/>
     <ROW File="unsupported.tcl" Component_="bgerror.tcl" FileName="UNSUPP~1.TCL|unsupported.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\unsupported.tcl" SelfReg="false" NextFile="xmfbox.tcl"/>
     <ROW File="utils.tcl" Component_="altTheme.tcl" FileName="utils.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\ttk\utils.tcl" SelfReg="false" NextFile="vistaTheme.tcl"/>
@@ -1386,6 +1395,11 @@
     <ROW File="vscale.tcl" Component_="anilabel.tcl" FileName="vscale.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\vscale.tcl" SelfReg="false" NextFile="widget"/>
     <ROW File="w9xpopen.exe" Component_="w9xpopen.exe" FileName="w9xpopen.exe" Attributes="0" SourcePath="AutoFP\dist\w9xpopen.exe" SelfReg="false" NextFile="readme.txt_3" DigSign="true"/>
     <ROW File="widget" Component_="anilabel.tcl" FileName="widget" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\demos\widget" SelfReg="false" NextFile="dialog.tcl"/>
+    <ROW File="win32api.pyd" Component_="autofp.ico" FileName="win32api.pyd" Attributes="0" SourcePath="AutoFP\dist\win32api.pyd" SelfReg="false" NextFile="win32pdh.pyd"/>
+    <ROW File="win32pdh.pyd" Component_="autofp.ico" FileName="win32pdh.pyd" Attributes="0" SourcePath="AutoFP\dist\win32pdh.pyd" SelfReg="false" NextFile="win32pipe.pyd"/>
+    <ROW File="win32pipe.pyd" Component_="autofp.ico" FileName="WIN32P~1.PYD|win32pipe.pyd" Attributes="0" SourcePath="AutoFP\dist\win32pipe.pyd" SelfReg="false" NextFile="win32ui.pyd"/>
+    <ROW File="win32ui.pyd" Component_="autofp.ico" FileName="win32ui.pyd" Attributes="0" SourcePath="AutoFP\dist\win32ui.pyd" SelfReg="false" NextFile="win32wnet.pyd"/>
+    <ROW File="win32wnet.pyd" Component_="autofp.ico" FileName="WIN32W~1.PYD|win32wnet.pyd" Attributes="0" SourcePath="AutoFP\dist\win32wnet.pyd" SelfReg="false" NextFile="_ctypes.pyd"/>
     <ROW File="winTheme.tcl" Component_="altTheme.tcl" FileName="winTheme.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\ttk\winTheme.tcl" SelfReg="false" NextFile="xpTheme.tcl"/>
     <ROW File="word.tcl" Component_="auto.tcl" FileName="word.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\word.tcl" SelfReg="false" NextFile="bgerror.tcl"/>
     <ROW File="xmfbox.tcl" Component_="bgerror.tcl" FileName="xmfbox.tcl" Attributes="0" SourcePath="AutoFP\dist\tcl\tk8.5\xmfbox.tcl" SelfReg="false" NextFile="tcl85.dll"/>
@@ -1534,9 +1548,6 @@
     <ROW Condition="VersionMsi &gt;= AI_REQUIRED_WINDOWS_INSTALLER_VERSION" Description="[ProductName] cannot be installed on systems with Windows Installer version lower than [AI_REQUIRED_WINDOWS_INSTALLER_DISPLAY]." DescriptionLocId="AI.LaunchCondition.WI" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiLockPermComponent">
-    <ROW LockObject="setting.txt" Table="File" User="Everyone" Permission="1880096767" Flags="0"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
     <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
     <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
@@ -1588,7 +1599,7 @@
     <ROW XmlAttribute="xsischemaLocation" XmlElement="swidsoftware_identification_tag" Name="xsi:schemaLocation" Flags="14" Order="3" Value="http://standards.iso.org/iso/19770/-2/2008/schema.xsd software_identification_tag.xsd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
-    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="128"/>
+    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="131"/>
     <ROW XmlElement="swidentitlement_required_indicator" ParentElement="swidsoftware_identification_tag" Name="swid:entitlement_required_indicator" Condition="1" Order="0" Flags="14" Text="false"/>
     <ROW XmlElement="swidmajor" ParentElement="swidnumeric" Name="swid:major" Condition="1" Order="0" Flags="14" Text="0"/>
     <ROW XmlElement="swidminor" ParentElement="swidnumeric" Name="swid:minor" Condition="1" Order="1" Flags="14" Text="1"/>
