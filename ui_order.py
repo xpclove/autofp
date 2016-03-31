@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-# Created: Fri Jan 08 22:43:20 2016
+# Created: Thu Mar 31 14:55:52 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -192,7 +192,7 @@ class Ui_Order(object):
         self.button_down.setText(_translate("Order", "Down", None))
         self.buttonreset.setText(_translate("Order", "Reset", None))
         self.button_configure_s.setText(_translate("Order", "configure", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Order", "Order", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Order", "Strategy", None))
         self.text_asylim.setToolTip(_translate("Order", "<html><head/><body><p><span style=\" color:#000000;\">defined by &quot;Asylim in *.PCR&quot;</span></p></body></html>", None))
         self.text_asylim.setText(_translate("Order", "60", None))
         self.label.setText(_translate("Order", "Asylim:", None))

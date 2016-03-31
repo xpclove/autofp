@@ -39,7 +39,7 @@
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>Order</string>
+     <string>Strategy</string>
     </attribute>
     <widget class="QTableWidget" name="table">
      <property name="geometry">
