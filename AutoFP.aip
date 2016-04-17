@@ -20,10 +20,10 @@
     <ROW Property="AiPreferFastOem" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="CTRLS" Value="3"/>
     <ROW Property="Manufacturer" Value="Shanghai University"/>
-    <ROW Property="ProductCode" Value="1033:{33A43941-6DCD-45B9-9D00-77FE3459A142} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{B0F54C98-43E4-4393-8FC9-41259B20409B} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="AutoFP"/>
-    <ROW Property="ProductVersion" Value="0.1.134" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.1.139" Type="32"/>
     <ROW Property="REBOOT" MultiBuildValue="DefaultBuild:ReallySuppress"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
@@ -139,7 +139,7 @@
     <ROW Component="back.png" ComponentId="{5784CC4C-A7BD-4C80-AFE4-AAFF9808A937}" Directory_="images_Dir" Attributes="0" KeyPath="back.png" Type="0"/>
     <ROW Component="bgerror.tcl" ComponentId="{8C7FCC13-52F7-49A1-8219-C17B9AB93F7C}" Directory_="tk8.5_Dir" Attributes="0" KeyPath="bgerror.tcl" Type="0"/>
     <ROW Component="bmh.mplstyle" ComponentId="{770F3627-F9CF-4C15-BA4D-6FCC9D636808}" Directory_="stylelib_Dir" Attributes="0" KeyPath="bmh.mplstyle" Type="0"/>
-    <ROW Component="cmb10.ttf" ComponentId="{05DCCF93-2784-4721-8BFB-27A0A0F7A223}" Directory_="ttf_Dir" Attributes="0" Type="0"/>
+    <ROW Component="cmb10.ttf" ComponentId="{05DCCF93-2784-4721-8BFB-27A0A0F7A223}" Directory_="ttf_Dir" Attributes="0" KeyPath="COPYRIGHT.TXT" Type="0"/>
     <ROW Component="cmex10.afm" ComponentId="{AEA4F65E-1165-492A-84D4-37CDC6DC3DAA}" Directory_="afm_Dir" Attributes="0" KeyPath="cmex10.afm" Type="0"/>
     <ROW Component="convert.exe" ComponentId="{610273BF-99B1-482F-9AB8-07DD1E79A16C}" Directory_="dist_Dir" Attributes="0" KeyPath="convert.exe"/>
     <ROW Component="cs.msg" ComponentId="{F85EBBFF-76FE-4D9B-B7DD-164CC6B9AF74}" Directory_="msgs_1_Dir" Attributes="0" KeyPath="cs.msg_1" Type="0"/>
@@ -1585,7 +1585,7 @@
     <ROW XmlAttribute="xsischemaLocation" XmlElement="swidsoftware_identification_tag" Name="xsi:schemaLocation" Flags="14" Order="3" Value="http://standards.iso.org/iso/19770/-2/2008/schema.xsd software_identification_tag.xsd"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
-    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="134"/>
+    <ROW XmlElement="swidbuild" ParentElement="swidnumeric" Name="swid:build" Condition="1" Order="2" Flags="14" Text="139"/>
     <ROW XmlElement="swidentitlement_required_indicator" ParentElement="swidsoftware_identification_tag" Name="swid:entitlement_required_indicator" Condition="1" Order="0" Flags="14" Text="false"/>
     <ROW XmlElement="swidmajor" ParentElement="swidnumeric" Name="swid:major" Condition="1" Order="0" Flags="14" Text="0"/>
     <ROW XmlElement="swidminor" ParentElement="swidnumeric" Name="swid:minor" Condition="1" Order="1" Flags="14" Text="1"/>
