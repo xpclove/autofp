@@ -3,13 +3,13 @@
 Titl    LaMnO3 (Pbnm) 3t2-RT  (Crushed single X-tal, Diam=4 mm, H=10mm)
 
   ! Cell parameters
-Cell      5.5365    5.7471    7.6926   90.0000   90.0000   90.0000
+Cell      5.5065    5.5471    7.6926   90.0000   90.0000   90.0000
 
   ! Atoms in the asymmetric unit 
-Atom  La      -0.00771   0.04904   0.25000   1.00000
+Atom  La      -0.00861   0.04964   0.25000   1.00000
 Atom  Mn       0.50000   0.00000   0.00000   1.00000
-Atom  O1       0.07432   0.48744   0.25000   1.00000
-Atom  O2       0.72553   0.30639   0.03831   1.00000
+Atom  O1       0.07932   0.49744   0.25000   1.00000
+Atom  O2       0.72853   0.30739   0.03831   1.00000
 
   ! Space group symbol
 Spgr P b n m             

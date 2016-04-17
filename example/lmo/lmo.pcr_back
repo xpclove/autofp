@@ -1,5 +1,6 @@
 COMM  LaMnO3 (Pbnm) 3t2-RT  (Crushed single X-tal, Diam=4 mm, H=10mm)
-! Files => DAT-file: lmo,  PCR-file: lmo_5
+! Current global Chi2 (Bragg contrib.) =      1263.    
+! Files => DAT-file: lmo.dat,  PCR-file: lmo
 !Job Npr Nph Nba Nex Nsc Nor Dum Iwg Ilo Ias Res Ste Nre Cry Uni Cor Opt Aut
    1   7   1   0   2   0   0   1   1   0   1   0   0   0   0   0   0   0   1
 !
@@ -17,20 +18,20 @@ COMM  LaMnO3 (Pbnm) 3t2-RT  (Crushed single X-tal, Diam=4 mm, H=10mm)
       125.00      180.00
 ! 
 !
-       4    !Number of refined parameters
+       0    !Number of refined parameters
 !
 !  Zero    Code    SyCos    Code   SySin    Code  Lambda     Code MORE ->Patt# 1
-  0.0009    0.0  0.00000    0.0  0.00000    0.0 0.000000    0.00   0
+  0.00090    0.0  0.00000    0.0  0.00000    0.0 0.000000    0.00   0
 !   Background coefficients/codes  for Pattern#  1  (Polynomial of 6th degree)
       20.208      -4.797      16.907     -12.027       1.070       0.571
         0.00        0.00        0.00        0.00        0.00        0.00
 !-------------------------------------------------------------------------------
-!  Data for PHASE number:   1  ==> Current R_Bragg for Pattern#  1:     0.00
+!  Data for PHASE number:   1  ==> Current R_Bragg for Pattern#  1:    81.92
 !-------------------------------------------------------------------------------
 LaMnO3              BKG brown
 !
 !Nat Dis Ang Pr1 Pr2 Pr3 Jbt Irf Isy Str Furth       ATZ    Nvk Npr More
-   4   3   0 0.0 0.0 1.0   0   0   0   0   0        967.370   0   7   1
+   4   3   0 0.0 0.0 1.0   0   0   0   0   0        967.367   0   7   1
 !
 !Jvi Jdi Hel Sol Mom Ter  Brind   RMua    RMub    RMuc   Jtyp  Nsp_Ref Ph_Shift N_Domains
    0   3   0   0   0   0  1.0000  0.0000  0.0000  0.0000    1      2      0      0
@@ -66,12 +67,12 @@ O2     O       0.72853  0.30739  0.03831  0.45960   1.00000   0   0   0    3  # 
   0.00000  0.00000  0.09394  0.03215  0.00000  0.00000  0.00000  0.00000
      0.00     0.00     0.00     0.00     0.00     0.00     0.00     0.00
 ! Special reflections: 
-!  h   k   l  nvk       D-HG^2  Cod_D-HG^2      D-HL      Cod_D-HL      Shift    Cod_Shift
-   0   2   2    0 -0.12906E-01      00.000     0.03826      00.000     0.00000       0.000
-   2   0   2    0  0.27546E-03      00.000    -0.00584      00.000     0.00000       0.000
+!  h   k   l  nvk       D-HG^2  Cod_D-HG^2      D-HL      Cod_D-HL      Shift    Cod_Shift    Del_U/sig1      Code     Del_Y/gam2     Code
+   0   2   2    0 -0.12906E-01       0.000     0.03826       0.000     0.00000       0.000     0.00000       0.000     0.00000       0.000
+   2   0   2    0  0.27546E-03       0.000    -0.00584       0.000     0.00000       0.000     0.00000       0.000     0.00000       0.000
 ! Soft distance constraints:
 La   Mn     1   -1.00000    0.00000    0.00000    3.34780    0.00090
 La   Mn     1    0.00000    0.00000    0.00000    3.41740    0.00090
 La   Mn     4   -0.50000    0.50000    0.00000    3.22740    0.00080
-!  2Th1/TOF1    2Th2/TOF2  Pattern # 1
+!  2Th1/TOF1    2Th2/TOF2  Pattern to plot
       11.000     125.000       1

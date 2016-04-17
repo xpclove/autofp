@@ -290,15 +290,15 @@ class Ui(QtGui.QMainWindow):
                           _fromUtf8("FullProf PCR File(*.pcr)"))
         if len(selectFileNames)<=0:
             return
-	print "open *.pcr: ",selectFileNames[0]
-	path=str(selectFileNames[0])
+	print "open *.pcr: ",selectFileNames[0].toLocal8Bit();path="";
+	path=str(selectFileNames[0].toLocal8Bit())#,'gbk',"ignore")
         self.open(path)
     def open(self,path):
         self.state=1
         self.run=Run() # get a new Run() 
         self.showMsg(path+" open")
         self.run.reset(path)
-        self.text_path.setText(path)
+        self.text_path.setText(unicode(path,"gbk","ignore"))
         self.updateTable()
         self.pcr_yorn=True
         self.window_order.init(self.run.job)

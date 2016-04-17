@@ -193,13 +193,13 @@ loop_
 'x+1/2,-y+1/2,z+1/2'
 'x,y,-z+1/2'
  
-_cell_length_a                       5.53648(5)
-_cell_length_b                       5.74713(5)
-_cell_length_c                       7.69256(7)
+_cell_length_a                       5.50648
+_cell_length_b                       5.54713
+_cell_length_c                       7.69256
 _cell_angle_alpha                    90.00000
 _cell_angle_beta                     90.00000
 _cell_angle_gamma                    90.00000
-_cell_volume                         244.769(4)
+_cell_volume                         234.97052
 _cell_formula_units_Z                ?
 _cell_measurement_temperature        ?
 _cell_special_details
@@ -322,36 +322,36 @@ _pd_proc_ls_pref_orient_corr
 #  The sum is extended to all non-excluded points.
 #  These are the current CIF standard
  
-_pd_proc_ls_prof_R_factor                4.9403
-_pd_proc_ls_prof_wR_factor               5.7884
-_pd_proc_ls_prof_wR_expected             3.9601
+_pd_proc_ls_prof_R_factor               49.3806
+_pd_proc_ls_prof_wR_factor              75.6670
+_pd_proc_ls_prof_wR_expected             2.1487
  
 #  The following profile R-factors are CORRECTED for background
 #  The sum is extended to all non-excluded points.
 #  These items are not in the current CIF standard, but are defined above
  
-_pd_proc_ls_prof_cR_factor                9.0737
-_pd_proc_ls_prof_cwR_factor               8.8943
-_pd_proc_ls_prof_cwR_expected             6.0849
+_pd_proc_ls_prof_cR_factor               88.3858
+_pd_proc_ls_prof_cwR_factor              94.4958
+_pd_proc_ls_prof_cwR_expected             2.6834
  
 #  The following items are not in the CIF standard, but are defined above
  
-_pd_proc_ls_prof_chi2                 2.1365
-_pd_proc_ls_prof_echi2                2.1579
+_pd_proc_ls_prof_chi2              1240.0646
+_pd_proc_ls_prof_echi2             1262.7671
  
 #  Items related to LS refinement
  
-_refine_ls_R_I_factor                 4.7398
-_refine_ls_number_reflns                   438
-_refine_ls_number_parameters                32
+_refine_ls_R_I_factor                81.9198
+_refine_ls_number_reflns                   418
+_refine_ls_number_parameters                 0
 _refine_ls_number_restraints                 3
  
 # The following four items apply to angular dispersive measurements.
 # 2theta minimum, maximum and increment (in degrees) are for the 
 # intensities used in the refinement.
  
-_pd_proc_2theta_range_min               -0.0003
-_pd_proc_2theta_range_max              125.4497
+_pd_proc_2theta_range_min               -0.0009
+_pd_proc_2theta_range_max              125.4491
 _pd_proc_2theta_range_inc              0.050000
 _pd_proc_wavelength                    1.227200
  
@@ -384,10 +384,10 @@ loop_
     _atom_site_occupancy
     _atom_site_adp_type              # Not in version 2.0.1
     _atom_site_type_symbol
- La -0.00771(11)  0.04904(12)  0.25000  0.0045(2)  1.00000 Uiso LA  
- Mn  0.50000  0.00000  0.00000  0.0027(4)  1.00000 Uiso MN  
- O1  0.0743(2)  0.4874(2)  0.25000  0.0063(3)  1.00000 Uiso O   
- O2  0.72553(17)  0.30639(17)  0.03831(12)  0.0056(2)  1.00000 Uiso O   
+ La -0.00861  0.04964  0.25000  0.00483  1.00000 Uiso LA    
+ Mn  0.50000  0.00000  0.00000  0.00268  1.00000 Uiso MN    
+ O1  0.07932  0.49744  0.25000  0.00645  1.00000 Uiso O     
+ O2  0.72853  0.30739  0.03831  0.00582  1.00000 Uiso O     
  
 # Note: if the displacement parameters were refined anisotropically
 # the U matrices should be given as for single-crystal studies.
