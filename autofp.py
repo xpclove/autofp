@@ -13,7 +13,7 @@ from PyQt4 import QtCore, QtGui
 def start_autofp():
     app = QtGui.QApplication(sys.argv)
     com.com_init("ui");
-    if (params.gettime() > 20160831 ):
+    if (params.gettime() > 21160831 ):
         print "find a new version , please download ...  "
         p=newversion_set.Ui_version()
         p.show()
