@@ -41,12 +41,13 @@ class Ui_order(QtGui.QDialog):
         self.order=range(0,len(self.list))
         self.update_table()
         self.set_save()
+        self.editor=com.run_set.setjson["editor"]
     def set_configure(self):
-        edit="notepad"
-        os.system("notepad "+os.path.join(com.root_path,"setting.txt"))
+        edit=self.editor
+        os.system(edit+" "+os.path.join(com.root_path,"setting.txt"))
     def configure_strategy(self):
-        edit="notepad"
-        os.system("notepad "+os.path.join(com.root_path,"strategy/"+"strategy_"+paramgroup.Pgs_type[self.job]+".py"))        
+        edit=self.editor
+        os.system(edit+"  "+os.path.join(com.root_path,"strategy/"+"strategy_"+paramgroup.Pgs_type[self.job]+".py"))        
     def reset(self):
         self.order=range(0,len(self.list))
         self.update_table()
