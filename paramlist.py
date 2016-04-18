@@ -67,7 +67,7 @@ class ParamList:
                     if "Atom_Occ" in group[j]:
                         self.param_group.append(j)
                         tmp=True
-                        if False: print "debug",self.paramlist[i].parname,j #print debug msg
+                        # print "select parameter: ",self.paramlist[i].parname,j #print debug msg
                 else:
                     if self.paramlist[i].type.split('[')[0] in group[j]:
                         self.param_group.append(j)
