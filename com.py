@@ -17,6 +17,7 @@ autofp_running=False;
 origin_path=setting.run_set.origin_path;root_path=os.getcwd()
 mode="ui";
 log=None;logstr=""
+debug=False
 text_style={"normal":"<font color=blue>",
             "ok":"<font color=green>",
             "warning":"<font color=purple>",
@@ -49,3 +50,6 @@ def com_log_open(path):
     log=open(path,"w")
 def autofp_init():
     plot.jobs_s=[]
+def debug_print():
+    if debug==True:
+        0==0
