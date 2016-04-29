@@ -53,13 +53,17 @@ def cmd_run(argv,argn):
     core.reset(r, pl, autoeng,cycle)
     core.autorunfp()
     params_dic={};
+    print_json(r);
+    print tag,"Rwp=",r.Rwp    
+def print_json(r):
+    params_dic={};
     for p in  r.params.paramlist:
         params_dic[p.parname]=p.realvalue
     pjson=json.dumps(params_dic)
     out=open("par.txt","w")
     out.write(pjson)
     out.close();
-    print tag,"Rwp=",r.Rwp
+    #print tag,"Rwp=",r.Rwp
 ########################################################################
 class Autofp_Core:
     """"""
