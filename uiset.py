@@ -8,6 +8,7 @@ from paramlist import ParamList
 from subauto import SubAutoRun
 from ui_order_set import Ui_order
 from ui_output_set import Ui_output_Form
+from ui_cif2pcr import Ui_makepcr
 import copy
 import com
 import prf2origin.prf2origin.python.prf2origin

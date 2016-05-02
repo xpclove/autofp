@@ -606,6 +606,22 @@
         <string>Prf -&gt; Origin</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_makpcr">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>15</y>
+         <width>130</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Makepcr</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_7">
       <attribute name="title">

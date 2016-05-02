@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'new.ui'
 #
-# Created: Fri Jan 08 23:11:36 2016
+# Created: Mon May 02 16:20:31 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -269,6 +269,10 @@ class Ui_Form(object):
         self.pushButton_prf2origin = QtGui.QPushButton(self.tab_9)
         self.pushButton_prf2origin.setGeometry(QtCore.QRect(20, 15, 130, 30))
         self.pushButton_prf2origin.setObjectName(_fromUtf8("pushButton_prf2origin"))
+        self.pushButton_makpcr = QtGui.QPushButton(self.tab_9)
+        self.pushButton_makpcr.setGeometry(QtCore.QRect(180, 15, 130, 30))
+        self.pushButton_makpcr.setStyleSheet(_fromUtf8(""))
+        self.pushButton_makpcr.setObjectName(_fromUtf8("pushButton_makpcr"))
         self.tabwidget_run.addTab(self.tab_9, _fromUtf8(""))
         self.tab_7 = QtGui.QWidget()
         self.tab_7.setObjectName(_fromUtf8("tab_7"))
@@ -393,6 +397,7 @@ class Ui_Form(object):
         self.buttonrun.setText(_translate("Form", "run", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_2), _translate("Form", "Manual", None))
         self.pushButton_prf2origin.setText(_translate("Form", "Prf -> Origin", None))
+        self.pushButton_makpcr.setText(_translate("Form", "Makepcr", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_9), _translate("Form", "Tool", None))
         self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
