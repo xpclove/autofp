@@ -1,5 +1,5 @@
 {
- "version": "1.3.5_stage3",
+ "version": "1.3.5_release",
  "show_rwp": true, 
  "show_log_FP": true,
  "NCY": 10,
