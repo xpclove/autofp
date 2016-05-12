@@ -302,7 +302,7 @@ class Ui(QtGui.QMainWindow):
         self.text_path.setText(unicode(path,"gbk","ignore"))
         self.updateTable()
         self.pcr_yorn=True
-        self.window_order.init(self.run.job)
+        self.window_order.init(self.run.job);self.window_order.ui.combobox_job.currentIndex=self.run.job;
         self.tabwidget_run.setEnabled(True)
         return
     txt_signal = QtCore.pyqtSignal(str)

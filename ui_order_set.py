@@ -32,7 +32,8 @@ class Ui_order(QtGui.QDialog):
         QtCore.QObject.connect(self.ui.button_configure,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_configure)
         QtCore.QObject.connect(self.ui.button_configure_s,QtCore.SIGNAL(_fromUtf8("clicked()")),self.configure_strategy)
         
-        QtCore.QObject.connect(self.ui.button_save,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_save)  
+        QtCore.QObject.connect(self.ui.button_save,QtCore.SIGNAL(_fromUtf8("clicked()")),self.set_save)
+        QtCore.QObject.connect(self.ui.combobox_job,QtCore.SIGNAL(_fromUtf8("currentIndexChanged(int)")),self.job_changed);
         self.init(0)
     def init(self,job):
         self.job=job
@@ -89,4 +90,9 @@ class Ui_order(QtGui.QDialog):
         self.Pg=paramgroup.Pgs[self.job]
         self.list=self.Pg.Param_Order_Group_Name
         self.order=range(0,len(self.list))
-        self.update_table()        
+        self.update_table()
+    def job_changed(self,job):
+        if job>= len(paramgroup.Pgs):
+            job=0;
+        self.init(job)
+        self.job=job

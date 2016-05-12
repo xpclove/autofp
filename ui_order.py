@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-# Created: Thu May 12 16:25:06 2016
+# Created: Thu May 12 16:37:27 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -69,13 +69,13 @@ class Ui_Order(object):
         self.button_configure_s = QtGui.QPushButton(self.tab)
         self.button_configure_s.setGeometry(QtCore.QRect(490, 330, 82, 25))
         self.button_configure_s.setObjectName(_fromUtf8("button_configure_s"))
-        self.comboBox = QtGui.QComboBox(self.tab)
-        self.comboBox.setGeometry(QtCore.QRect(450, 0, 130, 22))
-        self.comboBox.setObjectName(_fromUtf8("comboBox"))
-        self.comboBox.addItem(_fromUtf8(""))
-        self.comboBox.addItem(_fromUtf8(""))
-        self.comboBox.addItem(_fromUtf8(""))
-        self.comboBox.addItem(_fromUtf8(""))
+        self.combobox_job = QtGui.QComboBox(self.tab)
+        self.combobox_job.setGeometry(QtCore.QRect(450, 0, 130, 22))
+        self.combobox_job.setObjectName(_fromUtf8("combobox_job"))
+        self.combobox_job.addItem(_fromUtf8(""))
+        self.combobox_job.addItem(_fromUtf8(""))
+        self.combobox_job.addItem(_fromUtf8(""))
+        self.combobox_job.addItem(_fromUtf8(""))
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
@@ -199,10 +199,10 @@ class Ui_Order(object):
         self.button_down.setText(_translate("Order", "Down", None))
         self.buttonreset.setText(_translate("Order", "Reset", None))
         self.button_configure_s.setText(_translate("Order", "configure", None))
-        self.comboBox.setItemText(0, _translate("Order", "xray", None))
-        self.comboBox.setItemText(1, _translate("Order", "neutron_cw", None))
-        self.comboBox.setItemText(2, _translate("Order", "neutron_tof", None))
-        self.comboBox.setItemText(3, _translate("Order", "profile", None))
+        self.combobox_job.setItemText(0, _translate("Order", "xray", None))
+        self.combobox_job.setItemText(1, _translate("Order", "neutron_cw", None))
+        self.combobox_job.setItemText(2, _translate("Order", "neutron_tof", None))
+        self.combobox_job.setItemText(3, _translate("Order", "profile", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Order", "Strategy", None))
         self.text_asylim.setToolTip(_translate("Order", "<html><head/><body><p><span style=\" color:#000000;\">defined by &quot;Asylim in *.PCR&quot;</span></p></body></html>", None))
         self.text_asylim.setText(_translate("Order", "60", None))

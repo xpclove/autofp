@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'cif2pcr.ui'
 #
-# Created: Thu May 12 16:25:07 2016
+# Created: Thu May 12 16:37:27 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
