@@ -4,6 +4,8 @@ import os
 import release_core
 if __name__ == "__main__":
     print("prepare autofp_pkg .")
+    if os.path.exists("autofp_pkg"):
+        shutil.rmtree("autofp_pkg")
     os.mkdir("autofp_pkg")
     shutil.copytree("dist","autofp_pkg/dist")
     shutil.copytree("example","autofp_pkg/example")
