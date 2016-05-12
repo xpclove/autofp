@@ -159,6 +159,36 @@
       <string>configure</string>
      </property>
     </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>0</y>
+       <width>130</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>xray</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>neutron_cw</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>neutron_tof</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>profile</string>
+      </property>
+     </item>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
