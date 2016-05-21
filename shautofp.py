@@ -11,12 +11,20 @@ import os
 import json
 tag="shautofp->"
 def cmd_run(argv,argn):
+    root_dir=os.path.split(argv[0])
+    print root_dir[0]
+    cur_dir=os.getcwd()
+    os.chdir(root_dir[0])
+    os.chdir("../")
+    com.com_init("cmd")
+    os.chdir(cur_dir)
     com.run_mode=0;
     com.ui=com.sys_stdout
     setting.run_set.show_log_FP=False;
     setting.run_set.show_rwp=False;
     com.mode="cmd"
     com.autofp_running=True
+    print argv
     if argn<2:
         print("Error: the arguments is too few")
         doc.show()
