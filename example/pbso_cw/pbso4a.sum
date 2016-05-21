@@ -8,7 +8,7 @@
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 26/07/2015  Time: 13:42:35.249                              
+    Date: 20/05/2016  Time: 16:39:05.892                              
 
  => PCR file code: pbso4a
  => DAT file code: pbso4a.dat           -> Relative contribution: 1.0000                                                            
@@ -152,10 +152,10 @@
 
  => Phase:  1     PbSO4
  => Bragg R-factor:   1.66       Vol:  318.434( 0.000)  Fract(%):  100.00( 0.00)
- => Rf-factor=  1.39             ATZ:        1213.030   Brindley:  1.0000
+ => Rf-factor=  1.39             ATZ:        1206.155   Brindley:  1.0000
 
  
               CPU Time:     0.062 seconds
                             0.001 minutes
 
- => Run finished at:     Date: 26/07/2015  Time: 13:42:35.306                              
+ => Run finished at:     Date: 20/05/2016  Time: 16:39:05.954                              

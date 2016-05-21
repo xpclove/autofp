@@ -5,6 +5,7 @@ import setting
 import wphase
 import prf2origin.prf2origin.python.prf2origin
 import paramgroup
+import time
 run_set=setting.run_set
 plot=None
 show_plot=plot
@@ -18,6 +19,7 @@ origin_path=setting.run_set.origin_path;root_path=os.getcwd()
 mode="ui";
 log=None;logstr=""
 debug=False
+autofp_delay=0
 text_style={"normal":"<font color=blue>",
             "ok":"<font color=green>",
             "warning":"<font color=purple>",

@@ -59,6 +59,7 @@ def print_json(r):
     params_dic={};
     for p in  r.params.paramlist:
         params_dic[p.parname]=p.realvalue
+    params_dic["Rwp"]=r.Rwp
     pjson=json.dumps(params_dic)
     out=open("par.txt","w")
     out.write(pjson)

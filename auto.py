@@ -97,6 +97,7 @@ def autorun(pcrname,param_switch=None,r=None,param_order_num=None,option=option_
                 com.ui.write("step = "+str(r.step_index))
                 com.ui.write(param_name)
                 com.ui.write("Rwp="+str(r.Rwp)+"\n",style="ok")
+                if com.autofp_delay>0: com.time.sleep(com.autofp_delay)
             rwplist.append(r.Rwp);
             rwplist_all.append(r.Rwp);
             com.Rwplist.append(r.Rwp)
