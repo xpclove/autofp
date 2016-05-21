@@ -15,8 +15,9 @@ def cmd_run(argv,argn):
     print root_dir[0]
     cur_dir=os.getcwd()
     os.chdir(root_dir[0])
-    os.chdir("../")
-    com.com_init("cmd")
+    #os.chdir("../")
+    print "current_dir: ", os.getcwd()
+    com.com_init("cmd",os.getcwd())
     os.chdir(cur_dir)
     com.run_mode=0;
     com.ui=com.sys_stdout

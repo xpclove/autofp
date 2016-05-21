@@ -25,17 +25,17 @@ text_style={"normal":"<font color=blue>",
             "warning":"<font color=purple>",
             "error":"<font color=brown>"
             }
-def com_init(m):
+def com_init(m,root=os.getcwd()):
     global root_path,origin_path,run_set,plot,mode,show_plot,log
     mode=m
     if mode=="ui":
         plot=__import__("plot")
         show_plot=plot
-    root_path=os.path.abspath(os.getcwd())
-    prf2origin.prf2origin.python.prf2origin.prf2origin_path=os.path.abspath('prf2origin/prf2origin')    
-    run_set.load_setting()
+    root_path=os.path.abspath(root)
+    prf2origin.prf2origin.python.prf2origin.prf2origin_path=os.path.join(root_path,'prf2origin/prf2origin')    
+    run_set.load_setting(path=os.path.join(root_path,"setting.txt"))
     origin_path=run_set.origin_path
-    paramgroup.load_strategy()
+    paramgroup.load_strategy(os.path.join(root_path,"strategy"))
     #log=open("log.txt","w")
     
     print origin_path,root_path
