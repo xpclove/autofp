@@ -8,7 +8,7 @@
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 28/09/2015  Time: 14:40:57.606                              
+    Date: 21/05/2016  Time: 17:52:30.533                              
 
  => PCR file code: Y2O3
  => DAT file code: Y2O3.dat             -> Relative contribution: 1.0000                                                            
@@ -152,7 +152,7 @@
  => Rf-factor=  1.68             ATZ:        3653.496   Brindley:  1.0000
 
  
-              CPU Time:     0.070 seconds
-                            0.001 minutes
+              CPU Time:     0.438 seconds
+                            0.007 minutes
 
- => Run finished at:     Date: 28/09/2015  Time: 14:40:57.682                              
+ => Run finished at:     Date: 21/05/2016  Time: 17:52:31.002                              
