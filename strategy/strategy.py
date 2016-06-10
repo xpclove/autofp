@@ -52,6 +52,6 @@ strategy={
             "S_L,D_L",
             "manual background"            
         ],
-        'target':'MIN=Rwp'
+        'target':'MIN=R_Factor["Rwp"]'
         }
 }
