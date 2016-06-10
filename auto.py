@@ -28,6 +28,7 @@ def autorun(pcrname,param_switch=None,r=None,param_order_num=None,option=option_
     # print tag,param_switch
     job=r.job #get the job type of the Run,job=0 Xray; job=1 CW
     Pg=paramgroup.Pgs[job]
+    com.target_s=Pg.target["string"]
     #get the order of the params
     if param_order_num==None:
         param_order_num=Pg.Param_Num_Order
@@ -68,16 +69,20 @@ def autorun(pcrname,param_switch=None,r=None,param_order_num=None,option=option_
             r.err=13
             
         #check error
+        com.R=r.R   # target funcrion setting
+        exec(com.target_s)
+        target_r=MIN
         if r.err!=0:
             error+=0x01
-        if r.Rwp>goodrwp or r.Rwp !=r.Rwp:
+        if target_r>goodrwp or target_r !=target_r:        
             error+=0x10
             
         #if error back()
+        
         if error > 0:
             # 精修无错误,rwp没减小
             if r.err == 0 :
-                rwplist_all.append(r.Rwp)
+                rwplist_all.append(target_r)
                 r.back()
             # 精修有错误,没有保存,故不改变step_index
             if r.err != 0 :
@@ -92,24 +97,24 @@ def autorun(pcrname,param_switch=None,r=None,param_order_num=None,option=option_
         if com.mode=="ui":
             com.ui.write_status(out_str)
         if error==0:
-            goodrwp=r.Rwp            
+            goodrwp=target_r
             if com.mode=="ui":
                 com.ui.write("step = "+str(r.step_index))
                 com.ui.write(param_name)
-                com.ui.write("Rwp="+str(r.Rwp)+"\n",style="ok")
+                com.ui.write("Rwp="+str(target_r)+"\n",style="ok")
                 if com.autofp_delay>0: com.time.sleep(com.autofp_delay)
-            rwplist.append(r.Rwp);
-            rwplist_all.append(r.Rwp);
-            com.Rwplist.append(r.Rwp)
+            rwplist.append(target_r);
+            rwplist_all.append(target_r);
+            com.Rwplist.append(target_r)
             numpy.savetxt("rwp.txt",numpy.array(rwplist))
             numpy.savetxt("rwp_all.txt",numpy.array(rwplist_all))
             numpy.savetxt("rwplist.txt",numpy.array(com.Rwplist))
             out.write("step:    "+str(r.step_index)+"\n") 
             
         out.write(str(error)+"\n")
-        out.write(str(r.Rwp)+"\n")
+        out.write(str(target_r)+"\n")
         out.flush()
-        tmprwp=r.Rwp
+        tmprwp=target_r
         # autofp is stoped ?
         if com.autofp_running == False:
             break

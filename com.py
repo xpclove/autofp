@@ -7,6 +7,8 @@ import prf2origin.prf2origin.python.prf2origin
 import paramgroup
 import time
 run_set=setting.run_set
+R={"Rp":100,"Rwp":100,"Re":100,"Chi2":100}
+target_s='com.R["Rwp"]'
 plot=None
 show_plot=plot
 sys_stdout=sys.stdout

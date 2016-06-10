@@ -16,14 +16,21 @@ def load_strategy(sfolder=os.path.join(com.root_path,"strategy")):
     global Pgs;print os.path.abspath(sfolder)
     for key in Pgs_key:
         sfilemodule=os.path.join(sfolder,"strategy_"+key+".py")
-        files=open(sfilemodule);con=files.read();exec(con);
+        files=open(sfilemodule);
+        con=files.read();
+        exec(con);
         s_xray=strategy[key];
         print s_xray.keys()
         group=s_xray["param_group"]
         order=s_xray["param_order"]
+        target_s=s_xray["target"]
+        target_s=re.sub(r"R_Factor",r'com.R',target_s)
+        print "target=",target_s
+        target_s=target_s
         n=Pgs_key[key];
         Pgs[n].Param_Order_Group_Name=[]
         Pgs[n].Param_Order_Group=[]
+        Pgs[n].target["string"]=target_s
         for item in order:
             Pgs[n].Param_Order_Group_Name.append(item)
             Pgs[n].Param_Order_Group.append(group[item])

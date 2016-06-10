@@ -52,6 +52,7 @@ strategy={
             "Occ-Atom",
             "Anisotropic Thermal factors",
             "manual background"            
-        ]
+        ],
+        'target':'MIN=R_Factor["Rwp"]'
         }
 }

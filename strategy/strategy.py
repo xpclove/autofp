@@ -51,6 +51,7 @@ strategy={
             "Tempeture factors",
             "S_L,D_L",
             "manual background"            
-        ]
+        ],
+        'target':'MIN=Rwp'
         }
 }

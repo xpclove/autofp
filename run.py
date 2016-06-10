@@ -32,6 +32,7 @@ class Run:
         self.errmsg=""
         self.job_name=pcrfilename
         self.Rwp=10000
+        self.R={}
         #file pcr and out
         self.pcrfilename=os.path.realpath(pcrfilename)
         self.outfilename=os.path.splitext(self.pcrfilename)[0]+".out"
@@ -96,6 +97,8 @@ class Run:
             num=self.getCycleNum()+num+1
         if self.err==0:
             Rwp=self.outR.getResidues(num)[0][1]
+            r_factor=self.outR.getResidues(num)[0]
+            self.R={"Rp":r_factor[0],"Rwp":r_factor[1],"Re":r_factor[2],"Chi2":r_factor[3]}
             return Rwp
     
     def getCycleNum(self):

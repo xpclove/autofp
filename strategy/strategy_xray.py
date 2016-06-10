@@ -51,6 +51,7 @@ strategy={
             "Anisotropic Thermal factors",
             "S_L,D_L",
             "manual background"            
-        ]
+        ],
+        'target':'MIN=R_Factor["Rwp"]'
         }
 }

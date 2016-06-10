@@ -56,6 +56,7 @@ strategy={
             "Anisotropic Thermal factors",
             "ABS",
             "manual background"            
-        ]
+        ],
+        'target':'MIN=R_Factor["Rwp"]'
         }
 }
