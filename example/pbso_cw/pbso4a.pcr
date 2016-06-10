@@ -1,4 +1,4 @@
-COMM   PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
+  PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
 ! Current global Chi2 (Bragg contrib.) =      1.968    
 NPATT      1       1 <- Flags for patterns (1:refined, 0: excluded)
 W_PAT   1.000
@@ -13,7 +13,7 @@ pbso4a.dat
 !Mat Pcr NLI Rpa Sym Sho
    0   1   0   0   1   1
 !Ipr Ppl Ioc Ls1 Ls2 Ls3 Prf Ins Hkl Fou Ana
-   0   0   1   0   4   0   1   6   0   0   1  !-> Patt#: 1
+   2   2   1   0   4   0   1   6   0   0   1  !-> Patt#: 1
 !
 ! Lambda1  Lambda2    Ratio    Bkpos    Wdt    Cthm     muR   AsyLim   Rpolarz  2nd-muR -> Patt# 1
  1.912000 1.912000  1.00000   70.000  6.0000  0.0000  0.0000  160.00    0.0000  0.0000
@@ -43,7 +43,7 @@ PbSO4
 !Nat Dis Ang Jbt Isy Str Furth        ATZ     Nvk More
    5   0   0   0   0   0   0       1206.1545   0   1
 !Jvi Jdi Hel Sol Mom Ter  N_Domains
-   3   0   0   0   0   0      0
+   0   0   0   0   0   0      0
 !Contributions (0/1) of this phase to the  1 patterns
  1
 !Irf Npr Jtyp  Nsp_Ref Ph_Shift for Pattern#  1

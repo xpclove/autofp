@@ -1,18 +1,18 @@
 
 
         **********************************************************
-        ** PROGRAM FullProf.2k (Version 5.40 - Mar2014-ILL JRC) **
+        ** PROGRAM FullProf.2k (Version 5.60 - Jan2015-ILL JRC) **
         **********************************************************
                        M U L T I -- P A T T E R N                 
             Rietveld, Profile Matching & Integrated Intensity     
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 20/05/2016  Time: 16:39:05.892                              
+    Date: 03/06/2016  Time: 17:05:37.421                              
 
  => PCR file code: pbso4a
  => DAT file code: pbso4a.dat           -> Relative contribution: 1.0000                                                            
- => Title:   PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
+ => Title:  PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
 
  ==> CONDITIONS OF THIS RUN FOR PATTERN No.:  1
 
@@ -155,7 +155,7 @@
  => Rf-factor=  1.39             ATZ:        1206.155   Brindley:  1.0000
 
  
-              CPU Time:     0.062 seconds
-                            0.001 minutes
+              CPU Time:     0.516 seconds
+                            0.009 minutes
 
- => Run finished at:     Date: 20/05/2016  Time: 16:39:05.954                              
+ => Run finished at:     Date: 03/06/2016  Time: 17:05:37.985                              

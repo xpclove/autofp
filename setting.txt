@@ -2,7 +2,7 @@
  "version": "1.3.5_stage1",
  "show_rwp": true, 
  "show_log_FP": true,
- "NCY": 10,
+ "NCY": 15,
  "AsymLim": 60, 
  "eps": 0.1,
  "fp2k_path": "fp2k",

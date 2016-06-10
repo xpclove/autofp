@@ -1,4 +1,4 @@
-    PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
+   PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
 
             --------------------------------
             SYMMETRY INFORMATION ON PHASE: 1
@@ -21,23 +21,22 @@
         Information on Space Group: 
         --------------------------- 
 
- =>  Number of Space group:  62
- => Hermann-Mauguin Symbol: P n m a
- =>            Hall Symbol: -P 2ac 2n
- =>   Table Setting Choice: 
- =>           Setting Type: IT (Generated from Hermann-Mauguin symbol)
- =>         Crystal System: Orthorhombic
- =>             Laue Class: mmm
- =>            Point Group: mmm
- =>        Bravais Lattice: P
- =>         Lattice Symbol: oP
- => Reduced Number of S.O.:   4
- =>   General multiplicity:   8
- =>         Centrosymmetry: Centric (-1 at origin)
- => Generators (exc. -1&L):   2
- =>        Asymmetric unit:  0.000 <= x <=  0.500
-                             0.000 <= y <=  0.250
-                             0.000 <= z <=  1.000
+ =>   Number of Space group:  62
+ =>  Hermann-Mauguin Symbol: P n m a
+ =>             Hall Symbol: -P 2ac 2n
+ =>            Setting Type: IT (Generated from Hermann-Mauguin symbol)
+ =>          Crystal System: Orthorhombic
+ =>              Laue Class: mmm
+ =>             Point Group: mmm
+ =>         Bravais Lattice: P
+ =>          Lattice Symbol: oP
+ =>  Reduced Number of S.O.:   4
+ =>    General multiplicity:   8
+ =>          Centrosymmetry: Centric (-1 at origin)
+ =>  Generators (exc. -1&L):   2
+ =>         Asymmetric unit:  0.000 <= x <=  0.500
+                              0.000 <= y <=  0.250
+                              0.000 <= z <=  1.000
  => Centring vectors:  0
                                                                                                     
 

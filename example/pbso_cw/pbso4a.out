@@ -1,14 +1,14 @@
 
 
         **********************************************************
-        ** PROGRAM FullProf.2k (Version 5.40 - Mar2014-ILL JRC) **
+        ** PROGRAM FullProf.2k (Version 5.60 - Jan2015-ILL JRC) **
         **********************************************************
                        M U L T I -- P A T T E R N                 
             Rietveld, Profile Matching & Integrated Intensity     
                  Refinement of X-ray and/or Neutron Data
 
 
-    Date: 20/05/2016  Time: 16:39:05.892                              
+    Date: 03/06/2016  Time: 17:05:37.421                              
 
  => PCR file code: pbso4a
  => DAT file code: pbso4a.dat           -> Relative contribution: 1.0000                                                            
@@ -16,7 +16,7 @@
  ==> CONDITIONS OF THIS RUN FOR PATTERN No.:  1
 
  => Global Refinement of neutron powder data                                                                                        
- => Title:   PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
+ => Title:  PbSO4 D1A(ILL),Rietveld Round Robin, R.J. Hill,JApC 25,589(1992)
 
  => Number of phases:    1
  => Number of excluded regions:    2
@@ -38,6 +38,8 @@
 
  ==> INPUT/OUTPUT OPTIONS:
 
+ => Output Obs and Calc intensities on last cycle
+ => Generate bacground file *.bac
  => Generate file *.PRF for plot
  => Output Integrated Intensities
  => Generate new input file *.PCR
@@ -117,23 +119,22 @@
         Information on Space Group: 
         --------------------------- 
 
- =>  Number of Space group:  62
- => Hermann-Mauguin Symbol: P n m a
- =>            Hall Symbol: -P 2ac 2n
- =>   Table Setting Choice: 
- =>           Setting Type: IT (Generated from Hermann-Mauguin symbol)
- =>         Crystal System: Orthorhombic
- =>             Laue Class: mmm
- =>            Point Group: mmm
- =>        Bravais Lattice: P
- =>         Lattice Symbol: oP
- => Reduced Number of S.O.:   4
- =>   General multiplicity:   8
- =>         Centrosymmetry: Centric (-1 at origin)
- => Generators (exc. -1&L):   2
- =>        Asymmetric unit:  0.000 <= x <=  0.500
-                             0.000 <= y <=  0.250
-                             0.000 <= z <=  1.000
+ =>   Number of Space group:  62
+ =>  Hermann-Mauguin Symbol: P n m a
+ =>             Hall Symbol: -P 2ac 2n
+ =>            Setting Type: IT (Generated from Hermann-Mauguin symbol)
+ =>          Crystal System: Orthorhombic
+ =>              Laue Class: mmm
+ =>             Point Group: mmm
+ =>         Bravais Lattice: P
+ =>          Lattice Symbol: oP
+ =>  Reduced Number of S.O.:   4
+ =>    General multiplicity:   8
+ =>          Centrosymmetry: Centric (-1 at origin)
+ =>  Generators (exc. -1&L):   2
+ =>         Asymmetric unit:  0.000 <= x <=  0.500
+                              0.000 <= y <=  0.250
+                              0.000 <= z <=  1.000
 
  => List of S.O. without inversion and lattice centring translations
  => SYMM(  1): x,y,z                               => SYMM(  2): x+1/2,-y+1/2,-z+1/2
@@ -377,36 +378,36 @@
 
  => Overall scale factor:      1.478099942     0.000000000     0.000000000
  => Eta(p-Voigt) or m(Pearson VII):   0.000000  0.000000  0.000000
- => Overall tem. factor:  -1.466520  0.000000  0.000000
+ => Overall tem. factor:    -1.466520    0.000000    0.000000
  => Halfwidth parameters: 
-       0.112615  0.000000  0.000000
-      -0.471268  0.000000  0.000000
-       0.376275  0.000000  0.000000
+         0.112615    0.000000    0.000000
+        -0.471268    0.000000    0.000000
+         0.376275    0.000000    0.000000
  => Cell parameters: 
-       8.478960   0.000000   0.000000
-       5.397108   0.000000   0.000000
-       6.958508   0.000000   0.000000
-      90.000000   0.000000   0.000000
-      90.000000   0.000000   0.000000
-      90.000000   0.000000   0.000000
+        8.478960    0.000000    0.000000
+        5.397108    0.000000    0.000000
+        6.958508    0.000000    0.000000
+       90.000000    0.000000    0.000000
+       90.000000    0.000000    0.000000
+       90.000000    0.000000    0.000000
  => Preferred orientation: 
-       0.993720  0.000000  0.000000
-       1.000000  0.000000  0.000000
+         0.993720    0.000000    0.000000
+         1.000000    0.000000    0.000000
  => Asymmetry parameters: 
-       0.324970  0.000000  0.000000
-       0.031050  0.000000  0.000000
-      -0.202920  0.000000  0.000000
-       0.030350  0.000000  0.000000
+         0.324970    0.000000    0.000000
+         0.031050    0.000000    0.000000
+        -0.202920    0.000000    0.000000
+         0.030350    0.000000    0.000000
  => X and Y parameters: 
-       0.000000  0.000000  0.000000
-       0.083313  0.000000  0.000000
+         0.000000    0.000000    0.000000
+         0.083313    0.000000    0.000000
  => Strain parameters: 
-       0.000000  0.000000  0.000000
-       0.000000  0.000000  0.000000
-       0.000000  0.000000  0.000000
+         0.000000    0.000000    0.000000
+         0.000000    0.000000    0.000000
+         0.000000    0.000000    0.000000
  => Size   parameters (G,L): 
-       0.051236  0.000000  0.000000
-       0.000000  0.000000  0.000000
+         0.051236    0.000000    0.000000
+         0.000000    0.000000    0.000000
  => Further shape parameters (S_L and D_L): 
        0.000000  0.000000  0.000000
        0.000000  0.000000  0.000000
@@ -730,7 +731,7 @@
     NSOL    =       10 Max.num. of solutions to be stored in Montecarlo searchs   
 
  
-              CPU Time:     0.062 seconds
-                            0.001 minutes
+              CPU Time:     0.516 seconds
+                            0.009 minutes
 
- => Run finished at:     Date: 20/05/2016  Time: 16:39:05.954                              
+ => Run finished at:     Date: 03/06/2016  Time: 17:05:37.985                              
