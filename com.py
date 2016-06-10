@@ -24,6 +24,7 @@ debug=False
 autofp_delay=0
 text_style={"normal":"<font color=blue>",
             "ok":"<font color=green>",
+            "rwp":"<font color=green>",
             "warning":"<font color=purple>",
             "error":"<font color=brown>"
             }
