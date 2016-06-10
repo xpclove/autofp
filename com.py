@@ -8,7 +8,7 @@ import paramgroup
 import time
 run_set=setting.run_set
 R={"Rp":100,"Rwp":100,"Re":100,"Chi2":100}
-target_s='com.R["Rwp"]'
+target={"string":'com.R["Rwp"]',"name":'Rwp'}
 plot=None
 show_plot=plot
 sys_stdout=sys.stdout

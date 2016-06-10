@@ -31,6 +31,12 @@ def load_strategy(sfolder=os.path.join(com.root_path,"strategy")):
         Pgs[n].Param_Order_Group_Name=[]
         Pgs[n].Param_Order_Group=[]
         Pgs[n].target["string"]=target_s
+        target_name=re.sub("MIN=","",target_s)
+        target_name=re.sub('com.R','',target_name)
+        target_name=re.sub(r'"',r'',target_name)
+        target_name=re.sub(r'[\[\]]',r'',target_name)
+        print target_name
+        Pgs[n].target["name"]=target_name
         for item in order:
             Pgs[n].Param_Order_Group_Name.append(item)
             Pgs[n].Param_Order_Group.append(group[item])
