@@ -57,6 +57,8 @@ strategy={
             "ABS",
             "manual background"            
         ],
+        # target function, the valid variable : R_Factor["Rwp"], R_Factor["Rp"], R_Factor["Chi2"]
+        # MIN = minimum function         
         'target':'MIN=R_Factor["Rwp"]'
         }
 }
