@@ -90,7 +90,7 @@ class Ui(QtGui.QMainWindow):
         QtCore.QObject.connect(self.button_fold_paramstable,QtCore.SIGNAL(_fromUtf8("clicked()")),self.fold_paramstable)        
         QtCore.QObject.connect(self.button_params_ok,QtCore.SIGNAL(_fromUtf8("clicked()")),self.fold_paramstable)
         QtCore.QObject.connect(self.ui.spinbox_phase,QtCore.SIGNAL(_fromUtf8("valueChanged(int)")),self.phase_change)
-        QtCore.QObject.connect(self.ui.button_stop,QtCore.SIGNAL(_fromUtf8("clicked()")),self.stop_autofp)	
+        QtCore.QObject.connect(self.ui.button_stop,QtCore.SIGNAL(_fromUtf8("clicked()")),self.stop_autofp)
         self.txt_signal.connect(self.showMsg)
         self.autofp_done_signal.connect(self.autorunfp_result)
 	self.status_signal.connect(self.showMsg)
