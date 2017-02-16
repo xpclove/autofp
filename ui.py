@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file 'new.ui'
 #
-# Created: Mon May 02 16:20:31 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -26,7 +25,7 @@ except AttributeError:
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName(_fromUtf8("Form"))
-        Form.resize(1062, 520)
+        Form.resize(1062, 523)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -208,7 +207,7 @@ class Ui_Form(object):
         self.Buttonautorun.setGeometry(QtCore.QRect(120, 10, 81, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("SimSun-ExtB"))
-        font.setPointSize(16)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.Buttonautorun.setFont(font)
@@ -217,8 +216,8 @@ class Ui_Form(object):
         self.buttonautoselect = QtGui.QPushButton(self.tab_3)
         self.buttonautoselect.setGeometry(QtCore.QRect(10, 10, 91, 41))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
-        font.setPointSize(10)
+        font.setFamily(_fromUtf8("Simplified Arabic"))
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.buttonautoselect.setFont(font)
@@ -227,7 +226,7 @@ class Ui_Form(object):
         self.buttonorder.setGeometry(QtCore.QRect(220, 10, 91, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("SimSun-ExtB"))
-        font.setPointSize(16)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.buttonorder.setFont(font)
@@ -278,6 +277,7 @@ class Ui_Form(object):
         self.tab_7.setObjectName(_fromUtf8("tab_7"))
         self.textBrowser = QtGui.QTextBrowser(self.tab_7)
         self.textBrowser.setGeometry(QtCore.QRect(0, 0, 501, 61))
+        self.textBrowser.setOpenExternalLinks(True)
         self.textBrowser.setObjectName(_fromUtf8("textBrowser"))
         self.tabwidget_run.addTab(self.tab_7, _fromUtf8(""))
         self.texteditshow = QtGui.QTextEdit(self.widget)
@@ -341,8 +341,19 @@ class Ui_Form(object):
         self.labelpar.setText(_fromUtf8(""))
         self.labelpar.setObjectName(_fromUtf8("labelpar"))
         self.button_stop = QtGui.QToolButton(self.widget)
-        self.button_stop.setGeometry(QtCore.QRect(485, 500, 43, 22))
+        self.button_stop.setGeometry(QtCore.QRect(485, 500, 43, 21))
+        self.button_stop.setStyleSheet(_fromUtf8(""))
         self.button_stop.setObjectName(_fromUtf8("button_stop"))
+        self.labelpar.raise_()
+        self.tabwidget_run.raise_()
+        self.texteditshow.raise_()
+        self.buttonfold.raise_()
+        self.text_path.raise_()
+        self.check_show_rwp.raise_()
+        self.check_show_fp.raise_()
+        self.widget_2.raise_()
+        self.progress.raise_()
+        self.button_stop.raise_()
         self.buttonoutput = QtGui.QPushButton(Form)
         self.buttonoutput.setEnabled(False)
         self.buttonoutput.setGeometry(QtCore.QRect(1060, 430, 81, 41))
@@ -366,7 +377,7 @@ class Ui_Form(object):
         self.textrwp.setObjectName(_fromUtf8("textrwp"))
 
         self.retranslateUi(Form)
-        self.tabWidgettable.setCurrentIndex(2)
+        self.tabWidgettable.setCurrentIndex(5)
         self.tabwidget_run.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -403,15 +414,17 @@ class Ui_Form(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'SimSun-ExtB\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">AutoFP : <a href=\"http:\\\\autofp.sinaapp.com\"><span style=\" text-decoration: underline; color:#0000ff;\">http:\\\\pmedia.shu.edu.cn\\autofp</span></a></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">      or <a href=\"http:\\\\autofp.sinaapp.com\"><span style=\" font-family:\'SimSun\'; text-decoration: underline; color:#0000ff;\">http:\\\\autofp.sinaapp.com</span></a></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">Authors: Xiaopeng Cui, Zhenjie Feng, Jincang Zhang </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">AutoFP</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Website: <a href=\"http:\\\\pmedia.shu.edu.cn\\autofp\"><span style=\" font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\">http:\\\\pmedia.shu.edu.cn\\autofp </span></a>or <a href=\"http:\\\\physiworld.sinaapp.com\"><span style=\" font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\">here</span></a></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">Authors: Xiaopeng Cui ...o Jincang Zhang </span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">Institute: Shanghai University</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">--------------------------------------------------</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">Current version : 1.3.x</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Feedback Email : autofp@163.com</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LICENSE GPL v3</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">All copyright reversed 2014-2016</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LICENSE: GPL v3</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">All copyright reversed 2014-2017</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_7), _translate("Form", "About", None))
         self.buttonfold.setText(_translate("Form", ">", None))
