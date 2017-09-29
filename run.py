@@ -8,14 +8,16 @@ from paramlist import ParamList
 from outfilecheckerror import check
 from subrun import SubRun
 import setting
-#error??
-    # 0=no error
-    #-1=no out file
-    # 1=out file error
-    #-30=error in run and break;
-    #-31=asym error
-    #-32=no rwp in out
-#end error
+error_info={
+     0:"no error",
+    -1: "no out file",
+     1: "out file error",
+    -30: "error in run and break",
+    -31: "asym error",
+    -32: "no rwp in out file",
+    -33: "Singular matrix",
+    -10:  "no rwp task"
+}
 
 class Run:
     def __init__(self):
@@ -46,6 +48,8 @@ class Run:
             os.mkdir(self.tmpdir)
         os.chdir(self.dirname)  #   change the dir to the pcr dir
         self.resetLoad()
+        if self.err !=0: 
+            print(error_info[self.err])
         self.runfp()
         self.push() #   the number 0 version
         shutil.copy(self.pcrfilename,self.pcrfilename+"_back") #backup the pcrfile
@@ -65,6 +69,8 @@ class Run:
             asylim=self.fit.get("Pattern")[0].get("AsymLim")
             if asylim < 5: asylim=setting.run_set.AsymLim
             self.fit.get("Pattern")[0].set("AsymLim",asylim)
+        if self.job == 2:
+            self.err = -10 # no Rwp task
         if setting.run_set.Atom_Aniso_Temp_Enable==True:
             for atom_i in self.fit.get("Phase")[0].get("Atom"):
                 atom_i.set("N_t",2)
@@ -73,10 +79,10 @@ class Run:
         if os.path.exists(self.outfilename) == False:
             self.throwerr(-1, "no out file ")
         elif self.err>=0:
-             self.outR=FPOutFileParser(self.pcrRW.fit,self.outfilename)
-             if self.outR.getStatus()== False:
+            self.outR=FPOutFileParser(self.pcrRW.fit,self.outfilename)
+            if self.outR.getStatus()== False:
                 self.throwerr(1, "out file error")
-             elif self.err == 0:
+            elif self.err == 0:
                 self.Rwp=self.getRwp()
         #end read outfile
         self.params=ParamList(self.fit.getParamList(),self.job,self.fit)
