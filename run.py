@@ -34,7 +34,7 @@ class Run:
         self.errmsg=""
         self.job_name=pcrfilename
         self.Rwp=10000
-        self.R={}
+        self.R={"Rp":0,"Rwp":0,"Re":0,"Chi2":0}
         #file pcr and out
         self.pcrfilename=os.path.realpath(pcrfilename)
         self.outfilename=os.path.splitext(self.pcrfilename)[0]+".out"
