@@ -1,7 +1,7 @@
 #autofp readme file
 
 AutoFP
-Website http://pmedia.shu.edu.cn/autofp
+Website http://http://physiworld.sinaapp.com/autofp.html
 
 Program entry
 		autofp.py

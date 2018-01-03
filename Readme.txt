@@ -1,5 +1,5 @@
 AutoFP is an auto tools for FullProf Rietveld refinement released under GPL v3 LICENSE.
-AutoFP (http://pmedia.shu.edu.cn/autofp/ or http://autofp.sinaapp.com/)
+AutoFP (http://physiworld.sinaapp.com/autofp.html)
 Authors: Xiaopeng Cui, etc
 Email: autofp@163.com
 Shanghai University, Department of Physics 
@@ -8,7 +8,7 @@ English version
 
 Dependence£º
  OS platforms£º
-                         Windows XP£¬Windows 7 ,Windows 8
+                         Windows XP£¬Windows 7 ,Windows 8, Windows 10
  Dependence library (already packaged in AutoFP):
 						 diffpy/SrRietveld/PyFullProf http://www.diffpy.org/doc/srrietveld/
                          python2.7 https://www.python.org/download/releases/2.7/
