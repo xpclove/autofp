@@ -1,8 +1,6 @@
 # AutoFP
 
-AutoFP website
-
-		http://physiworld.sinaapp.com/autofp.html
+AutoFP website <http://physiworld.sinaapp.com/autofp.html>
 
 Python2 program entry (Windows, Linux)
 
