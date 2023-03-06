@@ -16,7 +16,7 @@ class SubRun:
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             startupinfo.wShowWindow = subprocess.SW_HIDE        
-            self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE,startupinfo=startupinfo, shell=True)
+            self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE,startupinfo=startupinfo)
         else:
             self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE)
         outstr="q";
