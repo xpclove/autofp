@@ -11,11 +11,12 @@ class SubRun:
         return
     def run(self):
         self.result=0
+        # print("OS: ",os.name)
         if os.name=="nt":
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             startupinfo.wShowWindow = subprocess.SW_HIDE        
-            self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE,startupinfo=startupinfo)
+            self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE,startupinfo=startupinfo, shell=True)
         else:
             self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE)
         outstr="q";
