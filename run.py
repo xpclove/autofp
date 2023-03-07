@@ -8,6 +8,7 @@ from paramlist import ParamList
 from outfilecheckerror import check
 from subrun import SubRun
 import setting
+import com
 error_info={
      0:"no error",
     -1: "no out file",
@@ -90,7 +91,8 @@ class Run:
     def runfp(self):
         self.err=0
         subrun=SubRun()
-        subrun.reset("fp2k",self.base_pcrfilename,"not saved to the current PCR file:")
+        fp2k_path = com.run_set.fp2k_path
+        subrun.reset(fp2k_path,self.base_pcrfilename,"not saved to the current PCR file:")
         self.err=subrun.run()
         self.err=check(self.outfilename)
         self.err=self.resetLoad()

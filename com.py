@@ -28,6 +28,7 @@ text_style={"normal":"<font color=blue>",
             "warning":"<font color=purple>",
             "error":"<font color=brown>"
             }
+
 def com_init(m,root=os.getcwd()):
     global root_path,origin_path,run_set,plot,mode,show_plot,log
     mode=m

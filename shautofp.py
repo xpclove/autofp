@@ -10,8 +10,10 @@ import run
 import os
 import json
 tag="shautofp->"
+
 def cmd_run(argv,argn):
-    root_dir=os.path.split(argv[0])
+    root_path_abs = os.path.abspath(argv[0]) 
+    root_dir=os.path.split(root_path_abs)
     print root_dir[0]
     cur_dir=os.getcwd()
     os.chdir(root_dir[0])
@@ -25,6 +27,8 @@ def cmd_run(argv,argn):
     setting.run_set.show_rwp=False;
     com.mode="cmd"
     com.autofp_running=True
+    com.run_set.fp2k_path= "./fp2k"
+
     print argv
     if argn<2:
         print("Error: the arguments is too few")
@@ -64,6 +68,7 @@ def cmd_run(argv,argn):
     params_dic={};
     print_json(r);
     print tag,"Rwp=",r.Rwp    
+
 def print_json(r):
     params_dic={};
     for p in  r.params.paramlist:
@@ -127,7 +132,8 @@ if __name__=="__main__":
     argn=len(sys.argv)
     #os.chdir("test")
     #os.system("test.bat")
-    #os.chdir("../")    
+    #os.chdir("../")
+    print(argv) 
     cmd_run(argv,argn)
     
     
