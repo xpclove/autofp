@@ -32,7 +32,7 @@ def cmd_run(argv, argn):
         com.run_set.fp2k_path = "fp2k"
     if os.name == "posix":
         com.run_set.fp2k_path = "./fp2k"
-        
+
     print argv
     if argn < 2:
         print("Error: the arguments is too few")
