@@ -6,56 +6,72 @@ import wphase
 import prf2origin.prf2origin.python.prf2origin
 import paramgroup
 import time
-run_set=setting.run_set
-R={"Rp":100,"Rwp":100,"Re":100,"Chi2":100}
-target={"string":'com.R["Rwp"]',"name":'Rwp'}
-plot=None
-show_plot=plot
-sys_stdout=sys.stdout
-ui=None
-cycle=1 
-run_mode=1;
-des=False;Rwplist=[];wait=0;
-autofp_running=False;
-origin_path=setting.run_set.origin_path;root_path=os.getcwd()
-mode="ui";
-log=None;logstr=""
-debug=False
-autofp_delay=0
-text_style={"normal":"<font color=blue>",
-            "ok":"<font color=green>",
-            "rwp":"<font color=green>",
-            "warning":"<font color=purple>",
-            "error":"<font color=brown>"
-            }
+run_set = setting.run_set
+R = {"Rp": 100, "Rwp": 100, "Re": 100, "Chi2": 100}
+target = {"string": 'com.R["Rwp"]', "name": 'Rwp'}
+plot = None
+show_plot = plot
+sys_stdout = sys.stdout
+ui = None
+cycle = 1
+run_mode = 1
+des = False
+Rwplist = []
+wait = 0
+autofp_running = False
+origin_path = setting.run_set.origin_path
+root_path = os.getcwd()
+mode = "ui"
+log = None
+logstr = ""
+debug = False
+autofp_delay = 0
+text_style = {"normal": "<font color=blue>",
+              "ok": "<font color=green>",
+              "rwp": "<font color=green>",
+              "warning": "<font color=purple>",
+              "error": "<font color=brown>"
+              }
 
-def com_init(m,root=os.getcwd()):
-    global root_path,origin_path,run_set,plot,mode,show_plot,log
-    mode=m
-    if mode=="ui":
-        plot=__import__("plot")
-        show_plot=plot
-    root_path=os.path.abspath(root)
-    prf2origin.prf2origin.python.prf2origin.prf2origin_path=os.path.join(root_path,'prf2origin/prf2origin')    
-    run_set.load_setting(path=os.path.join(root_path,"setting.txt"))
-    origin_path=run_set.origin_path
-    paramgroup.load_strategy(os.path.join(root_path,"strategy"))
-    #log=open("log.txt","w")
-    
-    print origin_path,root_path
+
+def com_init(m, root=os.getcwd()):
+    global root_path, origin_path, run_set, plot, mode, show_plot, log
+    mode = m
+    if mode == "ui":
+        plot = __import__("plot")
+        show_plot = plot
+    root_path = os.path.abspath(root)
+    prf2origin.prf2origin.python.prf2origin.prf2origin_path = os.path.join(
+        root_path, 'prf2origin/prf2origin')
+    run_set.load_setting(path=os.path.join(root_path, "setting.txt"))
+    origin_path = run_set.origin_path
+    paramgroup.load_strategy(os.path.join(root_path, "strategy"))
+    # log=open("log.txt","w")
+
+    print origin_path, root_path
+
+
 def com_exit():
-    if log!=None:
+    if log != None:
         log.close()
-        log=None
+        log = None
+
+
 def com_log_write(s):
-    global logstr,log
-    if log!=None:
+    global logstr, log
+    if log != None:
         log.write(s+"<br/>")
+
+
 def com_log_open(path):
     global log
-    log=open(path,"w")
+    log = open(path, "w")
+
+
 def autofp_init():
-    plot.jobs_s=[]
+    plot.jobs_s = []
+
+
 def debug_print():
-    if debug==True:
-        0==0
+    if debug == True:
+        0 == 0
