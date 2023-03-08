@@ -21,3 +21,5 @@ How to compile *.msi for Windows ? (Windows)
 Program setting (Windows, Linux)
 
 	(AutoFP Directory)/setting.txt
+
+For more detailed documentation, check out this URL <http://physiworld.sinaapp.com/document.html>
