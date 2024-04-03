@@ -22,4 +22,4 @@ Program setting (Windows, Linux)
 
 	(AutoFP Directory)/setting.txt
 
-For more detailed documentation, check out this URL <http://physiworld.sinaapp.com/document.html>
+For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
