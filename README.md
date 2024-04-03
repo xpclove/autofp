@@ -1,6 +1,6 @@
 # AutoFP
 
-AutoFP website <http://physiworld.vipsinaapp.com/download.html>
+AutoFP website <http://physiworld.vipsinaapp.com/>
 
 Python2 UI program entry (Windows, Linux)
 
