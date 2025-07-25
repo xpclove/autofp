@@ -3,7 +3,6 @@
 AutoFP website <http://physiworld.sinaapp.com/autofp.html>
 
 ## Requirement：
-	
 	OS platforms：
                          Windows XP/7/8/8.1/10/11	or  Linux
 	Dependence library (already packaged in AutoFP.msi):
