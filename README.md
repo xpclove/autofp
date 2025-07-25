@@ -2,7 +2,7 @@
 
 AutoFP website <http://physiworld.sinaapp.com/autofp.html>
 
-# Requirement：
+## Requirement：
 	
 	OS platforms：
                          Windows XP/7/8/8.1/10/11	or  Linux
@@ -15,7 +15,7 @@ AutoFP website <http://physiworld.sinaapp.com/autofp.html>
 	Refinement software: 
                          FullProf(fp2k) 		     http://www.ill.eu/sites/fullprof/
 
-# How to use?
+## How to use?
 Python2 UI program entry (Windows, Linux)
 
 		autofp.py
