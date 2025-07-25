@@ -2,6 +2,19 @@
 
 AutoFP website <http://physiworld.sinaapp.com/autofp.html>
 
+Dependence：
+	
+	OS platforms：
+                         Windows XP/7/8/8.1/10/11	or  Linux
+	Dependence library (already packaged in AutoFP.msi):
+			 			 diffpy/SrRietveld/PyFullProf     http://www.diffpy.org/doc/srrietveld/
+                         python2.7          https://www.python.org/download/releases/2.7/
+                         pyqt4 	         http://www.riverbankcomputing.com/software/pyqt/download
+                         numpy              http://www.scipy.org/scipylib/download.html
+                         matplotlib         http://matplotlib.org/
+	Refinement software: 
+                         FullProf(fp2k) 		     http://www.ill.eu/sites/fullprof/
+
 Python2 UI program entry (Windows, Linux)
 
 		autofp.py
