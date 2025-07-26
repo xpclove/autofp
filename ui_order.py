@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-# Created: Thu May 12 16:37:27 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created: Sat Jul 26 18:36:26 2025
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -33,6 +33,9 @@ class Ui_Order(object):
         Order.setModal(False)
         self.tabWidget = QtGui.QTabWidget(Order)
         self.tabWidget.setGeometry(QtCore.QRect(0, 20, 591, 500))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.tabWidget.setFont(font)
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
         self.tab = QtGui.QWidget()
         self.tab.setObjectName(_fromUtf8("tab"))
@@ -40,7 +43,8 @@ class Ui_Order(object):
         self.table.setGeometry(QtCore.QRect(0, 0, 441, 471))
         self.table.setMinimumSize(QtCore.QSize(441, 450))
         font = QtGui.QFont()
-        font.setPointSize(16)
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(12)
         self.table.setFont(font)
         self.table.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.table.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
@@ -54,23 +58,41 @@ class Ui_Order(object):
         self.table.setObjectName(_fromUtf8("table"))
         self.buttonBox = QtGui.QDialogButtonBox(self.tab)
         self.buttonBox.setGeometry(QtCore.QRect(490, 370, 81, 241))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.buttonBox.setFont(font)
         self.buttonBox.setOrientation(QtCore.Qt.Vertical)
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.button_up = QtGui.QPushButton(self.tab)
         self.button_up.setGeometry(QtCore.QRect(490, 90, 75, 61))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.button_up.setFont(font)
         self.button_up.setObjectName(_fromUtf8("button_up"))
         self.button_down = QtGui.QPushButton(self.tab)
         self.button_down.setGeometry(QtCore.QRect(490, 210, 75, 61))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.button_down.setFont(font)
         self.button_down.setObjectName(_fromUtf8("button_down"))
         self.buttonreset = QtGui.QPushButton(self.tab)
         self.buttonreset.setGeometry(QtCore.QRect(490, 430, 81, 21))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.buttonreset.setFont(font)
         self.buttonreset.setObjectName(_fromUtf8("buttonreset"))
         self.button_configure_s = QtGui.QPushButton(self.tab)
         self.button_configure_s.setGeometry(QtCore.QRect(490, 330, 82, 25))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.button_configure_s.setFont(font)
         self.button_configure_s.setObjectName(_fromUtf8("button_configure_s"))
         self.combobox_job = QtGui.QComboBox(self.tab)
         self.combobox_job.setGeometry(QtCore.QRect(450, 0, 130, 22))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.combobox_job.setFont(font)
         self.combobox_job.setObjectName(_fromUtf8("combobox_job"))
         self.combobox_job.addItem(_fromUtf8(""))
         self.combobox_job.addItem(_fromUtf8(""))
@@ -85,7 +107,7 @@ class Ui_Order(object):
         self.label = QtGui.QLabel(self.tab_2)
         self.label.setGeometry(QtCore.QRect(10, 30, 71, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
@@ -94,7 +116,7 @@ class Ui_Order(object):
         self.label_2 = QtGui.QLabel(self.tab_2)
         self.label_2.setGeometry(QtCore.QRect(10, 70, 71, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
@@ -131,6 +153,9 @@ class Ui_Order(object):
         self.tabWidget_2.addTab(self.tab_5, _fromUtf8(""))
         self.label_4 = QtGui.QLabel(self.tab_2)
         self.label_4.setGeometry(QtCore.QRect(300, 33, 54, 12))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.label_4.setFont(font)
         self.label_4.setObjectName(_fromUtf8("label_4"))
         self.spinbox_ncy = QtGui.QSpinBox(self.tab_2)
         self.spinbox_ncy.setGeometry(QtCore.QRect(340, 30, 111, 22))
@@ -182,11 +207,14 @@ class Ui_Order(object):
         self.tabWidget.addTab(self.tab_3, _fromUtf8(""))
         self.button_save = QtGui.QPushButton(Order)
         self.button_save.setGeometry(QtCore.QRect(460, 530, 111, 21))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.button_save.setFont(font)
         self.button_save.setInputMethodHints(QtCore.Qt.ImhDialableCharactersOnly|QtCore.Qt.ImhDigitsOnly|QtCore.Qt.ImhEmailCharactersOnly|QtCore.Qt.ImhFormattedNumbersOnly|QtCore.Qt.ImhLowercaseOnly|QtCore.Qt.ImhUppercaseOnly|QtCore.Qt.ImhUrlCharactersOnly)
         self.button_save.setObjectName(_fromUtf8("button_save"))
 
         self.retranslateUi(Order)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         self.tabWidget_2.setCurrentIndex(0)
         self.tab_widget.setCurrentIndex(0)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), Order.accept)
@@ -214,15 +242,15 @@ class Ui_Order(object):
         self.text_fp2k_path.setHtml(_translate("Order", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">./fp2k.exe</p></body></html>", None))
+"</style></head><body style=\" font-family:\'Noto Sans SC\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun\'; font-size:9pt;\">./fp2k.exe</span></p></body></html>", None))
         self.label_3.setText(_translate("Order", "fp2k path:", None))
         self.text_origin_path.setToolTip(_translate("Order", "<html><head/><body><p>the path of fp2k.exe</p></body></html>", None))
         self.text_origin_path.setHtml(_translate("Order", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">origin.exe</p></body></html>", None))
+"</style></head><body style=\" font-family:\'Noto Sans SC\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun\'; font-size:9pt;\">origin.exe</span></p></body></html>", None))
         self.label_5.setText(_translate("Order", "Origin path:", None))
         self.button_configure.setText(_translate("Order", "configure", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), _translate("Order", "system", None))
@@ -234,5 +262,5 @@ class Ui_Order(object):
         self.checkBox_fou.setText(_translate("Order", "Fou", None))
         self.tab_widget.setTabText(self.tab_widget.indexOf(self.tab_4), _translate("Order", "output", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Order", "Output", None))
-        self.button_save.setText(_translate("Order", "reload setting", None))
+        self.button_save.setText(_translate("Order", "Reload setting", None))
 
