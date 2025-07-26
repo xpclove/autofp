@@ -7,12 +7,12 @@ AutoFP website <http://physiworld.vipsinaapp.com/>
                          Windows XP/7/8/8.1/10/11	or  Linux
 	Dependence library (already packaged in AutoFP.msi):
 			 			 diffpy/SrRietveld/PyFullProf     http://www.diffpy.org/doc/srrietveld/
-                         python2.7          https://www.python.org/download/releases/2.7/
-                         pyqt4 	         http://www.riverbankcomputing.com/software/pyqt/download
+                         python2.7			https://www.python.org/download/releases/2.7/
+                         pyqt4 	            https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/
                          numpy              http://www.scipy.org/scipylib/download.html
                          matplotlib         http://matplotlib.org/
 	Refinement software: 
-                         FullProf(fp2k) 		     http://www.ill.eu/sites/fullprof/
+                         FullProf 2016 (fp2k) 		     http://www.ill.eu/sites/fullprof/
 
 ## How to use?
 Python2 UI program entry (Windows, Linux)

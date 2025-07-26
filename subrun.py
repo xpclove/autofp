@@ -19,7 +19,7 @@ class SubRun:
             if os.name=="nt":
                 startupinfo = subprocess.STARTUPINFO()
                 startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                startupinfo.wShowWindow = subprocess.SW_HIDE        
+                startupinfo.wShowWindow = subprocess.SW_HIDE
                 self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE,startupinfo=startupinfo)
             else:
                 self.rp=subprocess.Popen([self.ins,self.arg],stdout=subprocess.PIPE)
