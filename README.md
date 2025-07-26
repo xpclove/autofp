@@ -17,7 +17,7 @@ AutoFP website <http://physiworld.vipsinaapp.com/>
 ## How to use?
 Python2 UI program entry (Windows, Linux)
 
-		autofp.py
+		python autofp.py
 
 Python2 Shell program entry (Windows, Linux)
 
@@ -34,6 +34,8 @@ How to compile *.msi for Windows ? (Windows)
 Program setting (Windows, Linux)
 
 	(AutoFP Directory)/setting.txt
+
+	 "fp2k_path": "pathto\\fp2k.exe"	 # This key indicates the path of fullprof fp2k.
 
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
 

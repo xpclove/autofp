@@ -65,6 +65,18 @@ class setting:
         self.AsymLim = self.setjson["AsymLim"]
         self.eps = self.setjson["eps"]
         self.fp2k_path = self.setjson["fp2k_path"]
+
+        # Set the default location of FP2K.
+        if self.fp2k_path == "fp2k":
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            print("Current dir of fp2k: ", script_dir)
+            if os.name == "nt":
+                self.fp2k_path = "fp2k.exe"
+            if os.name == "posix":
+                self.fp2k_path = "fp2k"
+            self.fp2k_path = script_dir + "\\" +self.fp2k_path
+
+
         self.origin_path = self.setjson["origin_path"]
         return
 
