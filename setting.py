@@ -66,7 +66,7 @@ class setting:
         self.eps = self.setjson["eps"]
         self.fp2k_path = self.setjson["fp2k_path"]
 
-        # Set the default location of FP2K.
+        # Set the default location of fp2k.
         if self.fp2k_path == "fp2k":
             script_dir = os.path.dirname(os.path.abspath(__file__))
             print("Current dir of fp2k: ", script_dir)
