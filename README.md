@@ -42,9 +42,9 @@ For more detailed documentation, check out this URL <http://physiworld.vipsinaap
 
 Python2 UI Video tutorial: 
 
-[1) Y2O3 Xray demo](http://physiworld.vipsinaapp.com/demo.html) 
+[1) Y2O3 Xray demo .MP4](http://physiworld.vipsinaapp.com/demo.html) 
 
-[2) PbSO4 Neutron CW demo](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
+[2) PbSO4 Neutron CW demo .MP4](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
 
 ## Reference:
 1. [A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf (2016 )](http://webfile.sinacloud.net/autofp/kc5011.pdf)
