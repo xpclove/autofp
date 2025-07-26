@@ -36,3 +36,8 @@ Program setting (Windows, Linux)
 	(AutoFP Directory)/setting.txt
 
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
+
+## Reference:
+1. [A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf (2016 )](http://webfile.sinacloud.net/autofp/kc5011.pdf)
+
+2. [Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm(2016 )](http://webfile.sinacloud.net/autofp/autofp.pdf)
