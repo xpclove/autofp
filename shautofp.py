@@ -29,7 +29,8 @@ def cmd_run(argv, argn):
     com.mode = "cmd"
     com.autofp_running = True
     if os.name == "nt":
-        com.run_set.fp2k_path = "fp2k"
+        # com.run_set.fp2k_path = "fp2k.exe"
+        com.run_set.fp2k_path = com.run_set.fp2k_path
     if os.name == "posix":
         com.run_set.fp2k_path = "./fp2k"
 
