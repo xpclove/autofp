@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\new.ui'
+# Form implementation generated from reading ui file '.\ui.ui'
 #
-# Created: Sat Jul 26 18:09:17 2025
+# Created: Sat Jul 26 18:13:44 2025
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -143,7 +143,7 @@ class Ui_Form(object):
         self.tableWidgetocc.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_8, _fromUtf8(""))
         self.buttonrefineall = QtGui.QPushButton(self.params_widget)
-        self.buttonrefineall.setGeometry(QtCore.QRect(10, 500, 75, 23))
+        self.buttonrefineall.setGeometry(QtCore.QRect(10, 498, 75, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Serif SC"))
         font.setPointSize(9)
@@ -153,7 +153,7 @@ class Ui_Form(object):
         self.buttonrefineall.setFont(font)
         self.buttonrefineall.setObjectName(_fromUtf8("buttonrefineall"))
         self.buttonclearall = QtGui.QPushButton(self.params_widget)
-        self.buttonclearall.setGeometry(QtCore.QRect(100, 500, 75, 23))
+        self.buttonclearall.setGeometry(QtCore.QRect(100, 498, 75, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Serif SC"))
         font.setPointSize(9)
@@ -163,7 +163,7 @@ class Ui_Form(object):
         self.buttonclearall.setFont(font)
         self.buttonclearall.setObjectName(_fromUtf8("buttonclearall"))
         self.button_params_ok = QtGui.QPushButton(self.params_widget)
-        self.button_params_ok.setGeometry(QtCore.QRect(405, 500, 75, 23))
+        self.button_params_ok.setGeometry(QtCore.QRect(405, 498, 75, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(10)
