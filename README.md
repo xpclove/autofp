@@ -37,7 +37,14 @@ Program setting (Windows, Linux)
 
 	 "fp2k_path": "pathto\\fp2k.exe"	 # This key indicates the path of fullprof fp2k.
 
+## Document:
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
+
+Python2 UI Video tutorial: 
+
+[1) Y2O3 Xray demo](http://physiworld.vipsinaapp.com/demo.html) 
+
+[2) PbSO4 Neutron CW demo](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
 
 ## Reference:
 1. [A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf (2016 )](http://webfile.sinacloud.net/autofp/kc5011.pdf)
