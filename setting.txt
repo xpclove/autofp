@@ -5,7 +5,7 @@
  "NCY": 10,
  "AsymLim": 60, 
  "eps": 0.1,
- "fp2k_path": "D:\\git\\autofp\\fp2k.exe",
+ "fp2k_path": "C:\\git\\autofp\\fp2k.exe",
  "origin_path": "C:\\OriginLabOriginPro\\Origin9_64.exe",
  "editor":"notepad",
  "high-throughput": true

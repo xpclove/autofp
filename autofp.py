@@ -1,3 +1,7 @@
+# Solve the scaling issue for high DPI displays
+import ctypes
+ctypes.windll.shcore.SetProcessDpiAwareness(0)
+
 from uiset import Ui
 from run import Run
 import sys
@@ -10,6 +14,7 @@ import multiprocessing
 import shautofp
 import plot
 from PyQt4 import QtCore, QtGui
+
 def start_autofp():
     app = QtGui.QApplication(sys.argv)
     com.com_init("ui");
@@ -26,6 +31,7 @@ def start_autofp():
     sys.exit(app.exec_())
 def showmsg(msg):
 	window.showMsg(msg)
+
 if __name__ =="__main__":
     multiprocessing.freeze_support()
     if len(sys.argv)>1:
