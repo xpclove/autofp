@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'new.ui'
+# Form implementation generated from reading ui file '.\new.ui'
 #
-# Created by: PyQt4 UI code generator 4.11.4
+# Created: Sat Jul 26 18:09:17 2025
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -57,8 +58,8 @@ class Ui_Form(object):
         self.tabWidgettable = QtGui.QTabWidget(self.params_widget)
         self.tabWidgettable.setGeometry(QtCore.QRect(10, 10, 471, 461))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
-        font.setPointSize(9)
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(8)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -144,7 +145,7 @@ class Ui_Form(object):
         self.buttonrefineall = QtGui.QPushButton(self.params_widget)
         self.buttonrefineall.setGeometry(QtCore.QRect(10, 500, 75, 23))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Serif SC"))
         font.setPointSize(9)
         font.setBold(False)
         font.setItalic(False)
@@ -154,7 +155,7 @@ class Ui_Form(object):
         self.buttonclearall = QtGui.QPushButton(self.params_widget)
         self.buttonclearall.setGeometry(QtCore.QRect(100, 500, 75, 23))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Serif SC"))
         font.setPointSize(9)
         font.setBold(False)
         font.setItalic(False)
@@ -164,7 +165,7 @@ class Ui_Form(object):
         self.button_params_ok = QtGui.QPushButton(self.params_widget)
         self.button_params_ok.setGeometry(QtCore.QRect(405, 500, 75, 23))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(10)
         self.button_params_ok.setFont(font)
         self.button_params_ok.setObjectName(_fromUtf8("button_params_ok"))
@@ -181,7 +182,7 @@ class Ui_Form(object):
         self.label_2 = QtGui.QLabel(self.widget_3)
         self.label_2.setGeometry(QtCore.QRect(20, 15, 50, 12))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(9)
         self.label_2.setFont(font)
         self.label_2.setObjectName(_fromUtf8("label_2"))
@@ -191,9 +192,9 @@ class Ui_Form(object):
         self.widget.setObjectName(_fromUtf8("widget"))
         self.tabwidget_run = QtGui.QTabWidget(self.widget)
         self.tabwidget_run.setEnabled(True)
-        self.tabwidget_run.setGeometry(QtCore.QRect(100, 10, 431, 81))
+        self.tabwidget_run.setGeometry(QtCore.QRect(100, 10, 431, 91))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
@@ -206,7 +207,7 @@ class Ui_Form(object):
         self.Buttonautorun = QtGui.QPushButton(self.tab_3)
         self.Buttonautorun.setGeometry(QtCore.QRect(120, 10, 81, 41))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
@@ -216,7 +217,7 @@ class Ui_Form(object):
         self.buttonautoselect = QtGui.QPushButton(self.tab_3)
         self.buttonautoselect.setGeometry(QtCore.QRect(10, 10, 91, 41))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Simplified Arabic"))
+        font.setFamily(_fromUtf8("MS Shell Dlg 2"))
         font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
@@ -225,7 +226,7 @@ class Ui_Form(object):
         self.buttonorder = QtGui.QPushButton(self.tab_3)
         self.buttonorder.setGeometry(QtCore.QRect(220, 10, 91, 41))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
@@ -247,7 +248,7 @@ class Ui_Form(object):
         self.buttonback = QtGui.QPushButton(self.tab_2)
         self.buttonback.setGeometry(QtCore.QRect(150, 10, 111, 41))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(16)
         font.setBold(False)
         font.setWeight(50)
@@ -256,7 +257,7 @@ class Ui_Form(object):
         self.buttonrun = QtGui.QPushButton(self.tab_2)
         self.buttonrun.setGeometry(QtCore.QRect(10, 10, 111, 41))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(16)
         font.setBold(False)
         font.setWeight(50)
@@ -277,6 +278,12 @@ class Ui_Form(object):
         self.tab_7.setObjectName(_fromUtf8("tab_7"))
         self.textBrowser = QtGui.QTextBrowser(self.tab_7)
         self.textBrowser.setGeometry(QtCore.QRect(0, 0, 501, 61))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.textBrowser.setFont(font)
         self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.textBrowser.setOpenExternalLinks(True)
@@ -285,7 +292,7 @@ class Ui_Form(object):
         self.texteditshow = QtGui.QTextEdit(self.widget)
         self.texteditshow.setGeometry(QtCore.QRect(20, 132, 511, 341))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
@@ -304,27 +311,36 @@ class Ui_Form(object):
         self.buttonfold.setStyleSheet(_fromUtf8(""))
         self.buttonfold.setObjectName(_fromUtf8("buttonfold"))
         self.text_path = QtGui.QLineEdit(self.widget)
-        self.text_path.setGeometry(QtCore.QRect(20, 100, 511, 21))
+        self.text_path.setGeometry(QtCore.QRect(20, 105, 511, 21))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.text_path.setFont(font)
         self.text_path.setStyleSheet(_fromUtf8(""))
         self.text_path.setFrame(False)
         self.text_path.setReadOnly(True)
         self.text_path.setObjectName(_fromUtf8("text_path"))
         self.check_show_rwp = QtGui.QCheckBox(self.widget)
         self.check_show_rwp.setGeometry(QtCore.QRect(80, 480, 141, 16))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.check_show_rwp.setFont(font)
         self.check_show_rwp.setCheckable(True)
         self.check_show_rwp.setChecked(True)
         self.check_show_rwp.setObjectName(_fromUtf8("check_show_rwp"))
         self.check_show_fp = QtGui.QCheckBox(self.widget)
         self.check_show_fp.setGeometry(QtCore.QRect(250, 480, 131, 16))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.check_show_fp.setFont(font)
         self.check_show_fp.setChecked(True)
         self.check_show_fp.setObjectName(_fromUtf8("check_show_fp"))
         self.widget_2 = QtGui.QWidget(self.widget)
-        self.widget_2.setGeometry(QtCore.QRect(-10, 0, 120, 91))
+        self.widget_2.setGeometry(QtCore.QRect(-10, 0, 120, 101))
         self.widget_2.setObjectName(_fromUtf8("widget_2"))
         self.buttonopen = QtGui.QPushButton(self.widget_2)
-        self.buttonopen.setGeometry(QtCore.QRect(30, 10, 70, 81))
+        self.buttonopen.setGeometry(QtCore.QRect(30, 10, 70, 91))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
+        font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(16)
         font.setBold(False)
         font.setWeight(50)
@@ -343,19 +359,12 @@ class Ui_Form(object):
         self.labelpar.setText(_fromUtf8(""))
         self.labelpar.setObjectName(_fromUtf8("labelpar"))
         self.button_stop = QtGui.QToolButton(self.widget)
-        self.button_stop.setGeometry(QtCore.QRect(485, 500, 43, 21))
+        self.button_stop.setGeometry(QtCore.QRect(477, 500, 51, 21))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        self.button_stop.setFont(font)
         self.button_stop.setStyleSheet(_fromUtf8(""))
         self.button_stop.setObjectName(_fromUtf8("button_stop"))
-        self.labelpar.raise_()
-        self.tabwidget_run.raise_()
-        self.texteditshow.raise_()
-        self.buttonfold.raise_()
-        self.text_path.raise_()
-        self.check_show_rwp.raise_()
-        self.check_show_fp.raise_()
-        self.widget_2.raise_()
-        self.progress.raise_()
-        self.button_stop.raise_()
         self.buttonoutput = QtGui.QPushButton(Form)
         self.buttonoutput.setEnabled(False)
         self.buttonoutput.setGeometry(QtCore.QRect(1060, 430, 81, 41))
@@ -379,7 +388,7 @@ class Ui_Form(object):
         self.textrwp.setObjectName(_fromUtf8("textrwp"))
 
         self.retranslateUi(Form)
-        self.tabWidgettable.setCurrentIndex(5)
+        self.tabWidgettable.setCurrentIndex(0)
         self.tabwidget_run.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -398,11 +407,11 @@ class Ui_Form(object):
         self.spinbox_phase.setToolTip(_translate("Form", "<html><head/><body><p>Phase</p></body></html>", None))
         self.label_2.setText(_translate("Form", " phase:", None))
         self.Buttonautorun.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:10pt; color:#000000;\">start auto-refinement !</span></p></body></html>", None))
-        self.Buttonautorun.setText(_translate("Form", "run", None))
+        self.Buttonautorun.setText(_translate("Form", "Run", None))
         self.buttonautoselect.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" color:#000000;\">autoselect the parameters to refine </span></p></body></html>", None))
-        self.buttonautoselect.setText(_translate("Form", "autoselect", None))
+        self.buttonautoselect.setText(_translate("Form", "AutoSelect", None))
         self.buttonorder.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:10pt;\">setting of AutoFP</span></p></body></html>", None))
-        self.buttonorder.setText(_translate("Form", "setting", None))
+        self.buttonorder.setText(_translate("Form", "Setting", None))
         self.spinBox.setToolTip(_translate("Form", "<html><head/><body><pre style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Courier New,courier\'; font-size:10pt; color:#000000;\">&quot;cycle=0&quot; represent auto-select the cycles number;</span></pre><pre style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Courier New,courier\'; font-size:10pt; color:#000000;\">&quot;cycle=n&gt;0&quot; represent run n cycles.</span></pre></body></html>", None))
         self.label.setText(_translate("Form", "Cycle:", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_3), _translate("Form", "Auto", None))
@@ -415,25 +424,23 @@ class Ui_Form(object):
         self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun-ExtB\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">AutoFP</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Website: <a href=\"http:\\\\pmedia.shu.edu.cn\\autofp\"><span style=\" font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\">http:\\\\pmedia.shu.edu.cn\\autofp </span></a>or <a href=\"http:\\\\physiworld.sinaapp.com\"><span style=\" font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\">here</span></a></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun\'; font-size:9pt; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">Authors: Xiaopeng Cui ...o Jincang Zhang </span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">Institute: Shanghai University</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#000000;\">--------------------------------------------------</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">Current version : 1.3.x</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Feedback Email : autofp@163.com</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LICENSE: GPL v3</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">All copyright reversed 2014-2017</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+"</style></head><body style=\" font-family:\'Noto Sans SC\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt;\">AutoFP</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt;\">Website: </span><a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" font-size:11pt; text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt; font-style:italic; color:#000000;\">Authors: Xiaopeng Cui ...o Jincang Zhang </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt; font-style:italic; color:#000000;\">Institute: Shanghai University</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt; font-style:italic; color:#000000;\">--------------------------------------------------</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt; color:#000000;\">Current version : 1.3.x</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt;\">Feedback Email : autofp@163.com</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt;\">LICENSE: GPL v3</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun-ExtB\'; font-size:11pt;\">All copyright reversed 2014-2025</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun-ExtB\'; font-size:11pt;\"><br /></p></body></html>", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_7), _translate("Form", "About", None))
         self.buttonfold.setText(_translate("Form", ">", None))
         self.check_show_rwp.setText(_translate("Form", "Show Rwp curve", None))
         self.check_show_fp.setText(_translate("Form", "Show FP out", None))
         self.buttonopen.setToolTip(_translate("Form", "<html><head/><body><p><span style=\" font-size:10pt; color:#ff00ff;\">Open *.pcr file</span></p></body></html>", None))
-        self.buttonopen.setText(_translate("Form", "open", None))
+        self.buttonopen.setText(_translate("Form", "Open", None))
         self.button_stop.setToolTip(_translate("Form", "<html><head/><body><p>stop the auto-refinement!</p></body></html>", None))
         self.button_stop.setText(_translate("Form", "stop", None))
         self.buttonoutput.setText(_translate("Form", "output", None))
