@@ -1,6 +1,6 @@
 # AutoFP
 
-AutoFP website <http://physiworld.sinaapp.com/autofp.html>
+AutoFP website <http://physiworld.vipsinaapp.com/>
 
 ## Requirement：
 	OS platforms：
@@ -35,4 +35,4 @@ Program setting (Windows, Linux)
 
 	(AutoFP Directory)/setting.txt
 
-For more detailed documentation, check out this URL <http://physiworld.sinaapp.com/document.html>
+For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
