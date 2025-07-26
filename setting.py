@@ -78,6 +78,7 @@ class setting:
 
 
         self.origin_path = self.setjson["origin_path"]
+
         return
 
     def save_setting(self, path="setting.txt"):
