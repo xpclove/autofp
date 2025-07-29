@@ -15,11 +15,11 @@ AutoFP website <http://physiworld.vipsinaapp.com/>
                          FullProf 2016/2017 (Windows: fp2k.exe / Linux: fp2k) 		     http://www.ill.eu/sites/fullprof/
 
 ## How to use?
-Python2 UI program entry (Windows, Linux)
+Python2.7 UI program entry (Windows, Linux)
 
 		python autofp.py
 
-Python2 Shell program entry (Windows, Linux)
+Python2.7 Shell program entry (Windows, Linux)
 
 		pyhton shautofp.py -c 1 -a *.pcr
 		-c 1 : cycle number 1；set "-c 0" indicates the automatic determination of the number of cycles
@@ -29,7 +29,7 @@ Python2 Shell program entry (Windows, Linux)
 
 How to compile *.msi for Windows ? (Windows)
 
-		run make.bat to creat autofp.msi (it needs software "AdvancedInstaller")
+		run make.bat to creat autofp.msi (it needs software "AdvancedInstaller" <13.0 )
 
 Program setting (Windows, Linux)
 
@@ -40,7 +40,7 @@ Program setting (Windows, Linux)
 ## Document:
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
 
-Python2 UI Video tutorial: 
+Python2.7 Autofp UI Video tutorial: 
 
 [1) Y2O3 Xray demo @ Windows 8](http://physiworld.vipsinaapp.com/demo.html) 
 
