@@ -1,5 +1,5 @@
 # AutoFP
-
+AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes.
 AutoFP website <http://physiworld.vipsinaapp.com/>
 
 ## Requirement：
