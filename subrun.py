@@ -54,12 +54,16 @@ class SubRun:
             if self.result != 0:
                 self.rp.terminate()
                 self.rp.kill()
-                fp2k_name = os.path.basename(self.ins)
+                fp2k_name = os.path.basename(
+                    self.ins)  # get fp2k prcocess name
                 if os.name == "nt":
                     os.system("taskkill /IM {} /F".format(fp2k_name))
                 if os.name == "posix":
                     os.system("pkill -f {}".format(fp2k_name))
         self.rp.wait()
 
-        print("fp2k is finished with error {}".format(self.result))
+        print("fp2k is finished")
+        if self.result != 0:
+            print("fp2k error {}".format(self.result))
+
         return self.result
