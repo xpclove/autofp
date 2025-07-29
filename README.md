@@ -35,7 +35,7 @@ Program setting (Windows, Linux)
 
 	(AutoFP Directory)/setting.txt
 
-	 "fp2k_path": "pathto\\fp2k.exe"	 # This key indicates the path of fullprof fp2k.
+	 "fp2k_path": "pathto\\fp2k.exe"	 # This key indicates the path of fullprof fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k.
 
 ## Document:
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
