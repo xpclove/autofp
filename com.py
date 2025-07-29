@@ -1,7 +1,7 @@
 import sys
 import os
 import setting
-import plot
+# import plot
 import prf2origin.prf2origin.python.prf2origin
 import wphase
 
