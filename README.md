@@ -1,5 +1,5 @@
 # AutoFP
-AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes.
+AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and neutron diffraction patterns.
 AutoFP website <http://physiworld.vipsinaapp.com/>
 
 ## Requirement：
