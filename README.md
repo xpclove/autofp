@@ -4,7 +4,7 @@ AutoFP website <http://physiworld.vipsinaapp.com/>
 
 ## Requirement：
 	OS platforms：
-                         Windows XP/7/8/8.1/10/11	or  Linux
+                         Windows XP/7/8/10/11(x86/x64)	or  Linux(x86/x64)
 	Dependence library (already packaged in AutoFP.msi):
 			 			 diffpy/SrRietveld/PyFullProf     http://www.diffpy.org/doc/srrietveld/
                          python2.7			https://www.python.org/download/releases/2.7/
