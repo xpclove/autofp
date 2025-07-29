@@ -55,9 +55,9 @@ class SubRun:
                 self.rp.terminate()
                 self.rp.kill()
                 fp2k_name = os.path.basename(self.ins)
-                if os.name =="nt":
+                if os.name == "nt":
                     os.system("taskkill /IM {} /F".format(fp2k_name))
-                if os.name =="posix":
+                if os.name == "posix":
                     os.system("pkill -f {}".format(fp2k_name))
         self.rp.wait()
 
