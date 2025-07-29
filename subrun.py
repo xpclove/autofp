@@ -60,10 +60,11 @@ class SubRun:
                     os.system("taskkill /IM {} /F".format(fp2k_name))
                 if os.name == "posix":
                     os.system("pkill -f {}".format(fp2k_name))
+
         self.rp.wait()
 
-        print("fp2k is finished")
+        print(">>> fp2k is finished.")
         if self.result != 0:
-            print("fp2k error {}".format(self.result))
+            print(">>> fp2k error {}".format(self.result))
 
         return self.result

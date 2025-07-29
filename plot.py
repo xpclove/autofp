@@ -4,6 +4,7 @@ import numpy
 import os
 import multiprocessing
 import com
+
 fig = plt.figure("Rwp")
 # fig.suptitle("Rwp")
 axes1 = fig.add_subplot(111)
@@ -30,9 +31,11 @@ def update(d):
 def data_gen():
     # n=len(auto.rwplist)
     # data=[n,auto.rwplist]
-    if os.path.exists("rwp.txt"):
-        data = numpy.loadtxt("rwp.txt")
-        data = data.tolist()
+    rwp_file = "rwp.txt"
+    if os.path.exists(rwp_file):
+        if os.path.getsize(rwp_file) > 0:
+            data = numpy.loadtxt(rwp_file)
+            data = data.tolist()
     else:
         data = [0]
     data = [data, data]

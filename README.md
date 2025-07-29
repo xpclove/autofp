@@ -12,7 +12,7 @@ AutoFP website <http://physiworld.vipsinaapp.com/>
                          numpy              http://www.scipy.org/scipylib/download.html
                          matplotlib         http://matplotlib.org/
 	Refinement software: 
-                         FullProf 2016 (Windows:fp2k.exe / Linux:fp2k) 		     http://www.ill.eu/sites/fullprof/
+                         FullProf 2016/2017 (Windows: fp2k.exe / Linux: fp2k) 		     http://www.ill.eu/sites/fullprof/
 
 ## How to use?
 Python2 UI program entry (Windows, Linux)

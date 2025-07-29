@@ -11,9 +11,9 @@ import setting
 import com
 
 error_info = {
+    1: "out file error",
     0: "no error",
     -1: "no out file",
-    1: "out file error",
     -30: "error in run and break",
     -31: "asym error",
     -32: "no rwp in out file",
@@ -63,6 +63,7 @@ class Run:
 
     def resetLoad(self):
         self.pcrRW = pcrFileHelper()
+
         try:
             self.pcrRW.readFromPcrFile(self.pcrfilename)
         except Exception, e:
@@ -80,11 +81,14 @@ class Run:
             if asylim < 5:
                 asylim = setting.run_set.AsymLim
             self.fit.get("Pattern")[0].set("AsymLim", asylim)
+
         if self.job == 2:
             self.err = -10  # no Rwp task
+
         if setting.run_set.Atom_Aniso_Temp_Enable == True:
             for atom_i in self.fit.get("Phase")[0].get("Atom"):
                 atom_i.set("N_t", 2)
+
         # the absolute path of the data file
         self.real_datafile = os.path.splitext(self.pcrfilename)[0]+".dat"
 
@@ -100,6 +104,7 @@ class Run:
         # end read outfile
 
         self.params = ParamList(self.fit.getParamList(), self.job, self.fit)
+
         return self.err
 
     def runfp(self):
@@ -109,9 +114,11 @@ class Run:
         subrun.reset(fp2k_path, self.base_pcrfilename,
                      "not saved to the current PCR file:")
         self.err = subrun.run()
+
         if self.err == 0:
             self.err += check(self.outfilename)
             self.err += self.resetLoad()
+
         # only save the right result
         if (self.err == 0):
             self.push()
@@ -160,7 +167,7 @@ class Run:
         if self.step_index == 0:
             n = 0
         tmp = self.tmpdir+"step="+str(self.step_index-n)
-        print "$$ pop ", tmp
+        print ">>> pop <<<", tmp
         if com.is_file_locked(self.outfilename):
             print("file is use[pop]", self.outfilename)
             input()
