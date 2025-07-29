@@ -12,7 +12,10 @@ AutoFP website <http://physiworld.vipsinaapp.com/>. Contact: autofp@163.com
                          numpy              http://www.scipy.org/scipylib/download.html
                          matplotlib         http://matplotlib.org/
 	Refinement software: 
-                         FullProf 2016/2017 (Windows: fp2k.exe / Linux: fp2k) 		     http://www.ill.eu/sites/fullprof/
+                         FullProf  (Windows: fp2k.exe / Linux: fp2k) http://www.ill.eu/sites/fullprof/
+						 Windows: fp2k.exe (Fullprof 2017)
+						 Linux: fp2k(Fullprof 2017 -> Ubuntu 16.04), if you use Ubuntu 20.04, plese use Fullprof 2021
+
 
 ## How to use?
 Python2.7 UI program entry (Windows, Linux)
