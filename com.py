@@ -1,13 +1,9 @@
 import sys
 import os
 import setting
-# import plot
-import wphase
+import plot
 import prf2origin.prf2origin.python.prf2origin
-import paramgroup
-import time
-import errno
-import subprocess
+import wphase
 
 run_set = setting.run_set
 R = {"Rp": 100, "Rwp": 100, "Re": 100, "Chi2": 100}
@@ -36,7 +32,7 @@ text_style = {"normal": "<font color=blue>",
               "error": "<font color=brown>"
               }
 
-
+import paramgroup
 def com_init(m, root=os.getcwd()):
     global root_path, origin_path, run_set, plot, mode, show_plot, log
     mode = m
@@ -51,7 +47,7 @@ def com_init(m, root=os.getcwd()):
     paramgroup.load_strategy(os.path.join(root_path, "strategy"))
     # log=open("log.txt","w")
 
-    print origin_path, root_path
+    print (origin_path, root_path)
 
 
 def com_exit():

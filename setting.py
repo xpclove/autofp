@@ -1,5 +1,4 @@
 import os
-import run
 import json
 import re
 ########################################################################
@@ -75,7 +74,6 @@ class setting:
             if os.name == "posix":
                 self.fp2k_path = "fp2k"
             self.fp2k_path = os.path.join(script_dir, self.fp2k_path)
-
 
         self.origin_path = self.setjson["origin_path"]
 
