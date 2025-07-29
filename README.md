@@ -22,9 +22,9 @@ Python2 UI program entry (Windows, Linux)
 Python2 Shell program entry (Windows, Linux)
 
 		pyhton shautofp.py -c 1 -a *.pcr
-		-c 1 : cycle number 1
+		-c 1 : cycle number 1；set "-c 0" indicates the automatic determination of the number of cycles
 		-a : autoselect parameters
-		*.pcr : task pcr path
+		*.pcr : Fullprof task pcr path
 
 
 How to compile *.msi for Windows ? (Windows)
