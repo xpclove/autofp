@@ -38,8 +38,8 @@ Program setting (Windows, Linux)
 	(AutoFP Directory)/setting.txt
 
 	 "fp2k_path": "pathto\\fp2k.exe"	
-	  # This key indicates the absolute path of fullprof core fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2017 -> Ubuntu 16.04)。
-	  # If you use Ubuntu 20.04+, plese use Fullprof 2021+.
+	  # This key indicates the absolute path of fullprof core fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2021 -> Ubuntu 20.04)。
+	  # If you use Ubuntu 16.04+, plese use Fullprof 2017.
 
 ## Document:
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>

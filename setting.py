@@ -71,6 +71,8 @@ class setting:
             print("Current dir of fp2k: ", script_dir)
             if os.name == "nt":
                 self.fp2k_path = "fp2k.exe"
+                if script_dir.find('library.zip') != -1:
+                    script_dir = os.path.dirname(script_dir)
             if os.name == "posix":
                 self.fp2k_path = "fp2k"
             self.fp2k_path = os.path.join(script_dir, self.fp2k_path)

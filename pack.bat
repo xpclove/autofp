@@ -1,4 +1,5 @@
-rmdir /s /q /f ./dist ./build
+rmdir /s /q dist 
+rmdir /s /q build
 mkdir dist
 mkdir build
 C:/Python27/python.exe pack.py py2exe
