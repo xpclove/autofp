@@ -9,14 +9,16 @@ from outfilecheckerror import check
 from subrun import SubRun
 import setting
 import com
+
 error_info={
-     0:"no error",
+     0: "no error",
     -1: "no out file",
      1: "out file error",
     -30: "error in run and break",
     -31: "asym error",
     -32: "no rwp in out file",
     -33: "Singular matrix",
+    -34: "Rwp = NaN",
     -10:  "no rwp task"
 }
 
@@ -55,6 +57,7 @@ class Run:
         self.push() #   the number 0 version
         shutil.copy(self.pcrfilename,self.pcrfilename+"_back") #backup the pcrfile
         return
+    
     def resetLoad(self):
         self.pcrRW=pcrFileHelper()
         try:
@@ -62,10 +65,12 @@ class Run:
         except Exception,e:
             print Exception,":",e
             return -0x80
+        
         self.fit=self.pcrRW.fit
         self.job=self.fit.get("Pattern")[0].get("Job") # get the type of job
         self.datafile=self.fit.get("Pattern")[0].get("Datafile") # the name of data file
         self.phase_num=len(self.fit.get("Phase"))
+
         if self.job==0:
             asylim=self.fit.get("Pattern")[0].get("AsymLim")
             if asylim < 5: asylim=setting.run_set.AsymLim
@@ -76,7 +81,8 @@ class Run:
             for atom_i in self.fit.get("Phase")[0].get("Atom"):
                 atom_i.set("N_t",2)
         self.real_datafile=os.path.splitext(self.pcrfilename)[0]+".dat" # the absolute path of the data file
-        #read outfile and get rwp
+
+        # read outfile and get Rwp
         if os.path.exists(self.outfilename) == False:
             self.throwerr(-1, "no out file ")
         elif self.err>=0:
@@ -85,20 +91,27 @@ class Run:
                 self.throwerr(1, "out file error")
             elif self.err == 0:
                 self.Rwp=self.getRwp()
-        #end read outfile
+        # end read outfile
+
         self.params=ParamList(self.fit.getParamList(),self.job,self.fit)
         return self.err
+    
     def runfp(self):
-        self.err=0
+        self.err = 0
         subrun=SubRun()
         fp2k_path = com.run_set.fp2k_path
         subrun.reset(fp2k_path,self.base_pcrfilename,"not saved to the current PCR file:")
-        self.err=subrun.run()
-        self.err=check(self.outfilename)
-        self.err=self.resetLoad()
+        self.err =subrun.run()
+        if self.err == 0:
+            self.err += check(self.outfilename)
+            self.err += self.resetLoad()
+        if com.is_file_locked(self.outfilename):
+            print("file is use[0]", self.outfilename)
+            input()
         #only save the right result
-        if(self.err==0):
+        if(self.err == 0):
             self.push()
+
     #get the Rwp
     def getRwp(self,num=-1):
         if num<0:
@@ -113,10 +126,12 @@ class Run:
         if self.err == 0:
             Num=self.outR.getNumCycles()
             return Num
+        
     #----------------------------------------------------------------------
     def back_no_step(self):
         self.back(0)
         #   step=0 represent only pop but step_index don't change
+
     def back(self,step=1):
         self.err=0
         if self.step_index<0:
@@ -127,17 +142,22 @@ class Run:
         self.pop(step)
         self.resetLoad()
         return
+    
     def push(self):
         self.step_index+=1       
         tmp=self.tmpdir+"step="+str(self.step_index)
         copyfile(self.pcrfilename,tmp+".pcr")
         copyfile(self.outfilename,tmp+".out")      
         return
+    
     def pop(self , step = 1):
         n=step
         if self.step_index == 0: n = 0
         tmp=self.tmpdir+"step="+str(self.step_index-n)
         print "$$pop",tmp
+        if com.is_file_locked(self.outfilename):
+            print("file is use[1]", self.outfilename)
+            input()
         if(os.path.exists(tmp+".pcr")):
             copyfile(tmp+".pcr", self.pcrfilename)
         if(os.path.exists(tmp+".out")):
@@ -148,20 +168,24 @@ class Run:
         if self.step_index < 0:
             self.step_index = 0
         return 1
+    
     # write to pcr
     def writepcr(self):
         self.pcrRW.writeToPcrFile(self.pcrfilename)
         return
+    
     def setParam(self,index,code=False):
         if code ==False:
             self.params.turnoff_param(index)
         else:
             self.params.turnon_param(index)
         return
+    
     def throwerr(self, errcode, str):
         self.err = errcode
         self.errmsg = str
         print(self.errmsg)
+
 def copyfile(source,destin):
     shutil.copyfile(source,destin)
     '''

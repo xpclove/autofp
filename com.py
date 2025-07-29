@@ -6,6 +6,9 @@ import wphase
 import prf2origin.prf2origin.python.prf2origin
 import paramgroup
 import time
+import errno
+import subprocess
+
 run_set = setting.run_set
 R = {"Rp": 100, "Rwp": 100, "Re": 100, "Chi2": 100}
 target = {"string": 'com.R["Rwp"]', "name": 'Rwp'}
@@ -75,3 +78,20 @@ def autofp_init():
 def debug_print():
     if debug == True:
         0 == 0
+
+
+def is_file_locked(filepath):
+    try:
+        fd = os.open(filepath, os.O_WRONLY)
+        os.close(fd)
+        return False
+    except OSError as e:
+        return True
+
+
+def release_process(rp):
+    if os.name == "nt":
+        # os.system("taskkill /IM fp2k.exe /F")
+        os.system("taskkill /PID {} /F".format(rp.pid))
+    if os.name == "posix":
+        os.system("kill -s 9 ".format(rp.pid))
