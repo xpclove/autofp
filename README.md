@@ -51,6 +51,6 @@ Python2.7 Autofp UI Video tutorial:
 [2) PbSO4 Neutron CW demo @ Windows 8](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
 
 ## Reference:
-1. [Xiaopeng Cui. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )](http://webfile.sinacloud.net/autofp/kc5011.pdf)
+1. [Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )](http://webfile.sinacloud.net/autofp/kc5011.pdf)
 
-2. [Xiaopeng Cui. Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm ( 2016 )](http://webfile.sinacloud.net/autofp/autofp.pdf)
+2. [Xiaopeng Cui, etc. Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm ( 2016 )](http://webfile.sinacloud.net/autofp/autofp.pdf)
