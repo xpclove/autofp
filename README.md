@@ -12,14 +12,14 @@ AutoFP website <http://physiworld.vipsinaapp.com/>. Contact: autofp@163.com
                          numpy              http://www.scipy.org/scipylib/download.html
                          matplotlib         http://matplotlib.org/
 	Refinement software: 
-                         FullProf  (Windows: fp2k.exe / Linux: fp2k) http://www.ill.eu/sites/fullprof/
+                         FullProf  (Windows: fp2k.exe / Linux: fp2k)	http://www.ill.eu/sites/fullprof/
 
 
 ## How to use?
 Python2.7 UI program entry (Windows, Linux)
 
 		python autofp.py
-		Then click "Open" pcr file, "Autoslect", "run" 
+		Then click "Open" *.pcr file( with *.dat in the same folder), "Autoslect", "run" 
 
 Python2.7 Shell program entry (Windows, Linux)
 
@@ -38,7 +38,7 @@ Program setting (Windows, Linux)
 	(AutoFP Directory)/setting.txt
 
 	 "fp2k_path": "pathto\\fp2k.exe"	
-	  # This key indicates the absolute path of fullprof fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2017 -> Ubuntu 16.04)。
+	  # This key indicates the absolute path of fullprof core fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2017 -> Ubuntu 16.04)。
 	  # If you use Ubuntu 20.04+, plese use Fullprof 2021+.
 
 ## Document:
