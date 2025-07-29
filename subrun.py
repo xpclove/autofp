@@ -52,14 +52,18 @@ class SubRun:
                     self.result = -34
             # kill subprocess and fp2k when meet error
             if self.result != 0:
+                print("fp2k meet error, please wait fp2k exit ... ")
                 self.rp.terminate()
                 self.rp.kill()
                 fp2k_name = os.path.basename(
                     self.ins)  # get fp2k prcocess name
                 if os.name == "nt":
+                    # os.system("taskkill /PID {} /F".format(self.rp.pid))
                     os.system("taskkill /IM {} /F".format(fp2k_name))
+                    # os.system(u"taskkill /IM {}(32 *) /F".format(fp2k_name).encode("gbk"))
                 if os.name == "posix":
                     os.system("pkill -f {}".format(fp2k_name))
+                break
 
         self.rp.wait()
 
