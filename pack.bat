@@ -1,4 +1,5 @@
-#!/bin/sh
-rm -r -f ./dist ./build
-python.exe pack.py py2exe
-release_dist.py
+rmdir /s /q /f ./dist ./build
+mkdir dist
+mkdir build
+C:/Python27/python.exe pack.py py2exe
+C:/Python27/python.exe release_dist.py

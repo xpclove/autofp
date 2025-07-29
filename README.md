@@ -29,7 +29,7 @@ Python2.7 Shell program entry (Windows, Linux)
 		*.pcr : Fullprof task pcr path
 
 
-How to compile *.msi for Windows ? (Windows)
+How to compile *.msi for Windows ? ( Please use Windows 7/8 to compile )
 
 		run make.bat to creat autofp.msi (it needs software "AdvancedInstaller" <13.0 )
 

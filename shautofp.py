@@ -9,17 +9,20 @@ import doc
 import run
 import os
 import json
+
 tag = "shautofp->"
+
+# shell entry
 
 
 def cmd_run(argv, argn):
     root_path_abs = os.path.abspath(argv[0])
     root_dir = os.path.split(root_path_abs)
-    print root_dir[0]
+    print(root_dir[0])
     cur_dir = os.getcwd()
     os.chdir(root_dir[0])
     # os.chdir("../")
-    print "current_dir: ", os.getcwd()
+    print("current_dir: ", os.getcwd())
     com.com_init("cmd", os.getcwd())
     os.chdir(cur_dir)
     com.run_mode = 0
@@ -28,34 +31,30 @@ def cmd_run(argv, argn):
     setting.run_set.show_rwp = False
     com.mode = "cmd"
     com.autofp_running = True
-    
-    # if os.name == "nt":
-    #     # com.run_set.fp2k_path = "fp2k.exe"
-    #     com.run_set.fp2k_path = com.run_set.fp2k_path
-    # if os.name == "posix":
-    #     com.run_set.fp2k_path = "./fp2k"
+    print(argv)
 
-    print argv
     if argn < 2:
         print("Error: the arguments is too few")
         doc.show()
         return
+
     r = run.Run()
     r.reset(argv[-1])
     flag_autoselect = False
+
     cycle = 0
     for index, s in enumerate(argv):
         if s == "-c":
             cycle = int(argv[index+1])
             if cycle < 0:
                 cycle = 0
-            print tag, "cylce=", cycle
+            print(tag, "cylce=", cycle)
         if s == "-a":
             flag_autoselect = True
         if s == "-d":
             n = int(argv[index+1])
             com.wait = n
-    print argv[-1]
+    print(argv[-1])
 
     autoeng = subauto.SubAutoRun()
     pl = []
@@ -67,14 +66,15 @@ def cmd_run(argv, argn):
     if flag_autoselect == False:
         for i, p in enumerate(r.params.paramlist):
             pl[i] = False
-    print tag, pl
+    print(tag, pl)
+
     autoeng.reset(r.pcrfilename, pl, r)
     core = Autofp_Core()
     core.reset(r, pl, autoeng, cycle)
     core.autorunfp()
     params_dic = {}
     print_json(r)
-    print tag, "Rwp=", r.Rwp
+    print(tag, "Rwp=", r.Rwp)
 
 
 def print_json(r):
@@ -87,9 +87,11 @@ def print_json(r):
     out.write(pjson)
     out.close()
     # print tag,"Rwp=",r.Rwp
-########################################################################
 
 
+####################################################################################
+
+# autofp core
 class Autofp_Core:
     """"""
     # ----------------------------------------------------------------------
