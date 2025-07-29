@@ -18,6 +18,7 @@ AutoFP website <http://physiworld.vipsinaapp.com/>
 Python2.7 UI program entry (Windows, Linux)
 
 		python autofp.py
+		then click "Open" pcr file, "Autoslect", "run" 
 
 Python2.7 Shell program entry (Windows, Linux)
 
