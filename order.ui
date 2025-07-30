@@ -28,7 +28,7 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>20</y>
      <width>591</width>
      <height>500</height>
@@ -64,7 +64,7 @@
      <property name="font">
       <font>
        <family>Noto Sans SC</family>
-       <pointsize>12</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="cursor" stdset="0">
@@ -280,8 +280,8 @@
       <font>
        <family>Noto Sans SC</family>
        <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -431,7 +431,7 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="text">
-      <string>NCY</string>
+      <string>NCY：</string>
      </property>
     </widget>
     <widget class="QSpinBox" name="spinbox_ncy">
@@ -476,6 +476,12 @@ p, li { white-space: pre-wrap; }
        <height>271</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -497,10 +503,10 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="font">
         <font>
-         <family>Segoe UI</family>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Noto Sans SC</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -521,10 +527,10 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="font">
         <font>
-         <family>Segoe UI</family>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Noto Sans SC</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -545,10 +551,10 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="font">
         <font>
-         <family>Segoe UI</family>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Noto Sans SC</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">

@@ -359,8 +359,8 @@
       </property>
       <property name="font">
        <font>
-        <family>SimSun-ExtB</family>
-        <pointsize>12</pointsize>
+        <family>Noto Sans SC</family>
+        <pointsize>10</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -431,7 +431,7 @@
       <widget class="QPushButton" name="Buttonautorun">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>125</x>
          <y>10</y>
          <width>81</width>
          <height>41</height>
@@ -460,7 +460,7 @@
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>91</width>
+         <width>101</width>
          <height>41</height>
         </rect>
        </property>
@@ -514,6 +514,11 @@
          <width>42</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:10pt; color:#000000;&quot;&gt;&amp;quot;cycle=0&amp;quot; represent auto-select the cycles number;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-size:10pt; color:#000000;&quot;&gt;&amp;quot;cycle=n&amp;gt;0&amp;quot; represent run n cycles.&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>

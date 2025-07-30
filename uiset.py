@@ -213,6 +213,7 @@ class Ui(QtGui.QMainWindow):
         if self.params_fold == False:
             self.fold_paramstable()
 
+        # Read various parameter Settings on the UI
         self.cycle = self.ui.spinBox.value()
         com.run_set.output["Cif"] = self.window_order.ui.checkBox_cif.isChecked()
         com.run_set.eps = self.window_order.ui.spinbox_eps.value()/100.0
@@ -221,6 +222,7 @@ class Ui(QtGui.QMainWindow):
         self.updateFit(True)
         self.run.writepcr()
 
+        # start subautorun 
         self.showMsg("start!")
         com.autofp_running = True
         subautorun = SubAutoRun()

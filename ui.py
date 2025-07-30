@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui.ui'
 #
-# Created: Sat Jul 26 18:33:02 2025
+# Created: Wed Jul 30 19:18:59 2025
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -175,8 +175,8 @@ class Ui_Form(object):
         self.spinbox_phase = QtGui.QSpinBox(self.widget_3)
         self.spinbox_phase.setGeometry(QtCore.QRect(68, 13, 41, 17))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("SimSun-ExtB"))
-        font.setPointSize(12)
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(10)
         self.spinbox_phase.setFont(font)
         self.spinbox_phase.setObjectName(_fromUtf8("spinbox_phase"))
         self.label_2 = QtGui.QLabel(self.widget_3)
@@ -205,7 +205,7 @@ class Ui_Form(object):
         self.tab_3 = QtGui.QWidget()
         self.tab_3.setObjectName(_fromUtf8("tab_3"))
         self.Buttonautorun = QtGui.QPushButton(self.tab_3)
-        self.Buttonautorun.setGeometry(QtCore.QRect(120, 10, 81, 41))
+        self.Buttonautorun.setGeometry(QtCore.QRect(125, 10, 81, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(12)
@@ -215,7 +215,7 @@ class Ui_Form(object):
         self.Buttonautorun.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.Buttonautorun.setObjectName(_fromUtf8("Buttonautorun"))
         self.buttonautoselect = QtGui.QPushButton(self.tab_3)
-        self.buttonautoselect.setGeometry(QtCore.QRect(10, 10, 91, 41))
+        self.buttonautoselect.setGeometry(QtCore.QRect(10, 10, 101, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         font.setPointSize(12)
@@ -234,6 +234,9 @@ class Ui_Form(object):
         self.buttonorder.setObjectName(_fromUtf8("buttonorder"))
         self.spinBox = QtGui.QSpinBox(self.tab_3)
         self.spinBox.setGeometry(QtCore.QRect(380, 20, 42, 22))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.spinBox.setFont(font)
         self.spinBox.setMinimum(0)
         self.spinBox.setMaximum(100)
         self.spinBox.setSingleStep(1)
