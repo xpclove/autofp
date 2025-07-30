@@ -10,6 +10,7 @@ from subrun import SubRun
 import setting
 import com
 
+# Define the errors during the fullprof refinement process of autofp.
 error_info = {
     1: "out file error",
     0: "no error",
@@ -40,6 +41,7 @@ class Run:
         self.job_name = pcrfilename
         self.Rwp = 10000
         self.R = {"Rp": 0, "Rwp": 0, "Re": 0, "Chi2": 0}
+
         # file pcr and out
         self.pcrfilename = os.path.realpath(pcrfilename)
         self.outfilename = os.path.splitext(self.pcrfilename)[0]+".out"
@@ -49,12 +51,15 @@ class Run:
         self.base_outfilename = os.path.basename(self.outfilename)
         self.tmpdir = os.path.dirname(self.pcrfilename)+self.tmp_path
         shutil.copyfile(self.pcrfilename, self.pcrfilename+"_back")
+
         if os.path.exists(self.tmpdir) == False:
             os.mkdir(self.tmpdir)
         os.chdir(self.dirname)  # change the dir to the pcr dir
         self.resetLoad()
+
         if self.err != 0:
             print(error_info[self.err])
+
         self.runfp()
         self.push()  # the number 0 version
         shutil.copy(self.pcrfilename, self.pcrfilename +
@@ -150,7 +155,7 @@ class Run:
             return
         if self.step_index-step < 0:
             step = self.step_index
-        print "back", self.step_index, step
+        print("back", self.step_index, step)
         self.pop(step)
         self.resetLoad()
         return
@@ -167,7 +172,8 @@ class Run:
         if self.step_index == 0:
             n = 0
         tmp = self.tmpdir+"step="+str(self.step_index-n)
-        print ">>> pop <<<", tmp
+
+        print(">>> pop <<<", tmp)
         if com.is_file_locked(self.outfilename):
             print("file is use[pop]", self.outfilename)
             input()
@@ -178,8 +184,10 @@ class Run:
         else:
             self.throwerr(-1, "no out file")
         self.step_index -= step
+
         if self.step_index < 0:
             self.step_index = 0
+            
         return 1
 
     # write to pcr
@@ -202,11 +210,3 @@ class Run:
 
 def copyfile(source, destin):
     shutil.copyfile(source, destin)
-    '''
-    step_index=open(source,"r")
-    context=step_index.read()
-    step_index.close()
-    step_index=open(destin,"w")
-    step_index.write(context)
-    step_index.close()
-    '''

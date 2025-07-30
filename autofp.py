@@ -1,4 +1,5 @@
 import os
+
 # Solve the scaling issue for high DPI displays
 import ctypes
 if os.name == "nt":
