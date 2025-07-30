@@ -18,19 +18,19 @@ Pgs_type = ["xray", "neutron_cw", "neutron_tof"]
 
 def load_strategy(sfolder=os.path.join(com.root_path, "strategy")):
     global Pgs
-    print os.path.abspath(sfolder)
+    print(os.path.abspath(sfolder))
     for key in Pgs_key:
         sfilemodule = os.path.join(sfolder, "strategy_"+key+".py")
         files = open(sfilemodule)
         con = files.read()
         exec(con)
         s_xray = strategy[key]
-        print s_xray.keys()
+        print(s_xray.keys())
         group = s_xray["param_group"]
         order = s_xray["param_order"]
         target_s = s_xray["target"]
         target_s = re.sub(r"R_Factor", r'com.R', target_s)
-        print "target=", target_s
+        print("target=", target_s)
         target_s = target_s
         n = Pgs_key[key]
         Pgs[n].Param_Order_Group_Name = []
@@ -40,7 +40,7 @@ def load_strategy(sfolder=os.path.join(com.root_path, "strategy")):
         target_name = re.sub('com.R', '', target_name)
         target_name = re.sub(r'"', r'', target_name)
         target_name = re.sub(r'[\[\]]', r'', target_name)
-        print target_name
+        print(target_name)
         Pgs[n].target["name"] = target_name
         for item in order:
             Pgs[n].Param_Order_Group_Name.append(item)

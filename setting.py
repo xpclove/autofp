@@ -1,3 +1,4 @@
+# from __future__ import print_function
 import os
 import json
 import re
@@ -52,12 +53,13 @@ class setting:
             setstr = re.sub(r":\\\b", r":\\\\", setstr)
             self.setjson = json.loads(setstr)
             setting_file.close()
-        except Exception, e:
-            print "setting.txt error! load setting_default.txt."
+        except Exception as e:
+            print("setting.txt error! load setting_default.txt.")
             path = "setting_default.txt"
             setting_file = open(path, "r")
             self.setjson = json.load(setting_file)
             setting_file.close()
+            
         self.show_rwp = self.setjson["show_rwp"]
         self.show_log_FP = self.setjson["show_log_FP"]
         self.NCY = self.setjson["NCY"]
@@ -68,7 +70,7 @@ class setting:
         # Set the default location of fp2k.
         if self.fp2k_path == "fp2k":
             script_dir = os.path.dirname(os.path.abspath(__file__))
-            print("Current dir of fp2k: ", script_dir)
+            print(("Current dir of fp2k: ", script_dir))
             if os.name == "nt":
                 self.fp2k_path = "fp2k.exe"
                 if script_dir.find('library.zip') != -1:
