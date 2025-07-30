@@ -38,7 +38,8 @@ Python2.7 Shell program entry (Windows, Linux)
 
 How to compile *.msi for Windows ? ( It is recommended to use Windows 7/8 to compile )
 
-		run make.bat to creat autofp.msi (msi.bat needs software "AdvancedInstaller" )
+		You can use the already compiled MSI installation package in AutoFP_v_xxx.zip. Or you can recompile it.
+		Run make.bat to creat autofp.msi(msi.bat needs software "AdvancedInstaller" )
 		pack.bat needs to configure the directory of python2.7 and install py2exe version 0.6.9
 
 Program setting (Windows, Linux)
