@@ -35,16 +35,21 @@ class SubAutoRun(object):
         return
 
     def run(self):
+        # set backup_ dir
         path = os.path.dirname(self.pcrname)
         pathdes = path+"/backup_"+str(params.getnowtime())
+
+        # backup current pcr
         if os.path.exists(pathdes):
             shutil.rmtree(pathdes)
         shutil.copytree(
             path, pathdes, ignore=shutil.ignore_patterns("backup*", "tmp*"))
+        
         lists = os.listdir(path)
         for i in lists:
             if os.path.splitext(i)[1] == ".dat":
                 shutil.copy(path+"/"+i, path+"/tmp/"+i)
+
         self.result = 0
         if com.run_mode != 0:
             setting.run_set.show_rwp = com.ui.ui.check_show_rwp.isChecked()
@@ -55,9 +60,11 @@ class SubAutoRun(object):
                 sys.stdout = com.ui
             else:
                 sys.stdout = com.sys_stdout
+
         auto.rwplist = []
         auto.rwplist_all = []
         self.result = threading.Thread(target=autorun, args=(
             self.pcrname, self.param_switch, self.r, self.param_order_num))
         self.result.start()
+
         return self.result

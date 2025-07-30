@@ -22,19 +22,22 @@ option_this = {"label": 1,
 
 
 def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=option_this):
+
     if r == None:
         r = Run()
         r.reset(pcrname, "tmp")
-    r.fit.set("NCY", com.run_set.NCY)  # set number of circle is 10
+
+    r.fit.set("NCY", com.run_set.NCY)  # set number of circle is NCY
     # sys.stdout=com.ui;
     # print tag,param_switch
     job = r.job  # get the job type of the Run,job=0 Xray; job=1 CW
     Pg = paramgroup.Pgs[job]
     com.target = Pg.target
+
     # get the order of the params
     if param_order_num == None:
         param_order_num = Pg.Param_Num_Order
-    print param_switch
+    print(param_switch)
     if param_switch == None:
         param_switch = []
         for i in r.params.paramlist:
@@ -46,9 +49,10 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
     tmp_r = 10000
     goodr = 10000
     error = 0
-    # the out messenge
+    # print out messenge
     out = open(r.pcrfilename+"_order_out.txt", "w")
     rwplist_out = open(r.pcrfilename+"_rwplist.txt", "w")
+
     step = 0
     # rietveld according to the order
     for i in order:
@@ -58,6 +62,7 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
         r.setParam(i, True)
         r.writepcr()
         param_name = r.params.get_param_fullname(i)
+
         # try catch the error of the pcr file
         try:
             r.runfp()
@@ -81,7 +86,6 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
             error += 0x10
 
         # if error back()
-
         if error > 0:
             # 精修无错误,rwp没减小
             if r.err == 0:
@@ -97,6 +101,7 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
         progress = int(progress)
         out_str = "autofp_status:"+param_name+":"+str(progress)
         out_str = com.text_style["normal"]+out_str
+
         if com.mode == "ui":
             com.ui.write_status(out_str)
         if error == 0:
@@ -123,12 +128,14 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
         out.write(str(target_r)+"\n")
         out.flush()
         tmp_r = target_r
+
         # autofp is stoped ?
         if com.autofp_running == False:
             break
         if com.wait > 0:
             time = __import__("time")
             time.sleep(com.wait)
+
     out.close()
 
     print(goodr)
@@ -139,12 +146,15 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
         for i in order:
             r.setParam(i, False)
         r.writepcr()
+
     r.runfp()  # run FP to create the PRF
-    print "rwp:", rwplist
+    
+    print("rwp:", rwplist)
     for i in rwplist:
         rwplist_out.write(str(i)+"\n")
     rwplist_out.close()
     numpy.savetxt("OK.txt", rwplist)
+
     if rwplist != []:
         if abs(rwplist[-1]-rwplist[0]) < setting.run_set.eps:
             com.des = True
@@ -157,8 +167,10 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
     if com.run_mode > 0:
         com.ui.autofp_done_signal.emit(goodr)
     rwp_all.append(rwplist)
-    print rwp_all  # The good Rwp of all cycles
+
+    print(rwp_all)  # The good Rwp of all cycles
     # numpy.savetxt("rwp_all_cycles.txt",numpy.array(rwp_all))
+
     return goodr
 
 
