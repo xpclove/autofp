@@ -8,7 +8,7 @@
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui"/>
     <ROW Property="AI_PRODUCTNAME_ARP" Value="AutoFP"/>
-    <ROW Property="AI_README_FILE" Value="[#readme.txt_3]"/>
+    <ROW Property="AI_README_FILE" Value="[#README.md]"/>
     <ROW Property="AI_REQUIRED_WINDOWS_INSTALLER_DISPLAY" MultiBuildValue="DefaultBuild:2.0" ValueLocId="-"/>
     <ROW Property="AI_REQUIRED_WINDOWS_INSTALLER_VERSION" MultiBuildValue="DefaultBuild:2.0" ValueLocId="-"/>
     <ROW Property="AI_ThemeStyle" Value="default" MsiKey="AI_ThemeStyle"/>
@@ -1462,6 +1462,7 @@
     <ROW File="Chita" Component_="Aden" FileName="Chita" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\Asia\Chita" SelfReg="false"/>
     <ROW File="Srednekolymsk" Component_="Aden" FileName="SREDNE~1|Srednekolymsk" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\Asia\Srednekolymsk" SelfReg="false"/>
     <ROW File="Bougainville" Component_="Apia" FileName="BOUGAI~1|Bougainville" Attributes="0" SourcePath="AutoFP\dist\tcl\tcl8.5\tzdata\Pacific\Bougainville" SelfReg="false"/>
+    <ROW File="README.md" Component_="readme.txt" FileName="README.md" Attributes="0" SourcePath="README.md" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="AutoFP" Languages="en" InstallationType="4" ExtUI="true" UseLargeSchema="true" UACExecutionLevel="2"/>
