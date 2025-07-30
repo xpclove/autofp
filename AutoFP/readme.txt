@@ -1,14 +1,14 @@
 AutoFP is an auto tools for FullProf Rietveld refinement released under GPL v3 LICENSE.
-AutoFP (http://pmedia.shu.edu.cn/autofp/ or http://autofp.sinaapp.com/)
+AutoFP (http://physiworld.sinaapp.com/autofp.html)
 Authors: Xiaopeng Cui, etc
 Email: autofp@163.com
 Shanghai University, Department of Physics 
 
 English version
 
-Dependence£º
- OS platforms£º
-                         Windows XP£¬Windows 7 ,Windows 8
+Dependenceï¼š
+ OS platformsï¼š
+                         Windows XPï¼ŒWindows 7 ,Windows 8, Windows 10
  Dependence library (already packaged in AutoFP):
 						 diffpy/SrRietveld/PyFullProf http://www.diffpy.org/doc/srrietveld/
                          python2.7 https://www.python.org/download/releases/2.7/
@@ -18,7 +18,7 @@ Dependence£º
                          
  Refinement Software 
                          FullProf 		  http://www.ill.eu/sites/fullprof/
-How to use AutoFP£º
+How to use AutoFPï¼š
 steps:
 			 Launch AutoFP
                          select "Auto" tab
@@ -27,14 +27,14 @@ steps:
 						    "cycle=0" represent auto-select the cycles number;
 							"cycle=n>0" represent run n cycles
                          click "run" button  to autorun  the refinement 
-Attention £º
- 1. how to make PCR file£º
+Attention ï¼š
+ 1. how to make PCR fileï¼š
                       
-                         Please use FullProf to make right PCR file£¬AutoFP need a PCR file a DAT file, please ensure they have the same filename, 
-                         such as Y2O3.pcr£¬Y2O3.dat.
+                         Please use FullProf to make right PCR fileï¼ŒAutoFP need a PCR file a DAT file, please ensure they have the same filename, 
+                         such as Y2O3.pcrï¼ŒY2O3.dat.
                          Pleae put them in a empty folder which is easy to control.
                         
-                       2. About examples£º
+                       2. About examplesï¼š
                          examples are in the folder(such as C:\Program Files(x86)\AutoFP\AutoFP), example.zip 
                          example instrution:  example.txt
 					   3. Video of AutoFP Demo(http://pmedia.shu.edu.cn/autofp/document.html)         
@@ -44,34 +44,34 @@ Attention £º
                          
 Chinese version
 
-³ÌĞòÒÀÀµ£º
+ç¨‹åºä¾èµ–ï¼š
 
-   	ÔËĞĞÆ½Ì¨£º
-			Windows XP£¬Windows 7 ,Windows 8
+   	è¿è¡Œå¹³å°ï¼š
+			Windows XPï¼ŒWindows 7 ,Windows 8
 
-	ÒÀÀµ¿â(ÒÑ¾­´ò°üÓÚ³ÌĞòÄÚ£¬ÎŞĞè¶îÍâ°²×°£©:
+	ä¾èµ–åº“(å·²ç»æ‰“åŒ…äºç¨‹åºå†…ï¼Œæ— éœ€é¢å¤–å®‰è£…ï¼‰:
 			python2.7 https://www.python.org/download/releases/2.7/
 			pyqt4 	  http://www.riverbankcomputing.com/software/pyqt/download
 			numpy     http://www.scipy.org/scipylib/download.html
 			matplotlib
 			diffpy
-	¾«ĞŞÈí¼ş
+	ç²¾ä¿®è½¯ä»¶
 			FullProf 		  http://www.ill.eu/sites/fullprof/
 
-³ÌĞòÊ¹ÓÃËµÃ÷£º
+ç¨‹åºä½¿ç”¨è¯´æ˜ï¼š
 
-	Æô¶¯ AutoFP
-	Ñ¡Ôñ Auto ±êÇ©Ò³
-	open °´Å¥ ´ò¿ªpcrÎÄ¼ş
-	autoselect °´Å¥×Ô¶¯Ñ¡Ôñ¾«ĞŞ²ÎÊı
-	µã»÷run°´Å¥ ×Ô¶¯¾«ĞŞ
+	å¯åŠ¨ AutoFP
+	é€‰æ‹© Auto æ ‡ç­¾é¡µ
+	open æŒ‰é’® æ‰“å¼€pcræ–‡ä»¶
+	autoselect æŒ‰é’®è‡ªåŠ¨é€‰æ‹©ç²¾ä¿®å‚æ•°
+	ç‚¹å‡»runæŒ‰é’® è‡ªåŠ¨ç²¾ä¿®
 
-¸½¼ÓËµÃ÷£º
+é™„åŠ è¯´æ˜ï¼š
 
-	1.PCRÎÄ¼şÖÆ×÷£º
-	  	ÇëÊ¹ÓÃFullProfÖÆ×÷³öÕıÈ·PCRÎÄ¼ş£¬±¾³ÌĞòÔËĞĞĞèÒªPCRÎÄ¼şºÍDATÎÄ¼ş£¬ÇëÈ·±£¶şÕßÎÄ¼şÃû			ÏàÍ¬£¬ÈçY2O3.pcr£¬Y2O3.dat¡£ Çë½«¶şÕßÖÃÓÚÒ»¸ö¿ÕÎÄ¼ş¼ĞÏÂ£¬±ãÓÚ³ÌĞò¿ØÖÆ£¬ÁíÍâÇëÈ·±£
-		ÎÄ¼şÂ·¾¶Ãû²»°üº¬ÖĞÎÄ£¬·ñÔò³ÌĞò²»ÄÜ´ò¿ªPCRÎÄ¼ş¡£
-	2. Àı×ÓËµÃ÷£º
-		Àı×ÓÔÚ³ÌĞòÎÄ¼ş¼Ğ(ÈçC:\Program Files(x86)\AutoFP\)Ä¿Â¼ÏÂ example.zip 
-		Àı×ÓËµÃ÷ example.txt
-		Ä¿Ç°ËùÓĞÀı×Ó¾«ĞŞ½á¹û¾ùÒÑ´ïµ½FullprofÔ­Ê¼Àı×ÓË®Æ½
+	1.PCRæ–‡ä»¶åˆ¶ä½œï¼š
+	  	è¯·ä½¿ç”¨FullProfåˆ¶ä½œå‡ºæ­£ç¡®PCRæ–‡ä»¶ï¼Œæœ¬ç¨‹åºè¿è¡Œéœ€è¦PCRæ–‡ä»¶å’ŒDATæ–‡ä»¶ï¼Œè¯·ç¡®ä¿äºŒè€…æ–‡ä»¶å			ç›¸åŒï¼Œå¦‚Y2O3.pcrï¼ŒY2O3.datã€‚ è¯·å°†äºŒè€…ç½®äºä¸€ä¸ªç©ºæ–‡ä»¶å¤¹ä¸‹ï¼Œä¾¿äºç¨‹åºæ§åˆ¶ï¼Œå¦å¤–è¯·ç¡®ä¿
+		æ–‡ä»¶è·¯å¾„åä¸åŒ…å«ä¸­æ–‡ï¼Œå¦åˆ™ç¨‹åºä¸èƒ½æ‰“å¼€PCRæ–‡ä»¶ã€‚
+	2. ä¾‹å­è¯´æ˜ï¼š
+		ä¾‹å­åœ¨ç¨‹åºæ–‡ä»¶å¤¹(å¦‚C:\Program Files(x86)\AutoFP\)ç›®å½•ä¸‹ example.zip 
+		ä¾‹å­è¯´æ˜ example.txt
+		ç›®å‰æ‰€æœ‰ä¾‹å­ç²¾ä¿®ç»“æœå‡å·²è¾¾åˆ°FullprofåŸå§‹ä¾‹å­æ°´å¹³

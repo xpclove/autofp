@@ -1,4 +1,6 @@
 "C:\Program Files\WinRAR\winrar.exe" d AutoFP.zip *.msi
+
+
 set version=%1%
 set msi=AutoFP_v_%version%.msi
 copy /y AutoFP.msi %msi%

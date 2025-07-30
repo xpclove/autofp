@@ -5,8 +5,6 @@ GitHub: <https://github.com/xpclove/autofp>, Gitee: <https://gitee.com/xpclove/a
 Email : autofp@163.com  
 Authors : Xiaopeng Cui, etc.  
 
-
-
 ## Requirement：
 	OS platforms：
                          Windows XP/7/8/10/11(x86/x64)	or  Linux(x86/x64)
@@ -28,14 +26,14 @@ Python2.7 UI program entry (Windows, Linux)
 		2) click "Autoselect" button to select the refinement parameters
 				"cycle = 0 " represent auto-select the cycles number;
 				"cycle = n > 0 " represent run n cycles
-        3) click "Run" button  to autorun  the refinement 
+		3) click "Run" button  to autorun  the refinement 
 
 Python2.7 Shell program entry (Windows, Linux)
 
 		pyhton shautofp.py -c 1 -a *.pcr
-		-c 1 : cycle number 1；set "-c 0" indicates the automatic determination of the number of cycles
-		-a : autoselect parameters
-		*.pcr : Fullprof task pcr path ( with *.dat in the same folder)
+			-c 1 : cycle number 1；set "-c 0" indicates the automatic determination of the number of cycles
+			-a : autoselect parameters
+			*.pcr : Fullprof task pcr path ( with *.dat in the same folder)
 
 
 How to compile *.msi for Windows ? ( It is recommended to use Windows 7/8 to compile )
