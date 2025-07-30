@@ -1,5 +1,5 @@
 # AutoFP
-AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and neutron diffraction patterns.  
+AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and Neutron diffraction patterns.  
 AutoFP Website: <http://physiworld.vipsinaapp.com/autofp.html>.  Shanghai University, Department of Physics  
 GitHub: <https://github.com/xpclove/autofp>, Gitee: <https://gitee.com/xpclove/autofp>  
 Email : autofp@163.com  
@@ -23,28 +23,33 @@ Authors : Xiaopeng Cui, etc.
 ## How to use?
 Python2.7 UI program entry (Windows, Linux)
 
-		python autofp.py
-		Then click "Open" *.pcr file( with *.dat in the same folder), "Autoslect", "run" 
+		python autofp.py start UI
+		1) click "Open" *.pcr file( with *.dat in the same folder), "Autoslect", "Run"
+		2) click "Autoselect" button to select the refinement parameters
+				"cycle = 0 " represent auto-select the cycles number;
+				"cycle = n > 0 " represent run n cycles
+        3) click "Run" button  to autorun  the refinement 
 
 Python2.7 Shell program entry (Windows, Linux)
 
 		pyhton shautofp.py -c 1 -a *.pcr
 		-c 1 : cycle number 1；set "-c 0" indicates the automatic determination of the number of cycles
 		-a : autoselect parameters
-		*.pcr : Fullprof task pcr path
+		*.pcr : Fullprof task pcr path ( with *.dat in the same folder)
 
 
-How to compile *.msi for Windows ? ( Please use Windows 7/8 to compile )
+How to compile *.msi for Windows ? ( It is recommended to use Windows 7/8 to compile )
 
-		run make.bat to creat autofp.msi (it needs software "AdvancedInstaller" <13.0 )
+		run make.bat to creat autofp.msi (msi.bat needs software "AdvancedInstaller" )
+		pack.bat needs to configure the directory of python2.7 and install py2exe version 0.6.9
 
 Program setting (Windows, Linux)
 
 	(AutoFP Directory)/setting.txt
 
 	 "fp2k_path": "pathto\\fp2k.exe"	
-	  # This key indicates the absolute path of fullprof core fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2021 -> Ubuntu 20.04)。
-	  # If you use Ubuntu 16.04+, plese use Fullprof 2017.
+	  # This key indicates the absolute path of fullprof core fp2k. If you set it to "fp2k", the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2021 -> Ubuntu 20.04+)。
+	  # If you use Ubuntu 16.04, plese use Fullprof 2017.
 
 ## Document:
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
