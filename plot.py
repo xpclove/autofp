@@ -32,12 +32,14 @@ def data_gen():
     # n=len(auto.rwplist)
     # data=[n,auto.rwplist]
     rwp_file = "rwp.txt"
+    data = []
     if os.path.exists(rwp_file):
         if os.path.getsize(rwp_file) > 0:
             data = numpy.loadtxt(rwp_file)
             data = data.tolist()
     else:
         data = [0]
+        
     data = [data, data]
     rwpdata = data
     yield data
