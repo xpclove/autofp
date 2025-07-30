@@ -366,9 +366,9 @@ code {
     });
   </script>
 <h1 id="autofp">AutoFP</h1>
-<p>AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and neutron diffraction patterns.<br>
+<p>AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and Neutron diffraction patterns.<br>
 AutoFP Website: <a href="http://physiworld.vipsinaapp.com/autofp.html">http://physiworld.vipsinaapp.com/autofp.html</a>.  Shanghai University, Department of Physics<br>
-GitHub: https://github.com/xpclove/autofp, Gitee: https://gitee.com/xpclove/autofp<br>
+GitHub: <a href="https://github.com/xpclove/autofp">https://github.com/xpclove/autofp</a>, Gitee: <a href="https://gitee.com/xpclove/autofp">https://gitee.com/xpclove/autofp</a><br>
 Email : autofp@163.com<br>
 Authors : Xiaopeng Cui, etc.</p>
 <h2 id="requirement">Requirement：</h2>
@@ -385,24 +385,29 @@ Refinement software:
 </code></pre>
 <h2 id="how-to-use">How to use?</h2>
 <p>Python2.7 UI program entry (Windows, Linux)</p>
-<pre><code>	python autofp.py
-	Then click &quot;Open&quot; *.pcr file( with *.dat in the same folder), &quot;Autoslect&quot;, &quot;run&quot; 
+<pre><code>	python autofp.py start UI
+	1) click &quot;Open&quot; *.pcr file( with *.dat in the same folder), &quot;Autoslect&quot;, &quot;Run&quot;
+	2) click &quot;Autoselect&quot; button to select the refinement parameters
+			&quot;cycle = 0 &quot; represent auto-select the cycles number;
+			&quot;cycle = n &gt; 0 &quot; represent run n cycles
+    3) click &quot;Run&quot; button  to autorun  the refinement 
 </code></pre>
 <p>Python2.7 Shell program entry (Windows, Linux)</p>
 <pre><code>	pyhton shautofp.py -c 1 -a *.pcr
 	-c 1 : cycle number 1；set &quot;-c 0&quot; indicates the automatic determination of the number of cycles
 	-a : autoselect parameters
-	*.pcr : Fullprof task pcr path
+	*.pcr : Fullprof task pcr path ( with *.dat in the same folder)
 </code></pre>
-<p>How to compile *.msi for Windows ? ( Please use Windows 7/8 to compile )</p>
-<pre><code>	run make.bat to creat autofp.msi (it needs software &quot;AdvancedInstaller&quot; &lt;13.0 )
+<p>How to compile *.msi for Windows ? ( It is recommended to use Windows 7/8 to compile )</p>
+<pre><code>	run make.bat to creat autofp.msi (msi.bat needs software &quot;AdvancedInstaller&quot; )
+	pack.bat needs to configure the directory of python2.7 and install py2exe version 0.6.9
 </code></pre>
 <p>Program setting (Windows, Linux)</p>
 <pre><code>(AutoFP Directory)/setting.txt
 
  &quot;fp2k_path&quot;: &quot;pathto\\fp2k.exe&quot;	
-  # This key indicates the absolute path of fullprof core fp2k. If you set it to &quot;fp2k&quot;, the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2021 -&gt; Ubuntu 20.04)。
-  # If you use Ubuntu 16.04+, plese use Fullprof 2017.
+  # This key indicates the absolute path of fullprof core fp2k. If you set it to &quot;fp2k&quot;, the program will use the built-in fullprof 2017 version of fp2k. Windows: fp2k.exe (Fullprof 2017), Linux: fp2k(Fullprof 2021 -&gt; Ubuntu 20.04+)。
+  # If you use Ubuntu 16.04, plese use Fullprof 2017.
 </code></pre>
 <h2 id="document">Document:</h2>
 <p>For more detailed documentation, check out this URL <a href="http://physiworld.vipsinaapp.com/document.html">http://physiworld.vipsinaapp.com/document.html</a></p>
@@ -413,12 +418,8 @@ Refinement software:
 The examples are in the Program folder (such as C:\Program Files(x86)\AutoFP) with the directory bane example.zip. At present, the refined results of all the examples have reached the level of the original Fullprof examples.</p>
 <h2 id="reference">Reference:</h2>
 <ol>
-<li>
-<p><a href="http://webfile.sinacloud.net/autofp/kc5011.pdf">Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )</a></p>
-</li>
-<li>
-<p><a href="http://webfile.sinacloud.net/autofp/autofp.pdf">Xiaopeng Cui, etc. Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm ( 2016 )</a></p>
-</li>
+<li><a href="http://webfile.sinacloud.net/autofp/kc5011.pdf">Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )</a></li>
+<li><a href="http://webfile.sinacloud.net/autofp/autofp.pdf">Xiaopeng Cui, etc. Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm ( 2016 )</a></li>
 </ol>
 
 </body>
