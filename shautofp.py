@@ -100,7 +100,7 @@ class Autofp_Core:
         """Constructor"""
 
     def write(self, msg, mode=""):
-        print "=>cycle "+str(com.cycle)+": ", msg
+        print("=>cycle "+str(com.cycle)+": ", msg)
 
     def reset(self, run, pl, subautorun, cycle=0):
         # run=Run(),pl=param_switch,subautorun=SubAutoRun(run),cycle=0

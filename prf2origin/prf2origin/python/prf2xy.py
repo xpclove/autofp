@@ -44,11 +44,11 @@ def prf_xy(path,des):
     for line in outlines:
         outfile.write(line+"\n")
     outfile.close()
+
 def prf2origin_(prf,origin):
     prfdir=os.path.dirname(prf)
     datpath=prfdir+"/origin.dat"
     prf_xy(prf,datpath)
-    
     cur_path=os.getcwd()
     path=script_path+"/prf_one.cpp"
     path=os.path.abspath(path)
@@ -60,5 +60,6 @@ def prf2origin_(prf,origin):
     print cmd
     print "prf2origin complete!"
     os.chdir(cur_path)
+    
 if __name__=="__main__":
     prf2origin_("tmp/test.prf")

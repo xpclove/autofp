@@ -305,7 +305,7 @@ class Ui(QtGui.QMainWindow):
             qr = self.paramSelect[i]
             # for the autorun paramorder
             self.param_switch.append(qr.isChecked())
-            print qr.isChecked(), self.run.params.get_param_fullname(i)
+            print(qr.isChecked(), self.run.params.get_param_fullname(i))
             if (auto == False):
                 self.run.setParam(i, qr.isChecked())
             else:
@@ -329,7 +329,7 @@ class Ui(QtGui.QMainWindow):
                                                              _fromUtf8("FullProf PCR File(*.pcr)"))
         if len(selectFileNames) <= 0:
             return
-        print "open *.pcr: ", selectFileNames[0].toLocal8Bit()
+        print("open *.pcr: ", selectFileNames[0].toLocal8Bit())
         path = ""
         path = str(selectFileNames[0].toLocal8Bit())  # ,'gbk',"ignore")
         self.open(path)
