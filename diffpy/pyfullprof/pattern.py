@@ -434,7 +434,7 @@ class Pattern(RietveldClass):
             raise IndexError(err)
         # title line
         titleline  = -1
-        for index in xrange(len(contents)):
+        for index in range(len(contents)):
             for term in contents[index]:
                 if term == "Ycal":
                     titleline = index
@@ -450,7 +450,7 @@ class Pattern(RietveldClass):
         self._yobs = []
         self._ycal = []
 
-        #for index in xrange(titleline+1, titleline+1+datalength):
+        #for index in range(titleline+1, titleline+1+datalength):
         index    = titleline+1
         maxindex = len(contents)-1
         STOP     = False

@@ -241,13 +241,13 @@ class ImportFitFromFullProf:
 
             # Line 2: initialize pattern
             NPATT = int(words[1])
-            for pat in xrange(0, NPATT):
+            for pat in range(0, NPATT):
                 newpattern = Pattern(fit)
                 fit.set("Pattern", newpattern)
 
             # read in bank number
             count = 1
-            for i in xrange(2, len(words)):
+            for i in range(2, len(words)):
                 sindex = words[i]
                 if sindex == "0":
                     count += 1
@@ -466,7 +466,7 @@ class ImportFitFromFullProf:
         if Nph < 0:
             raise NotImplementedError("Number of Phase = " + str(Nph) + " < 0")
         else:
-            for n in xrange(0, Nph):
+            for n in range(0, Nph):
                 phase = PhaseModule.Phase(fit)
                 fit.set("Phase", phase)
 
@@ -489,7 +489,7 @@ class ImportFitFromFullProf:
 
         # print debug
         """
-        for pat in xrange(1, fit.NPATT+1):
+        for pat in range(1, fit.NPATT+1):
             print "\t\tFile Name: " + fit.Patterns[pat].Datafile + "  File Style: " + self.Style
             print "\t\tResolution File" + fit.Patterns[pat].Resofile + "  Res = " + str(fit.Patterns[pat].Res)
         """
@@ -741,7 +741,7 @@ class ImportFitFromFullProf:
                     background.extend(pattern.get("Background"))
 
                     linetoread = abs(pattern.get("NbaPoint"))
-                    for l in xrange(0, linetoread):
+                    for l in range(0, linetoread):
                         index += 1
                         words = self.SplitNewLine(index)
                         try:
@@ -767,7 +767,7 @@ class ImportFitFromFullProf:
                     """
 
                 if pattern.get("Nex") > 0:
-                    for l in xrange(0, pattern.get("Nex")):
+                    for l in range(0, pattern.get("Nex")):
                         index = index + 1
                         words = self.SplitNewLine(index)
                         if len(words) != 2:
@@ -791,7 +791,7 @@ class ImportFitFromFullProf:
 
                 lineno = abs(pattern.get("Nsc"))
 
-                for sc in xrange(1, lineno+1):
+                for sc in range(1, lineno+1):
                     # 1. initialization -> scatterfactor
                     if pattern.get("Job") == 0 or pattern.get("Job") == 2:
                         scatterfactor = PatternModule.ScatterFactorXray(
@@ -1221,7 +1221,7 @@ class ImportFitFromFullProf:
                     # end --- if fit.Patterns[pat].ContributionList[phase.PHSNM] is not False:
 
                     patternindex += 1
-                # end -- for pat in xrange(1, fit.NPATT+1):
+                # end -- for pat in range(1, fit.NPATT+1):
                 # end -- 19, -1, -2, -3
 
             elif self.Style == "old":
@@ -1341,7 +1341,7 @@ class ImportFitFromFullProf:
                         words = self.SplitNewLine(index)
                         if len(words) != N_CATIONS:
                             warning.PCRFormatItemError("3", "21-1", str(words))
-                        for cat in xrange(0, N_CATIONS):
+                        for cat in range(0, N_CATIONS):
                             ion = IonModule.Ion(None)
                             ion.setIon(words[cat])
                             self.ionList.append(ion)
@@ -1352,7 +1352,7 @@ class ImportFitFromFullProf:
                         words = self.SplitNewLine(index)
                         if len(words) != N_ANIONS:
                             warning.PCRFormatItemError("3", "21-2", str(words))
-                        for ani in xrange(0, N_ANIONS):
+                        for ani in range(0, N_ANIONS):
                             ion = IonModule.Ion(None)
                             ion.setIon(words[ani])
                             self.ionList.append(ion)
@@ -1389,7 +1389,7 @@ class ImportFitFromFullProf:
                 phase.set("TimeRev", timerev)
 
                 # read
-                for item in xrange(0, NS+1):
+                for item in range(0, NS+1):
                     param_name = "TimeRev"+str(item)
                     timerev.set(param_name, int(words[item]))
 
@@ -1471,7 +1471,7 @@ class ImportFitFromFullProf:
                     symmopschool, symmopschool.get("N_Bas"))
                 symmopschool.set("Icompl", icomplobj)
                 # read
-                for item in xrange(0, len(words)):
+                for item in range(0, len(words)):
                     param_name = "Icompl"+str(item)
                     icomplobj.set(param_name, int(words[item]))
 
@@ -1485,7 +1485,7 @@ class ImportFitFromFullProf:
                 DepMat = symmopschool.get("DepMat")
                 linetoread = Nsym*(1+MagMat+DepMat)
                 # read count = 1
-                for nsym in xrange(0, Nsym):
+                for nsym in range(0, Nsym):
                     # debug output print "Isy == 1/-1:  symmetry operator " + str(count) count += 1
 
                     combobj = PhaseModule.OperatorComboSymmetry(None)
@@ -1514,7 +1514,7 @@ class ImportFitFromFullProf:
 
                 refinebiso = False
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
 
                     # create atom
                     atom = AtomModule.AtomCrystal(None)
@@ -1600,14 +1600,14 @@ class ImportFitFromFullProf:
                         words = {}
                         index = self.ReadByItem(7, words, index)
                         count = 0
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             f[i] = words[count]
                             count = count + 1
                         # Line 25-4
                         words = {}
                         index = self.ReadByItem(7, words, index)
                         count = 0
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             code = toFloat(words[count])
                             codeindex = self.CodeWord(f[i], code, fit)
                             atom.f[i] = (f[i], codeindex)
@@ -1616,14 +1616,14 @@ class ImportFitFromFullProf:
                         words = {}
                         index = self.ReadByItem(7, words, index)
                         count = 0
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             f[i] = words[count]
                             count = count + 1
                         # Line 25-6
                         words = {}
                         index = self.ReadByItem(7, words, index)
                         count = 0
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             code = toFloat(words[count])
                             self.setRefine(fit, atomicdisplace,
                                            param_name, f[i], code)
@@ -1635,7 +1635,7 @@ class ImportFitFromFullProf:
                             index = self.ReadByItem(11, words, index)
                             atom.SHSA_type = words[0]
                             atom.Ncoeff = int(words[1])
-                            for i in xrange(1, 9+1):
+                            for i in range(1, 9+1):
                                 atom.Matrix[i] = toFloat(words[1+i])
                             # Line 25-8
                             index = index + 1
@@ -1643,7 +1643,7 @@ class ImportFitFromFullProf:
                             if len(words) != 2*atom.Ncoeff and len(words) != 3*atom.Ncoeff:
                                 warning.PCRFormatItemError(
                                     "3", "25-8 Jbt=0", str(words))
-                            for l in xrange(0, len(words)):
+                            for l in range(0, len(words)):
                                 atom.lmp[l+1] = int(words[l])
 
                 # end for at
@@ -1667,7 +1667,7 @@ class ImportFitFromFullProf:
 
             elif phase.get("Jbt") == 1:
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     # object init
                     atom = AtomModule.AtomMagneticScatter(None)
                     phase.set("Atom", atom)
@@ -1750,7 +1750,7 @@ class ImportFitFromFullProf:
 
             elif phase.get("Jbt") == -1 and phase.get("Isy") != -2:
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     # object init
                     atom = AtomModule.AtomMagneticScatter(None)
                     phase.set("Atom", atom)
@@ -1833,7 +1833,7 @@ class ImportFitFromFullProf:
 
             elif phase.get("Jbt") == -1 and phase.get("Isy") == -2:
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     # object init
                     atom = AtomModule.AtomMagneticBasisfunction(None)
                     phase.set("Atom", atom)
@@ -1855,7 +1855,7 @@ class ImportFitFromFullProf:
                     Z = toFloat(words[6])
                     Biso = toFloat(words[7])
                     Occ = toFloat(words[8])
-                    for c in xrange(1, 3+1):
+                    for c in range(1, 3+1):
                         C[c] = toFloat(words[8+c])
                     # Line 25-2
                     index = index + 1
@@ -1873,7 +1873,7 @@ class ImportFitFromFullProf:
                     self.set(fit, atom, "Biso", Biso, code)
                     code = toFloat(words[4])
                     self.set(fit, atom, "Occ", Occ, code)
-                    for c in xrange(1, 3+1):
+                    for c in range(1, 3+1):
                         code = toFloat(words[4+c])
                         param_name = "C"+str(i)
                         self.setRefine(fit, magmoment, param_name, C[c], code)
@@ -1883,7 +1883,7 @@ class ImportFitFromFullProf:
                     if len(words) != 7:
                         warning.PCRFormatItemError(
                             "3", "25-3 Jbt=-1", str(words))
-                    for c in xrange(4, 9+1):
+                    for c in range(4, 9+1):
                         C[c] = toFloat(words[c-4])
                     MagPh = toFloat(words[6])
                     # Line 25-4
@@ -1892,7 +1892,7 @@ class ImportFitFromFullProf:
                     if len(words) != 7:
                         warning.PCRFormatItemError(
                             "3", "25-4 Jbt=1", str(words))
-                    for c in xrange(4, 9+1):
+                    for c in range(4, 9+1):
                         code = toFloat(words[c-4])
                         param_name = "C"+str(c)
                         self.setRefine(fit, magmoment, param_name, C[c], code)
@@ -1903,7 +1903,7 @@ class ImportFitFromFullProf:
 
                 raise NotImplementedError("Jbt=-4 Not Implemented yet")
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     # init object
                     atom = AtomModule.AtomRigid()
                     # Line 25
@@ -1915,7 +1915,7 @@ class ImportFitFromFullProf:
                     atom.Atom = words[0]
                     atom.Typ = words[1]
                     nP = {}
-                    for p in xrange(1, 8+1):
+                    for p in range(1, 8+1):
                         nP[p] = toFloat(words[p+1])
                     # Line 25-2
                     index = index + 1
@@ -1923,7 +1923,7 @@ class ImportFitFromFullProf:
                     if len(words) != 8:
                         warning.PCRFormatItemError(
                             "3", "25-2 Jbt=-4", str(words))
-                    for p in xrange(1, 8+1):
+                    for p in range(1, 8+1):
                         code = toFloat(words[p-1])
                         codeindex = self.CodeWord(nP[p], code, fit)
                         atom.P[p] = (nP[p], codeindex)
@@ -1932,7 +1932,7 @@ class ImportFitFromFullProf:
                         warning.PCRFormatItemError(
                             "3", "25-3 Jbt=-4", str(words))
                     nP = {}
-                    for p in xrange(9, 15):
+                    for p in range(9, 15):
                         nP[p] = toFloat(words[p-9])
                     # Line 25-2
                     index = index + 1
@@ -1940,7 +1940,7 @@ class ImportFitFromFullProf:
                     if len(words) != 7:
                         warning.PCRFormatItemError(
                             "3", "25-4 Jbt=-4", str(words))
-                    for p in xrange(9, 15+1):
+                    for p in range(9, 15+1):
                         code = toFloat(words[p-9])
                         codeindex = self.CodeWord(nP[p], code, fit)
                         atom.P[p] = (nP[p], codeindex)
@@ -1951,7 +1951,7 @@ class ImportFitFromFullProf:
                 return
                 raise NotImplementedError("Jbt=4 not implemented yet")
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     atom = AtomModule.Atom()
                     """
                     print "Atom " + str(at)
@@ -2076,7 +2076,7 @@ class ImportFitFromFullProf:
 
             elif phase.get("Jbt") == 5 or phase.get("Jbt") == -5:
 
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     # init atom
                     atom = AtomModule.AtomMagneticUserModel(None)
                     phase.set("Atom", atom)
@@ -2092,7 +2092,7 @@ class ImportFitFromFullProf:
                     atom.set("Typ",  words[1])
                     atom.set("Mag",  int(words[2]))
                     atom.set("Vek",  int(words[3]))
-                    for p in xrange(1, 8+1):
+                    for p in range(1, 8+1):
                         P[p] = toFloat(words[p+3])
                     # Line 25-2
                     index = index + 1
@@ -2100,7 +2100,7 @@ class ImportFitFromFullProf:
                     if len(words) != 8:
                         warning.PCRFormatItemError(
                             "3", "25-2 Jbt=-1", str(words))
-                    for p in xrange(1, 8+1):
+                    for p in range(1, 8+1):
                         code = toFloat(words[p-1])
                         param_name = "P"+str(p)
                         self.setRefine(fit, atom, param_name, P[p], code)
@@ -2110,7 +2110,7 @@ class ImportFitFromFullProf:
                     if len(words) != 7:
                         warning.PCRFormatItemError(
                             "3", "25-3 Jbt=-1", str(words))
-                    for p in xrange(9, 15+1):
+                    for p in range(9, 15+1):
                         P[p] = toFloat(words[p-9])
                     # Line 25-4
                     index = index + 1
@@ -2118,7 +2118,7 @@ class ImportFitFromFullProf:
                     if len(words) != 7:
                         warning.PCRFormatItemError(
                             "3", "25-4 Jbt=1", str(words))
-                    for p in xrange(9, 15+1):
+                    for p in range(9, 15+1):
                         code = toFloat(words[p-9])
                         param_name = "P"+str(p)
                         self.setRefine(fit, atom, param_name, P[p], code)
@@ -2126,7 +2126,7 @@ class ImportFitFromFullProf:
             elif phase.get("Jbt") == 10 or phase.get("Jbt") == -10:
 
                 # Line 25b Suite
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     # init object
                     atom = AtomModule.AtomCombined(None)
                     phase.set("Atom", atom)
@@ -2256,7 +2256,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError4(
                                 "3", "25b-3", (words), 7, "MagPar")
-                        for c in xrange(1, 6+1):
+                        for c in range(1, 6+1):
                             C[c] = toFloat(words[c-1])
                         # Line 25b-4
                         index = index + 1
@@ -2264,7 +2264,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "3", "25b-4", str(words))
-                        for c in xrange(1, 6+1):
+                        for c in range(1, 6+1):
                             code = toFloat(words[c-1])
                             self.setRefine(fit, magmoment, C[c], code)
 
@@ -2310,7 +2310,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-7", str(words))
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             f[i] = toFloat(words[i-1])
                         # Line 25b-8
                         index = index + 1
@@ -2318,7 +2318,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-8", str(words))
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             code = toFloat(words[i-1])
                             param_name = "f"+str(i)
                             self.setRefine(fit, atomicdisplace,
@@ -2329,7 +2329,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-9", str(words))
-                        for i in xrange(8, 14+1):
+                        for i in range(8, 14+1):
                             f[i] = toFloat(words[i-8])
                         # Line 25b-10
                         index = index + 1
@@ -2337,7 +2337,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-10", str(words))
-                        for i in xrange(8, 14+1):
+                        for i in range(8, 14+1):
                             code = toFloat(words[i-8])
                             param_name = "f"+str(i)
                             self.setRefine(fit, atomicdisplace,
@@ -2347,7 +2347,7 @@ class ImportFitFromFullProf:
 
                 raise NotImplementedError("Jbt = 15 not implemented yet")
                 # Line 25b Suite
-                for at in xrange(0, phase.get("Nat")):
+                for at in range(0, phase.get("Nat")):
                     atom = AtomModule.Atom()
 
                     # 25b-1
@@ -2469,7 +2469,7 @@ class ImportFitFromFullProf:
                         codeindex = self.CodeWord(MagPh, code, fit)
                         atom.Magph = (MagPh, codeindex)
                     elif atom.Ndvk != 0:
-                        for dvk in xrange(1, abs(Ndvk)+1):
+                        for dvk in range(1, abs(Ndvk)+1):
                             # 25-3 25b-3
                             # FIXME: never called, and can not find the definition of this function
                             newdp = DisplacementParameter()
@@ -2549,7 +2549,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-7", str(words))
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             f[i] = toFloat(words[i-1])
                         # Line 25b-8
                         index = index + 1
@@ -2557,7 +2557,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-8", str(words))
-                        for i in xrange(1, 7+1):
+                        for i in range(1, 7+1):
                             code = toFloat(words[i-1])
                             codeindex = self.CodeWord(f[i], code, fit)
                             atom.f[i] = (f[i], codeindex)
@@ -2567,7 +2567,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-9", str(words))
-                        for i in xrange(8, 14+1):
+                        for i in range(8, 14+1):
                             f[i] = toFloat(words[i-8])
                         # Line 25b-10
                         index = index + 1
@@ -2575,7 +2575,7 @@ class ImportFitFromFullProf:
                         if len(words) != 7:
                             warning.PCRFormatItemError(
                                 "3", "25b-10", str(words))
-                        for i in xrange(8, 14+1):
+                        for i in range(8, 14+1):
                             code = toFloat(words[i-8])
                             codeindex = self.CodeWord(f[i], code, fit)
                             atom.f[i] = (f[i], codeindex)
@@ -2622,14 +2622,14 @@ class ImportFitFromFullProf:
                 # words = self.SplitNewLine(index)
                 # if len(words) != 6:
                 #     warning.PCRFormatItemError("3", "26 Irf=4", str(words))
-                # for sc in xrange(1, 6+1):
+                # for sc in range(1, 6+1):
                 #     SC[sc] = toFloat(words[sc-1])
                 # # Line 26-1
                 # index = index+1
                 # words = self.SplitNewLine(index)
                 # if len(words) != 6:
                 #     warning.PCRFormatItemError("3", "26-1 Irf=4", str(words))
-                # for sc in xrange(1, 6+1):
+                # for sc in range(1, 6+1):
                 #     code      = toFloat(words[sc-1])
                 #     codeindex = self.CodeWord(SC[sc], code, fit)
                 #     SCC.SC[sc]   = (SC[sc], codeindex)
@@ -2639,7 +2639,7 @@ class ImportFitFromFullProf:
                 # words = self.SplitNewLine(index)
                 # if len(words) != 7 and len(words) != 8:
                 #     warning.PCRFormatItemError("3", "27 Irf=4", str(words))
-                # for sc in xrange(1, 7+1):
+                # for sc in range(1, 7+1):
                 #     EXT[sc] = toFloat(words[sc-1])
                 # if len(words) == 8:
                 #     SCC.ExtModel = int(words[7])
@@ -2648,7 +2648,7 @@ class ImportFitFromFullProf:
                 # words = self.SplitNewLine(index)
                 # if len(words) != 7:
                 #     warning.PCRFormatItemError("3", "27-1 Irf=4", str(words))
-                # for sc in xrange(1, 7+1):
+                # for sc in range(1, 7+1):
                 #     code      = toFloat(words[sc-1])
                 #     codeindex = self.CodeWord(EXT[sc], code, fit)
                 #     SCC.EXT[sc]   = (EXT[sc], codeindex)
@@ -2693,14 +2693,14 @@ class ImportFitFromFullProf:
                 # words = self.SplitNewLine(index)
                 # if len(words) != 5:
                 #     warning.PCRFormatItemError("3", "30 Irf=4", str(words))
-                # for sc in xrange(1, 5+1):
+                # for sc in range(1, 5+1):
                 #     Par[sc] = toFloat(words[sc-1])
                 # # Line 30-1
                 # index = index+1
                 # words = self.SplitNewLine(index)
                 # if len(words) != 5:
                 #     warning.PCRFormatItemError("3", "30-1 Irf=4", str(words))
-                # for sc in xrange(1, 5+1):
+                # for sc in range(1, 5+1):
                 #     code      = toFloat(words[sc-1])
                 #     codeindex = self.CodeWord(Par[sc], code, fit)
                 #     SCC.Par[sc]   = (Par[sc], codeindex)
@@ -3033,7 +3033,7 @@ class ImportFitFromFullProf:
                                 "3", "30 2theta", str(words))
                         Pref1 = toFloat(words[0])
                         Pref2 = toFloat(words[1])
-                        for pa in xrange(1, 4+1):
+                        for pa in range(1, 4+1):
                             PA[pa] = toFloat(words[1+pa])
                         # optional terms
                         if contribution.get("Npr") == 7:
@@ -3054,7 +3054,7 @@ class ImportFitFromFullProf:
                         self.setRefine(fit, preferorient, "Pref1", Pref1, code)
                         code = toFloat(words[1])
                         self.setRefine(fit, preferorient, "Pref2", Pref2, code)
-                        for pa in xrange(1, 4+1):
+                        for pa in range(1, 4+1):
                             code = toFloat(words[1+pa])
                             param_name = "PA"+str(pa)
                             self.setRefine(
@@ -3212,7 +3212,7 @@ class ImportFitFromFullProf:
                         words = self.SplitNewLine(index)
                         if len(words) != 4:
                             warning.PCRFormatItemError("3", "34", str(words))
-                        for shf in xrange(1, 3+1):
+                        for shf in range(1, 3+1):
                             SHF[shf] = toFloat(words[shf-1])
                         shiftmodel.set("ModS", int(words[3]))
                         # debug output
@@ -3224,7 +3224,7 @@ class ImportFitFromFullProf:
                         if len(words) != 3:
                             warning.PCRFormatItemError(
                                 "3", "31-1 T.O.F.", str(words))
-                        for shf in xrange(1, 3+1):
+                        for shf in range(1, 3+1):
                             code = toFloat(words[shf-1])
                             param_name = "SHF"+str(shf)
                             self.setRefine(fit, shiftmodel,
@@ -3244,7 +3244,7 @@ class ImportFitFromFullProf:
                             if len(words) != 3:
                                 warning.PCRFormatItemError(
                                     "3", "35 (1)", str(words))
-                            for s in xrange(1, 3+1):
+                            for s in range(1, 3+1):
                                 param_name = "Sh"+str(s)
                                 shiftmodel.set(param_name, toFloat(words[s-1]))
 
@@ -3256,7 +3256,7 @@ class ImportFitFromFullProf:
                             shiftmodeluser.extend(shiftmodel)
                             shiftmodel = shiftmodeluser
                             # read
-                            for m in xrange(-ModS):
+                            for m in range(-ModS):
                                 # init
                                 shift = ContributionModule.SelectiveShift(None)
                                 shiftmodel.set("SelectiveShift", shift)
@@ -3266,7 +3266,7 @@ class ImportFitFromFullProf:
                                 if len(words) != 7:
                                     warning.PCRFormatItemError(
                                         "3", "35 (2)", str(words))
-                                for s in xrange(1, 5+1):
+                                for s in range(1, 5+1):
                                     param_name = "n"+str(s)
                                     shift.set(param_name, int(words[s-1]))
                                 Shift = toFloat(words[5])
@@ -3457,7 +3457,7 @@ class ImportFitFromFullProf:
                         if len(words) != 3:
                             warning.PCRFormatItemError(
                                 "3", "36 Size-Model = +/-1", str(words))
-                        for shf in xrange(1, 3+1):
+                        for shf in range(1, 3+1):
                             param_name = "Sz"+str(shf)
                             contribution.set(param_name, toFloat(words[shf-1]))
 
@@ -3474,7 +3474,7 @@ class ImportFitFromFullProf:
                                 "6", "36 Size-Model < -1", str(words))
                         df = ContributionModule.DefectSizeBroaden(None)
                         sizemodel.set("DefectSizeBroaden", df)
-                        for shf in xrange(1, 5+1):
+                        for shf in range(1, 5+1):
                             param_name = "n"+str(shf)
                             df.set(param_name, int(words[shf-1]))
                         SZ = toFloat(words[5])
@@ -3575,7 +3575,7 @@ class ImportFitFromFullProf:
                         if len(words) != 3:
                             warning.PCRFormatItemError(
                                 "3", "37 StrainModel == 7", str(words))
-                        for shf in xrange(1, 3+1):
+                        for shf in range(1, 3+1):
                             param_name = "St"+str(shf)
                             strainmodel.set(param_name, toFloat(words[shf-1]))
 
@@ -3592,7 +3592,7 @@ class ImportFitFromFullProf:
                         if len(words) != 5:
                             warning.PCRFormatItemError(
                                 "5", "37 StrainModel > 8 & Str = 0", str(words))
-                        for shf in xrange(4, 8+1):
+                        for shf in range(4, 8+1):
                             STR[shf] = toFloat(words[shf-4])
                         # 37-1
                         index = index+1
@@ -3600,7 +3600,7 @@ class ImportFitFromFullProf:
                         if len(words) != 5:
                             warning.PCRFormatItemError(
                                 "5", "37-1 StrainModel > 8 & Str = 0", str(words))
-                        for shf in xrange(4, 8+1):
+                        for shf in range(4, 8+1):
                             code = toFloat(words[shf-4])
                             param_name = "Str"+str(shf)
                             self.setRefine(fit, strainmodel,
@@ -3619,7 +3619,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "5", "37 Str = -1, 2, 3", str(words))
-                        for shf in xrange(1, 6+1):
+                        for shf in range(1, 6+1):
                             SZ[shf] = words[shf-1]
                         # 37-1
                         index = index+1
@@ -3627,7 +3627,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "5", "37-1 Str = -1, 2, 3", str(words))
-                        for shf in xrange(1, 6+1):
+                        for shf in range(1, 6+1):
                             code = toFloat(words[shf-1])
                             param_name = "SZ"+str(shf)
                             self.setRefine(
@@ -3811,7 +3811,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "6", "37 Str=1 and Strain-model = 0, or Str = 3", str(words))
-                        for shf in xrange(4, 9+1):
+                        for shf in range(4, 9+1):
                             STR[shf] = words[shf-4]
                         # 37-1
                         index = index+1
@@ -3819,7 +3819,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "6", "37-1 Str=1 and Strain-model = 0, or Str = 3", str(words))
-                        for shf in xrange(4, 9+1):
+                        for shf in range(4, 9+1):
                             code = toFloat(words[shf-4])
                             param_name = "STR"+str(shf)
                             self.setRefine(fit, strainmodel,
@@ -3831,7 +3831,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "6", "37-2 Str=1 and Strain-model = 0, or Str = 3", str(words))
-                        for shf in xrange(10, 15+1):
+                        for shf in range(10, 15+1):
                             STR[shf] = words[shf-10]
                         # 37-3
                         index = index+1
@@ -3839,7 +3839,7 @@ class ImportFitFromFullProf:
                         if len(words) != 6:
                             warning.PCRFormatItemError(
                                 "3", "37-3 Str=1 and Strain-model = 0, or Str = 3", str(words))
-                        for shf in xrange(10, 15+1):
+                        for shf in range(10, 15+1):
                             code = toFloat(words[shf-10])
                             param_name = "STR"+str(shf)
                             self.setRefine(fit, strainmodel,
@@ -3864,7 +3864,7 @@ class ImportFitFromFullProf:
                         self.setRefine(fit, lorstrain, "XI", XI, code)
 
                     # Line New 1: This is a new line not described in manual
-                    for line in xrange(1, contribution.get("Nsp_Ref")+1):
+                    for line in range(1, contribution.get("Nsp_Ref")+1):
                         # init
                         spref = ContributionModule.SpecialReflection(None)
                         contribution.set("SpecialReflection", spref)
@@ -3889,7 +3889,7 @@ class ImportFitFromFullProf:
                         self.setRefine(fit, spref, "D_HL",  dhl,  code)
                         self.setRefine(fit, spref, "Shift", shift, code)
 
-                # end -- for pat in xrange (1, fit.NPATT+1)
+                # end -- for pat in range (1, fit.NPATT+1)
 
             # end -- if Single Crysal -- elif Powder
 
@@ -3985,7 +3985,7 @@ class ImportFitFromFullProf:
         index = self.ReadIndex
         refine = fit.get("Refine")
 
-        for line in xrange(0, fit.get("Nre")):
+        for line in range(0, fit.get("Nre")):
 
             # read 1 line and check
             index = index + 1
@@ -4143,7 +4143,7 @@ class ImportFitFromFullProf:
         try:
             newline = self.LineContent[index]
         except KeyError as err:
-            for line in xrange(0, 200):
+            for line in range(0, 200):
                 if line in self.LineContent:
                     print(str(line) + ":\t" + self.LineContent[line])
             print("index = " + str(index))
@@ -4174,7 +4174,7 @@ class ImportFitFromFullProf:
             if itemread == 3:
                 itemread = itemread - 1    # reason see pseudocode Line 10
                 # print "---------------------------------------------------------> Find it  " + str(counter)
-            for i in xrange(0, itemread):
+            for i in range(0, itemread):
                 emptylist[counter] = words[i]
                 counter = counter + 1
             if counter == itemno:
@@ -4294,31 +4294,31 @@ class ImportFitFromFullProf:
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-1: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempvalues[i] = toFloat(words[i])
             # 17-2
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-2: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempcodes[i] = toFloat(words[i])
             # 17-3
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-3: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempvalues[i+6] = toFloat(words[i])
             # 17-4
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-4: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempcodes[i+6] = toFloat(words[i])
             # combine codes ...
-            for i in xrange(0, 12):
+            for i in range(0, 12):
                 param_name = "BACK"
                 self.setRefine(fit, background, param_name,
                                tempvalues[i], tempcodes[i], i)
@@ -4330,7 +4330,7 @@ class ImportFitFromFullProf:
                 if len(words) != 6:
                     warning.PCRFormatItemError(
                         "2", "17-5: 12 coeff", str(words))
-                for i in xrange(0, 6):
+                for i in range(0, 6):
                     tempvalues[i] = toFloat(words[i])
                 # 17-6
                 index = index + 1
@@ -4338,10 +4338,10 @@ class ImportFitFromFullProf:
                 if len(words) != 6:
                     warning.PCRFormatItemError(
                         "2", "17-6: 12 coeff", str(words))
-                for i in xrange(0, 6):
+                for i in range(0, 6):
                     tempcodes[i] = toFloat(words[i])
                 # combine codes ...
-                for i in xrange(0, 6):
+                for i in range(0, 6):
                     param_name = "BACK"
             # xpc end
         elif pattern.get("Nba") == -2:    # Fourier filtering
@@ -4367,17 +4367,17 @@ class ImportFitFromFullProf:
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-1: 6 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempvalues[i] = toFloat(words[i])
             # 17-2
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-2: 6 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempcodes[i] = toFloat(words[i])
             # combine
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 # codeindex = self.CodeWord(tempvalues[i], tempcodes[i], fit)
                 # fit.Patterns[pat].AnalyBackground.BACK[i+1] = (tempvalues[i], codeindex)
                 param_name = "BACK"+str(i+1)
@@ -4388,17 +4388,17 @@ class ImportFitFromFullProf:
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-3: 6 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempvalues[i] = toFloat(words[i])
             # 17-4
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-4: 6 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempcodes[i] = toFloat(words[i])
             # combine
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 # codeindex = self.CodeWord(tempvalues[i], tempcodes[i], fit)
                 # fit.Patterns[pat].AnalyBackground.Bc[i+1] = (tempvalues[i], codeindex)
                 param_name = "Bc"+str(i+1)
@@ -4409,17 +4409,17 @@ class ImportFitFromFullProf:
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-5: 6 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempvalues[i] = toFloat(words[i])
             # 17-6
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-6: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempcodes[i] = toFloat(words[i])
             # combine
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 # codeindex = self.CodeWord(tempvalues[i], tempcodes[i], fit)
                 # fit.Patterns[pat].AnalyBackground.D[i+1] = (tempvalues[i], codeindex)
                 param_name = "D"+str(i+1)
@@ -4447,17 +4447,17 @@ class ImportFitFromFullProf:
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-1: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempvalues[i] = toFloat(words[i])
             # 17-2
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 6:
                 warning.PCRFormatItemError("2", "17-2: 12 coeff", str(words))
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 tempcodes[i] = toFloat(words[i])
             # combine codes ...
-            for i in xrange(0, 6):
+            for i in range(0, 6):
                 param_name = "BACK"
                 self.setRefine(fit, background, param_name,
                                tempvalues[i], tempcodes[i], i)
@@ -4476,17 +4476,17 @@ class ImportFitFromFullProf:
             words = self.SplitNewLine(index)
             if len(words) != 4:
                 warning.PCRFormatItemError("2", "17-1: 12 coeff", str(words))
-            for i in xrange(0, 4):
+            for i in range(0, 4):
                 tempvalues[i] = toFloat(words[i])
             # 17-2
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 4:
                 warning.PCRFormatItemError("2", "17-2: 12 coeff", str(words))
-            for i in xrange(0, 4):
+            for i in range(0, 4):
                 tempcodes[i] = toFloat(words[i])
             # combine codes ...
-            for i in xrange(0, 4):
+            for i in range(0, 4):
                 param_name = "BACK"
                 self.setRefine(fit, background, param_name,
                                tempvalues[i], tempcodes[i], i)
@@ -4554,8 +4554,8 @@ class ImportFitFromFullProf:
         symop = PhaseModule.SymmetryMatrix33(operatorcombo)
         operatorcombo.set("SymmetryMatrix", symop)
         # read
-        for i in xrange(1, 4):
-            for j in xrange(1, 4):
+        for i in range(1, 4):
+            for j in range(1, 4):
                 param_name = "S"+str(i)+str(j)
                 symop.set(param_name, int(words[count]))
                 count = count + 1
@@ -4563,7 +4563,7 @@ class ImportFitFromFullProf:
             symop.set(param_name, toFloat(words[count]))
             count = count + 1
         # 2. Fourier component of displacement
-        for dp in xrange(1, DepMat+1):
+        for dp in range(1, DepMat+1):
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 10:
@@ -4573,14 +4573,14 @@ class ImportFitFromFullProf:
             depop = PhaseModule.RotationalMatrix33(None)
             operatorcombo.set("DisplacementMatrix", depop)
             # read
-            for i in xrange(1, 4):
-                for j in xrange(1, 4):
+            for i in range(1, 4):
+                for j in range(1, 4):
                     param_name = "R"+str(i)+str(j)
                     depop.set(param_name, int(words[count]))
                     count = count + 1
             depop.set("Phase", toFloat(words[count]))
         # 3. magnetic operator
-        for mg in xrange(1, MagMat+1):
+        for mg in range(1, MagMat+1):
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 10:
@@ -4590,8 +4590,8 @@ class ImportFitFromFullProf:
             magop = PhaseModule.RotationalMatrix33(None)
             operatorcombo.set("MagneticMatrix", magop)
             # read
-            for i in xrange(1, 4):
-                for j in xrange(1, 4):
+            for i in range(1, 4):
+                for j in range(1, 4):
                     param_name = "R"+str(i)+str(j)
                     magop.set(param_name, int(words[count]))
                     count = count + 1
@@ -4632,7 +4632,7 @@ class ImportFitFromFullProf:
         symop.set("Y", words[2])
         symop.set("Z", words[3])
         # 2. Fourier component of displacement
-        for dp in xrange(1, DepMat+1):
+        for dp in range(1, DepMat+1):
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 5:
@@ -4647,7 +4647,7 @@ class ImportFitFromFullProf:
             depop.set("Z", words[3])
             depop.set("Phase", toFloat(words[4]))
         # 3. magnetic operator
-        for mg in xrange(1, MagMat+1):
+        for mg in range(1, MagMat+1):
             index = index + 1
             words = self.SplitNewLine(index)
             if len(words) != 5:
@@ -4679,7 +4679,7 @@ class ImportFitFromFullProf:
         words = self.SplitNewLine(index)
         if len(words) != 4:
             warning.PCRFormatItemError("3", "25-11-1, Jbt=+/-15", str(words))
-        for i in xrange(1, 3+1):
+        for i in range(1, 3+1):
             param_name = "T1"+str(i)
             transformation.set(param_name, toFloat(words[i-1]))
         transformation.set("Or_sh1", toFloat(words[3]))
@@ -4688,7 +4688,7 @@ class ImportFitFromFullProf:
         words = self.SplitNewLine(index)
         if len(words) != 4:
             warning.PCRFormatItemError("3", "25-11-2, Jbt=+/-15", str(words))
-        for i in xrange(1, 3+1):
+        for i in range(1, 3+1):
             param_name = "T2"+str(i)
             transformation.set(param_name, toFloat(words[i-1]))
         transformation.set("Or_sh2", toFloat(words[3]))
@@ -4697,7 +4697,7 @@ class ImportFitFromFullProf:
         words = self.SplitNewLine(index)
         if len(words) != 4:
             warning.PCRFormatItemError("3", "25-11-3, Jbt=+/-15", str(words))
-        for i in xrange(1, 3+1):
+        for i in range(1, 3+1):
             param_name = "T3"+str(i)
             transformation.set(param_name, toFloat(words[i-1]))
         transformation.set("Or_sh3", toFloat(words[3]))
@@ -4719,7 +4719,7 @@ class ImportFitFromFullProf:
         """
         count = 0
         laue = LaueShiftParameter(shiftmodel.get("Laueclass"))
-        for l in xrange(len(LineItemList)):
+        for l in range(len(LineItemList)):
             # read file
             index = index + 1
             words1 = self.SplitNewLine(index)
@@ -4733,7 +4733,7 @@ class ImportFitFromFullProf:
                     "3", "35 (3) - Line " + str(index) + " laue: " + laue.Name, str(words2))
 
             # set value to fit-suite
-            for r in xrange(LineItemList[l]):
+            for r in range(LineItemList[l]):
                 # init
                 hkl = laue.get()
                 shift = ContributionModule.GeneralShift(None, hkl)
@@ -4753,7 +4753,7 @@ class ImportFitFromFullProf:
         Read Line 36 LaueClass:  Size Model
         """
         count = 0
-        for l in xrange(len(LineItemList)):
+        for l in range(len(LineItemList)):
             index = index + 1
             words1 = self.SplitNewLine(index)
             if len(words1) != LineItemList[l]:
@@ -4766,7 +4766,7 @@ class ImportFitFromFullProf:
                 # warning.PCRFormatItemError("3", "35 (3) - Line " + str(index) + " laue: " + laue.Name, str(words2))
                 warning.PCRFormatItemError(
                     "3", "35 (3) - Line " + str(index) + " laue: ", str(words2))
-            for r in xrange(LineItemList[l]):
+            for r in range(LineItemList[l]):
                 # init
                 shcoeff = ContributionModule.SHcoefficient(None)
                 sizemodel.set("SHcoefficient", shcoeff)
@@ -4793,7 +4793,7 @@ class ImportFitFromFullProf:
         lineamount = len(shlist)
 
         # 2. start to read
-        for l in xrange(lineamount):
+        for l in range(lineamount):
 
             # increment line number
             index = index + 1
@@ -4813,7 +4813,7 @@ class ImportFitFromFullProf:
                     "3", "35 (3) - Line " + str(index) + " laue: ", str(words2))
 
             # read
-            for r in xrange(itemamount):
+            for r in range(itemamount):
 
                 # init SHcoefficent
                 spname = shlist[l][r]
@@ -4827,7 +4827,7 @@ class ImportFitFromFullProf:
                 else:
                     self.setRefine(fit, shcoeff, "Y", KYitem, code)
 
-            # END -- for r in xrange(itemamount):
+            # END -- for r in range(itemamount):
 
         return index
 
@@ -4844,7 +4844,7 @@ class ImportFitFromFullProf:
         # read
         count = 0
         laue = LaueModule.LaueStrainModel(strainmodel.get("Laueclass"))
-        for l in xrange(len(LineItemList)):
+        for l in range(len(LineItemList)):
             # debug output print "Line Numbe = " + str(len(LineItemList))
             index = index + 1
             words1 = self.SplitNewLine(index)
@@ -4856,7 +4856,7 @@ class ImportFitFromFullProf:
             if len(words2) != LineItemList[l]:
                 warning.PCRFormatItemError(
                     "3", "35 (3) - Line " + str(index) + " laue: " + laue.Name, str(words2))
-            for r in xrange(LineItemList[l]):
+            for r in range(LineItemList[l]):
                 # init
                 hkl = laue.get()
                 quartic = ContributionModule.QuarticCoefficient(None, hkl)
@@ -4879,7 +4879,7 @@ class ImportFitFromFullProf:
         if phase.get("Furth") > 0:
             raise NotImplementedError("This is example for Furth != 0")
 
-        for line in xrange(0, phase.get("Furth")):
+        for line in range(0, phase.get("Furth")):
             # read
             index = index + 1
             words = self.SplitNewLine(index)
@@ -4905,7 +4905,7 @@ class ImportFitFromFullProf:
         indexed as '1', '2', '3'
         """
 
-        for line in xrange(0, abs(phase.get("Nvk"))):
+        for line in range(0, abs(phase.get("Nvk"))):
 
             # init
             pvector = PhaseModule.PropagationVector(None)
@@ -4937,7 +4937,7 @@ class ImportFitFromFullProf:
         """
         read Dis Lines of distant constraints
         """
-        for line in xrange(0, phase.get("Dis")):
+        for line in range(0, phase.get("Dis")):
             # init
             soft = PhaseModule.DistanceRestraint(None)
             phase.set("DistanceRestraint", soft)
@@ -4965,7 +4965,7 @@ class ImportFitFromFullProf:
         """
         read Dis Lines of distant constraints
         """
-        for line in xrange(1, phase.MomAngles+1):
+        for line in range(1, phase.MomAngles+1):
             # init
             soft = PhaseModule.AngleRestraint()
             phase.set("AngleRestraint", soft)
@@ -4998,7 +4998,7 @@ class ImportFitFromFullProf:
         """
         read Dis Lines of distant constraints
         """
-        for line in xrange(1, phase.MomMoment+1):
+        for line in range(1, phase.MomMoment+1):
             # FIXME: no such method definition
             soft = PhaseModule.Phase.SoftMomentContrain()
             index = index + 1

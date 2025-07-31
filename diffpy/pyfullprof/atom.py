@@ -206,7 +206,7 @@ class AtomRigid(Atom):
         initialization
         """
         Atom.__init__(self, parent)     
-        for i in xrange(1, 15+1):
+        for i in range(1, 15+1):
             param_name = "P"+str(i)
             self.__dict__[param_name] = RefineData(self.ParamDict[param_name].get("default"))
 
@@ -345,7 +345,7 @@ class AtomMagneticUserModel(AtomMagnetic):
         AtomMagnetic.__init__(self, parent)    
        
         # define this class's variable 
-        for i in xrange(1, 15+1):
+        for i in range(1, 15+1):
             param_name = "P"+str(i)
             self.__dict__[param_name] = data.RefineData\
                             (self.ParamDict[param_name].get("default"))

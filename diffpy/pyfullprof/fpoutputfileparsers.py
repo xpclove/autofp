@@ -59,7 +59,7 @@ def prfParser(prffname):
 
     # 2.3 excluded region
     excludedregions = []
-    for lineindex in xrange(infoline-1, -1, -1):
+    for lineindex in range(infoline-1, -1, -1):
         line  = lines[lineindex]
         terms = line.split("\n")[0].strip().split()
         if len(terms) == 2:
@@ -83,7 +83,7 @@ def prfParser(prffname):
         errmsg = "prfParser():  Unrecognizable line:  should be < Reflection-Number, 0, 1>, now %-30s"% (line)
         raise NotImplementedError(errmsg)
     reflpeaknum = 0
-    for pindex in xrange(phasenumber):
+    for pindex in range(phasenumber):
         reflpeaknum += int(refterms[pindex])
 
     # 3. Read diffraction
@@ -93,7 +93,7 @@ def prfParser(prffname):
     listydif = []
     stline   = infoline+1
     edline   = stline+patpointnum-1
-    for l in xrange(stline, edline+1):
+    for l in range(stline, edline+1):
         # 3.1 Split the line
         try:
             terms = lines[l].split("\n")[0].strip().split()
@@ -154,7 +154,7 @@ def prfParser(prffname):
             errmsg = "pcrParser()  refmode = %-5s Not Allowed!"% (refmode)
             raise NotImplementedError(errmsg)
 
-        for lineindex in xrange(stline, edline+1):
+        for lineindex in range(stline, edline+1):
             terms = lines[lineindex].split("\n")[0].strip().split()
             refpos = float(terms[stcol])
             reflections.append(refpos)
@@ -210,7 +210,7 @@ def subParser(rootname=None, phaseno=None, filename=None, thmin=None, thmax=None
     # 3. get data pattern
     calpattern = []
     pindex     = 0
-    for lindex in xrange(1, numlines):
+    for lindex in range(1, numlines):
         terms = lines[lindex].strip().split()
         for term in terms:
             calX = thmin+step*float(pindex)
@@ -264,7 +264,7 @@ def parseHKLn(fullname, phaseno, singlepattern, patno, hklrange):
     # 3. interpret
     numlines = len(lines)
     reflectdict = {}
-    for lindex in xrange(2, numlines):
+    for lindex in range(2, numlines):
         terms = lines[lindex].split()
         # FIXME - Cannot handle the situation when l and m are stuck together
         try:
@@ -281,7 +281,7 @@ def parseHKLn(fullname, phaseno, singlepattern, patno, hklrange):
             pass
         except ValueError as err:
             pass
-    # LOOP-OVER:  for lindex in xrange(2, numlines):
+    # LOOP-OVER:  for lindex in range(2, numlines):
 
     # 4. return
     return reflectdict
@@ -395,7 +395,7 @@ class FPOutFileParser:
         prevcycleno = 0
         breakflag = False
         self._goodRefine =  True
-        for cindex in xrange(self._numcycles):
+        for cindex in range(self._numcycles):
             # 1. search for start
             findFirstBlockLine = False
             noCycleBlock       = False
@@ -443,7 +443,7 @@ class FPOutFileParser:
                 self._goodRefine =  False
                 break
 
-        # LOOP-OVER: for cindex in xrange(self._numclycles)
+        # LOOP-OVER: for cindex in range(self._numclycles)
 
         # 5. Error message check
         if self._goodRefine is False:
@@ -489,16 +489,16 @@ class FPOutFileParser:
         
    
         # 2.3 parse
-        for pindex in xrange(numpatterns):
+        for pindex in range(numpatterns):
             flaglineindex = None
             #2.1 find pattern flag
-            for lindex in xrange(startlineno, self._blocks[blockno][1]+1):
+            for lindex in range(startlineno, self._blocks[blockno][1]+1):
                 if self._lines[lindex].count(self.PatternFlag) == 1:
                     flaglineindex = lindex
                     break
  
             # 2.2 find residue values line
-            for lindex in xrange(flaglineindex, self._blocks[blockno][1]+1):
+            for lindex in range(flaglineindex, self._blocks[blockno][1]+1):
                 if self._lines[lindex].count(self.ResidueFlag) == 1:
                     resline = self._lines[lindex]
                     startlineno = lindex
@@ -528,7 +528,7 @@ class FPOutFileParser:
 
             retlist.append( (Rp, Rwp, Re, Chi2) )
             
-        # LOOP-OVER: for pindex in xrange(numpatterns)
+        # LOOP-OVER: for pindex in range(numpatterns)
 
         return retlist
 

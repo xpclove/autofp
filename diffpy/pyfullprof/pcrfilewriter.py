@@ -135,9 +135,9 @@ def writeBlock1(fit, Line):
     # note:  bank: from 1 --- max. 
     allbanklist = []
     bankcount   = 0
-    for p in xrange(len(fit.get("Pattern"))):
+    for p in range(len(fit.get("Pattern"))):
         allbanklist.append(0)
-    for p in xrange(len(fit.get("Pattern"))):
+    for p in range(len(fit.get("Pattern"))):
         pattern = fit.get("Pattern")[p] 
         if isinstance(pattern, PatternTOF):
             bank = pattern.get("Bank")
@@ -209,7 +209,7 @@ def writeBlock2(fit, Line):
     # Line 5
     Line[5] = "! Datafile"
     for pattern in fit.get("Pattern"):
-        Line[5] += "\n" + pattern.get("Datafile") 
+        Line[5] += "\n" + pattern.get("Datafile")
 
     # Line 6
     infoline = "! Resolution file"
@@ -552,7 +552,7 @@ def writeBlock2(fit, Line):
                 Line[14] += "\n"+commline
                 dataline = "  "
                 codeline = "  "
-                for i in xrange(1, 6+1):
+                for i in range(1, 6+1):
                     param_name = "BACK"
                     backpos    = getRefine(background, param_name, i-1)
                     dataline += "%-15s "% (StringOutput(backpos.value))
@@ -562,7 +562,7 @@ def writeBlock2(fit, Line):
                 # 7-12
                 dataline = "  "
                 codeline = "  "
-                for i in xrange(7, 12+1):
+                for i in range(7, 12+1):
                     param_name = "BACK"
                     backpos    = getRefine(background, param_name, i-1)
                     dataline += "%-15s "% (StringOutput(backpos.value))
@@ -583,7 +583,7 @@ def writeBlock2(fit, Line):
                 # BACK 1-6
                 dataline = ""
                 codeline = ""
-                for i in xrange(1, 6+1):
+                for i in range(1, 6+1):
                     param_name = "BACK"+StringOutput(i)
                     bkgd       = getRefine(background, param_name)
                     dataline  += "%-15s "% (StringOutput(bkgd.value))
@@ -592,7 +592,7 @@ def writeBlock2(fit, Line):
                 # Bc 1-6
                 dataline = ""
                 codeline = ""
-                for i in xrange(1, 6+1):
+                for i in range(1, 6+1):
                     param_name = "Bc"+StringOutput(i)
                     bkgd       = getRefine(background, param_name)
                     dataline  += "%-15s "% (StringOutput(bkgd.value))
@@ -601,7 +601,7 @@ def writeBlock2(fit, Line):
                 # D 1-6
                 dataline = ""
                 codeline = ""
-                for i in xrange(1, 6+1):
+                for i in range(1, 6+1):
                     param_name = "D"+StringOutput(i)
                     bkgd       = getRefine(background, param_name)
                     dataline  += "%-15s "% (StringOutput(bkgd.value))
@@ -621,7 +621,7 @@ def writeBlock2(fit, Line):
                 commline = "! Background coefficients/Codes for Pattern # %-5s"% (patternindex)
                 dataline = "  "
                 codeline = "  "
-                for i in xrange(1, 6+1):
+                for i in range(1, 6+1):
                     param_name = "BACK"
                     bkgd       = getRefine(background, param_name, i-1)
                     dataline  += "%-15s "% (StringOutput(bkgd.value))
@@ -634,7 +634,7 @@ def writeBlock2(fit, Line):
                 # BACK 1-4
                 dataline = ""
                 codeline = ""
-                for i in xrange(1, 4+1):
+                for i in range(1, 4+1):
                     param_name = "BACK"
                     bkgd       = getRefine(background, param_name, i-1)
                     dataline  += StringOutput(bkgd.value) + " "
@@ -662,7 +662,7 @@ def writeBlock3(fit, Line, srtype="r"):
     """
     
     # initialization
-    for line in xrange(18, 46+1):
+    for line in range(18, 46+1):
         Line[line] = {}
     count = 1
 
@@ -778,7 +778,7 @@ def writeBlock3(fit, Line, srtype="r"):
             cationdict = {}
             aniondict  = {}
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 elecnumber = atom.get("IonNumber")
                 symbol     = atom.get("Typ")
@@ -846,7 +846,7 @@ def writeBlock3(fit, Line, srtype="r"):
         timereversallist = phase.get("TimeRev")
         if len(timereversallist) == 1:
             timereversal = timereversallist[0]
-            for ti in xrange(timereversal.get("NS")+1):
+            for ti in range(timereversal.get("NS")+1):
                 param_name = "TimeRev"+StringOutput(ti)
                 dataline += StringOutput(timereversal.get(param_name)) + " "
             if dataline != "":
@@ -896,8 +896,8 @@ def writeBlock3(fit, Line, srtype="r"):
                 # SymmetryrMatrix
                 dataline = ""
                 smatrix = combo.get("SymmetryMatrix")
-                for i in xrange(1, 3+1):
-                    for j in xrange(1, 3+1):
+                for i in range(1, 3+1):
+                    for j in range(1, 3+1):
                         param_name = "S"+StringOutput(i)+StringOutput(j)
                         dataline  += StringOutput(smatrix.get(param_name)) + " "
                     param_name = "T"+StringOutput(i)
@@ -907,8 +907,8 @@ def writeBlock3(fit, Line, srtype="r"):
                 # DisplaceMatrix
                 for matrix in combo.get("DisplaceMatrix"):
                     dataline = ""
-                    for i in xrange(1, 3+1):
-                        for j in xrange(1, 3+1):
+                    for i in range(1, 3+1):
+                        for j in range(1, 3+1):
                             param_name = "R"+StringOutput(i)+StringOutput(j)
                             dataline  += StringOutput(matrix.get(param_name)) + " "
                     dataline += StringOutput(matrix.get("Phase")) 
@@ -917,8 +917,8 @@ def writeBlock3(fit, Line, srtype="r"):
                 # MagneticMatrix
                 for matrix in combo.get("MagneticMatrix"):
                     dataline = ""
-                    for i in xrange(1, 3+1):
-                        for j in xrange(1, 3+1):
+                    for i in range(1, 3+1):
+                        for j in range(1, 3+1):
                             param_name = "R"+StringOutput(i)+StringOutput(j)
                             dataline  += StringOutput(matrix.get(param_name)) + " "
                     dataline += StringOutput(matrix.get("Phase")) 
@@ -993,7 +993,7 @@ def writeBlock3(fit, Line, srtype="r"):
                         %("Atom", "Typ", "X", "Y", "Z", "Biso", "Occ", "In", "Fin", "N_t", "Spc/Codes")
             Line[25][count] += commline
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 dfactor  = atom.get("AtomicDisplacementFactor")
                 # 25-1 25-2
@@ -1042,16 +1042,16 @@ def writeBlock3(fit, Line, srtype="r"):
                 elif atom.get("N_t") == 4:
                     commline = "! Form-factor refinable parameters"
                     f = {}
-                    for i in xrange(1, 14+1):
+                    for i in range(1, 14+1):
                         param_name = "f"+StringOutput(i)
                         f[i] = getRefine(dfactor, param_name)
                     dataline = ""
                     codeline = ""
-                    for i in xrange(1, 7+1):
+                    for i in range(1, 7+1):
                         dataline += StringOutput(f[i].value) + " "
                         codeline += StringOutput(f[i].code)  + " "
                     Line[25][count] += commline + "\n" + dataline + "\n" + codeline
-                    for i in xrange(8, 14+1):
+                    for i in range(8, 14+1):
                         dataline += StringOutput(f[i].value) + " "
                         codeline += StringOutput(f[i].code)  + " "
                     Line[25][count] += "\n" + dataline + "\n" + codeline
@@ -1064,17 +1064,17 @@ def writeBlock3(fit, Line, srtype="r"):
             commline =  "!Atom Typ      p1       p2       p3      p4     p5      p6     p7     p8"
             Line[25][count] += commline
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 # rigid body
                 P = {}
-                for i in xrange(1, 8+1):
+                for i in range(1, 8+1):
                     param_name = "P"+StringOutput(i)
                     P[i] = getRefine(atom, param_name)
                 # Line 25-1 25-2
                 dataline = StringOutput(atom.get("Name")) + " " + StringOutput(atom.get("Typ")) + " " 
                 codeline = ""
-                for i in xrange(1, 8+1):
+                for i in range(1, 8+1):
                     dataline += StringOutput(P[i].value) + " " 
                     codeline += StringOutput(P[i].code)  + " "
                 Line[25][count] += commline + "\n" + dataline + "\n" + codeline 
@@ -1082,7 +1082,7 @@ def writeBlock3(fit, Line, srtype="r"):
                 commline = "P9, P10, P11, P12, P13, P14, P15"
                 dataline = ""
                 codeline = ""
-                for i in xrange(9, 15+1):
+                for i in range(9, 15+1):
                     dataline += StringOutput(P[i].value) + " " 
                     codeline += StringOutput(P[i].code)  + " "
                 Line[25][count] += "\n" + dataline + "\n" + codeline 
@@ -1096,7 +1096,7 @@ def writeBlock3(fit, Line, srtype="r"):
             commline = "!Atom Typ  Mag Vek    X      Y      Z       Biso   Occ      Rx    Ry    Rz"
             Line[25][count] += commline
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 x = getRefine(atom, "X")
                 y = getRefine(atom, "Y")
@@ -1137,7 +1137,7 @@ def writeBlock3(fit, Line, srtype="r"):
             commline2 = "!Im, Iphi, Ithet, B11, B22, B33, MagPh"
             Line[25][count] += commline + "\n" + commline2
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 x = getRefine(atom, "X")
                 y = getRefine(atom, "Y")
@@ -1177,7 +1177,7 @@ def writeBlock3(fit, Line, srtype="r"):
             commline2 = "! C4, C5, C6, C7, C8, C9, MagPh"
             Line[25][count] += commline + "\n" + commline2
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 x = getRefine(atom, "X")
                 y = getRefine(atom, "Y")
@@ -1185,7 +1185,7 @@ def writeBlock3(fit, Line, srtype="r"):
                 b = getRefine(atom, "Biso")
                 o = getRefine(atom, "Occ")
                 c = {}
-                for i in xrange(1, 9+1):
+                for i in range(1, 9+1):
                     param_name = "C"+StringOutput(i)
                     c[i] = getRefine(atom, param_name)
                 mph = getRefine(atom, "MagPh")
@@ -1193,17 +1193,17 @@ def writeBlock3(fit, Line, srtype="r"):
                 dataline =  StringOutput(atom.get("Name")) + " " + StringOutput(atom.get("Typ")) + " " + StringOutput(atom.get("Mag")) + " " + \
                             StringOutput(atom.get("Vek")) + " " + StringOutput(x.value) + " " + StringOutput(y.value) + " " + \
                             StringOutput(z.value) + " " + StringOutput(b.value) + " " + StringOutput(o.value) + " " 
-                for i in xrange(1, 3+1):
+                for i in range(1, 3+1):
                     dataline += StringOutput(c[i].value) + " "
                 codeline =  StringOutput(x.code) + " " + StringOutput(y.code) + " " + StringOutput(z.code) + " " + StringOutput(b.code) + " " + \
                             StringOutput(o.code) + " " 
-                for i in xrange(1, 3+1):
+                for i in range(1, 3+1):
                     codeline += StringOutput(c[i].code) + " "
                 Line[25][count] += "\n" + dataline + "\n" + codeline
                 # 25-3 25-4
                 dataline = ""
                 codeline = ""
-                for i in xrange(4, 9+1):
+                for i in range(4, 9+1):
                     dataline += StringOutput(c[i].value) + " "
                     codeline += StringOutput(c[i].code) + " "
                 dataline += StringOutput(mph.value)
@@ -1216,24 +1216,24 @@ def writeBlock3(fit, Line, srtype="r"):
             commline2 = "!   Phi & Theta  of Cone-axis + unused params"
             Line[25][count] += commline + "\n" + commline2
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 p = {}
-                for i in xrange(1, 15+1):
+                for i in range(1, 15+1):
                     param_name = "P"+StringOutput(i)
                     p[i] = getRefine(atom, param_name)
                 # 25-1 25-2
                 dataline =  StringOutput(atom.get("Name")) + " " + StringOutput(atom.get("Typ")) + " " + StringOutput(atom.get("Mag")) + " " + \
                             StringOutput(atom.get("Vek"))  + " "
                 codeline = ""
-                for i in xrange(1, 8+1):
+                for i in range(1, 8+1):
                     dataline += StringOutput(p[i].value) + " "
                     codeline += StringOutput(p[i].code ) + " "
                 Line[25][count] += "\n" + dataline + "\n" + codeline
                 # 25-3 25-4
                 dataline = ""
                 codeline = ""
-                for i in xrange(9, 15+1):
+                for i in range(9, 15+1):
                     dataline += StringOutput(p[i].value) + " "
                     codeline += StringOutput(p[i].code ) + " "
                 Line[25][count] += "\n" + dataline + "\n" + codeline
@@ -1244,7 +1244,7 @@ def writeBlock3(fit, Line, srtype="r"):
             commline = "!Atom Typ Mag Vek X Y Z Biso Occ N_type Spc "
             Line[25][count] += commline
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 x = getRefine(atom, "X")
                 y = getRefine(atom, "Y")
@@ -1296,7 +1296,7 @@ def writeBlock3(fit, Line, srtype="r"):
                     c = {}
                     dataline = ""
                     codeline = ""
-                    for i in xrange(1, 6+1):
+                    for i in range(1, 6+1):
                         param_name = "C"+StringOutput(i)
                         c[i]       = getRefine(atom, param_name)
                         dataline  += StringOutput(c[i].value) + " "
@@ -1326,20 +1326,20 @@ def writeBlock3(fit, Line, srtype="r"):
                 if N_t == 4:
                     atomicfactor = atom.get("AtomicDisplacemenFactor")
                     f = {}
-                    for i in xrange(1, 14+1):
+                    for i in range(1, 14+1):
                         param_name = "f"+StringOutput(i)
                         f[i]       = getRefine(atomicfactor, param_name)
                     # 25-7 25-8
                     dataline = ""
                     codeline = ""
-                    for i in xrange(1, 7+1):
+                    for i in range(1, 7+1):
                         dataline += StringOutput(f[i].value) + " "
                         codeline += StringOutput(f[i].code ) + " "
                     Line[25][count] += "\n" + dataline + "\n" + codeline
                     # 25-9 25-10
                     dataline = ""
                     codeline = ""
-                    for i in xrange(8, 14+1):
+                    for i in range(8, 14+1):
                         dataline += StringOutput(f[i].value) + " "
                         codeline += StringOutput(f[i].code ) + " "
                     Line[25][count] += "\n" + dataline + "\n" + codeline
@@ -1350,7 +1350,7 @@ def writeBlock3(fit, Line, srtype="r"):
             raise_(NotImplementedError, errmsg)
 
             atomslist = phase.get("Atom")
-            for atomindex in xrange(Nat):
+            for atomindex in range(Nat):
                 atom = atomslist[atomindex]
                 pass
 
@@ -1368,9 +1368,9 @@ def writeBlock3(fit, Line, srtype="r"):
             transf   = phase.get("TransformationMatrixSet")[0]
             infoline = "! Multiple Cell Transformation"
             dataline = ""
-            for i in xrange(1, 3+1):
+            for i in range(1, 3+1):
                 dataline += "\n"
-                for j in xrange(1, 3+1):
+                for j in range(1, 3+1):
                     param_name = "T"+StringOutput(i)+StringOutput(j)
                     dataline  += StringOutput(transf.get(param_name)) + " "
                 param_name = "Or_sh"+StringOutput(i)
@@ -1395,7 +1395,7 @@ def writeBlock3(fit, Line, srtype="r"):
             # powder
 
             # index initialization:  patcount is the count for contributions from 1 continuously
-            for line in xrange(26, 42+1):
+            for line in range(26, 42+1):
                 Line[line][count] = {}
             patcount = 1
 
@@ -1837,7 +1837,7 @@ def writeBlock3(fit, Line, srtype="r"):
                     commline = "! 5 additional strain parameters"
                     dataline = ""
                     codeline = ""
-                    for i in xrange(4, 8+1):
+                    for i in range(4, 8+1):
                         param_name = "Str"+StringOutput(i)
                         strmodel  = getRefine(strainmodel, param_name)
                         dataline  += StringOutput(strmodel.value) + " "
@@ -2035,7 +2035,7 @@ def writeBlock5(fit, Line):
             lastline = 3
         else:
             lastline = 2
-        for lno in xrange(lastline+1):
+        for lno in range(lastline+1):
             Line[49] += commline[lno] + "\n"
             Line[49] += dataline
             if lno != lastline:
@@ -2207,7 +2207,7 @@ def PrintShiftLaue(shiftmodel, lineitems):
     for line in lineitems:
         vstr = ""
         cstr = ""
-        for item in xrange(line):
+        for item in range(line):
             hkl    = laue.get()
             gshift = shiftmodel.get("hkl", hkl)
             refine = getRefine(gshift, "D")
@@ -2240,7 +2240,7 @@ def PrintStrainLaue(strainmodel, lineitems):
     for line in lineitems:
         vstr = ""
         cstr = ""
-        for item in xrange(line):
+        for item in range(line):
             hkl     = laue.get()
             gstrain = strainmodel.get("hkl", hkl)
             refine  = getRefine(gstrain, "S")
@@ -2265,7 +2265,7 @@ def printLine36SizeModelSphericalHarmonic(sizemodel, shlist):
    
     lineamount = len(shlist)
 
-    for lindex in xrange(lineamount):
+    for lindex in range(lineamount):
 
         # 1. init
         commline = "! "
@@ -2292,7 +2292,7 @@ def printLine36SizeModelSphericalHarmonic(sizemodel, shlist):
             wbuf += "\n"
         wbuf += commline+"\n"+dataline+"\n"+codeline
 
-    # END -- for lindex in xrange(lineamount):
+    # END -- for lindex in range(lineamount):
 
     return wbuf
 
@@ -2341,31 +2341,31 @@ def printLines(Line):
 
     # print "PrintLines: " + StringOutput(Line.keys())
 
-    for l in xrange(block1_i, block1_f+1):
+    for l in range(block1_i, block1_f+1):
         if l in Line.keys():
             print(Line[l])
 
-    for l in xrange(block2_i, block2_f+1):
+    for l in range(block2_i, block2_f+1):
         if l in Line.keys():
             print("Line " + StringOutput(l))
             print(Line[l])
 
     phaseloop = len(Line[18])
-    for phasecount in xrange(1, phaseloop+1):
+    for phasecount in range(1, phaseloop+1):
         # determine contribution loop --- phase related
         if 26 in Line and phasecount in Line[26]:
             contribloop = len(Line[26][phasecount])
         else:
             contribloop = 0
         # write
-        for l in xrange(block3_i, block3_f+1):
+        for l in range(block3_i, block3_f+1):
             print("Line " + StringOutput(l))
             try:
 
                 if l < 26 and l in Line and phasecount in Line[l]:
                     print(Line[l][phasecount])
                 elif l >= 26 and l <= 42:
-                    for n in xrange(1, contribloop+1):
+                    for n in range(1, contribloop+1):
                         if l in Line and phasecount in Line[l] and contribloop in Line[l][phasecount]:
                             print(Line[l][phasecount][contribloop])
                 elif l >= 43 and l in Line and phasecount in Line[l]:
@@ -2401,18 +2401,18 @@ def printLineToFile(Line, filename, userinfo):
     block4_i  = 47
     block4_f  = 50
 
-    for l in xrange(block1_i, block1_f+1):
+    for l in range(block1_i, block1_f+1):
         if l in Line.keys():
             fout.write(Line[l]+"\n")
     fout.write("!\n")
 
-    for l in xrange(block2_i, block2_f+1):
+    for l in range(block2_i, block2_f+1):
         if l in Line.keys():
             fout.write(Line[l]+"\n")
         fout.write("!\n")
 
     phaseloop = len(Line[18])
-    for phasecount in xrange(1, phaseloop+1):
+    for phasecount in range(1, phaseloop+1):
         # determine contribution loop --- phase related
         if 26 in Line and phasecount in Line[26]:
             contribloop = len(Line[26][phasecount])
@@ -2420,27 +2420,27 @@ def printLineToFile(Line, filename, userinfo):
             contribloop = 0
 
         # write:  line for phase only < 26
-        for l in xrange(block3_i, 25+1):
+        for l in range(block3_i, 25+1):
             if l in Line and phasecount in Line[l]:
                 fout.write(Line[l][phasecount]+"\n")
                 fout.write("!\n")
 
         # write:  contribution
-        for n in xrange(1, contribloop+1):
-            for l in xrange(26, 42+1):
+        for n in range(1, contribloop+1):
+            for l in range(26, 42+1):
                 if l in Line and phasecount in Line[l] and n in Line[l][phasecount]:
                     fout.write(Line[l][phasecount][n]+"\n")
                     fout.write("!\n")
 
         # write:  line for phase only > 43
-        for l in xrange(43, block3_f+1):
+        for l in range(43, block3_f+1):
             if l in Line and phasecount in Line[l]:
                 fout.write(Line[l][phasecount]+"\n")
                 fout.write("!\n")
     # end -for phasecount 
 
     # write block 4
-    for l in xrange(block4_i, block4_f+1):
+    for l in range(block4_i, block4_f+1):
         if l in Line.keys():
             fout.write(Line[l]+"\n")
             fout.write("!\n")

@@ -13,6 +13,7 @@
 #
 ##############################################################################
 
+from __future__ import print_function
 __id__ = "$Id: irfreader.py 6843 2013-01-09 22:14:20Z juhas $"
 
 """
@@ -97,18 +98,18 @@ class TOFIrfReader(IrfReader):
                 bankno = int(line.split("Bank")[1])
                 if bankno != numbank:
                     errmsg = "Irf File Bank Number Error"
-                    print errmsg
+                    print(errmsg)
                 banklinedict[numbank] = lineindex
             lineindex += 1
         # LOOP-OVER for line in self._lines
 
         # 2. import value to dictionary
-        for bankno in xrange(1, numbank+1):
+        for bankno in range(1, numbank+1):
             self._infodict[bankno] = {}
             # 2.1 get data lines
             datalines = []
             lineno = banklinedict[bankno]+1
-            for l in xrange(13):
+            for l in range(13):
                 if self._lines[lineno][0] != "!":
                     datalines.append(self._lines[lineno])
                 lineno += 1
@@ -126,7 +127,7 @@ class TOFIrfReader(IrfReader):
             self._infodict[bankno]["ExpDecay"] = {}
             getFloats(self._infodict[bankno]["ExpDecay"], datalines[5], ["ALPH0", "BETA0", "ALPH1", "BETA1"], 1)
 
-        # LOOP-OVER for bankno in xrange(1, numbank+1):
+        # LOOP-OVER for bankno in range(1, numbank+1):
 
         return
 

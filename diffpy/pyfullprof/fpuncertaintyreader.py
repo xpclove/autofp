@@ -17,6 +17,7 @@
 """Read uncertainty from Fullprof output file and 
 insert these data to corresponding Fit instance.
 """
+from __future__ import print_function
 
 __id__="$Id: fpuncertaintyreader.py 6843 2013-01-09 22:14:20Z juhas $"
 
@@ -120,7 +121,7 @@ class FPUncertainty(object):
 
         # 1. File Flag Line
         startlinenum = -1
-        for lindex in xrange( len(lineslist) ):
+        for lindex in range( len(lineslist) ):
             if lineslist[lindex].count(self._FLAG2) == 1:
                 startlinenum = lindex
                 break
@@ -130,7 +131,7 @@ class FPUncertainty(object):
         
         # 2. Get Informative Lines:
         infolineslist = []
-        for lindex in xrange( startlinenum+1, len(lineslist) ):
+        for lindex in range( startlinenum+1, len(lineslist) ):
             candline = lineslist[lindex]
             # 1. Find stop line
             if candline[0]=="=" and candline[1]==">":
@@ -140,7 +141,7 @@ class FPUncertainty(object):
             if candline.count(self._FLAG3) > 0:
                 infolineslist.append(candline)
 
-        # LOOP-OVER: for lindex in xrange( startlinenum+1, len(lineslist) )
+        # LOOP-OVER: for lindex in range( startlinenum+1, len(lineslist) )
 
         # 3. Parse to standard database
         for line in infolineslist:
@@ -182,7 +183,7 @@ class FPUncertainty(object):
         retlist  = []
 
         # 2. filter out the correct meaning
-        for itm in xrange(numterms):
+        for itm in range(numterms):
             term = terms[numterms-1-itm]
 
             if term.count("pat") > 0:
@@ -250,10 +251,10 @@ class FPUncertainty(object):
                         index = bcknum-1
                     else:
                         errmsg = "1045-1:  Object Instance %-10s Unrecoganizable"% (rietobj.__class__.__name__)
-                        print errmsg  
+                        print(errmsg)  
                 else:
                     iname = nameinfotuple[-1]
-                    if FPUncertainty._NAMEMAPDICT.has_key(iname):
+                    if iname in FPUncertainty._NAMEMAPDICT:
                         iname = FPUncertainty._NAMEMAPDICT[iname]
                     rietobj, parname = pattern.locateParameter(iname)
             elif isphase:
@@ -274,7 +275,7 @@ class FPUncertainty(object):
                 # c. if not atom's
                 if rietobj is None:
                     iname = nameinfotuple[-1]
-                    if FPUncertainty._NAMEMAPDICT.has_key(iname):
+                    if iname in FPUncertainty._NAMEMAPDICT:
                         iname = FPUncertainty._NAMEMAPDICT[iname]
                     rietobj, parname = phase.locateParameter(iname)
             elif iscontribution:
@@ -288,7 +289,7 @@ class FPUncertainty(object):
                     rietobj, parname = phase.locateParameter(nameinfotuple[-2])
                 else:
                     iname = nameinfotuple[-1]
-                    if FPUncertainty._NAMEMAPDICT.has_key(iname):
+                    if iname in FPUncertainty._NAMEMAPDICT:
                         iname = FPUncertainty._NAMEMAPDICT[iname]
                     rietobj, parname = contrib.locateParameter(iname)
             else:
@@ -297,7 +298,7 @@ class FPUncertainty(object):
             if parname is None:
                 rstring = "%-20s ispat = %-10s ispha = %-10s iscon = %-10s"% \
                     (nameinfotuple, ispat, ispha, iscon)
-                print "# 1045-Warning:  Implement this case! %-50s"% (rstring)
+                print("# 1045-Warning:  Implement this case! %-50s"% (rstring))
             else:
                 if rietobj is None:
                     raise RietError("Parameter %s can not be found in the fit object."%parname)
@@ -308,8 +309,8 @@ class FPUncertainty(object):
                     raise RietError("No constraint is bound to the parameter '%s'"%parname)
             
             if 0:   # 1501
-                print "1501:Par = %-10s  Val = %-15s  vs. input Val = %-15s  Sig = %-15s"% \
-                    (parname, rietobj.get(parname).value(), val, sig)
+                print("1501:Par = %-10s  Val = %-15s  vs. input Val = %-15s  Sig = %-15s"% \
+                    (parname, rietobj.get(parname).value(), val, sig))
             # END-DEBUG
 
         # LOOP-OVER: for nameinfotuple, val, sig in self._ParameterList

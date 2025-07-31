@@ -72,7 +72,7 @@ class Run:
         try:
             self.pcrRW.readFromPcrFile(self.pcrfilename)
         except Exception as e:
-            print(Exception, ":", e)
+            print(Exception, ":", e, "in run.py resetload")
             return -0x80
 
         self.fit = self.pcrRW.fit
@@ -123,6 +123,7 @@ class Run:
         if self.err == 0:
             self.err += check(self.outfilename)
             self.err += self.resetLoad()
+            print("test1")
 
         # only save the right result
         if (self.err == 0):

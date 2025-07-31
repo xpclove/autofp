@@ -342,7 +342,7 @@ class TimeRev(RietveldClass):
         else:
             raise NotImplementedError, "NS = " + str(ns) + " cannot be 0"
 
-        for i in xrange(0, self.get("NS")+1):
+        for i in range(0, self.get("NS")+1):
             param_name = "TimeRev"+str(i)
             TimeRev.__dict__[param_name] = data.IntData(self.ParamDict[param_name].get("default"))
 

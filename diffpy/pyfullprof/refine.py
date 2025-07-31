@@ -184,7 +184,7 @@ class Constraint(object):
         # 1. Verify the data consistency
         verifyType(self.owner, RietveldClass)
         verifyType(self.refine, Refine)
-        if not self.owner.ParamDict.has_key(self.name):
+        if self.name not in self.owner.ParamDict:
             raise RietError("Incorrect ParentParameterName")
 
         # 2. Verify the data 

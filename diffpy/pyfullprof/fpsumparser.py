@@ -16,6 +16,7 @@
 """ Parser for Fullprof .sum file
 """
 
+from future.utils import raise_
 __id__ = "$Id: fpsumparser.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.stringop import parseLineToDict
@@ -51,10 +52,10 @@ class FPSumFileParser:
             sfile = open(sumfilename, "r")
             rawlines = sfile.readlines()
             sfile.close()
-        except IOError, err:
+        except IOError as err:
             errmsg = "Fullprof .sum %-15s cannot be read properly\n" % \
                     sumfilename + str(err)
-            raise IOError, err
+            raise_(IOError, err)
 
         # 2. Clean line
         self.lines = []

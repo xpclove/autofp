@@ -16,7 +16,9 @@
 '''classes for running Rietveld refinement through a FullProf engine
 (engine can be run as an external command, or as a Python binding)
 '''
+from __future__ import print_function
 
+from future.utils import raise_
 __id__ = "$Id: runfullprof.py 6843 2013-01-09 22:14:20Z juhas $"
 
 import os
@@ -292,7 +294,7 @@ def runFullProf(fit, pcrfilename, mode="refine", srtype="r", processdir=dir, use
             if lastline.count("Error") > 0:
                 # Error 
                 result = -1
-                print "Exception!  FullProf set up error!   " + lastline + "\n"
+                print("Exception!  FullProf set up error!   " + lastline + "\n")
 
             elif lastline.count("Excessive peak overlap") == 1:
                 # Excessive peak overlap error
@@ -329,8 +331,8 @@ def runFullProf(fit, pcrfilename, mode="refine", srtype="r", processdir=dir, use
     if not isvalid:
         dbtag = "1721"
         refine = fit.get("Refine")
-        print "Debug Tag: %-20s" % (dbtag)
-        print str(refine)
+        print("Debug Tag: %-20s" % (dbtag))
+        print(str(refine))
         errmsg = "runFullProf() Fit object is not valid. Abort!"
         raise RietError(errmsg)
 
@@ -381,8 +383,8 @@ def runFullProf(fit, pcrfilename, mode="refine", srtype="r", processdir=dir, use
         try:
             importfile   = ImportFitFromFullProf(pcrfilename)
             importresult = importfile.ImportFile(newfit)    
-        except RietPCRError, err:
-            print "Error Message:  %-30s"% (err)
+        except RietPCRError as err:
+            print("Error Message:  %-30s"% (err))
             importresult = False
 
         # 5. pass the parameter and constraint information
@@ -417,7 +419,7 @@ def runFullProf(fit, pcrfilename, mode="refine", srtype="r", processdir=dir, use
                 errmsg = None
                 if result < 0:
                     quitmessage = "result = %-5s < 0 means a failure error" % result
-                    raise ValueError, quitmessage
+                    raise_(ValueError, quitmessage)
             # END-IF-ELSE
 
             # 6.3 read uncertainty and phase fraction if refine is good 
@@ -458,7 +460,7 @@ def runFullProf(fit, pcrfilename, mode="refine", srtype="r", processdir=dir, use
             rootname = pcrfilename.split(".")[0]
 
             simpatternslist = []
-            for phaseid in xrange(1, len(phases)+1):
+            for phaseid in range(1, len(phases)+1):
                 # FIXME  This is not good for multiple pattern simulation
                 if len(patterns) > 1:
                     raise NotImplementedError("See FIXME")

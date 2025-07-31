@@ -95,7 +95,7 @@ def allNumericalCharacter(tstring):
 
     # check E
     if not notnumerical:
-        for pos in xrange(len(tstring)):
+        for pos in range(len(tstring)):
             if tstring[pos] == 'E':
                 if pos < len(tstring)-1:  # not last position
                     if tstring[pos+1] != '+' and tstring[pos+1] != '-':
@@ -130,7 +130,7 @@ def isValidDataOrString(tstring):
         posminus = -1
         numdot   = 0
         numE     = 0
-        for p in xrange(len(tstring)):
+        for p in range(len(tstring)):
             if tstring[p] == '+':
                 posplus = p
             elif tstring[p] == '-':
@@ -181,7 +181,7 @@ def Split2GluedNumerical(tstring):
         posplus  = -1
         posminus = -1
 
-        for pos in xrange(len(tstring)):
+        for pos in range(len(tstring)):
             if tstring[pos] == '-' and pos != 0:
                 if tstring[pos-1] != 'E':
                     posminus = pos
@@ -193,9 +193,9 @@ def Split2GluedNumerical(tstring):
 
             s1 = ""
             s2 = ""
-            for pos in xrange(0, posplus):
+            for pos in range(0, posplus):
                 s1 += tstring[pos]
-            for pos in xrange(posplus, len(tstring)):
+            for pos in range(posplus, len(tstring)):
                 s2 += tstring[pos]
 
             rlist.append(s1)
@@ -204,9 +204,9 @@ def Split2GluedNumerical(tstring):
         elif posminus > 0:
             s1 = ""
             s2 = ""
-            for pos in xrange(0, posminus):
+            for pos in range(0, posminus):
                 s1 += tstring[pos]
-            for pos in xrange(posminus, len(tstring)):
+            for pos in range(posminus, len(tstring)):
                 s2 += tstring[pos]
 
             rlist.append(s1)
@@ -223,10 +223,10 @@ def Split2GluedNumerical(tstring):
                     spoint = 6
                 # split middle string according spoint
                 s1 = ""
-                for i in xrange(0, spoint):
+                for i in range(0, spoint):
                     s1 += substring[1][i]
                 s2 = ""
-                for i in xrange(spoint, len(substring[1])):
+                for i in range(spoint, len(substring[1])):
                     s2 += substring[1][i]
                 #except Exception, err:
                 #    print str(err)
@@ -255,12 +255,12 @@ def Split2GluedNumerical(tstring):
         # Example: 0.74735E-03-0.23554E-04-0.60930E-06
         terms   = tstring.split(".")
         preterm = terms[0]
-        for n in xrange(numE):
+        for n in range(numE):
             numpm = terms[n+1].count("+")+terms[n+1].count("-")
             if numpm == 2:
                 lenstring = len(terms[n+1])
                 # find position of last + or -
-                for i in xrange(1, lenstring+1):
+                for i in range(1, lenstring+1):
                     if not terms[n+1][lenstring-i].isdigit():
                         seppos = lenstring-i
                         break
@@ -273,7 +273,7 @@ def Split2GluedNumerical(tstring):
 
             rlist.append(floatstring)
 
-        # LOOP-OVER for n in xrange(numE)
+        # LOOP-OVER for n in range(numE)
          
     # END-IF-ELSE
 

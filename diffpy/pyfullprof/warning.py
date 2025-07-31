@@ -69,7 +69,7 @@ def PCRFormatItemError4(block, line, words, itemnumber, flagword):
         return False
     # check
     error = False
-    for i in xrange(itemnumber, exactnumber):
+    for i in range(itemnumber, exactnumber):
         if words[i].count(flagword) < 1:
             error = True
         else:

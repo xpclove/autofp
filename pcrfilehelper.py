@@ -13,22 +13,36 @@ class pcrFileHelper:
 		
 	def readFromPcrFile(self,filename=""):
 		self.fit=Fit(None)
+
 		if filename=="":
 			filename=self.fileName
+
 		pcrfile=open(filename,"r")
 		pcr_context=pcrfile.read()
 		pcrfile.close()
+
 		pcrfile=open(filename,"w")
 		pcr_context=pcr_context.replace("# CRY","CRY")
 		print("change ok!") # change the phase name("# CRY")
 		pcrfile.write(pcr_context)
 		pcrfile.close()
+        
 		
 		self.reader=ImportFitFromFullProf(str(filename))
+
+		# try:
+		# 	self.reader.ImportFile(self.fit)
+		# except Exception as e:
+		# 	print(Exception, ":", e, "in pcrfilehelper.py FromPcrFile")
+		print("test------------")
 		self.reader.ImportFile(self.fit)
+
 		self.param_list=self.fit.Refine.constraints
 		self.fileName=str(filename)
+
 		print("read pcr file ok!")
+
+
 
 	def getFixedList(self):
 		#
