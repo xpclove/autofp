@@ -78,8 +78,11 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
 
         # check error
         com.R = r.R   # target funcrion setting
-        exec(com.target["string"])
+
+        # begin python 2 - > pyhton 2+3, + globals()
+        exec(com.target["string"], globals())
         target_r = MIN
+
         if r.err != 0:
             error += 0x01
         if target_r > goodr or target_r != target_r:

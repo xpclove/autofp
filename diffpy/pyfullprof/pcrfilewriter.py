@@ -22,6 +22,7 @@
     4. getRefine(objref, param_name)
 """
 from __future__ import print_function
+# from __future__ import unicode_literals
 
 from future.utils import raise_
 __id__ = "$Id: pcrfilewriter.py 6843 2013-01-09 22:14:20Z juhas $"
@@ -126,7 +127,7 @@ def writeBlock1(fit, Line):
     """
 
     # Line 1 and comment chi^2
-    Line[1]  = "COMM   %-50s"% (fit.get("Information"))
+    Line[1]  = "COMM   %-50s"% (fit.get("Information") )
     Line[1] += "\n! Current global Chi2 (Bragg contrib.) =      %-10s"% (1.0E15)
 
     # Line 2
@@ -209,7 +210,15 @@ def writeBlock2(fit, Line):
     # Line 5
     Line[5] = "! Datafile"
     for pattern in fit.get("Pattern"):
-        Line[5] += "\n" + pattern.get("Datafile")
+        # Line[5] += "\n" + pattern.get("Datafile")
+
+        # begin python 2 -> python 2 + 3
+        import sys
+        if sys.version_info[0] >=3:
+            Line[5] += "\n" + pattern.get("Datafile")
+        if sys.version_info[0] <3:
+            Line[5] += "\n" + pattern.get("Datafile")
+        # end
 
     # Line 6
     infoline = "! Resolution file"

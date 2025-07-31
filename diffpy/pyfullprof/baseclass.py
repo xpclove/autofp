@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
 ##############################################################################
 #
@@ -309,10 +310,19 @@ class BaseClass:
                      (self.__class__.__name__, str(name))
             raise RietError(errmsg)
 
-        return value
+        # begin python 2 -> python 2 + 3
+        import sys
+        v  = value
+        if sys.version_info[0] >= 3:
+            if isinstance(v,bytes):
+                v = value.decode("utf-8")
+        # return value
+        return v
+        #end 
 
 
     def set(self, name, value, index=None):
+        import sys
         """Set the value for a member.
 
         name  --  a key in ParamDict, ParamListDict, ObjectDict or ObjectListDict
@@ -322,7 +332,16 @@ class BaseClass:
         if name in self.ParamDict:
             if index is not None:
                 raise RietError('The parameter "%s" is not a list.'%name)
-            setattr(self, name, self.ParamDict[name].convert(value))
+
+            # begin python 2 - > python 2 + 3
+            # To resolve the conflict between Python 2 and Python 3, Python 3 imposes stricter restrictions on attributes, prohibiting the use of setters to access read-only attributes and preventing conflicts in variable names.
+            # setattr(self, name, self.ParamDict[name].convert(value))
+            if sys.version_info[0] >= 3 and hasattr(type(self), name):
+                self.__dict__[name] = self.ParamDict[name].convert(value)  # Python 3
+            else:
+                setattr(self, name, self.ParamDict[name].convert(value))  # Python 2
+            # end
+
         elif name in self.ParamListDict:
             getattr(self, name).set(self.ParamListDict[name].convert(value),index)
         elif name in self.ObjectDict:
@@ -332,7 +351,13 @@ class BaseClass:
             object = getattr(self, name)
             if object is not None:
                 object.clear()
-            setattr(self, name, value)
+            
+            # setattr(self, name, value)
+            if sys.version_info[0] >= 3 and hasattr(type(self), name):
+                self.__dict__[name] = value  # Python 3
+            else:
+                setattr(self, name, value)  # Python 2
+
             value.parent = self
             value.key = name
             _param_indices = getattr(self.getRoot(), '_param_indices',  None)

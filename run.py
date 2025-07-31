@@ -73,6 +73,15 @@ class Run:
             self.pcrRW.readFromPcrFile(self.pcrfilename)
         except Exception as e:
             print(Exception, ":", e, "in run.py resetload")
+
+            # begin python 2 - python 2 + 3
+            if sys.version_info[0] >= 3:
+                tb = e.__traceback__
+                while tb:
+                    print("file: ", tb.tb_frame.f_code.co_filename, "line: ", tb.tb_lineno)
+                    tb = tb.tb_nex
+            # end
+            
             return -0x80
 
         self.fit = self.pcrRW.fit

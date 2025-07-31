@@ -399,6 +399,7 @@ class StringInfo(ParameterInfo):
         """
         import sys
 
+        # begin python 2 - > python 2 + 3
         if sys.version_info.major >= 3:
             if isinstance(value, str):
                 # encode using ascii, an error will be thrown in case it is not an ascii.
@@ -424,6 +425,8 @@ class StringInfo(ParameterInfo):
             if self.fixlen and len(value) != self.fixlen:
                 raise ValueError("'%s' receives a value '%s' does not match the length."%
                                     (self.name, repr(value)) )
+        #end
+        
         return value
 
 

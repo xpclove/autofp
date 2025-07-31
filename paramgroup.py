@@ -128,6 +128,11 @@ def name_to_alias(name="", phase=0, fit=None):
     atomobj = re.compile(r"Atom\[")
     reobj = re.compile(r"B[0-9][0-9]")
     atom_name = fit.get("Phase")[phase].get("Atom")[atom].get("Name")
+    
+    # python2 -> python2+3
+    if isinstance(atom_name, bytes):
+        atom_name = atom_name.decode("utf-8")
+
     if atomobj.search(name):
         name = name.replace("Atom", "Atom["+atom_name+"]-")
     if reobj.search(name):

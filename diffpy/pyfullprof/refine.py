@@ -238,7 +238,14 @@ class Constraint(object):
             return self.parname
         
         return self.parname+'[%i]'%self.index    
-                      
+
+    @name.setter
+    def name(self, v):
+        """Get the full name of the constraint, with index
+        
+        return: a string
+        """
+        self.parname = v  
                       
 class Variable(BaseClass):
     """Variable represents a float value to be refined. Variables are 
