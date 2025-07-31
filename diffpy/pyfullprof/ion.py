@@ -19,6 +19,7 @@
 # NOTE: currently it is only used for pcrFileReader,
 # ion information is merged into Atom
 
+from future.utils import raise_
 __id__ = "$Id: ion.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.rietveldclass import RietveldClass
@@ -68,7 +69,7 @@ class Ion(RietveldClass):
         else:
             errmsg = "%-30s: Input parameter 'symnum' is invalid! symnum = %-15s"%\
                      (self.__class__.__name___+".setIon( )", symnum)
-            raise RietError, errmsg
+            raise_(RietError, errmsg)
 
         self.set("Symbol", terms[0])
         self.set("number", number)

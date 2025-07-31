@@ -1,5 +1,5 @@
 import os
-import prf2xy
+from . import prf2xy
 origin='F:\OriginLabOriginPro\Origin9.exe'
 prf2origin_path='F:\prf2origin\prf2origin'
 def prf_to_origin(prf):

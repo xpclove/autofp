@@ -9,4 +9,4 @@ doc=[
 def show():
     """"""
     for i in doc:
-        print i
+        print (i)

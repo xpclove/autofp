@@ -21,11 +21,13 @@ def load_strategy(sfolder=os.path.join(com.root_path, "strategy")):
     print(os.path.abspath(sfolder))
     for key in Pgs_key:
         sfilemodule = os.path.join(sfolder, "strategy_"+key+".py")
+
         files = open(sfilemodule)
         con = files.read()
-        exec(con)
+        exec(con, globals())
         s_xray = strategy[key]
         print(s_xray.keys())
+
         group = s_xray["param_group"]
         order = s_xray["param_order"]
         target_s = s_xray["target"]

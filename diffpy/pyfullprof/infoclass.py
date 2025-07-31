@@ -201,7 +201,7 @@ class EnumInfo(ParameterInfo):
         return: the converted value
         raise: ValueError if the value is not in the list of values
         """
-        if not self.rangedict.has_key(value):
+        if value not in self.rangedict:
             raise ValueError("'%s' can only take a value in '%s', but '%s' is received."%
                             (self.name, str(self.rangedict.keys()),  str(value)))
         
@@ -397,18 +397,33 @@ class StringInfo(ParameterInfo):
         return: the converted value
         raise: ValueError if the object has the wrong type
         """
-        if isinstance(value, unicode):
-            # encode using ascii, an error will be thrown in case it is not an ascii.
-            value = value.encode()
-        elif not isinstance(value, str):
-            raise ValueError("'%s' expects a 'str', but a '%s'=%s is received"%
-                            (self.name, type(value), repr(value)))
+        import sys
+
+        if sys.version_info.major >= 3:
+            if isinstance(value, str):
+                # encode using ascii, an error will be thrown in case it is not an ascii.
+                value = value.encode()
+            elif not isinstance(value, str):
+                raise ValueError("'%s' expects a 'str', but a '%s'=%s is received"%
+                                (self.name, type(value), repr(value)))
 
 
-        if self.fixlen and len(value) != self.fixlen:
-            raise ValueError("'%s' receives a value '%s' does not match the length."%
-                                (self.name, repr(value)) )
+            if self.fixlen and len(value) != self.fixlen:
+                raise ValueError("'%s' receives a value '%s' does not match the length."%
+                                    (self.name, repr(value)) )
+            
+        if sys.version_info.major < 3:
+            if isinstance(value, unicode):
+                # encode using ascii, an error will be thrown in case it is not an ascii.
+                value = value.encode()
+            elif not isinstance(value, str):
+                raise ValueError("'%s' expects a 'str', but a '%s'=%s is received"%
+                                (self.name, type(value), repr(value)))
 
+
+            if self.fixlen and len(value) != self.fixlen:
+                raise ValueError("'%s' receives a value '%s' does not match the length."%
+                                    (self.name, repr(value)) )
         return value
 
 

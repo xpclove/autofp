@@ -71,8 +71,8 @@ class Run:
 
         try:
             self.pcrRW.readFromPcrFile(self.pcrfilename)
-        except Exception, e:
-            print Exception, ":", e
+        except Exception as e:
+            print(Exception, ":", e)
             return -0x80
 
         self.fit = self.pcrRW.fit

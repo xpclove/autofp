@@ -13,6 +13,8 @@
 #
 ##############################################################################
 
+from __future__ import print_function
+from future.utils import raise_
 __id__ = "$Id: utilfunction.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.exception import RietError
@@ -101,8 +103,8 @@ def checkFileExistence(filename):
     try:
         cfile = open(filename, 'r')
         cfile.close()
-    except IOError, err:
-        print "File << %-20s >> Do NOT Exist:  %-30s"% (filename, err)
+    except IOError as err:
+        print("File << %-20s >> Do NOT Exist:  %-30s"% (filename, err))
         return False
 
     return True
@@ -143,7 +145,7 @@ def locateParameterByPath(rietobj, parfullname, srtype="r"):
         name   = pathlist[index]
         index += 1
 
-        if name == parName and retObj.ParamDict.has_key(parName):
+        if name == parName and parName in retObj.ParamDict:
             # ending case
             returntuple = (retObj, parName)
             Continue    = False             
@@ -153,27 +155,27 @@ def locateParameterByPath(rietobj, parfullname, srtype="r"):
             estring = "utilfunction.locateParameterByPath()   cannot locate parameter " + parfullname
             raise RietError(estring)
 
-        elif retObj.ObjectDict.has_key(name):
+        elif name in retObj.ObjectDict:
             # progress case: subclass
             retObj = retObj.get(name)
 
-        elif retObj.ObjectListDict.has_key(name):
+        elif name in retObj.ObjectListDict:
             # progress case: container 
             try:
                 seq    = int(pathlist[index])
                 retObj = retObj.get(name)[seq]
                 index += 1
-            except IndexError, err:
+            except IndexError as err:
                 estring  = "utilfunction.locateParameterByPath() Locate parameter " + parfullname + " Error!"
                 estring += "RietveldClass "+retObj.__class__.__name__+" has no "+str(seq)+"-th "+name
                 estring += str(err)
                 raise RietError(estring)
         else:
-            print "Parameter with Path and Name:  " + str(parfullname)
-            print retObj.ParamDict.keys()
-            print "Parameter Name: " + name + "    doesn't match input parameter name " + parName
-            print "Last object: " + retObj.__class__.__name__ + "  name = " + str(name)
+            print("Parameter with Path and Name:  " + str(parfullname))
+            print(retObj.ParamDict.keys())
+            print("Parameter Name: " + name + "    doesn't match input parameter name " + parName)
+            print("Last object: " + retObj.__class__.__name__ + "  name = " + str(name))
             #print retObj
-            raise NotImplementedError, "path_list: "+str(pathlist)+ " incorrect"
+            raise_(NotImplementedError, "path_list: "+str(pathlist)+ " incorrect")
 
     return returntuple

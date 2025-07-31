@@ -13,6 +13,8 @@
 #
 ##############################################################################
 
+from __future__ import print_function
+from future.utils import raise_
 __id__ = "$Id: pattern.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.rietveldclass import RietveldClass
@@ -251,7 +253,7 @@ class Pattern(RietveldClass):
                 background = BackgroundUserDefinedCubic(self)
             else:
                 errmsg = "Nba = %-10s is not supported" % (nba)
-                raise RietError, errmsg
+                raise_(RietError, errmsg)
 
             if background is not None:
                 self.set("Background", background)
@@ -276,7 +278,7 @@ class Pattern(RietveldClass):
             try: 
                 pos = bkgdtup[0]
                 bck = bkgdtup[1]
-            except IndexError, err:
+            except IndexError as err:
                 errmsg = "%-30s:  Input Error!  Element in input bkgdpointlist is not 2-tuple\n"% \
                     (self.__class__.__name__+"addBackgroundPoints()")
                 errmsg += "Error message:  %-40s"% (err)
@@ -306,7 +308,7 @@ class Pattern(RietveldClass):
         name = self.__class__.__name__
         if name == "Pattern":
             errmsg += "%-30s: %-40s"%("Pattern.validate()", "virtual base Pattern")
-            print errmsg
+            print(errmsg)
             rvalue = False
 
         # FullProf Parameter Synchronization
@@ -347,7 +349,7 @@ class Pattern(RietveldClass):
         if self.get("Nba") <= -5 or self.get("Nba") >= 2:
             self.set('NbaPoint', self.get("Background").size())
 
-        if background.ParamDict.has_key("Bkpos"):
+        if "Bkpos" in background.ParamDict:
             self.set('Bkpos', self.get("Background").get("Bkpos"))
 
         # 4. output 
@@ -382,7 +384,7 @@ class Pattern(RietveldClass):
         # 2. data file.... ->  moved to Fit.validate()
         
         if rvalue is not True:
-            print "Invalidity Detected In %-10s: %-60s"% (self.__class__.__name__, errmsg)
+            print("Invalidity Detected In %-10s: %-60s"% (self.__class__.__name__, errmsg))
 
         return rvalue
 
@@ -403,9 +405,9 @@ class Pattern(RietveldClass):
             pfile = open(prffname, "r")
             lines = pfile.readlines()
             pfile.close()
-        except IOError, err:
+        except IOError as err:
             errmsg = "Prf File: %-15s Cannot be Located"%(prffname)
-            print "pyfullprof.Pattern.importPrfFile(): %40s"%(errmsg)
+            print("pyfullprof.Pattern.importPrfFile(): %40s"%(errmsg))
             rdict = {}
             return rdict
 
@@ -425,10 +427,10 @@ class Pattern(RietveldClass):
         # length/amount of data point
         try:
             datalength = int(contents[0][1])
-        except ValueError, err:
+        except ValueError as err:
             pass
-        except IndexError, err:
-            print contents[0]
+        except IndexError as err:
+            print(contents[0])
             raise IndexError(err)
         # title line
         titleline  = -1
@@ -463,7 +465,7 @@ class Pattern(RietveldClass):
                 try:
                     self._yobs.append(float(contents[index][1]))
                     self._ycal.append(float(contents[index][2]))
-                except ValueError, err:
+                except ValueError as err:
                     errmsg = "Reading Prf %-20s Meeting\n%-60s"% (prffname, err)
                     raise RietError(errmsg)
             # end of file
@@ -717,7 +719,7 @@ class PatternTOF(Pattern):
 
         # Check: TwoSinTh
         if abs(self.get("TwoSinTh")) < 1.0E-7:
-            print "Not Allowed:  TwoSinTh = 0.0"
+            print("Not Allowed:  TwoSinTh = 0.0")
             rvalue = False
 
         return rvalue
@@ -756,7 +758,7 @@ class PatternTOFThermalNeutron(PatternTOF):
             rvalue = False
             errmsg = "PyFullProf.Core.PatternTOFNeutronThermal:  Npr = %-10 (Must Be 10)"% \
                 self.get("Npr")
-            print errmsg
+            print(errmsg)
 
         return rvalue
 
@@ -812,7 +814,7 @@ class PatternED(Pattern):
 
         # Check:  TwoSinTh
         if abs(self.get("TwoSinTh")) < 1.0E-7:
-            print "Not Allowed:  TwoSinTh = 0.0"
+            print("Not Allowed:  TwoSinTh = 0.0")
             rvalue = False
 
         return rvalue
@@ -904,7 +906,7 @@ class Background(RietveldClass):
 
         name = self.__class__.__name__
         if name == "Background":
-            print "base class of Background is not allowed"
+            print("base class of Background is not allowed")
             rvalue = False
 
         return rvalue
@@ -956,8 +958,8 @@ class BackgroundUserDefined(Background):
         rvalue = Background.validate(self)
         
         if (len(self.BCK)!=len(self.POS)):
-            print "'%s': the number of BCK is not equal to the number of POS"\
-                  % (self.name)
+            print("'%s': the number of BCK is not equal to the number of POS"\
+                  % (self.name))
             rvalue = False
         
         return rvalue
@@ -1099,13 +1101,13 @@ class BackgroundPolynomial(Background):
 
         order = self.get("Order")
         if not (order == 6 or order == 12):
-            print "%s '%s': The order=%i is invalid."\
-                   %(self.path, self.__class__.__name__, self.Order)
+            print("%s '%s': The order=%i is invalid."\
+                   %(self.path, self.__class__.__name__, self.Order))
             rvalue = False
             
         if len(self.BACK) != self.Order:
-            print "%s '%s': The order=%i and the number of coefficients=%i do not match."\
-                   %(self.path, self.__class__.__name__, self.Order, len(self.BACK))
+            print("%s '%s': The order=%i and the number of coefficients=%i do not match."\
+                   %(self.path, self.__class__.__name__, self.Order, len(self.BACK)))
             rvalue = False
 
         return rvalue         
@@ -1264,7 +1266,7 @@ class ScatterFactor(RietveldClass):
         rvalue = RietveldClass.validate(self)
 
         if self.__class__.__name__ == "ScatterFactor":
-            print "base class ScatterFactor is not allowed"
+            print("base class ScatterFactor is not allowed")
             rvalue = False
 
         return rvalue
@@ -1370,7 +1372,7 @@ class FormFactor(RietveldClass):
         rvalue = RietveldClass.validate(self)
 
         if self.__class__.__name__ == "FormFactor":
-            print "base class FormFactor is not allowed"
+            print("base class FormFactor is not allowed")
             rvalue = False
 
         return rvalue

@@ -1,6 +1,6 @@
 import os
 import shutil
-import format
+from . import format
 script_path=os.path.abspath("../origin/script/")
 def prf_xy(path,des):
     file=open(path);
@@ -57,8 +57,8 @@ def prf2origin_(prf,origin):
     cmd="start "+origin+" -RS run.loadOC("+path+", 16);;stringarray aa;aa.Add("+datepath+");test(aa)"
     os.system(cmd)
     # os.system("test.bat \""+datepath+"\" \""+path+"\" \""+origin+"\"")
-    print cmd
-    print "prf2origin complete!"
+    print(cmd)
+    print("prf2origin complete!")
     os.chdir(cur_path)
     
 if __name__=="__main__":

@@ -54,7 +54,7 @@ class LaueShiftParameter:
                 break;
 
         if __laue__ is None:
-            raise NotImplementedError, "LaueShiftParameter"
+            raise NotImplementedError("LaueShiftParameter")
 
         self.__index__    = 0
         self.__lauelist__ = self.LaueDict[__laue__] 
@@ -70,7 +70,7 @@ class LaueShiftParameter:
         """
 
         if self.__index__ < 0:
-            raise NotImplementedError, "LaueShiftParameter.get()"
+            raise NotImplementedError("LaueShiftParameter.get()")
 
         inttuple = self.__lauelist__[self.__index__]
 
@@ -147,7 +147,7 @@ class LaueStrainModel:
                 break;
 
         if __laue__ is None:
-            raise NotImplementedError, "LaueShiftParameter"
+            raise NotImplementedError("LaueShiftParameter")
 
         self.__index__    = 0
         self.__lauelist__ = self.LaueDict[__laue__] 
@@ -163,7 +163,7 @@ class LaueStrainModel:
         """
 
         if self.__index__ < 0:
-            raise NotImplementedError, "LaueShiftParameter.get()"
+            raise NotImplementedError("LaueShiftParameter.get()")
 
         inttuple = self.__lauelist__[self.__index__]
 

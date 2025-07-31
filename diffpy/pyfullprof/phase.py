@@ -13,6 +13,10 @@
 #
 ##############################################################################
 
+from __future__ import print_function
+from builtins import str
+from builtins import range
+from builtins import object
 __id__ = "$Id: phase.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.rietveldclass import RietveldClass
@@ -278,7 +282,7 @@ class Phase(RietveldClass):
         ang = len(self.get("AngleRestraint"))
         mom = len(self.get("MomentRestraint"))
         if ang != 0 and mom != 0:
-            raise NotImplementedError, "Angular Restraint and Moment Restraint cannot be used simultaneously"
+            raise NotImplementedError("Angular Restraint and Moment Restraint cannot be used simultaneously")
         self.set("MomMA", ang+mom)
         # nvk
         nvk = len(self.get("PropagationVector"))
@@ -295,10 +299,10 @@ class Phase(RietveldClass):
         # error message output
         if errmsg != "":
             prtmsg = "Phase Invalid Setup: %-60s"% (errmsg)
-            print prtmsg
+            print(prtmsg)
 
         if rvalue is not True:
-            print "Invalidity Deteced In %-10s"% (self.__class__.__name__)
+            print("Invalidity Deteced In %-10s"% (self.__class__.__name__))
 
         return rvalue
 
@@ -347,7 +351,7 @@ class TimeRev(RietveldClass):
 
 # make doc string
 MaxNS = 20
-for i in xrange(0, MaxNS+1):
+for i in range(0, MaxNS+1):
     param_name = "TimeRev"+str(i)
     TimeRev.ParamDict[param_name] = EnumInfo(param_name, "time reversal operator", -1,
                                             {1: "1",
@@ -543,7 +547,7 @@ class Icompl(RietveldClass):
         """
         RietveldClass.__init__(self, parent)
 
-        for i in xrange(0, nbas):
+        for i in range(0, nbas):
             param_name = "Ireps"+str(i)
             self.ParamDict[param_name] = IntInfo(param_name, "real/pure imaginary BSF coefficient flags"+str(i), 0)
             self.__dict__[param_name] = self.ParamDict[param_name].get("Default")
@@ -849,7 +853,7 @@ class AngleRestraint(RietveldClass):
         return
 
 
-class MomentRestrain:
+class MomentRestrain(object):
     """
     soft moment constraints
     """

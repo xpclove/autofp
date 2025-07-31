@@ -13,6 +13,7 @@
 #
 ##############################################################################
 
+from __future__ import print_function
 __id__ = "$Id: baseclass.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.containerclass import *
@@ -108,13 +109,13 @@ class BaseClass:
         name -- the key name in ParamDict/ParamListDic/ObjectDict/ObjectListDict
         id   -- additional object id to delete it from the ObjectListDict
         """
-        if self.ParamDict.has_key(name):
+        if name in self.ParamDict:
             self.__dict__[name].clear()
-        elif self.ParamListDict.has_key(name):
+        elif name in self.ParamListDict:
             self.__dict__[name].delete(id)
-        elif self.ObjectDict.has_key(name):
+        elif name in self.ObjectDict:
             self.__dict__[name].clear()
-        elif self.ObjectListDict.has_key(name):
+        elif name in self.ObjectListDict:
             self.__dict__[name].delete(id)
             
         return
@@ -291,17 +292,17 @@ class BaseClass:
                 2. ObjectDict: return the RietveldClass object
                 3. ObjectListDict: return the RietveldClass object(s)
         """
-        if self.ParamDict.has_key(name):
+        if name in self.ParamDict:
             if index is not None:
                 raise RietError('The parameter "%s" is not a list.'%name)
             value = self.__dict__[name]
-        elif self.ParamListDict.has_key(name):
+        elif name in self.ParamListDict:
             value = self.__dict__[name].get(index)
-        elif self.ObjectDict.has_key(name):
+        elif name in self.ObjectDict:
             if index is not None:
                 raise RietError('The object "%s" is not a list.'%name)
             value = self.__dict__[name]
-        elif self.ObjectListDict.has_key(name):
+        elif name in self.ObjectListDict:
             value = self.__dict__[name].get(index)
         else:
             errmsg = "Class '%-15s' does not have '%-15s'"%\
@@ -366,7 +367,7 @@ class BaseClass:
                 rvalue = False
                 wmsg = "Warning! Class %-20s: UniObjectList %-20s Not Set-Up"%\
                        (self.__class__.__name__, name)
-                print wmsg
+                print(wmsg)
             else:
                 if not obj.validate():
                     rvalue = False
@@ -378,7 +379,7 @@ class BaseClass:
             minlen = self.ObjectListDict[name].minsize
             maxlen = self.ObjectListDict[name].maxsize
             if (objlen < minlen):
-                print "class " + self.__class__.__name__ + ":\tcontainer " + name + "\t not set-up\n"
+                print("class " + self.__class__.__name__ + ":\tcontainer " + name + "\t not set-up\n")
                 rvalue = False
             for obj in containerobj.get():
                 if not obj.validate():

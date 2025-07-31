@@ -15,6 +15,7 @@
 
 '''Shared routines that output warnings and error messages.
 '''
+from __future__ import print_function
 
 __id__ = "$Id: warning.py 6843 2013-01-09 22:14:20Z juhas $"
 
@@ -25,7 +26,7 @@ def warning(message):
     message:  message to print
     """
 
-    print "%-15s %-40s"%("Warning:", message)
+    print("%-15s %-40s"%("Warning:", message))
 
     return
 
@@ -34,8 +35,8 @@ def SystemErrorStyle(block, line, style):
     """
     PCR File Style Error:  Shouldn't Happen
     """
-    print "PCR File Style Error at Block " + block + " Line " + line
-    print "Present Style: " + style + " Should be new or old"
+    print("PCR File Style Error at Block " + block + " Line " + line)
+    print("Present Style: " + style + " Should be new or old")
 
     return
     
@@ -50,8 +51,8 @@ def PCRFormatItemError(block, line, errmsg):
     """
     wstring = "PCR File Format Error Related with Wrong Item Number at Block [%-5s] Line [%-5s]"% \
             (str(block), str(line))
-    print "Warning: %-40s"% (wstring)
-    print "  Customized Error Message: " + errmsg
+    print("Warning: %-40s"% (wstring))
+    print("  Customized Error Message: " + errmsg)
 
     return
 
@@ -64,7 +65,7 @@ def PCRFormatItemError4(block, line, words, itemnumber, flagword):
     # check extra item in words[] is number or not
     exactnumber = len(words)
     if itemnumber >= exactnumber:
-        print "No Extra: Less or Equal"
+        print("No Extra: Less or Equal")
         return False
     # check
     error = False
@@ -74,10 +75,10 @@ def PCRFormatItemError4(block, line, words, itemnumber, flagword):
         else:
             break;
     if error:
-        print "PCR File Format Error Related with Wrong Item Number at Block %-5s Line %-5s"% \
-              (block, line)
-        print "Error Message: " + str(words)
-        print "---5---"
+        print("PCR File Format Error Related with Wrong Item Number at Block %-5s Line %-5s"% \
+              (block, line))
+        print("Error Message: " + str(words))
+        print("---5---")
 
     return
 
@@ -86,9 +87,9 @@ def PCRFormatValueError(block, line, err):
     """
     PCR File Format Error related to Value
     """
-    print "PCR File Format Error Related to Value at Block %-5s Line %-5s"% \
-          (block, line)
-    print "Error Message: " + str(err)
+    print("PCR File Format Error Related to Value at Block %-5s Line %-5s"% \
+          (block, line))
+    print("Error Message: " + str(err))
 
     return
 
@@ -97,8 +98,8 @@ def PCRFormatErrorUnknown(block, line, errmsg):
     """
     PCR File Format Error Due to some UNKNONW reason 
     """
-    print "PCR File Format Error Due to some UNKNONW reason at Block " + block + " Line " + line
-    print "Error Message: " + errmsg
+    print("PCR File Format Error Due to some UNKNONW reason at Block " + block + " Line " + line)
+    print("Error Message: " + errmsg)
 
     return
 
@@ -111,7 +112,7 @@ def PrintError(err, lineno, linecontent):
     lineno  :   number of line in pcr file where the error is found
     linecontent:    string for the content in this line
     """
-    print "Error Message: " + str(err)
-    print "Input file format error at Line " + str(lineno) + ": " + str(linecontent)
+    print("Error Message: " + str(err))
+    print("Input file format error at Line " + str(lineno) + ": " + str(linecontent))
 
     return

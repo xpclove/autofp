@@ -94,6 +94,6 @@ def get_order(params,param_switch,param_order_num=Param_Num_Order,job=0):
             s=params.alias[j]
             if (s.find(Param_Order[i])!=-1 and param_switch[j]==True):
                 order.append(j)
-                print "order-",s,param_switch[j]
+                print ("order-",s,param_switch[j])
 
         

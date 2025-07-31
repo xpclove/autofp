@@ -4,7 +4,6 @@ import subauto
 import com
 import setting
 import threading
-import Queue
 import doc
 import run
 import os

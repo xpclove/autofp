@@ -18,6 +18,7 @@
     2. rigid body
     3. magnetic
 '''
+from __future__ import print_function
 
 __id__ = "$Id: atom.py 6843 2013-01-09 22:14:20Z juhas $"
 
@@ -124,7 +125,7 @@ class Atom(RietveldClass):
         # type check
         name = self.__class__.__name__
         if name == "Atom":
-            print "base class Atom is not allowed"
+            print("base class Atom is not allowed")
             rvalue = False
 
         return rvalue
@@ -578,7 +579,7 @@ class AtomicDisplacementFactor(RietveldClass):
         # type check
         name = self.__class__.__name__
         if name == "AtomicDisplacementFactor":
-            print "base class AtomicDisplacementFactor is not allowed"
+            print("base class AtomicDisplacementFactor is not allowed")
             rvalue = False
 
         return rvalue

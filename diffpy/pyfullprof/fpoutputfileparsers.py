@@ -16,6 +16,7 @@
 '''class FPOutFileParser -- FullProf output parser and several related
 routines, such as prfParser and subParser.
 '''
+from __future__ import print_function
 
 __id__ = "$Id: fpoutputfileparsers.py 6843 2013-01-09 22:14:20Z juhas $"
 
@@ -96,9 +97,9 @@ def prfParser(prffname):
         # 3.1 Split the line
         try:
             terms = lines[l].split("\n")[0].strip().split()
-        except IndexError, err:
-            print "Line %-5s"% (l)
-            print lines[l]
+        except IndexError as err:
+            print("Line %-5s"% (l))
+            print(lines[l])
         # END-TRY
 
         # 3.2 Parse
@@ -106,11 +107,11 @@ def prfParser(prffname):
         yobs  = float(terms[1])
         try:
             ycal  = float(terms[2])
-        except ValueError, err:
+        except ValueError as err:
             ycal  = 0.0
         try:
             ydif  = float(terms[3])
-        except ValueError, err:
+        except ValueError as err:
             ydif  = 0.0
         listx.append(x)
         listyobs.append(yobs)
@@ -276,9 +277,9 @@ def parseHKLn(fullname, phaseno, singlepattern, patno, hklrange):
                 reflectdict[(h,k,l)] = (pos, m)
             elif hklrange["min"] <= pos and hklrange["max"] >= pos:
                 reflectdict[(h,k,l)] = (pos, m)         
-        except IndexError, err:
+        except IndexError as err:
             pass
-        except ValueError, err:
+        except ValueError as err:
             pass
     # LOOP-OVER:  for lindex in xrange(2, numlines):
 
@@ -512,7 +513,7 @@ class FPOutFileParser:
                 Chi2 = float(terms[3])
             else:
                 terms = {}
-                print digits, len(digits)
+                print(digits, len(digits))
                 for i in range(4):
                     terms[i] = ""
                     for j in range(9):

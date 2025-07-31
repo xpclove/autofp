@@ -13,6 +13,9 @@
 #
 ##############################################################################
 
+from __future__ import print_function
+from future.utils import raise_
+from builtins import str
 __id__ = "$Id: contribution.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.rietveldclass import RietveldClass
@@ -194,7 +197,7 @@ class Contribution(RietveldClass):
             raise NotImplementedError(errmsg)
 
         if rvalue is not True:
-            print "Invalidity Deteced In %-10s"% (self.__class__.__name__)
+            print("Invalidity Deteced In %-10s"% (self.__class__.__name__))
 
         return rvalue
 
@@ -278,7 +281,7 @@ class Contribution(RietveldClass):
         else:
             errmsg = "Not allowed to set up a phase fraction %-15s out of range [0.0, 1.0]" \
                     % phasefraction
-            raise RietError, errmsg
+            raise_(RietError, errmsg)
 
         return
 
@@ -504,7 +507,7 @@ class Profile(RietveldClass):
         # type check
         name = self.__class__.__name__
         if name == "Profile":
-            print "base class Profile is not allowed"
+            print("base class Profile is not allowed")
             rvalue = False
 
         return rvalue
@@ -1063,7 +1066,7 @@ class ShiftParameterLaue(ShiftParameter):
                 if gshift.get("H") == condition[0] and gshift.get("K") == condition[1] \
                         and gshift.get("L") == condition[2]:
                     return gshift
-            print  "this shift parameter doesn't contain a general shift (%-10s)"%(condition)
+            print("this shift parameter doesn't contain a general shift (%-10s)"%(condition))
             return None
         else:
             return ShiftParameter.get(self, param_name)
@@ -1645,7 +1648,7 @@ class StrainParameter(RietveldClass):
 
         else:
             errmsg = "StrainParameter.validate()  StrainModel = %-15s has not been implemented"%(strainmodel.__class__.__name__)
-            raise NotImplementedError, errmsg
+            raise_(NotImplementedError, errmsg)
 
         return rvalue
 

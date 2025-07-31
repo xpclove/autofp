@@ -13,6 +13,7 @@
 #
 ##############################################################################
 
+from __future__ import print_function
 __id__ = "$Id: rietveldclass.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.refine import Constraint
@@ -52,7 +53,7 @@ class RietveldClass(BaseClass):
         """
         try:
             newobject = self.__class__(None)
-        except TypeError, err:
+        except TypeError as err:
             errmsg  = "RietveldClass.duplicate():  instantiated as %-20s\n"%(self.__class__.__name__)
             errmsg += str(err)
             raise RietError(errmsg)
@@ -109,7 +110,7 @@ class RietveldClass(BaseClass):
                 if classname.count(basename) == 1:
                     return basename
            
-            raise RietError, "rietveldclass.extend - getClassName"
+            raise RietError("rietveldclass.extend - getClassName")
             return
 
         from diffpy.pyfullprof.contribution import Contribution
@@ -161,8 +162,8 @@ class RietveldClass(BaseClass):
             else:
                 raise RietError("RietveldClass.extend(): Can not find the ")
         else:
-            print "base obj:\t" + baseobj.__class__.__name__
-            print "parent obj:\t" + str(parentobj.ObjectDict.keys())
+            print("base obj:\t" + baseobj.__class__.__name__)
+            print("parent obj:\t" + str(parentobj.ObjectDict.keys()))
             raise RietError("RietveldClass.extend(): Parent Class Cannot Locate Object")
 
         return True
@@ -251,13 +252,13 @@ class RietveldClass(BaseClass):
       
         raise: RietError if name or index is not right.
         """  
-        if self.ParamDict.has_key(name):
+        if name in self.ParamDict:
             if index is not None:
                 raise RietError('The parameter "%s" is not a list.'%name)
             return
             
         
-        if self.ParamListDict.has_key(name):
+        if name in self.ParamListDict:
             if not isinstance(index, int):
                 raise RietError('The parameter list needs an int for index, but "%s"=%s is received.' 
                                 %(type(index), str(index)))

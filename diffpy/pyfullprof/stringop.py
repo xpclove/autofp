@@ -13,6 +13,8 @@
 #
 ##############################################################################
 
+from __future__ import print_function
+from future.utils import raise_
 __id__ = "$Id: stringop.py 6843 2013-01-09 22:14:20Z juhas $"
 from diffpy.pyfullprof.exception import RietPCRError
     
@@ -40,7 +42,7 @@ class StringOP:
         """
         try:
             list1 = s.split(c)  
-        except Exception, err:
+        except Exception as err:
             raise RietPCRError(str(err))
         """
         print "step 1"
@@ -52,7 +54,7 @@ class StringOP:
         for word in list1:
             try:
                 templist = word.split()
-            except Exception, err:
+            except Exception as err:
                 raise RietPCRError(s)
             for subw in templist:
                 # check subw
@@ -153,7 +155,7 @@ def isValidDataOrString(tstring):
 
         if not valid:
             if _DEBUGOUTPUT:
-                print "Find the bastard.... " + tstring
+                print("Find the bastard.... " + tstring)
             return False
         
     return True
@@ -240,7 +242,7 @@ def Split2GluedNumerical(tstring):
                 rlist.append(t2)
 
                 mstring = "Split string ' %-30s ' to ' %-30s ' and ' %-30s '"%(tstring, t1, t2)
-                print mstring
+                print(mstring)
 
             else:
                 emsg = ("Cannot deal with glued string " + tstring +
@@ -279,7 +281,7 @@ def Split2GluedNumerical(tstring):
         msg = "Floats Stick Together: %-10s --> " % ( tstring )
         for r in rlist:
             msg += "%-10s  " % (r)
-        print msg
+        print(msg)
 
     return rlist
 
@@ -354,10 +356,10 @@ def parseValue( interm, uncertaintyflag = None ):
                 nouncertainty = False
                 try:
                     uncertaintyterm = terms[1].split( uncertaintyflag[1] )[0].strip()
-                except IndexError, err:
+                except IndexError as err:
                     errmsg = "Terms = %-20s   No flag %-5s Inside" % \
                             (terms, uncertaintyflag[0])
-                    raise NotImplementedError, errmsg
+                    raise_(NotImplementedError, errmsg)
                 # END-TRY-EXCEPT
 
             else:
@@ -382,7 +384,7 @@ def parseValue( interm, uncertaintyflag = None ):
             newuncert = float( uncertaintyterm )
         else:
             newuncert = None
-    except ValueError, err:
+    except ValueError as err:
         errmsg = "value term = %-10s   test term = %-10s" % \
                 (valueterm, testterm)
         raise RietPCRError(errmsg)

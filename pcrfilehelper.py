@@ -20,7 +20,7 @@ class pcrFileHelper:
 		pcrfile.close()
 		pcrfile=open(filename,"w")
 		pcr_context=pcr_context.replace("# CRY","CRY")
-		print "change ok!" # change the phase name("# CRY")
+		print("change ok!") # change the phase name("# CRY")
 		pcrfile.write(pcr_context)
 		pcrfile.close()
 		

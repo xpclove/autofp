@@ -13,6 +13,10 @@
 #
 ##############################################################################
 
+from builtins import str
+from builtins import range
+from builtins import object
+from future.utils import raise_
 __id__ = "$Id: containerclass.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.exception import *
@@ -149,14 +153,14 @@ class ObjectList(object):
         return: a list of indices
         """
         if index is None:
-            return range(len(self._list))
+            return list(range(len(self._list)))
         
         if isinstance(index, int):
             return [index]
             
         if isinstance(index, slice):
             start, stop, step = index.indices(len(self._list))
-            return range(start, stop, step)
+            return list(range(start, stop, step))
         
         from diffpy.pyfullprof.baseclass import BaseClass
         if isinstance(index, BaseClass):
@@ -184,7 +188,7 @@ class ObjectList(object):
             if self.max is None or len(self) < self.max:
                 self._list.append(obj)
             else:
-                raise RietError, "The size exceeds the limit: " + str(self.max)
+                raise_(RietError, "The size exceeds the limit: " + str(self.max))
             return
 
         indices = self._range(index)
@@ -334,14 +338,14 @@ class ParamList(object):
         return: a list of indices
         """
         if index is None:
-            return range(len(self._list))
+            return list(range(len(self._list)))
         
         if isinstance(index, int):
             return [index]
             
         if isinstance(index, slice):
             start, stop, step = index.indices(len(self._list))
-            return range(start, stop, step)
+            return list(range(start, stop, step))
             
         raise RietError("An integer, slice or None is required to specify the indices to the parameter(s), but a '%s'=%s is received."%(type(index), str(index)))
         
@@ -359,7 +363,7 @@ class ParamList(object):
             if self.max is None or len(self) < self.max:
                 self._list.append(value)
             else:
-                raise RietError, "The size exceeds the limit: " + str(self.max)
+                raise_(RietError, "The size exceeds the limit: " + str(self.max))
             return
         
         # index has a value

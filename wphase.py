@@ -55,9 +55,9 @@ def get_w(r_):
 
 
 if __name__ == "__main__":
-    print "w"
+    print("w")
     get_volume("./test/out/out.out", 2)
     r = run.Run()
     r.reset("./test/cvo/cvo.pcr")
     w = get_w(r)
-    print w
+    print(w)

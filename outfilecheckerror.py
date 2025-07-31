@@ -1,3 +1,4 @@
+from __future__ import print_function
 def check(str):
     p = open(str, "r")
     c = p.read()
@@ -14,6 +15,6 @@ def check(str):
         err = -33
 
     if err < 0:
-        print "!out file check error code=", err
+        print("!out file check error code=", err)
         
     return err

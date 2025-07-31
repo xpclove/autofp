@@ -21,7 +21,9 @@
     3. StringOutput(value)
     4. getRefine(objref, param_name)
 """
+from __future__ import print_function
 
+from future.utils import raise_
 __id__ = "$Id: pcrfilewriter.py 6843 2013-01-09 22:14:20Z juhas $"
 
 from diffpy.pyfullprof.utilfunction import verifyType
@@ -110,7 +112,7 @@ def pcrFileWriter(fit, filename, userinfo=None, srtype="r"):
     if isinstance(filename, str):
         printLineToFile(Line, filename, userinfo)
     elif filename is not None:
-        raise NotImplementedError, "filename is not a string nor None"
+        raise NotImplementedError("filename is not a string nor None")
 
     return True
 
@@ -322,7 +324,7 @@ def writeBlock2(fit, Line):
             infoline =  StringOutput(pattern.get("Thmin")) + " " + StringOutput(pattern.get("Step")) + \
                         " " + StringOutput(pattern.get("Thmax"))
         else:
-            raise NotImplementedError, "Line 9 Uni Error"
+            raise NotImplementedError("Line 9 Uni Error")
         
         Line[9] += commline + "\n" + infoline
         # advance
@@ -438,7 +440,7 @@ def writeBlock2(fit, Line):
         dbgmsg  = "\n--------  Print Line 13  --------------"
         dbgmsg += refine.simpleInformation()
         dbgmsg += "---------- End Line 13 -----------------\n"
-        print dbgmsg
+        print(dbgmsg)
 
     # Line 14-17
     if fit.get("Cry") == 0:
@@ -538,7 +540,7 @@ def writeBlock2(fit, Line):
                 Line[14] += commline + "\n" + dataline
 
             else:
-                raise NotImplementedError, "Line14-17: Uni not defined"
+                raise NotImplementedError("Line14-17: Uni not defined")
 
             # Line 17
             Nba = pattern.get("Nba")
@@ -614,7 +616,7 @@ def writeBlock2(fit, Line):
 
                 background = pattern.get("Background")
                 if not isinstance(background, Background):
-                    raise NotImplementedError, "Nba == 0, not get a background"
+                    raise NotImplementedError("Nba == 0, not get a background")
                 # BACK 1-6
                 commline = "! Background coefficients/Codes for Pattern # %-5s"% (patternindex)
                 dataline = "  "
@@ -782,24 +784,24 @@ def writeBlock3(fit, Line, srtype="r"):
                 symbol     = atom.get("Typ")
                 if elecnumber > 0 :
                     # cation
-                    if cationdict.has_key(symbol):
+                    if symbol in cationdict:
                         # check only purpse
                         if cationdict[symbol] != elecnumber:
                             errmsg = "method writePCRFile Line 21, same atom has inconsistent electron number"
                             raise RietError(errmsg)
-                    elif aniondict.has_key(symbol):
+                    elif symbol in aniondict:
                         errmsg = "method writePCRFile Line 21, same atom has inconsistent electron number"
                         raise RietError(errmsg)
                     else:
                         cationdict[symbol] = elecnumber
                 elif elecnumber < 0:
                     # anion
-                    if aniondict.has_key(symbol):
+                    if symbol in aniondict:
                         # check only purpse
                         if aniondict[symbol] != elecnumber:
                             errmsg = "method writePCRFile Line 21, same atom has inconsistent electron number"
                             raise RietError(errmsg)
-                    elif cationdict.has_key(symbol):
+                    elif symbol in cationdict:
                         # check only purpse
                         errmsg = "method writePCRFile Line 21, same atom has inconsistent electron number"
                         raise RietError(errmsg)
@@ -875,7 +877,7 @@ def writeBlock3(fit, Line, srtype="r"):
             # Line 23-1
             commline = "! Real(0)-Imaginary(1) indicator for Ci"
             dataline = ""
-            raise NotImplementedError, "Line 23-1 not implemented"
+            raise NotImplementedError("Line 23-1 not implemented")
             # The following code is temporary design, subject to be developed
             #for icompl in operatorset.get("Icompl"):
             #    dataline += StringOutput(icompl.get("Ireps"))
@@ -981,7 +983,7 @@ def writeBlock3(fit, Line, srtype="r"):
 
         # bug to fix
         if Jbt == 4:
-            print "Jbt == 4 is not supported yet"
+            print("Jbt == 4 is not supported yet")
             return Line
 
 
@@ -1056,7 +1058,7 @@ def writeBlock3(fit, Line, srtype="r"):
 
                 # Line 25-7 25-8
                 if atom.get("Typ") == "SASH":
-                    raise NotImplementedError, "Line 25-7 25-8 Not Implemented"
+                    raise NotImplementedError("Line 25-7 25-8 Not Implemented")
 
         elif Jbt == 4 or Jbt == -4:
             commline =  "!Atom Typ      p1       p2       p3      p4     p5      p6     p7     p8"
@@ -1086,7 +1088,7 @@ def writeBlock3(fit, Line, srtype="r"):
                 Line[25][count] += "\n" + dataline + "\n" + codeline 
 
                 if Jbt == 4:
-                    print "Jbt == 4:  not implemented pcrfilewriter.py"
+                    print("Jbt == 4:  not implemented pcrfilewriter.py")
                     return Line
 
         elif Jbt == 1:
@@ -1345,7 +1347,7 @@ def writeBlock3(fit, Line, srtype="r"):
         elif Jbt == 15 or Jbt == -15:
             # xray/nuclear + magnetic (modulated structure)
             errmsg = "Jbt=+/-15 not implemented yet"
-            raise NotImplementedError, errmsg
+            raise_(NotImplementedError, errmsg)
 
             atomslist = phase.get("Atom")
             for atomindex in xrange(Nat):
@@ -1386,7 +1388,7 @@ def writeBlock3(fit, Line, srtype="r"):
                     continue
                 else:
                     if contribution.get("Irf") == 4:
-                        print "Single Crystal is not supported.... For debug purpose, return an incomplete Line"
+                        print("Single Crystal is not supported.... For debug purpose, return an incomplete Line")
                         return Line
                     # raise NotImplementedError, "Single crystal is not supporrted at this moment"
 
@@ -1430,7 +1432,7 @@ def writeBlock3(fit, Line, srtype="r"):
                     if contribution.get("Npr") != 11:
 
                         if not isinstance(profile, Profile):
-                            print "profile: " + StringOutput(profile)
+                            print("profile: " + StringOutput(profile))
                             raise RietError("pcrfilewriter.Line 27")
                         u = getRefine(profile, "U")
                         v = getRefine(profile, "V")
@@ -1760,7 +1762,7 @@ def writeBlock3(fit, Line, srtype="r"):
                         Line[35][count][patcount] = PrintShiftLaue(shift, [1, 2])
 
                     else:
-                        raise NotImplementedError, "ModS = " + StringOutput(ModS) + " not defined"
+                        raise_(NotImplementedError, "ModS = " + StringOutput(ModS) + " not defined")
 
                 # Line 36   SizeModel
 
@@ -1798,19 +1800,19 @@ def writeBlock3(fit, Line, srtype="r"):
                     shcoefficients = sizemodel.get("SHcoefficient")
                     
                 elif SizeModelSelector == 16:
-                    raise NotImplementedError, "size model = 16 is not implemented"
+                    raise NotImplementedError("size model = 16 is not implemented")
                 elif SizeModelSelector == 17:
-                    raise NotImplementedError, "size model = 17 is not implemented"
+                    raise NotImplementedError("size model = 17 is not implemented")
                 elif SizeModelSelector == 18:
-                    raise NotImplementedError, "size model = 18 is not implemented"
+                    raise NotImplementedError("size model = 18 is not implemented")
                 elif SizeModelSelector == 19:
-                    raise NotImplementedError, "size model = 19 is not implemented"
+                    raise NotImplementedError("size model = 19 is not implemented")
                 elif SizeModelSelector == 20:
-                    raise NotImplementedError, "size model = 20 is not implemented"
+                    raise NotImplementedError("size model = 20 is not implemented")
                 elif SizeModelSelector == 21:
-                    raise NotImplementedError, "size model = 21 is not implemented"
+                    raise NotImplementedError("size model = 21 is not implemented")
                 elif SizeModelSelector == 22:
-                    raise NotImplementedError, "size model = 22 is not implemented"
+                    raise NotImplementedError("size model = 22 is not implemented")
                 else:
                     pass
 
@@ -1843,7 +1845,7 @@ def writeBlock3(fit, Line, srtype="r"):
                     Line[37][count][patcount] = commline + "\n" + dataline + "\n" + codeline
 
                 elif Str == -1 and Str == 2 and Str == 3:
-                    raise NotImplementedError, "Line 37: Str == -1 and Str == 2 and Str == 3"
+                    raise NotImplementedError("Line 37: Str == -1 and Str == 2 and Str == 3")
 
                 elif abs(Str) == 1 and StrainModelSelector == 1:
                     lineitems = [5, 5, 5]
@@ -2029,7 +2031,7 @@ def writeBlock5(fit, Line):
 
         # Write All Information to Line
         Line[49] = ""
-        if commline.has_key(4):
+        if 4 in commline:
             lastline = 3
         else:
             lastline = 2
@@ -2196,7 +2198,7 @@ def PrintShiftLaue(shiftmodel, lineitems):
     from diffpy.pyfullprof.laue import LaueShiftParameter
     # check
     if not isinstance(shiftmodel, ShiftParameterLaue):
-        raise NotImplementedError, "PrintShiftLaue:  wrong shiftmodel object of type " + shiftmodel.__class__.__name__
+        raise_(NotImplementedError, "PrintShiftLaue:  wrong shiftmodel object of type " + shiftmodel.__class__.__name__)
 
     # init
     laue = LaueShiftParameter(shiftmodel.get("Laueclass"))
@@ -2229,7 +2231,7 @@ def PrintStrainLaue(strainmodel, lineitems):
 
     # check
     if not isinstance(strainmodel, StrainModelAnisotropic):
-        raise NotImplementedError, "PrintStrainLaue:  wrong shiftmodel object of type " + strainmodel.__class__.__name__
+        raise_(NotImplementedError, "PrintStrainLaue:  wrong shiftmodel object of type " + strainmodel.__class__.__name__)
 
     # init
     laue = LaueStrainModel(strainmodel.get("Laueclass"))
@@ -2341,38 +2343,38 @@ def printLines(Line):
 
     for l in xrange(block1_i, block1_f+1):
         if l in Line.keys():
-            print Line[l]
+            print(Line[l])
 
     for l in xrange(block2_i, block2_f+1):
         if l in Line.keys():
-            print "Line " + StringOutput(l)
-            print Line[l]
+            print("Line " + StringOutput(l))
+            print(Line[l])
 
     phaseloop = len(Line[18])
     for phasecount in xrange(1, phaseloop+1):
         # determine contribution loop --- phase related
-        if Line.has_key(26) and Line[26].has_key(phasecount):
+        if 26 in Line and phasecount in Line[26]:
             contribloop = len(Line[26][phasecount])
         else:
             contribloop = 0
         # write
         for l in xrange(block3_i, block3_f+1):
-            print "Line " + StringOutput(l)
+            print("Line " + StringOutput(l))
             try:
 
-                if l < 26 and Line.has_key(l) and Line[l].has_key(phasecount):
-                    print Line[l][phasecount]
+                if l < 26 and l in Line and phasecount in Line[l]:
+                    print(Line[l][phasecount])
                 elif l >= 26 and l <= 42:
                     for n in xrange(1, contribloop+1):
-                        if Line.has_key(l) and Line[l].has_key(phasecount) and Line[l][phasecount].has_key(contribloop):
-                            print Line[l][phasecount][contribloop]
-                elif l >= 43 and Line.has_key(l) and Line[l].has_key(phasecount):
-                    print Line[l][phasecount]
+                        if l in Line and phasecount in Line[l] and contribloop in Line[l][phasecount]:
+                            print(Line[l][phasecount][contribloop])
+                elif l >= 43 and l in Line and phasecount in Line[l]:
+                    print(Line[l][phasecount])
 
-            except AttributeError, err:
-                print "Error reading Line:"
-                print StringOutput(Line[l])
-                raise AttributeError, StringOutput(err)
+            except AttributeError as err:
+                print("Error reading Line:")
+                print(StringOutput(Line[l]))
+                raise_(AttributeError, StringOutput(err))
 
     return
     
@@ -2412,27 +2414,27 @@ def printLineToFile(Line, filename, userinfo):
     phaseloop = len(Line[18])
     for phasecount in xrange(1, phaseloop+1):
         # determine contribution loop --- phase related
-        if Line.has_key(26) and Line[26].has_key(phasecount):
+        if 26 in Line and phasecount in Line[26]:
             contribloop = len(Line[26][phasecount])
         else:
             contribloop = 0
 
         # write:  line for phase only < 26
         for l in xrange(block3_i, 25+1):
-            if Line.has_key(l) and Line[l].has_key(phasecount):
+            if l in Line and phasecount in Line[l]:
                 fout.write(Line[l][phasecount]+"\n")
                 fout.write("!\n")
 
         # write:  contribution
         for n in xrange(1, contribloop+1):
             for l in xrange(26, 42+1):
-                if Line.has_key(l) and Line[l].has_key(phasecount) and Line[l][phasecount].has_key(n):
+                if l in Line and phasecount in Line[l] and n in Line[l][phasecount]:
                     fout.write(Line[l][phasecount][n]+"\n")
                     fout.write("!\n")
 
         # write:  line for phase only > 43
         for l in xrange(43, block3_f+1):
-            if Line.has_key(l) and Line[l].has_key(phasecount):
+            if l in Line and phasecount in Line[l]:
                 fout.write(Line[l][phasecount]+"\n")
                 fout.write("!\n")
     # end -for phasecount 
@@ -2444,7 +2446,7 @@ def printLineToFile(Line, filename, userinfo):
             fout.write("!\n")
 
     # write extra problemaic block 6
-    if Line.has_key("ext"):
+    if "ext" in Line:
         fout.write(Line["ext"]+"\n")
 
     # write extra user information

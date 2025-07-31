@@ -43,7 +43,7 @@ class SubRun:
                     [self.ins, self.arg], stdout=subprocess.PIPE)
 
         while self.rp.poll() == None:
-            outstr = self.rp.stdout.readline()
+            outstr = self.rp.stdout.readline().decode("utf-8")
             if outstr.find(self.err_string) != -1:
                 self.result = -30
             if outstr.find("Rwp") != -1:
@@ -70,5 +70,7 @@ class SubRun:
         print(">>> fp2k is finished.")
         if self.result != 0:
             print(">>> fp2k error {}".format(self.result))
+        
+        # input()
 
         return self.result

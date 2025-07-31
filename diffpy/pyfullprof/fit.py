@@ -16,7 +16,11 @@
 """class Fit - a class containing information to perform a multi-phase,
 multi-pattern Rietveld refinement
 """
+from __future__ import print_function
 
+from future.utils import raise_
+from builtins import str
+from builtins import range
 __id__ = "$Id: fit.py 6843 2013-01-09 22:14:20Z juhas $"
 
 import os
@@ -171,7 +175,7 @@ class Fit(RietveldClass):
             pattern = p2
             phase   = p1
         else:
-            raise NotImplementedError, "fit.getContribution:  p1 and p2 must be phase and pattern or pattern and phase"
+            raise NotImplementedError("fit.getContribution:  p1 and p2 must be phase and pattern or pattern and phase")
 
         contributionlist = self.get("Contribution")
         for contribution in contributionlist:
@@ -189,7 +193,7 @@ class Fit(RietveldClass):
                 addrpattern = repr(contribution._ParentPattern)
                 dbmsg += "%-20s: Phase -- %-30s  Pattern -- %-30s\n"%("Contribution "+str(counts), addrphase, addrpattern)
                 counts += 1
-            print dbmsg
+            print(dbmsg)
         
         return None
 
@@ -218,10 +222,10 @@ class Fit(RietveldClass):
                     constraint.sigma = newconstraint.sigma
                     
         for constraint in self.get("Refine").constraints[:]:
-            print "                    %-10s    %-15s    %-15.6f+/- %-11.6f" \
+            print("                    %-10s    %-15s    %-15.6f+/- %-11.6f" \
             % ( constraint.name, constraint.varName, constraint.getValue(), 
-                constraint.sigma)
-        print "\n"
+                constraint.sigma))
+        print("\n")
         return
 
 
@@ -281,13 +285,13 @@ class Fit(RietveldClass):
                     try:
                         hklfile = open(hklfname, "r")
                         hklfile.close()
-                    except IOError, err:
+                    except IOError as err:
                         # if no such file exits, update Irf to 0
                         contribution.set("Irf", 0)
                         # error message output
                         errmsg += "Fit.validate():  Reflection File %-10s Cannot Be Found: "% (hklfname)
                         errmsg += "Chaning Contribution.Irf to 0 ... Related to Phase[%-5s]"% (pindex)
-                        print errmsg
+                        print(errmsg)
                 # End -- if contribution is not None and Irf == 2:
 
                 pindex += 1
@@ -299,7 +303,7 @@ class Fit(RietveldClass):
                 try:
                     hklfile = open(hklfname, "r")
                     hklfile.close()
-                except IOError, err:
+                except IOError as err:
                     # if no such file exists, update all Irf to 0
                     for contribution in self.get("Contribution"):
                         contribution.set("Irf", 0)
@@ -309,7 +313,7 @@ class Fit(RietveldClass):
         if rvalue is not True:
             # Error output
             errmsg =  "===  Fit.validate() ===\n" + "Invalidity Deteced\n"
-            print errmsg
+            print(errmsg)
 
         return rvalue
 
@@ -447,7 +451,7 @@ class Fit(RietveldClass):
                 pattern.importPrfFile(prffname)
             else:
                 errmsg = "Prf = %-5s will be implemented soon in Fit._readCalculatePattern()"%(pattern.get("Prf"))
-                raise NotImplementedError, errmsg
+                raise_(NotImplementedError, errmsg)
             index += 1
         # End of:  for pattern in patternlist:
 
@@ -485,7 +489,7 @@ class Fit(RietveldClass):
         for pattern in self.get("Pattern"):
             id += 1
             radiationtype = pattern.get("Job")
-            pattern.setDataProperty([datadict.keys()[id], datadict.values()[id]["Name"]], 
+            pattern.setDataProperty([list(datadict.keys())[id], list(datadict.values())[id]["Name"]], 
                 radiationtype)
         return
 
