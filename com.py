@@ -1,3 +1,4 @@
+import paramgroup
 import sys
 import os
 import setting
@@ -8,23 +9,28 @@ import wphase
 run_set = setting.run_set
 R = {"Rp": 100, "Rwp": 100, "Re": 100, "Chi2": 100}
 target = {"string": 'com.R["Rwp"]', "name": 'Rwp'}
+
 plot = None
 show_plot = plot
 sys_stdout = sys.stdout
+
 ui = None
 cycle = 1
 run_mode = 1
 des = False
 Rwplist = []
+
 wait = 0
 autofp_running = False
 origin_path = setting.run_set.origin_path
 root_path = os.getcwd()
+
 mode = "ui"
 log = None
 logstr = ""
 debug = False
 autofp_delay = 0
+
 text_style = {"normal": "<font color=blue>",
               "ok": "<font color=green>",
               "rwp": "<font color=green>",
@@ -32,22 +38,27 @@ text_style = {"normal": "<font color=blue>",
               "error": "<font color=brown>"
               }
 
-import paramgroup
+
 def com_init(m, root=os.getcwd()):
     global root_path, origin_path, run_set, plot, mode, show_plot, log
     mode = m
+
     if mode == "ui":
         plot = __import__("plot")
         show_plot = plot
+
     root_path = os.path.abspath(root)
+
     prf2origin.prf2origin.python.prf2origin.prf2origin_path = os.path.join(
         root_path, 'prf2origin/prf2origin')
+
     run_set.load_setting(path=os.path.join(root_path, "setting.txt"))
     origin_path = run_set.origin_path
+
     paramgroup.load_strategy(os.path.join(root_path, "strategy"))
     # log=open("log.txt","w")
 
-    print (origin_path, root_path)
+    print(origin_path, root_path)
 
 
 def com_exit():
@@ -86,8 +97,10 @@ def is_file_locked(filepath):
 
 
 def release_process(rp):
+    
     if os.name == "nt":
         # os.system("taskkill /IM fp2k.exe /F")
         os.system("taskkill /PID {} /F".format(rp.pid))
+
     if os.name == "posix":
         os.system("kill -s 9 ".format(rp.pid))

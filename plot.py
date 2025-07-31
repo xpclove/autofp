@@ -39,7 +39,7 @@ def data_gen():
             data = data.tolist()
     else:
         data = [0]
-        
+
     data = [data, data]
     rwpdata = data
     yield data

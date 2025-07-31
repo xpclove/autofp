@@ -289,6 +289,7 @@ class Ui(QtGui.QMainWindow):
                                             QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
         event.ignore()
 
+        # kill all Rwp plot
         if result == QtGui.QMessageBox.Yes:
             self.stop_autofp()
             for p in com.plot.jobs_s:
