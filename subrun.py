@@ -40,7 +40,8 @@ class SubRun:
                     
                     if sys.version_info[0] >= 3:
                         self.rp = subprocess.Popen(
-                            [self.ins, self.arg], stdout=subprocess.PIPE, startupinfo=startupinfo, shell=True,  universal_newlines=True)
+                            # [self.ins, self.arg], stdout=subprocess.PIPE, startupinfo=startupinfo, shell=True,  universal_newlines=True)
+                            [self.ins, self.arg], stdout=subprocess.PIPE, startupinfo=startupinfo, shell=True)
                     if sys.version_info[0] < 3:
                         self.rp = subprocess.Popen(
                         [self.ins, self.arg], stdout=subprocess.PIPE, startupinfo=startupinfo, shell=True, bufsize=1)
@@ -52,7 +53,7 @@ class SubRun:
             while self.rp.poll() == None:
 
                 if sys.version_info[0] >= 3:
-                    outstr = self.rp.stdout.readline()
+                    outstr = self.rp.stdout.readline().decode("utf-8")
                 if sys.version_info[0] < 3:
                     outstr = self.rp.stdout.readline().decode("utf-8")
 
@@ -81,6 +82,13 @@ class SubRun:
 
         except Exception as e:
             print("subprocess: fp2k error!")
+            # begin python 2 - python 2 + 3
+            if sys.version_info[0] >= 3:
+                tb = e.__traceback__
+                while tb:
+                    print("file: ", tb.tb_frame.f_code.co_filename, "line: ", tb.tb_lineno)
+                    tb = tb.tb_next
+            # end
         
         print(">>> fp2k is finished.")
         if self.result != 0:
