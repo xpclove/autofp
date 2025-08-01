@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>584</width>
+    <width>591</width>
     <height>556</height>
    </rect>
   </property>
@@ -40,7 +40,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -64,7 +64,7 @@
      <property name="font">
       <font>
        <family>Noto Sans SC</family>
-       <pointsize>10</pointsize>
+       <pointsize>8</pointsize>
       </font>
      </property>
      <property name="cursor" stdset="0">
@@ -193,9 +193,9 @@
     <widget class="QComboBox" name="combobox_job">
      <property name="geometry">
       <rect>
-       <x>450</x>
+       <x>453</x>
        <y>0</y>
-       <width>130</width>
+       <width>111</width>
        <height>22</height>
       </rect>
      </property>
@@ -568,7 +568,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="button_save">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>470</x>
      <y>530</y>
      <width>111</width>
      <height>21</height>

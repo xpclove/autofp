@@ -132,7 +132,6 @@ class Run:
         if self.err == 0:
             self.err += check(self.outfilename)
             self.err += self.resetLoad()
-            print("test1")
 
         # only save the right result
         if (self.err == 0):

@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'order.ui'
 #
-# Created: Wed Jul 30 19:15:18 2025
-#      by: PyQt4 UI code generator 4.10.4
+# Created: Fri Aug  1 15:37:00 2025
+#      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_Order(object):
     def setupUi(self, Order):
         Order.setObjectName(_fromUtf8("Order"))
-        Order.resize(584, 556)
+        Order.resize(591, 556)
         Order.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
         Order.setStyleSheet(_fromUtf8(""))
         Order.setSizeGripEnabled(False)
@@ -44,7 +44,7 @@ class Ui_Order(object):
         self.table.setMinimumSize(QtCore.QSize(441, 450))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
-        font.setPointSize(10)
+        font.setPointSize(8)
         self.table.setFont(font)
         self.table.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.table.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
@@ -56,6 +56,8 @@ class Ui_Order(object):
         self.table.setRowCount(0)
         self.table.setColumnCount(2)
         self.table.setObjectName(_fromUtf8("table"))
+        self.table.setColumnCount(2)
+        self.table.setRowCount(0)
         self.buttonBox = QtGui.QDialogButtonBox(self.tab)
         self.buttonBox.setGeometry(QtCore.QRect(490, 370, 81, 241))
         font = QtGui.QFont()
@@ -89,7 +91,7 @@ class Ui_Order(object):
         self.button_configure_s.setFont(font)
         self.button_configure_s.setObjectName(_fromUtf8("button_configure_s"))
         self.combobox_job = QtGui.QComboBox(self.tab)
-        self.combobox_job.setGeometry(QtCore.QRect(450, 0, 130, 22))
+        self.combobox_job.setGeometry(QtCore.QRect(453, 0, 111, 22))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         self.combobox_job.setFont(font)
@@ -210,7 +212,7 @@ class Ui_Order(object):
         self.tab_widget.addTab(self.tab_4, _fromUtf8(""))
         self.tabWidget.addTab(self.tab_3, _fromUtf8(""))
         self.button_save = QtGui.QPushButton(Order)
-        self.button_save.setGeometry(QtCore.QRect(460, 530, 111, 21))
+        self.button_save.setGeometry(QtCore.QRect(470, 530, 111, 21))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         self.button_save.setFont(font)
@@ -218,7 +220,7 @@ class Ui_Order(object):
         self.button_save.setObjectName(_fromUtf8("button_save"))
 
         self.retranslateUi(Order)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.tab_widget.setCurrentIndex(0)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), Order.accept)

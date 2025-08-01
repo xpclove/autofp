@@ -2,11 +2,11 @@ import paramgroup
 import sys
 import os
 import setting
-# import plot
 import prf2origin.prf2origin.python.prf2origin
 import wphase
 
 run_set = setting.run_set
+
 R = {"Rp": 100, "Rwp": 100, "Re": 100, "Chi2": 100}
 target = {"string": 'com.R["Rwp"]', "name": 'Rwp'}
 
@@ -97,7 +97,7 @@ def is_file_locked(filepath):
 
 
 def release_process(rp):
-    
+
     if os.name == "nt":
         # os.system("taskkill /IM fp2k.exe /F")
         os.system("taskkill /PID {} /F".format(rp.pid))

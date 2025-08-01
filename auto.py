@@ -6,7 +6,7 @@ import shutil
 import numpy
 import os
 import com
-# from PyQt4 import QtCore
+
 rwplist = []
 rwplist_all = []
 rwp_all = []
@@ -18,9 +18,8 @@ option_this = {"label": 1,
                "alt": None,
                "rwp": rwplist
                }
-# auto rietveld
 
-
+# Auto rietveld
 def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=option_this):
 
     if r == None:

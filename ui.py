@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui.ui'
 #
-# Created: Wed Jul 30 19:18:59 2025
-#      by: PyQt4 UI code generator 4.10.4
+# Created: Fri Aug  1 15:41:08 2025
+#      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -76,6 +76,8 @@ class Ui_Form(object):
         self.tableWidgetprofile.setRowCount(0)
         self.tableWidgetprofile.setColumnCount(4)
         self.tableWidgetprofile.setObjectName(_fromUtf8("tableWidgetprofile"))
+        self.tableWidgetprofile.setColumnCount(4)
+        self.tableWidgetprofile.setRowCount(0)
         self.tabWidgettable.addTab(self.tab, _fromUtf8(""))
         self.tab_4 = QtGui.QWidget()
         self.tab_4.setObjectName(_fromUtf8("tab_4"))
@@ -87,6 +89,8 @@ class Ui_Form(object):
         self.tableWidgetins.setRowCount(0)
         self.tableWidgetins.setColumnCount(4)
         self.tableWidgetins.setObjectName(_fromUtf8("tableWidgetins"))
+        self.tableWidgetins.setColumnCount(4)
+        self.tableWidgetins.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_4, _fromUtf8(""))
         self.Atom = QtGui.QWidget()
         self.Atom.setObjectName(_fromUtf8("Atom"))
@@ -102,7 +106,7 @@ class Ui_Form(object):
         self.tableWidgetatom.setStatusTip(_fromUtf8(""))
         self.tableWidgetatom.setColumnCount(4)
         self.tableWidgetatom.setObjectName(_fromUtf8("tableWidgetatom"))
-        self.tableWidgetatom.setRowCount(0)
+        self.tableWidgetatom.setColumnCount(4)
         self.tabWidgettable.addTab(self.Atom, _fromUtf8(""))
         self.tab_6 = QtGui.QWidget()
         self.tab_6.setObjectName(_fromUtf8("tab_6"))
@@ -113,7 +117,7 @@ class Ui_Form(object):
         self.tableWidgetatombiso.setFont(font)
         self.tableWidgetatombiso.setColumnCount(4)
         self.tableWidgetatombiso.setObjectName(_fromUtf8("tableWidgetatombiso"))
-        self.tableWidgetatombiso.setRowCount(0)
+        self.tableWidgetatombiso.setColumnCount(4)
         self.tabWidgettable.addTab(self.tab_6, _fromUtf8(""))
         self.tab_5 = QtGui.QWidget()
         self.tab_5.setObjectName(_fromUtf8("tab_5"))
@@ -125,6 +129,8 @@ class Ui_Form(object):
         self.tableWidgetother.setRowCount(0)
         self.tableWidgetother.setColumnCount(4)
         self.tableWidgetother.setObjectName(_fromUtf8("tableWidgetother"))
+        self.tableWidgetother.setColumnCount(4)
+        self.tableWidgetother.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_5, _fromUtf8(""))
         self.tab_8 = QtGui.QWidget()
         self.tab_8.setObjectName(_fromUtf8("tab_8"))
@@ -140,7 +146,7 @@ class Ui_Form(object):
         self.tableWidgetocc.setStatusTip(_fromUtf8(""))
         self.tableWidgetocc.setColumnCount(4)
         self.tableWidgetocc.setObjectName(_fromUtf8("tableWidgetocc"))
-        self.tableWidgetocc.setRowCount(0)
+        self.tableWidgetocc.setColumnCount(4)
         self.tabWidgettable.addTab(self.tab_8, _fromUtf8(""))
         self.buttonrefineall = QtGui.QPushButton(self.params_widget)
         self.buttonrefineall.setGeometry(QtCore.QRect(10, 498, 75, 23))
@@ -249,19 +255,19 @@ class Ui_Form(object):
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
         self.buttonback = QtGui.QPushButton(self.tab_2)
-        self.buttonback.setGeometry(QtCore.QRect(150, 10, 111, 41))
+        self.buttonback.setGeometry(QtCore.QRect(120, 10, 91, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
-        font.setPointSize(16)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.buttonback.setFont(font)
         self.buttonback.setObjectName(_fromUtf8("buttonback"))
         self.buttonrun = QtGui.QPushButton(self.tab_2)
-        self.buttonrun.setGeometry(QtCore.QRect(10, 10, 111, 41))
+        self.buttonrun.setGeometry(QtCore.QRect(20, 10, 81, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
-        font.setPointSize(16)
+        font.setPointSize(12)
         font.setBold(False)
         font.setWeight(50)
         self.buttonrun.setFont(font)
@@ -433,7 +439,7 @@ class Ui_Form(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Noto Sans SC\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">AutoFP</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Website: <a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Website: <a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/autofp.html</span></a></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Authors: Xiaopeng Cui ...o Jincang Zhang </p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Institute: Shanghai University</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">--------------------------------------------------</p>\n"

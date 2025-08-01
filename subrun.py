@@ -51,12 +51,7 @@ class SubRun:
 
             
             while self.rp.poll() == None:
-
-                if sys.version_info[0] >= 3:
-                    outstr = self.rp.stdout.readline().decode("utf-8")
-                if sys.version_info[0] < 3:
-                    outstr = self.rp.stdout.readline().decode("utf-8")
-
+                outstr = self.rp.stdout.readline().decode("utf-8")
                 if outstr.find(self.err_string) != -1:
                     self.result = -30
                 if outstr.find("Rwp") != -1:
@@ -77,7 +72,6 @@ class SubRun:
                     if os.name == "posix":
                         os.system("pkill -f {}".format(fp2k_name))
                     break
-
             self.rp.wait()
 
         except Exception as e:
@@ -96,7 +90,7 @@ class SubRun:
         
         # global n_debug
         # n_debug += 1
-        # if n_debug >= 30  :
+        # if n_debug >= 10  :
         #     sys.exit(0)
 
         return self.result

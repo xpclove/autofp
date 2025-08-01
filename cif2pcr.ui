@@ -23,6 +23,12 @@
       <height>141</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans SC</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -41,13 +47,19 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>230</y>
+      <y>210</y>
       <width>91</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans SC</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>make</string>
+     <string>Make</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox">
@@ -58,6 +70,12 @@
       <width>131</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans SC</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <item>
      <property name="text">
@@ -77,7 +95,7 @@
      <x>0</x>
      <y>0</y>
      <width>500</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
