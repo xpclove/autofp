@@ -27,7 +27,7 @@ class Ui_output_Form(QtGui.QDialog):
         qc=QCheckBox()
         for i in self.checklist:
             qc=self.checkbox_list[i]
-            print self.checklist[i]
+            print (self.checklist[i])
             qc.setChecked(self.checklist[i])
         return
     def reset(self):

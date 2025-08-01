@@ -41,7 +41,7 @@ class SubRun:
                     if sys.version_info[0] >= 3:
                         self.rp = subprocess.Popen(
                             [self.ins, self.arg], stdout=subprocess.PIPE, startupinfo=startupinfo, shell=True,  universal_newlines=True)
-                    else:
+                    if sys.version_info[0] < 3:
                         self.rp = subprocess.Popen(
                         [self.ins, self.arg], stdout=subprocess.PIPE, startupinfo=startupinfo, shell=True, bufsize=1)
                 else:
@@ -53,7 +53,7 @@ class SubRun:
 
                 if sys.version_info[0] >= 3:
                     outstr = self.rp.stdout.readline()
-                else:
+                if sys.version_info[0] < 3:
                     outstr = self.rp.stdout.readline().decode("utf-8")
 
                 if outstr.find(self.err_string) != -1:
@@ -80,8 +80,7 @@ class SubRun:
             self.rp.wait()
 
         except Exception as e:
-            print("rp error!")
-            sys.exit(-1)
+            print("subprocess: fp2k error!")
         
         print(">>> fp2k is finished.")
         if self.result != 0:

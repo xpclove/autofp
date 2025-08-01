@@ -56,16 +56,16 @@ class Ui_order(QtGui.QDialog):
         tablep=self.table
         tablep.setRowCount(0)
         for i in self.order:
-            print self.list[i]
+            print (self.list[i])
             rowcount = tablep.rowCount()
-            print rowcount
+            print (rowcount)
             tablep.insertRow(rowcount)
             tablep.setCellWidget(rowcount,0,QtGui.QLabel(self.list[i]))
             tablep.setCellWidget(rowcount,1,QtGui.QLabel("parameter"))
     def up(self):
         current_rowcount=self.table.currentIndex().row()
         tmp=self.order[current_rowcount-1]
-        print current_rowcount
+        print (current_rowcount)
         self.order[current_rowcount-1]=self.order[current_rowcount]
         self.order[current_rowcount]=tmp
         self.update_table()
@@ -74,7 +74,7 @@ class Ui_order(QtGui.QDialog):
         next=current_rowcount+1
         if(next>=len(self.list)):next=0
         tmp=self.order[next]
-        print current_rowcount
+        print (current_rowcount)
         self.order[next]=self.order[current_rowcount]
         self.order[current_rowcount]=tmp
         self.update_table()

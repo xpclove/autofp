@@ -79,9 +79,9 @@ class Run:
                 tb = e.__traceback__
                 while tb:
                     print("file: ", tb.tb_frame.f_code.co_filename, "line: ", tb.tb_lineno)
-                    tb = tb.tb_nex
+                    tb = tb.tb_next
             # end
-            
+
             return -0x80
 
         self.fit = self.pcrRW.fit
@@ -183,10 +183,10 @@ class Run:
             n = 0
         tmp = self.tmpdir+"step="+str(self.step_index-n)
 
-        print(">>> pop <<<", tmp)
+        print(">>> pop", tmp)
         if com.is_file_locked(self.outfilename):
             print("file is use[pop]", self.outfilename)
-            input()
+            sys.exit(-1)
         if (os.path.exists(tmp+".pcr")):
             copyfile(tmp+".pcr", self.pcrfilename)
         if (os.path.exists(tmp+".out")):

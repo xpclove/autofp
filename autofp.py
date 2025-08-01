@@ -11,7 +11,6 @@ import sys
 import com
 import params
 import newversion_set
-import thread
 import time
 import multiprocessing
 import shautofp

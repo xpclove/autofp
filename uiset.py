@@ -10,6 +10,7 @@ from ui_order_set import Ui_order
 from ui_output_set import Ui_output_Form
 from ui_cif2pcr import Ui_makepcr
 import copy
+import sys
 import com
 import prf2origin.prf2origin.python.prf2origin
 try:
@@ -330,9 +331,17 @@ class Ui(QtGui.QMainWindow):
                                                              _fromUtf8("FullProf PCR File(*.pcr)"))
         if len(selectFileNames) <= 0:
             return
-        print("open *.pcr: ", selectFileNames[0].toLocal8Bit())
+        
+        # begin python 2 -> python 2 + 3
+        if sys.version_info[0] >= 3:
+            filename = selectFileNames[0]
+        if sys.version_info[0] < 3:
+            filename = selectFileNames[0].toLocal8Bit()
+        # end
+        
+        print("open *.pcr: {}".format(filename))
         path = ""
-        path = str(selectFileNames[0].toLocal8Bit())  # ,'gbk',"ignore")
+        path = str(filename)
         self.open(path)
 
     def open(self, path):
@@ -340,7 +349,7 @@ class Ui(QtGui.QMainWindow):
         self.run = Run()  # get a new Run()
         self.showMsg(path+" open")
         self.run.reset(path)
-        self.text_path.setText(unicode(path, "gbk", "ignore"))
+        self.text_path.setText(path)
         self.updateTable()
         self.pcr_yorn = True
         self.window_order.init(self.run.job)
