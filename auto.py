@@ -6,6 +6,7 @@ import shutil
 import numpy
 import os
 import com
+import json
 
 rwplist = []
 rwplist_all = []
@@ -17,7 +18,37 @@ option_this = {"label": 1,
                "clear_all": True,
                "alt": None,
                "rwp": rwplist
-               }
+}
+
+class autorun_log():
+    def __init__(self):
+        self.log_cycles = {}
+        self.current_cycle = 0
+        return
+
+    def get_log_handle(self, cycle):
+        key ="cycle_{}".format(cycle)
+        log ={}
+        if key not in self.log_cycles:
+            log = self.log_cycles[key] ={"log":[]}
+        return log
+
+    def log_rwplist(self, rwplist, rwplist_param, cycle):
+        log = self.get_log_handle(cycle)
+        log["rwplist"] = rwplist
+        log["rwplist_param"] = rwplist_param
+        log["cycle"]  = cycle
+        self.current_cycle = cycle
+
+    def log(self, context, cycle):
+        log = self.get_log_handle(cycle)
+        log["log"].append(context)
+        self.current_cycle = cycle
+
+    def save_log(self):
+        json.dump(self.log_cycles, open("autofp.log","w"), indent=4 )
+        
+g_arl = autorun_log()
 
 # Auto rietveld
 def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=option_this):
@@ -48,9 +79,11 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
     tmp_r = 10000
     goodr = 10000
     error = 0
+
     # print out messenge
     out = open(r.pcrfilename+"_order_out.txt", "w")
     rwplist_out = open(r.pcrfilename+"_rwplist.txt", "w")
+    rwp_param = []
 
     step = 0
     # rietveld according to the order
@@ -124,6 +157,13 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
             numpy.savetxt("rwp.txt", numpy.array(rwplist))
             numpy.savetxt("rwp_all.txt", numpy.array(rwplist_all))
             numpy.savetxt("rwplist.txt", numpy.array(com.Rwplist))
+
+            rwp_param.append(param_name)
+            json.dump(rwp_param,open("rwp_param.txt","w"))
+
+            g_arl.log_rwplist(rwplist=rwplist, rwplist_param=rwp_param, cycle=com.cycle)
+            g_arl.save_log()
+
             out.write("step:    "+str(r.step_index)+"\n")
 
         out.write(str(error)+"\n")
@@ -165,7 +205,8 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
     if (com.run_set.rm_tmp_done == True):
         shutil.rmtree(r.tmpdir)
     if (com.run_set.show_rwp == True):
-        com.show_plot.show_stable(rwplist)
+        com.plot.g_stop_events[com.cycle].set() # Send animation termination signals across multiple processes.
+    #     com.show_plot.show_stable(rwplist)
     if com.run_mode > 0:
         com.ui.autofp_done_signal.emit(goodr)
     rwp_all.append(rwplist)

@@ -138,8 +138,8 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
         com.des = True
     if (com.run_set.rm_tmp_done == True):
         shutil.rmtree(r.tmpdir)
-    if (com.run_set.show_rwp == True):
-        com.show_plot.show_stable(rwplist)
+    # if (com.run_set.show_rwp == True):
+    #     com.show_plot.show_stable(rwplist)
     # if com.run_mode>0:
         # com.ui.autofp_done_signal.emit(goodrwp)
     rwp_all.append(rwplist)

@@ -8,6 +8,7 @@ import re
 class setting:
     """"""
     show_rwp = True
+    show_rwp_param = True
     show_log_FP = True
     AsymLim = 60
     NCY = 10                          # NCY: cycle in edpcr
@@ -28,7 +29,7 @@ class setting:
     def __init__(self):
         """Constructor"""
 
-    def load_setting(self, path="setting.txt"):
+    def load_setting(self, path= "setting.txt"):
         '''
         context_set=setting_file.readlines()
         context=[]
@@ -61,6 +62,7 @@ class setting:
             setting_file.close()
             
         self.show_rwp = self.setjson["show_rwp"]
+        self.show_rwp_param = self.setjson["show_rwp_param"]
         self.show_log_FP = self.setjson["show_log_FP"]
         self.NCY = self.setjson["NCY"]
         self.AsymLim = self.setjson["AsymLim"]
