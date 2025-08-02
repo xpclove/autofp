@@ -55,7 +55,7 @@ class SubAutoRun(object):
             setting.run_set.show_rwp = com.ui.ui.check_show_rwp.isChecked()
             setting.run_set.show_log_FP = com.ui.ui.check_show_fp.isChecked()
             if(setting.run_set.show_rwp == True):
-                com.plot.showrwp()
+                com.plot.show_Rwp_animation()
             if(setting.run_set.show_log_FP == True):
                 sys.stdout = com.ui
             else:

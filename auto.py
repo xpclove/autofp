@@ -28,9 +28,9 @@ class autorun_log():
 
     def get_log_handle(self, cycle):
         key ="cycle_{}".format(cycle)
-        log ={}
         if key not in self.log_cycles:
-            log = self.log_cycles[key] ={"log":[]}
+            self.log_cycles[key] = {"log":[]}
+        log = self.log_cycles[key]
         return log
 
     def log_rwplist(self, rwplist, rwplist_param, cycle):
@@ -46,7 +46,9 @@ class autorun_log():
         self.current_cycle = cycle
 
     def save_log(self):
-        json.dump(self.log_cycles, open("autofp.log","w"), indent=4 )
+        self.log_cycles["cur_cycle"] = self.current_cycle
+        with open("autofp.log","w") as f:
+            json.dump(self.log_cycles, f, indent=4 )
         
 g_arl = autorun_log()
 
@@ -205,6 +207,8 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
     if (com.run_set.rm_tmp_done == True):
         shutil.rmtree(r.tmpdir)
     if (com.run_set.show_rwp == True):
+        msg = "n job {}, cycle {}\n".format(len(com.plot.g_stop_events),com.cycle)
+        open("log.txt","a").write(msg)
         com.plot.g_stop_events[com.cycle].set() # Send animation termination signals across multiple processes.
     #     com.show_plot.show_stable(rwplist)
     if com.run_mode > 0:

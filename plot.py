@@ -6,22 +6,20 @@ import multiprocessing
 import com
 import json
 import textwrap
+import time
 
 plt.rcParams['text.antialiased'] = True
 rwpdata = None
 
-g_figs={}
 g_stop_events={}
 jobs_s = []
 
 '''
 (1) Rwp dynamic image
 '''
-def update(data):
-    key = multiprocessing.current_process().name
-    cycle,fig,axes1,ani,stop_event = g_figs[key]
-    
-    if data != None:
+def update(data, axes1, cycle):
+
+    if len(data) > 0:
         line, = axes1.plot(data[1], 'go-', linewidth=0.3,
                         markersize=10, markerfacecolor='red')
         '''plot good param mark'''
@@ -46,50 +44,60 @@ def update(data):
                 an.set_fontstyle('italic')
                 an.set_fontweight('light')
         ''''''
-    if stop_event.is_set():
-        ani.event_source.stop()
+    return axes1.lines or []
 
-    return line,
+def data_gen(stop_event, cycle):
+    data = []
+    while not stop_event.is_set():
+        try:
+            with open("autofp.log") as f:
+                js = json.load(f)
+                key = "cycle_{}".format(cycle)
+                if key in js:
+                    data_rwplist = js[key]["rwplist"]
+                    data_rwplist_param = js[key]["rwplist_param"]
+                    data = [ data_rwplist_param, data_rwplist]
+                yield data
+        except Exception as e:
+            print("error: {}".format(e))
+            yield data
+        time.sleep(0.05)
 
-def data_gen():
-    key = multiprocessing.current_process().name
-    cycle,fig,axes1,ani,stop_event = g_figs[key]
-    data = None
-    key = "cycle_{}".format(cycle)
-    js = json.load(open("autofp.log"))
-    if key in js:
-        data_rwplist = js[key]["rwplist"]
-        data_rwplist_param = js[key]["rwplist_param"]
-        data = [ data_rwplist_param, data_rwplist]
-    yield data
 
-
-def show(stop_event, cycle=1):
+def show(stop_event, cycle = 1 ):
     fig = plt.figure("Rwp Cycle {}".format(cycle))
     axes1 = fig.add_subplot(111)
-    
     axes1.set_xlabel("Step")
     axes1.set_ylabel("Rwp")
     axes1.set_title("Cycle "+str(cycle)+" Rwp curve")
-    ani = FuncAnimation(fig, update, data_gen, interval=100)
-
-    key = multiprocessing.current_process().name
-    g_figs[key] = (cycle, fig, axes1, ani, stop_event)
-
-    plt.show()
     
+    ani = FuncAnimation(fig, 
+                        update, 
+                        frames=data_gen(stop_event, cycle), 
+                        fargs=(axes1,cycle),
+                        interval=100
+                        )
+    
+    plt.show(block=False)
+    plt.pause(0.1)
+    while not stop_event.is_set():
+        fig.canvas.flush_events()
+        time.sleep(0.01)
+    ani.event_source.stop()
+    plt.show()
+    # plt.close(fig)
     return
 
-def showrwp(s=None):
-    if s == None:
-        s = "."
-    os.chdir(s)
+def show_Rwp_animation( dir=None ):
+    if dir == None:
+        dir = "."
+    os.chdir(dir)
     cycle = com.cycle
     stop_event = multiprocessing.Event()
     job = multiprocessing.Process(target=show, args=(stop_event, cycle))
     job.start()
     jobs_s.append(job)
-    g_stop_events[cycle]=stop_event
+    g_stop_events[cycle] = stop_event
 
 
 '''
@@ -145,4 +153,5 @@ def show_data(rwplist, cycle=1):
 
 if __name__ == "__main__":
     multiprocessing.freeze_support()
+    g_figs= multiprocessing.Manager().dict()
     show()
