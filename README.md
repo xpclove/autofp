@@ -17,14 +17,14 @@ Authors : Xiaopeng Cui, etc.
 - [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/) （https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/）  
 - [Numpy](http://www.scipy.org/scipylib/download.html) （http://www.scipy.org/scipylib/download.html）  
 - [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/）  
-- `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3+)
+- `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3 +)
 
 **Refinement Software:**  
 - FullProf (Windows: fp2k.exe / Linux: fp2k) [http://www.ill.eu/sites/fullprof/](http://www.ill.eu/sites/fullprof/) （http://www.ill.eu/sites/fullprof/）
 
 
 ## How To Use AutoFP?
-Python2.7 UI program entry (Windows, Linux)
+Python UI program entry (Windows, Linux)
 
 		python autofp.py start UI
 		1) click "Open" *.pcr file( with *.dat in the same folder), "Autoslect", "Run"
@@ -33,7 +33,7 @@ Python2.7 UI program entry (Windows, Linux)
 				"cycle = n > 0 " represent run n cycles
 		3) click "Run" button  to autorun  the refinement 
 
-Python2.7 Shell program entry (Windows, Linux)
+Python Shell program entry (Windows, Linux)
 
 		pyhton shautofp.py -c 1 -a *.pcr
 			-c 1 : cycle number 1；set "-c 0" indicates the automatic determination of the number of cycles
