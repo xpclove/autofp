@@ -10,7 +10,7 @@ import multiprocessing
 run_set = setting.run_set
 
 R = {"Rp": 100, "Rwp": 100, "Re": 100, "Chi2": 100}
-target = {"string": 'com.R["Rwp"]', "name": 'Rwp'}
+target = {"string": 'com.R["Rwp"]', "name": "Rwp"}
 
 plot = None
 show_plot = plot
@@ -33,14 +33,16 @@ logstr = ""
 debug = False
 autofp_delay = 0
 
-text_style = {"normal": "<font color=blue>",
-              "ok": "<font color=green>",
-              "rwp": "<font color=green>",
-              "warning": "<font color=purple>",
-              "error": "<font color=brown>"
-              }
+text_style = {
+    "normal": "<font color=blue>",
+    "ok": "<font color=green>",
+    "rwp": "<font color=green>",
+    "warning": "<font color=purple>",
+    "error": "<font color=brown>",
+}
 
 mp_queue = multiprocessing.Queue()
+
 
 def com_init(m, root=os.getcwd()):
     global root_path, origin_path, run_set, plot, mode, show_plot, log
@@ -53,7 +55,8 @@ def com_init(m, root=os.getcwd()):
     root_path = os.path.abspath(root)
 
     prf2origin.prf2origin.python.prf2origin.prf2origin_path = os.path.join(
-        root_path, 'prf2origin/prf2origin')
+        root_path, "prf2origin/prf2origin"
+    )
 
     run_set.load_setting(path=os.path.join(root_path, "setting.txt"))
     origin_path = run_set.origin_path
@@ -73,7 +76,7 @@ def com_exit():
 def com_log_write(s):
     global logstr, log
     if log != None:
-        log.write(s+"<br/>")
+        log.write(s + "<br/>")
 
 
 def com_log_open(path):

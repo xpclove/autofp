@@ -17,14 +17,14 @@ jobs_s = []
 """
 
 
-def update(data, axes1, cycle):
+def update(data, axes1, run_set, cycle):
 
     if len(data) > 0:
         (line,) = axes1.plot(
             data[1], "go-", linewidth=0.3, markersize=10, markerfacecolor="red"
         )
         """plot good param mark"""
-        if com.run_set.show_rwp_param == True:
+        if run_set.show_rwp_param == True:
             for index, value in enumerate(data[0]):
                 mark = value
                 offset = +10
@@ -101,7 +101,7 @@ def data_gen_queue(stop_event, queue, cycle):
         max -= 1
 
 
-def show(stop_event, queue, cycle=1):
+def show(stop_event, com_var, cycle=1):
     fig = plt.figure("Rwp Cycle {}".format(cycle))
     axes1 = fig.add_subplot(111)
     axes1.set_xlabel("Step")
@@ -112,8 +112,8 @@ def show(stop_event, queue, cycle=1):
         fig,
         update,
         # frames=data_gen_file(stop_event, cycle),
-        frames=data_gen_queue(stop_event, queue, cycle),
-        fargs=(axes1, cycle),
+        frames=data_gen_queue(stop_event, com_var["queue"], cycle),
+        fargs=(axes1, com_var["run_set"], cycle),
         interval=200,
     )
 
@@ -133,7 +133,8 @@ def show_Rwp_animation(dir=None):
     os.chdir(dir)
     cycle = com.cycle
     stop_event = multiprocessing.Event()
-    job = multiprocessing.Process(target=show, args=(stop_event, com.mp_queue, cycle))
+    com_var = {"queue": com.mp_queue, "run_set": com.run_set}
+    job = multiprocessing.Process(target=show, args=(stop_event, com_var, cycle))
     job.start()
     jobs_s.append(job)
     g_stop_events[cycle] = stop_event

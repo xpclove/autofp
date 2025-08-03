@@ -146,6 +146,7 @@ class Ui(QtGui.QMainWindow):
         )
         self.txt_signal.connect(self.showMsg)
 
+        # connect the global signal to the uiset method
         self.autofp_done_signal.connect(self.autorunfp_result)  #
         self.status_signal.connect(self.showMsg)
 
