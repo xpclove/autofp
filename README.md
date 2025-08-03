@@ -5,20 +5,25 @@ GitHub: <https://github.com/xpclove/autofp>, Gitee: <https://gitee.com/xpclove/a
 Email : autofp@163.com  
 Authors : Xiaopeng Cui, etc.  
 
-## Requirement：
-	OS platforms：
-                         Windows XP/7/8/10/11(x86/x64)	or  Linux(x86/x64)
-	Dependence library (already packaged in AutoFP.msi(x86) ):
-			 			 diffpy/SrRietveld/PyFullProf     http://www.diffpy.org/doc/srrietveld/
-                         python2.7			https://www.python.org/download/releases/2.7/
-                         pyqt4 	            https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/
-                         numpy              http://www.scipy.org/scipylib/download.html
-                         matplotlib         http://matplotlib.org/
-	Refinement software: 
-                         FullProf  (Windows: fp2k.exe / Linux: fp2k)	http://www.ill.eu/sites/fullprof/
+## Requirement
+
+**OS Platforms:**  
+- Windows XP/7/8/10/11 (x86/x64)  
+- Linux (x86/x64)
+
+**Dependency Libraries** (already packaged in AutoFP.msi (x86)):  
+- [diffpy/SrRietveld/PyFullProf](http://www.diffpy.org/doc/srrietveld/) （http://www.diffpy.org/doc/srrietveld/）  
+- [Python2.7 / Python 3+](https://www.python.org/download/releases/2.7/) （https://www.python.org/download/releases/2.7/）  
+- [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/) （https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/）  
+- [Numpy](http://www.scipy.org/scipylib/download.html) （http://www.scipy.org/scipylib/download.html）  
+- [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/）  
+- `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3+)
+
+**Refinement Software:**  
+- FullProf (Windows: fp2k.exe / Linux: fp2k) [http://www.ill.eu/sites/fullprof/](http://www.ill.eu/sites/fullprof/) （http://www.ill.eu/sites/fullprof/）
 
 
-## How to use?
+## How To Use AutoFP?
 Python2.7 UI program entry (Windows, Linux)
 
 		python autofp.py start UI
@@ -54,8 +59,8 @@ Program setting (Windows, Linux)
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
 
 Python2.7 Autofp UI Video tutorial:  
-[1) Y2O3 Xray demo @ Windows 8](http://physiworld.vipsinaapp.com/demo.html)   
-[2) PbSO4 Neutron CW demo @ Windows 8](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
+[1) Y2O3 Xray demo @ Windows](http://physiworld.vipsinaapp.com/demo.html)   
+[2) PbSO4 Neutron CW demo @ Windows](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
 
 Example:  
 The examples are in the Program folder (such as C:\Program Files(x86)\AutoFP\) with the directory bane example.zip. At present, the refined results of all the examples have reached the level of the original Fullprof examples.
