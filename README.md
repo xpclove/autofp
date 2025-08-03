@@ -12,11 +12,11 @@ Authors : Xiaopeng Cui, etc.
 - Linux (x86/x64)
 
 **Dependency Libraries** (already packaged in AutoFP.msi (x86)):  
-- [diffpy/SrRietveld/PyFullProf](http://www.diffpy.org/doc/srrietveld/) （http://www.diffpy.org/doc/srrietveld/）  
-- [Python2.7 / Python 3 +](https://www.python.org/downloads/) （https://www.python.org/downloads/）  
-- [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/) （https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/）  
-- [Numpy](http://www.scipy.org/scipylib/download.html) （http://www.scipy.org/scipylib/download.html）  
-- [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/）  
+- [diffpy/SrRietveld/PyFullProf](http://www.diffpy.org/doc/srrietveld/) （http://www.diffpy.org/doc/srrietveld/)  
+- [Python2.7 / Python 3 +](https://www.python.org/downloads/) (https://www.python.org/downloads/)  
+- [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/) (https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/)
+- [Numpy](http://www.scipy.org/scipylib/download.html) (http://www.scipy.org/scipylib/download.html)
+- [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/) 
 - `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3 +)
 
 **Refinement Software:**  
