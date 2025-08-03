@@ -49,6 +49,7 @@ class autorun_log():
         self.log_cycles["cur_cycle"] = self.current_cycle
         with open("autofp.log","w") as f:
             json.dump(self.log_cycles, f, indent=4 )
+
         
 g_arl = autorun_log()
 
@@ -207,10 +208,7 @@ def autorun(pcrname, param_switch=None, r=None, param_order_num=None, option=opt
     if (com.run_set.rm_tmp_done == True):
         shutil.rmtree(r.tmpdir)
     if (com.run_set.show_rwp == True):
-        msg = "n job {}, cycle {}\n".format(len(com.plot.g_stop_events),com.cycle)
-        open("log.txt","a").write(msg)
-        com.plot.g_stop_events[com.cycle].set() # Send animation termination signals across multiple processes.
-    #     com.show_plot.show_stable(rwplist)
+        com.plot.g_stop_events[com.cycle].set() 
     if com.run_mode > 0:
         com.ui.autofp_done_signal.emit(goodr)
     rwp_all.append(rwplist)
@@ -227,3 +225,4 @@ if __name__ == "__main__":
     copyfile(pcr+"/"+pcr+".dat", "auto/"+pcr+".dat")
     copyfile(pcr+"/"+pcr+".out", "auto/"+pcr+".out")
     autorun("auto/"+pcr+".pcr")
+ 
