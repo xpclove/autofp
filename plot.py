@@ -1,15 +1,13 @@
+from queue import Empty
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import numpy
 import os
 import multiprocessing
 import com
 import json
-import textwrap
 import time
 
 plt.rcParams["text.antialiased"] = True
-rwpdata = None
 
 g_stop_events = {}
 jobs_s = []
@@ -71,8 +69,30 @@ def data_gen(stop_event, cycle):
             yield data
         time.sleep(0.05)
 
+#
+def data_gen_queue(stop_event, queue, cycle):
+    data = []
+    old_data = data
+    while not stop_event.is_set():
+        try:
+            js_txt = queue.get(timeout=0.01)
+            js = json.loads(js_txt)
+            key = "cycle_{}".format(cycle)
+            if key in js:
+                data_rwplist = js[key]["rwplist"]
+                data_rwplist_param = js[key]["rwplist_param"]
+                data = [data_rwplist_param, data_rwplist]
+            old_data = data
+            yield old_data
+        except Empty:
+            # print("com.mp_queue: empty")
+            yield old_data
+        time.sleep(0.01)
+    while True:
+        yield old_data
+        time.sleep(0.05)
 
-def show(stop_event, cycle=1):
+def show(stop_event, queue, cycle=1):
     fig = plt.figure("Rwp Cycle {}".format(cycle))
     axes1 = fig.add_subplot(111)
     axes1.set_xlabel("Step")
@@ -82,9 +102,10 @@ def show(stop_event, cycle=1):
     ani = FuncAnimation(
         fig,
         update,
-        frames=data_gen(stop_event, cycle),
+        # frames=data_gen(stop_event, cycle),
+        frames=data_gen_queue(stop_event, queue, cycle),
         fargs=(axes1, cycle),
-        interval=100,
+        interval=200,
     )
 
     plt.show(block=False)
@@ -104,7 +125,7 @@ def show_Rwp_animation(dir=None):
     os.chdir(dir)
     cycle = com.cycle
     stop_event = multiprocessing.Event()
-    job = multiprocessing.Process(target=show, args=(stop_event, cycle))
+    job = multiprocessing.Process(target=show, args=(stop_event, com.mp_queue, cycle))
     job.start()
     jobs_s.append(job)
     g_stop_events[cycle] = stop_event

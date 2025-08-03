@@ -1,9 +1,11 @@
+from operator import mul
 import paramgroup
 import sys
 import os
 import setting
 import prf2origin.prf2origin.python.prf2origin
 import wphase
+import multiprocessing
 
 run_set = setting.run_set
 
@@ -38,6 +40,7 @@ text_style = {"normal": "<font color=blue>",
               "error": "<font color=brown>"
               }
 
+mp_queue = multiprocessing.Queue()
 
 def com_init(m, root=os.getcwd()):
     global root_path, origin_path, run_set, plot, mode, show_plot, log
