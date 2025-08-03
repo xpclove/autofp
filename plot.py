@@ -1,5 +1,4 @@
 from queue import Empty
-from urllib import parse
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import os
@@ -28,9 +27,9 @@ def update(data, axes1, cycle):
         if com.run_set.show_rwp_param == True:
             for index, value in enumerate(data[0]):
                 mark = value
-                offset = len(mark) * 5
+                offset = +10
                 pos_x = index
-                pos_y = 0
+                pos_y = data[1][index] if index < len(data[1]) else 0
                 if index < len(data[1]):
                     pos_y = data[1][index]
                 an = axes1.annotate(
@@ -41,9 +40,11 @@ def update(data, axes1, cycle):
                         offset,
                     ),
                     textcoords="offset points",
-                    fontsize=8,
-                    family="monospace",
-                    color="black",
+                    verticalalignment="bottom",
+                    # textcoords="data",
+                    fontsize=9,
+                    family="sans-serif",
+                    color="#333366",
                     rotation=90,
                     multialignment="center",
                 )
@@ -63,6 +64,7 @@ def parse_json(js, cycle):
     return data
 
 
+# This function is used to generate data from a log josn file
 def data_gen_file(stop_event, cycle):
     data = []
     while not stop_event.is_set():
