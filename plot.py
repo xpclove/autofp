@@ -52,7 +52,7 @@ def update(data, axes1, cycle):
     return axes1.lines or []
 
 
-def data_gen(stop_event, cycle):
+def data_gen_file(stop_event, cycle):
     data = []
     while not stop_event.is_set():
         try:
@@ -69,7 +69,7 @@ def data_gen(stop_event, cycle):
             yield data
         time.sleep(0.05)
 
-#
+# using multi process queue communication to enhance data interaction
 def data_gen_queue(stop_event, queue, cycle):
     data = []
     old_data = data
@@ -88,9 +88,11 @@ def data_gen_queue(stop_event, queue, cycle):
             # print("com.mp_queue: empty")
             yield old_data
         time.sleep(0.01)
-    while True:
+    max = 5
+    while max > 0:
         yield old_data
-        time.sleep(0.05)
+        time.sleep(0.2)
+        max -= 1
 
 def show(stop_event, queue, cycle=1):
     fig = plt.figure("Rwp Cycle {}".format(cycle))
@@ -102,7 +104,7 @@ def show(stop_event, queue, cycle=1):
     ani = FuncAnimation(
         fig,
         update,
-        # frames=data_gen(stop_event, cycle),
+        # frames=data_gen_file(stop_event, cycle),
         frames=data_gen_queue(stop_event, queue, cycle),
         fargs=(axes1, cycle),
         interval=200,
@@ -111,8 +113,7 @@ def show(stop_event, queue, cycle=1):
     plt.show(block=False)
     plt.pause(0.1)
     while not stop_event.is_set():
-        fig.canvas.flush_events()
-        time.sleep(0.01)
+        plt.pause(0.1)
     ani.event_source.stop()
     plt.show()
     # plt.close(fig)

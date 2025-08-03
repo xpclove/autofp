@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*
+from queue import Full
 import paramgroup
 from diffpy.pyfullprof.exception import *
 from run import *
@@ -50,7 +51,10 @@ class autofp_log:
     def log_write_queue(self):
         self.log_cycles["cur_cycle"] = self.current_cycle
         js = json.dumps(self.log_cycles)
-        com.mp_queue.put(js)
+        try:
+            com.mp_queue.put(js)
+        except Full:
+            print("Queue is full, cannot write log to queue.")
 
     def log_write_file(self):
         self.log_cycles["cur_cycle"] = self.current_cycle
@@ -176,7 +180,9 @@ def autorun(
             json.dump(rwp_param, open("rwp_param.txt", "w"))
 
             g_afl.log_rwplist(rwplist=rwplist, rwplist_param=rwp_param, cycle=com.cycle)
-            g_afl.log_write_queue()
+            
+            if com.mode == "ui":
+                g_afl.log_write_queue()
 
             out.write("step:    " + str(r.step_index) + "\n")
 
@@ -225,7 +231,7 @@ def autorun(
     rwp_all.append(rwplist)
 
     print(rwp_all)  # The good Rwp of all cycles
-    g_afl.log_write_file() # write log
+    g_afl.log_write_file()  # write log
 
     # numpy.savetxt("rwp_all_cycles.txt",numpy.array(rwp_all))
 
