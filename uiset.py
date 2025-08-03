@@ -13,10 +13,13 @@ import copy
 import sys
 import com
 import prf2origin.prf2origin.python.prf2origin
+
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    def _fromUtf8(s): return s
+
+    def _fromUtf8(s):
+        return s
 
 
 class Ui(QtGui.QMainWindow):
@@ -66,12 +69,15 @@ class Ui(QtGui.QMainWindow):
         self.text_path = self.ui.text_path
         self.table_phase = self.ui.spinbox_phase.value()
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("autofp.ico")),
-                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("autofp.ico")),
-                       QtGui.QIcon.Normal, QtGui.QIcon.On)
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("autofp.ico")),
-                       QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon.addPixmap(
+            QtGui.QPixmap(_fromUtf8("autofp.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
+        icon.addPixmap(
+            QtGui.QPixmap(_fromUtf8("autofp.ico")), QtGui.QIcon.Normal, QtGui.QIcon.On
+        )
+        icon.addPixmap(
+            QtGui.QPixmap(_fromUtf8("autofp.ico")), QtGui.QIcon.Active, QtGui.QIcon.On
+        )
         self.setWindowIcon(icon)
 
         self.ui.splitter.resize(self.size())
@@ -79,39 +85,70 @@ class Ui(QtGui.QMainWindow):
         self.show()
         self.fold_paramstable()
         #
-        QtCore.QObject.connect(self.ui.pushButton_prf2origin, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.prf2origin)
-        QtCore.QObject.connect(self, QtCore.SIGNAL(
-            _fromUtf8("close()")), self.stop_autofp)
-        QtCore.QObject.connect(self.buttonauto, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.autorunfp)
-        QtCore.QObject.connect(self.button_autoselect, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.auto_select)
-        QtCore.QObject.connect(self.button_refineall, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.table_select_all)  # select all params
-        QtCore.QObject.connect(self.button_clearall, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.table_clear_all)  # clear all params
-        QtCore.QObject.connect(self.buttonstart, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.runfullprof)
-        QtCore.QObject.connect(self.buttonback, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.back)
-        QtCore.QObject.connect(self.buttonopen, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.openfile)
-        QtCore.QObject.connect(self.buttonorder, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.open_order)
-        QtCore.QObject.connect(self.button_output, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.outputset)
-        QtCore.QObject.connect(self.button_fold_paramstable, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.fold_paramstable)
-        QtCore.QObject.connect(self.button_params_ok, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.fold_paramstable)
-        QtCore.QObject.connect(self.ui.spinbox_phase, QtCore.SIGNAL(
-            _fromUtf8("valueChanged(int)")), self.phase_change)
-        QtCore.QObject.connect(self.ui.button_stop, QtCore.SIGNAL(
-            _fromUtf8("clicked()")), self.stop_autofp)
+        QtCore.QObject.connect(
+            self.ui.pushButton_prf2origin,
+            QtCore.SIGNAL(_fromUtf8("clicked()")),
+            self.prf2origin,
+        )
+        QtCore.QObject.connect(
+            self, QtCore.SIGNAL(_fromUtf8("close()")), self.stop_autofp
+        )
+        QtCore.QObject.connect(
+            self.buttonauto, QtCore.SIGNAL(_fromUtf8("clicked()")), self.autorunfp
+        )
+        QtCore.QObject.connect(
+            self.button_autoselect,
+            QtCore.SIGNAL(_fromUtf8("clicked()")),
+            self.auto_select,
+        )
+        QtCore.QObject.connect(
+            self.button_refineall,
+            QtCore.SIGNAL(_fromUtf8("clicked()")),
+            self.table_select_all,
+        )  # select all params
+        QtCore.QObject.connect(
+            self.button_clearall,
+            QtCore.SIGNAL(_fromUtf8("clicked()")),
+            self.table_clear_all,
+        )  # clear all params
+        QtCore.QObject.connect(
+            self.buttonstart, QtCore.SIGNAL(_fromUtf8("clicked()")), self.runfullprof
+        )
+        QtCore.QObject.connect(
+            self.buttonback, QtCore.SIGNAL(_fromUtf8("clicked()")), self.back
+        )
+        QtCore.QObject.connect(
+            self.buttonopen, QtCore.SIGNAL(_fromUtf8("clicked()")), self.openfile
+        )
+        QtCore.QObject.connect(
+            self.buttonorder, QtCore.SIGNAL(_fromUtf8("clicked()")), self.open_order
+        )
+        QtCore.QObject.connect(
+            self.button_output, QtCore.SIGNAL(_fromUtf8("clicked()")), self.outputset
+        )
+        QtCore.QObject.connect(
+            self.button_fold_paramstable,
+            QtCore.SIGNAL(_fromUtf8("clicked()")),
+            self.fold_paramstable,
+        )
+        QtCore.QObject.connect(
+            self.button_params_ok,
+            QtCore.SIGNAL(_fromUtf8("clicked()")),
+            self.fold_paramstable,
+        )
+        QtCore.QObject.connect(
+            self.ui.spinbox_phase,
+            QtCore.SIGNAL(_fromUtf8("valueChanged(int)")),
+            self.phase_change,
+        )
+        QtCore.QObject.connect(
+            self.ui.button_stop, QtCore.SIGNAL(_fromUtf8("clicked()")), self.stop_autofp
+        )
         self.txt_signal.connect(self.showMsg)
-        self.autofp_done_signal.connect(self.autorunfp_result)
+
+        self.autofp_done_signal.connect(self.autorunfp_result)  #
         self.status_signal.connect(self.showMsg)
+
         return
 
     def fold_paramstable(self):
@@ -119,14 +156,14 @@ class Ui(QtGui.QMainWindow):
             control_geo = self.control_panel.geometry()
             self.params_panel_width = control_geo.x()
             form_geo = self.geometry()
-            form_geo.setX(form_geo.x()+control_geo.x())
+            form_geo.setX(form_geo.x() + control_geo.x())
             self.setGeometry(form_geo)
             self.params_panel.hide()
             self.button_fold_paramstable.setText(_fromUtf8("<"))
             self.params_fold = True
         else:
             form_geo = self.geometry()
-            form_geo.setX(form_geo.x()-self.params_panel_width)
+            form_geo.setX(form_geo.x() - self.params_panel_width)
             self.setGeometry(form_geo)
             self.params_panel.show()
             self.button_fold_paramstable.setText(_fromUtf8(">"))
@@ -137,9 +174,9 @@ class Ui(QtGui.QMainWindow):
         return
 
     def prf2origin(self):
-        path = self.run.codefile+".prf"
+        path = self.run.codefile + ".prf"
         prf2origin.prf2origin.python.prf2origin.origin = com.origin_path
-        self.write(com.origin_path+" "+path)
+        self.write(com.origin_path + " " + path)
         prf2origin.prf2origin.python.prf2origin.prf_to_origin(path)
 
     def open_order(self):
@@ -171,7 +208,7 @@ class Ui(QtGui.QMainWindow):
         string = "select all param of table " + str(index)
         if arg == 0:
             s = False
-            string = "clear all param of table "+str(index)
+            string = "clear all param of table " + str(index)
         for i in range(0, len(self.paramSelect_group)):
             if self.paramSelect_group[i] == index:
                 self.paramSelect[i].setChecked(s)
@@ -196,10 +233,10 @@ class Ui(QtGui.QMainWindow):
         if self.run.params.get_phase(param_index) == self.table_phase:
             rowcount = tablep.rowCount()
             tablep.insertRow(rowcount)
-            tablep.setCellWidget(rowcount, 0, QtGui.QLabel(
-                self.run.params.alias[param_index]))
             tablep.setCellWidget(
-                rowcount, 2, QtGui.QLabel(str(param.realvalue)))
+                rowcount, 0, QtGui.QLabel(self.run.params.alias[param_index])
+            )
+            tablep.setCellWidget(rowcount, 2, QtGui.QLabel(str(param.realvalue)))
             tablep.setCellWidget(rowcount, 3, qr)
         if param.codeWord > 0:
             qr.setChecked(True)
@@ -207,6 +244,7 @@ class Ui(QtGui.QMainWindow):
         self.paramSelect_group.append(table_index)
         return
 
+    # use the global signal to call autorunfp result for multiple cycles of operation
     def autorunfp(self):
         if self.state == 0:
             self.write("No Pcr file!")
@@ -217,29 +255,33 @@ class Ui(QtGui.QMainWindow):
         # Read various parameter Settings on the UI
         self.cycle = self.ui.spinBox.value()
         com.run_set.output["Cif"] = self.window_order.ui.checkBox_cif.isChecked()
-        com.run_set.eps = self.window_order.ui.spinbox_eps.value()/100.0
+        com.run_set.eps = self.window_order.ui.spinbox_eps.value() / 100.0
         com.run_set.NCY = self.window_order.ui.spinbox_ncy.value()
         self.textrwp.clear()
         self.updateFit(True)
         self.run.writepcr()
 
-        # start subautorun 
+        # start subautorun
         self.showMsg("start!")
         com.autofp_running = True
         subautorun = SubAutoRun()
-        subautorun.reset(self.run.pcrfilename, self.param_switch,
-                         self.run, self.window_order.order, self.textshow)
+        subautorun.reset(
+            self.run.pcrfilename,
+            self.param_switch,
+            self.run,
+            self.window_order.order,
+            self.textshow,
+        )
         subautorun.run()
 
     def done_output(self):  # auto refinement over!
         rpa_raw = 0
         com.des = False
         self.write(" ")
-        self.write(
-            "weight of phase [phase1, phase2, phase3 ... ]:", style="ok")
+        self.write("weight of phase [phase1, phase2, phase3 ... ]:", style="ok")
         wp = com.wphase.get_w(self.run)
         self.write(str(wp), style="ok")
-        self.write("AutoFP version: v_"+com.run_set.setjson["version"])
+        self.write("AutoFP version: v_" + com.run_set.setjson["version"])
         if com.run_set.output["Cif"] == True:
             rpa_raw = self.run.fit.get("Rpa")
             self.run.fit.set("Rpa", -1)
@@ -248,9 +290,10 @@ class Ui(QtGui.QMainWindow):
             self.run.fit.set("Rpa", rpa_raw)
             self.run.writepcr()
 
+    # the real place for multi cycle operation
     def autorunfp_result(self, r):
         rwp = r
-        self.write("end! \n Rwp="+str(rwp), "ok")
+        self.write("end! \n Rwp=" + str(rwp), "ok")
         self.textrwp.setText(str(rwp))
         self.run.resetLoad()
         self.run.push()
@@ -269,10 +312,10 @@ class Ui(QtGui.QMainWindow):
                         self.done_output()
                         com.des = False
                     else:
-                        com.cycle = com.cycle+1
+                        com.cycle = com.cycle + 1
                         self.autorunfp()
             else:
-                com.cycle = com.cycle+1
+                com.cycle = com.cycle + 1
                 self.autorunfp()
         else:
             self.write("autofp has been stoped by user!", style="warning")
@@ -280,14 +323,16 @@ class Ui(QtGui.QMainWindow):
             self.updateTable()
             self.done_output()
 
-        self.showMsg(str(com.cycle)+" ok!")
+        self.showMsg(str(com.cycle) + " ok!")
         return
 
     def closeEvent(self, event):
-        result = QtGui.QMessageBox.question(self,
-                                            "Confirm Exit...",
-                                            "Are you sure you want to exit ?",
-                                            QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
+        result = QtGui.QMessageBox.question(
+            self,
+            "Confirm Exit...",
+            "Are you sure you want to exit ?",
+            QtGui.QMessageBox.Yes | QtGui.QMessageBox.No,
+        )
         event.ignore()
 
         # kill all Rwp plot
@@ -308,10 +353,10 @@ class Ui(QtGui.QMainWindow):
             # for the autorun paramorder
             self.param_switch.append(qr.isChecked())
             print(qr.isChecked(), self.run.params.get_param_fullname(i))
-            if (auto == False):
+            if auto == False:
                 self.run.setParam(i, qr.isChecked())
             else:
-                if (qr.isChecked() == False):
+                if qr.isChecked() == False:
                     self.run.setParam(i, qr.isChecked())
 
     def runfullprof(self):
@@ -325,20 +370,22 @@ class Ui(QtGui.QMainWindow):
         return
 
     def openfile(self):
-        selectFileNames = QtGui.QFileDialog.getOpenFileNames(None,
-                                                             _fromUtf8(
-                                                                 "Choose a file name"), ".",
-                                                             _fromUtf8("FullProf PCR File(*.pcr)"))
+        selectFileNames = QtGui.QFileDialog.getOpenFileNames(
+            None,
+            _fromUtf8("Choose a file name"),
+            ".",
+            _fromUtf8("FullProf PCR File(*.pcr)"),
+        )
         if len(selectFileNames) <= 0:
             return
-        
+
         # begin python 2 -> python 2 + 3
         if sys.version_info[0] >= 3:
             filename = selectFileNames[0]
         if sys.version_info[0] < 3:
             filename = selectFileNames[0].toLocal8Bit()
         # end
-        
+
         print("open *.pcr: {}".format(filename))
         path = ""
         path = str(filename)
@@ -347,7 +394,7 @@ class Ui(QtGui.QMainWindow):
     def open(self, path):
         self.state = 1
         self.run = Run()  # get a new Run()
-        self.showMsg(path+" open")
+        self.showMsg(path + " open")
         self.run.reset(path)
         self.text_path.setText(path)
         self.updateTable()
@@ -356,12 +403,14 @@ class Ui(QtGui.QMainWindow):
         self.window_order.ui.combobox_job.currentIndex = self.run.job
         self.tabwidget_run.setEnabled(True)
         return
+
+    #   global signal
     txt_signal = QtCore.pyqtSignal(str)
     autofp_done_signal = QtCore.pyqtSignal(float)
     status_signal = QtCore.pyqtSignal(str, str)
 
     def write(self, s, style="normal"):
-        s = com.text_style[style]+s
+        s = com.text_style[style] + s
         self.txt_signal.emit(s)
 
     def flush(self):
@@ -374,7 +423,7 @@ class Ui(QtGui.QMainWindow):
         self.textshow.append(s)
         if strrwp == "status":
             s = str(s)
-            msg = s.split(':')
+            msg = s.split(":")
             self.ui.labelpar.setText(msg[1])
             self.ui.progress.setValue(int(msg[2]))
 
@@ -384,7 +433,7 @@ class Ui(QtGui.QMainWindow):
     def back(self):
         self.showMsg("back!")
         self.run.back()
-        self.showMsg("step="+str(self.run.step_index))
+        self.showMsg("step=" + str(self.run.step_index))
         self.updateTable()
         self.textrwp.setText(str(self.run.Rwp))
         return

@@ -45,7 +45,8 @@ class autofp_log:
 
     def log(self, context, cycle):
         log = self.get_log_handle(cycle)
-        log["log"].append(context)
+        msg = {"msg": context, "cycle": cycle}
+        log["log"].append(msg)
         self.current_cycle = cycle
 
     def log_write_queue(self):
@@ -54,10 +55,10 @@ class autofp_log:
         try:
             com.mp_queue.put(js)
         except Full:
-            print("Queue is full, cannot write log to queue.")
+            print("Queue is full, cannot write autofp log to queue.")
 
     def log_write_file(self):
-        self.log_cycles["cur_cycle"] = self.current_cycle
+        self.log_cycles["current_cycle"] = self.current_cycle
         with open("autofp.log", "w") as f:
             json.dump(self.log_cycles, f, indent=4)
 
@@ -227,7 +228,7 @@ def autorun(
     if com.run_set.show_rwp == True:
         com.plot.g_stop_events[com.cycle].set()
     if com.run_mode > 0:
-        com.ui.autofp_done_signal.emit(goodr)
+        com.ui.autofp_done_signal.emit(goodr) # emit global signal to uiset.py
     rwp_all.append(rwplist)
 
     print(rwp_all)  # The good Rwp of all cycles
