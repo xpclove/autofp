@@ -1,4 +1,5 @@
 from queue import Empty
+from urllib import parse
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import os
@@ -52,22 +53,29 @@ def update(data, axes1, cycle):
     return axes1.lines or []
 
 
+def parse_json(js, cycle):
+    data = []
+    key = "cycle_{}".format(cycle)
+    if key in js:
+        data_rwplist = js[key]["good_rwplist"]
+        data_rwplist_param = js[key]["good_rwplist_param"]
+        data = [data_rwplist_param, data_rwplist]
+    return data
+
+
 def data_gen_file(stop_event, cycle):
     data = []
     while not stop_event.is_set():
         try:
             with open("autofp.log") as f:
                 js = json.load(f)
-                key = "cycle_{}".format(cycle)
-                if key in js:
-                    data_rwplist = js[key]["rwplist"]
-                    data_rwplist_param = js[key]["rwplist_param"]
-                    data = [data_rwplist_param, data_rwplist]
+                data = parse_json(js, cycle)
                 yield data
         except Exception as e:
             print("error: {}".format(e))
             yield data
         time.sleep(0.05)
+
 
 # using multi process queue communication to enhance data interaction
 def data_gen_queue(stop_event, queue, cycle):
@@ -77,11 +85,7 @@ def data_gen_queue(stop_event, queue, cycle):
         try:
             js_txt = queue.get(timeout=0.01)
             js = json.loads(js_txt)
-            key = "cycle_{}".format(cycle)
-            if key in js:
-                data_rwplist = js[key]["rwplist"]
-                data_rwplist_param = js[key]["rwplist_param"]
-                data = [data_rwplist_param, data_rwplist]
+            data = parse_json(js, cycle)
             old_data = data
             yield old_data
         except Empty:
@@ -93,6 +97,7 @@ def data_gen_queue(stop_event, queue, cycle):
         yield old_data
         time.sleep(0.2)
         max -= 1
+
 
 def show(stop_event, queue, cycle=1):
     fig = plt.figure("Rwp Cycle {}".format(cycle))

@@ -38,8 +38,8 @@ class autofp_log:
 
     def log_rwplist(self, rwplist, rwplist_param, cycle):
         log = self.get_log_handle(cycle)
-        log["rwplist"] = rwplist
-        log["rwplist_param"] = rwplist_param
+        log["good_rwplist"] = rwplist
+        log["good_rwplist_param"] = rwplist_param
         log["cycle"] = cycle
         self.current_cycle = cycle
 
@@ -180,7 +180,7 @@ def autorun(
             json.dump(rwp_param, open("rwp_param.txt", "w"))
 
             g_afl.log_rwplist(rwplist=rwplist, rwplist_param=rwp_param, cycle=com.cycle)
-            
+
             if com.mode == "ui":
                 g_afl.log_write_queue()
 
