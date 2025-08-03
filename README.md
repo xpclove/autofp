@@ -13,7 +13,7 @@ Authors : Xiaopeng Cui, etc.
 
 **Dependency Libraries** (already packaged in AutoFP.msi (x86)):  
 - [diffpy/SrRietveld/PyFullProf](http://www.diffpy.org/doc/srrietveld/) （http://www.diffpy.org/doc/srrietveld/）  
-- [Python2.7 / Python 3+](https://www.python.org/download/releases/2.7/) （https://www.python.org/download/releases/2.7/）  
+- [Python2.7 / Python 3 +](https://www.python.org/downloads/) （https://www.python.org/downloads/）  
 - [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/) （https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/）  
 - [Numpy](http://www.scipy.org/scipylib/download.html) （http://www.scipy.org/scipylib/download.html）  
 - [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/）  
