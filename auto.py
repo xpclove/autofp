@@ -13,6 +13,7 @@ rwplist = []
 rwplist_all = []
 rwp_all = []
 tag = "auto->"
+
 option_this = {
     "label": 1,
     "path": "tmp",
@@ -23,8 +24,19 @@ option_this = {
 }
 
 
+class log_type(object):
+    State = "State"
+    Action = "Action"
+    Reward = "Reward"
+    Environment = "Environment"
+
+
 class autofp_log:
     def __init__(self):
+        self.clear()
+        return
+
+    def clear(self):
         self.log_cycles = {}
         self.current_cycle = 0
         return
@@ -43,8 +55,9 @@ class autofp_log:
         log["cycle"] = cycle
         self.current_cycle = cycle
 
-    def log(self, context, cycle):
+    def log(self, tp, context, cycle=com.cycle):
         log = self.get_log_handle(cycle)
+        context = {tp: context}
         msg = {"msg": context, "cycle": cycle}
         log["log"].append(msg)
         self.current_cycle = cycle
@@ -63,7 +76,7 @@ class autofp_log:
             json.dump(self.log_cycles, f, indent=4)
 
 
-g_afl = autofp_log()
+g_log = autofp_log()
 
 
 # Auto rietveld
@@ -107,24 +120,39 @@ def autorun(
     # rietveld according to the order
     for i in order:
         error = 0
+
         out.write(r.params.get_param_fullname(i) + "\n")
         out.flush()
+        g_log.log(log_type.Action, "write pcr")
+
         r.setParam(i, True)
-        r.writepcr()
         param_name = r.params.get_param_fullname(i)
+        g_log.log(log_type.Action,
+                  "select param_id={} param_name={}".format(i, param_name))
+
+        r.writepcr()
+        g_log.log(log_type.Action, "write pcr")
 
         # try catch the error of the pcr file
         try:
             r.runfp()
+            g_log.log(log_type.Action, "run fp2k")
+
             if option["clear_one"] == True:
+                g_log.log(log_type.Environment, "clear_one true")
                 r.setParam(i, False)
+                g_log.log(log_type.Action, "un_select param_id={}".format(i))
+
             r.writepcr()
+            g_log.log(log_type.Action, "write pcr")
+
         except RietPCRError:
             r.err = 11  # err=11 pcrfile error
         except RietError:
             r.err = 12
         except Exception:
             r.err = 13
+        g_log.log(log_type.State, "err {}".format(r.err))
 
         # check error
         com.R = r.R  # target funcrion setting
@@ -137,28 +165,38 @@ def autorun(
             error += 0x01
         if target_r > goodr or target_r != target_r:
             error += 0x10
+        g_log.log(log_type.State, "error {}".format(error))
 
         # if error back()
         if error > 0:
             # 精修无错误,rwp没减小
             if r.err == 0:
+                g_log.log(log_type.State, "err 0")
                 rwplist_all.append(target_r)
                 r.back()
+                g_log.log(log_type.Action, "back step=1")
             # 精修有错误,没有保存,故不改变step_index
             if r.err != 0:
+                g_log.log(log_type.State, "err !0")
                 r.back_no_step()
+                g_log.log(log_type.Action, "back step=0")
 
         # if no error
         step += 1
         progress = step * 1.0 / len(order) * 100
+        g_log.log(log_type.State, "progress {}".format(progress))
         progress = int(progress)
         out_str = "autofp_status:" + param_name + ":" + str(progress)
         out_str = com.text_style["normal"] + out_str
 
         if com.mode == "ui":
             com.ui.write_status(out_str)
+
         if error == 0:
+            g_log.log(log_type.State, "error 0")
             goodr = target_r
+            g_log.log(log_type.Action, "set good_Rwp {}".format(goodr))
+
             if com.mode == "ui":
                 com.ui.write("step = " + str(r.step_index))
                 com.ui.write(param_name)
@@ -169,7 +207,10 @@ def autorun(
                 com.ui.write(str(r.R), style="ok")
                 if com.autofp_delay > 0:
                     com.time.sleep(com.autofp_delay)
+
             Rwp = r.R["Rwp"]
+            g_log.log(log_type.State, "Rwp {}".format(Rwp))
+
             rwplist.append(Rwp)
             rwplist_all.append(Rwp)
             com.Rwplist.append(Rwp)
@@ -178,12 +219,11 @@ def autorun(
             numpy.savetxt("rwplist.txt", numpy.array(com.Rwplist))
 
             rwp_param.append(param_name)
-            json.dump(rwp_param, open("rwp_param.txt", "w"))
-
-            g_afl.log_rwplist(rwplist=rwplist, rwplist_param=rwp_param, cycle=com.cycle)
+            g_log.log_rwplist(
+                rwplist=rwplist, rwplist_param=rwp_param, cycle=com.cycle)
 
             if com.mode == "ui":
-                g_afl.log_write_queue()
+                g_log.log_write_queue()
 
             out.write("step:    " + str(r.step_index) + "\n")
 
@@ -191,6 +231,7 @@ def autorun(
         out.write(str(target_r) + "\n")
         out.flush()
         tmp_r = target_r
+        g_log.log(log_type.Action, "set tmp_Rwp {}".format(tmp_r))
 
         # autofp is stoped ?
         if com.autofp_running == False:
@@ -206,11 +247,15 @@ def autorun(
     com.ui.write("complete !\n")
 
     if option["clear_all"] == True:
+        g_log.log(log_type.Environment, "clear_all False")
         for i in order:
             r.setParam(i, False)
+        g_log.log(log_type.Action, "un_select param_id=all param_name=all")
         r.writepcr()
+        g_log.log(log_type.Action, "write pcr")
 
     r.runfp()  # run FP to create the PRF
+    g_log.log(log_type.Action, "run fp2k")
 
     print("rwp:", rwplist)
     for i in rwplist:
@@ -228,11 +273,11 @@ def autorun(
     if com.run_set.show_rwp == True:
         com.plot.g_stop_events[com.cycle].set()
     if com.run_mode > 0:
-        com.ui.autofp_done_signal.emit(goodr) # emit global signal to uiset.py
+        com.ui.autofp_done_signal.emit(goodr)  # emit global signal to uiset.py
     rwp_all.append(rwplist)
 
     print(rwp_all)  # The good Rwp of all cycles
-    g_afl.log_write_file()  # write log
+    g_log.log_write_file()  # write log
 
     # numpy.savetxt("rwp_all_cycles.txt",numpy.array(rwp_all))
 
