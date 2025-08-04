@@ -219,8 +219,6 @@ def autorun(
             numpy.savetxt("rwplist.txt", numpy.array(com.Rwplist))
 
             rwp_param.append(param_name)
-            json.dump(rwp_param, open("rwp_param.txt", "w"))
-
             g_log.log_rwplist(
                 rwplist=rwplist, rwplist_param=rwp_param, cycle=com.cycle)
 
