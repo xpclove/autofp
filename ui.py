@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui.ui'
 #
-# Created: Fri Aug  1 15:41:08 2025
-#      by: PyQt4 UI code generator 4.11
+# Created: Mon Aug  4 22:35:47 2025
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -34,7 +34,7 @@ class Ui_Form(object):
         Form.setSizePolicy(sizePolicy)
         Form.setAcceptDrops(True)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("C:/Users/xp/.designer/backup/AutoFP.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../Users/xp/.designer/backup/AutoFP.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
         Form.setStyleSheet(_fromUtf8(""))
         self.splitter = QtGui.QSplitter(Form)
@@ -76,8 +76,6 @@ class Ui_Form(object):
         self.tableWidgetprofile.setRowCount(0)
         self.tableWidgetprofile.setColumnCount(4)
         self.tableWidgetprofile.setObjectName(_fromUtf8("tableWidgetprofile"))
-        self.tableWidgetprofile.setColumnCount(4)
-        self.tableWidgetprofile.setRowCount(0)
         self.tabWidgettable.addTab(self.tab, _fromUtf8(""))
         self.tab_4 = QtGui.QWidget()
         self.tab_4.setObjectName(_fromUtf8("tab_4"))
@@ -89,8 +87,6 @@ class Ui_Form(object):
         self.tableWidgetins.setRowCount(0)
         self.tableWidgetins.setColumnCount(4)
         self.tableWidgetins.setObjectName(_fromUtf8("tableWidgetins"))
-        self.tableWidgetins.setColumnCount(4)
-        self.tableWidgetins.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_4, _fromUtf8(""))
         self.Atom = QtGui.QWidget()
         self.Atom.setObjectName(_fromUtf8("Atom"))
@@ -106,7 +102,7 @@ class Ui_Form(object):
         self.tableWidgetatom.setStatusTip(_fromUtf8(""))
         self.tableWidgetatom.setColumnCount(4)
         self.tableWidgetatom.setObjectName(_fromUtf8("tableWidgetatom"))
-        self.tableWidgetatom.setColumnCount(4)
+        self.tableWidgetatom.setRowCount(0)
         self.tabWidgettable.addTab(self.Atom, _fromUtf8(""))
         self.tab_6 = QtGui.QWidget()
         self.tab_6.setObjectName(_fromUtf8("tab_6"))
@@ -117,7 +113,7 @@ class Ui_Form(object):
         self.tableWidgetatombiso.setFont(font)
         self.tableWidgetatombiso.setColumnCount(4)
         self.tableWidgetatombiso.setObjectName(_fromUtf8("tableWidgetatombiso"))
-        self.tableWidgetatombiso.setColumnCount(4)
+        self.tableWidgetatombiso.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_6, _fromUtf8(""))
         self.tab_5 = QtGui.QWidget()
         self.tab_5.setObjectName(_fromUtf8("tab_5"))
@@ -129,8 +125,6 @@ class Ui_Form(object):
         self.tableWidgetother.setRowCount(0)
         self.tableWidgetother.setColumnCount(4)
         self.tableWidgetother.setObjectName(_fromUtf8("tableWidgetother"))
-        self.tableWidgetother.setColumnCount(4)
-        self.tableWidgetother.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_5, _fromUtf8(""))
         self.tab_8 = QtGui.QWidget()
         self.tab_8.setObjectName(_fromUtf8("tab_8"))
@@ -146,7 +140,7 @@ class Ui_Form(object):
         self.tableWidgetocc.setStatusTip(_fromUtf8(""))
         self.tableWidgetocc.setColumnCount(4)
         self.tableWidgetocc.setObjectName(_fromUtf8("tableWidgetocc"))
-        self.tableWidgetocc.setColumnCount(4)
+        self.tableWidgetocc.setRowCount(0)
         self.tabWidgettable.addTab(self.tab_8, _fromUtf8(""))
         self.buttonrefineall = QtGui.QPushButton(self.params_widget)
         self.buttonrefineall.setGeometry(QtCore.QRect(10, 498, 75, 23))
@@ -371,7 +365,7 @@ class Ui_Form(object):
         self.labelpar.setText(_fromUtf8(""))
         self.labelpar.setObjectName(_fromUtf8("labelpar"))
         self.button_stop = QtGui.QToolButton(self.widget)
-        self.button_stop.setGeometry(QtCore.QRect(477, 500, 51, 21))
+        self.button_stop.setGeometry(QtCore.QRect(481, 498, 45, 25))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         self.button_stop.setFont(font)
@@ -439,14 +433,15 @@ class Ui_Form(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Noto Sans SC\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">AutoFP</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Website: <a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/autofp.html</span></a></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Authors: Xiaopeng Cui ...o Jincang Zhang </p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Institute: Shanghai University</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">--------------------------------------------------</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Current version : 1.3.x</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Feedback Email : autofp@163.com</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LICENSE: GPL v3</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">All copyright reversed 2014-2025</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Website: </span><a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" font-size:10pt; text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/autofp.html</span></a></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Authors: Xiaopeng Cui ...o Jincang Zhang </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Institute: Shanghai University</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">--------------------------------------------------</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Current version : 1.3.x</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Feedback Email : autofp@163.com</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">LICENSE: GPL v3</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">All copyright reversed 2014-2025</span></p></body></html>", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_7), _translate("Form", "About", None))
         self.buttonfold.setText(_translate("Form", ">", None))
         self.check_show_rwp.setText(_translate("Form", "Show Rwp curve", None))
