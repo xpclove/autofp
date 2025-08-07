@@ -13,14 +13,21 @@ Authors : Xiaopeng Cui, etc.
 
 **Dependency Libraries** (already packaged in AutoFP.msi (x86)):  
 - [diffpy/SrRietveld/PyFullProf](http://www.diffpy.org/doc/srrietveld/) （http://www.diffpy.org/doc/srrietveld/)  
-- [Python2.7 / Python 3 +](https://www.python.org/downloads/) (https://www.python.org/downloads/)  
+- [Python 3+ / Python 2.7](https://www.python.org/downloads/) (https://www.python.org/downloads/)  
 - [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/) (https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/)
 - [Numpy](http://www.scipy.org/scipylib/download.html) (http://www.scipy.org/scipylib/download.html)
 - [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/) 
-- `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3 +)
+- `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3+ )
+
+Some configurations of key Python library that have passed the AutoFP Demo test:
+
+	(1) python3.4  -> python3.6 , numpy 1.16.6, matplotlib 1.4.0, PyQT4.11.4
+	(2) python3.7  -> python3.13, numpy 1.26.4 (only shell entry shautofp.py OK, PyQt4 does not support Python 3.7+)
+	(3) python2.7,                numpy 1.16.6, matplotlib 2.2.5, PyQT4.11.4
+
 
 **Refinement Software:**  
-- FullProf (Windows: fp2k.exe / Linux: fp2k) [http://www.ill.eu/sites/fullprof/](http://www.ill.eu/sites/fullprof/) （http://www.ill.eu/sites/fullprof/）
+- FullProf ( Windows: fp2k.exe / Linux: fp2k ) [http://www.ill.eu/sites/fullprof/](http://www.ill.eu/sites/fullprof/)
 
 
 ## How To Use AutoFP?
@@ -41,11 +48,11 @@ Python Shell program entry (Windows, Linux)
 			*.pcr : Fullprof task pcr path ( with *.dat in the same folder)
 
 
-How to compile *.msi for Windows ? ( It is recommended to use Windows 7/8 to compile )
+How to compile *.msi for Windows ? ( It is recommended to use Windows 7/10 to compile )
 
 		You can use the already compiled MSI installation package in AutoFP_v_xxx.zip. Or you can recompile it.
 		Run make.bat to creat autofp.msi(msi.bat needs software "AdvancedInstaller" )
-		pack.bat needs to configure the directory of python2.7 and install py2exe version 0.6.9
+		pack.bat needs to configure "the directory of python2.7" and "install py2exe version 0.6.9" if you use Python 2.7。
 
 Program setting (Windows, Linux)
 
