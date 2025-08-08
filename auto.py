@@ -261,7 +261,7 @@ def autorun(
     for i in rwplist:
         rwplist_out.write(str(i) + "\n")
     rwplist_out.close()
-    numpy.savetxt("OK.txt", rwplist)
+    # numpy.savetxt("OK.txt", rwplist)
 
     if rwplist != []:
         if abs(rwplist[-1] - rwplist[0]) < setting.run_set.eps:

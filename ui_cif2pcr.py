@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'cif2pcr.ui'
 #
-# Created: Thu May 12 16:37:27 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created: Fri Aug  8 12:05:06 2025
+#      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -27,10 +27,18 @@ class Ui_makepcr(object):
     def setupUi(self, makepcr):
         makepcr.setObjectName(_fromUtf8("makepcr"))
         makepcr.resize(500, 300)
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        makepcr.setFont(font)
         self.centralwidget = QtGui.QWidget(makepcr)
+        self.centralwidget.setGeometry(QtCore.QRect(0, 0, 491, 261))
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.tabWidget = QtGui.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(10, 10, 461, 141))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(10)
+        self.tabWidget.setFont(font)
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
         self.tab_1 = QtGui.QWidget()
         self.tab_1.setObjectName(_fromUtf8("tab_1"))
@@ -39,21 +47,27 @@ class Ui_makepcr(object):
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
         self.tabWidget.addTab(self.tab_2, _fromUtf8(""))
         self.pushButton = QtGui.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(390, 230, 91, 31))
+        self.pushButton.setGeometry(QtCore.QRect(390, 210, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(10)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName(_fromUtf8("pushButton"))
         self.comboBox = QtGui.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(10, 160, 131, 22))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Noto Sans SC"))
+        font.setPointSize(10)
+        self.comboBox.setFont(font)
         self.comboBox.setObjectName(_fromUtf8("comboBox"))
         self.comboBox.addItem(_fromUtf8(""))
         self.comboBox.addItem(_fromUtf8(""))
-        makepcr.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(makepcr)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 500, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 500, 23))
         self.menubar.setObjectName(_fromUtf8("menubar"))
-        makepcr.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(makepcr)
+        self.statusbar.setGeometry(QtCore.QRect(0, 0, 3, 21))
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
-        makepcr.setStatusBar(self.statusbar)
 
         self.retranslateUi(makepcr)
         self.tabWidget.setCurrentIndex(0)
@@ -63,7 +77,7 @@ class Ui_makepcr(object):
         makepcr.setWindowTitle(_translate("makepcr", "MainWindow", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("makepcr", "1->1", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("makepcr", "n->1", None))
-        self.pushButton.setText(_translate("makepcr", "make", None))
+        self.pushButton.setText(_translate("makepcr", "Make", None))
         self.comboBox.setItemText(0, _translate("makepcr", "Xray", None))
         self.comboBox.setItemText(1, _translate("makepcr", "Neutron", None))
 

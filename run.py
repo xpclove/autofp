@@ -182,7 +182,7 @@ class Run:
             n = 0
         tmp = self.tmpdir+"step="+str(self.step_index-n)
 
-        print(">>> pop", tmp)
+        print(">>> pop, backup to lastest good Rwp", tmp)
         if com.is_file_locked(self.outfilename):
             print("file is use[pop]", self.outfilename)
             sys.exit(-1)
