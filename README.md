@@ -1,4 +1,4 @@
-# AutoFP
+， # AutoFP
 AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and Neutron diffraction patterns.  Now, AutoFP support Python 3!
 AutoFP Website: <http://physiworld.vipsinaapp.com/autofp.html>.  Shanghai University, Department of Physics  
 GitHub: <https://github.com/xpclove/autofp>, Gitee: <https://gitee.com/xpclove/autofp>  
@@ -19,11 +19,11 @@ Authors : Xiaopeng Cui, etc.
 - [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/) 
 - `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3+ )
 
-Some configurations of key Python library that have passed the AutoFP Demo test:
+Some configurations of key Python library that have passed the AutoFP demo test:
 
-	(1) python3.4  -> python3.6 , numpy 1.16.6, matplotlib 1.4.0, PyQT4.11.4
+	(1) python3.4  -> python3.6 , numpy 1.16.6, matplotlib 1.4.0, PyQT 4.11.4, pyparsing 2.2.0
 	(2) python3.7  -> python3.13, numpy 1.26.4 (only shell entry shautofp.py OK, PyQt4 does not support Python 3.7+)
-	(3) python2.7,                numpy 1.16.6, matplotlib 2.2.5, PyQT4.11.4
+	(3) python2.7,                numpy 1.16.6, matplotlib 2.2.5, PyQT 4.11.4
 
 
 **Refinement Software:**  
