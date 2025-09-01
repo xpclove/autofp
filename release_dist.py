@@ -7,6 +7,7 @@ if __name__ == "__main__":
     if os.path.exists("autofp_pkg"):
         shutil.rmtree("autofp_pkg")
     os.mkdir("autofp_pkg")
+
     shutil.copytree("dist", "autofp_pkg/dist")
     shutil.copytree("example", "autofp_pkg/example")
     shutil.copytree("imageformats", "autofp_pkg/dist/imageformats")
@@ -33,7 +34,7 @@ if __name__ == "__main__":
         shutil.rmtree(s)
     os.rename("autofp_pkg", s)
 
-    print("copyt autofp_date/dist to AutoFP/dist ...... ")
+    print("copy autofp_date/dist to AutoFP/dist ...... ")
     if (os.path.exists("AutoFP/dist")):
         shutil.rmtree("AutoFP/dist")
     shutil.copytree(s+"/dist", "AutoFP/dist")

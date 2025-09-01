@@ -17,6 +17,18 @@ class SubRun:
         self.err_string = err
         self.result = 0
         return
+    
+    def kill_process(process_name):
+        # os.system("taskkill /IM {} /F".format(process_name))
+        # try:
+        #     subprocess.run(['taskkill', '/IM', process_name, '/F'], check=True)
+        #     print("Successfully terminated: {}".format(process_name))
+        # except subprocess.CalledProcessError:
+        #     print("Process {} not found".format(process_name))
+        si = subprocess.STARTUPINFO()
+        si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        subprocess.call("taskkill /F /IM {}".format(process_name), startupinfo=si)
+
 
     def run(self):
         self.result = 0
@@ -67,7 +79,8 @@ class SubRun:
                         self.ins)  # get fp2k prcocess name
                     if os.name == "nt":
                         # os.system("taskkill /PID {} /F".format(self.rp.pid))
-                        os.system("taskkill /IM {} /F".format(fp2k_name))
+                        # os.system("taskkill /IM {} /F".format(fp2k_name))
+                        self.kill_process(fp2k_name)
                         # os.system(u"taskkill /IM {}(32 *) /F".format(fp2k_name).encode("gbk"))
                     if os.name == "posix":
                         os.system("pkill -f {}".format(fp2k_name))
