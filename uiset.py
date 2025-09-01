@@ -404,9 +404,17 @@ class Ui(QtGui.QMainWindow):
     def open(self, path):
         self.state = 1
         self.run = Run()  # get a new Run()
-        self.showMsg(path + " open")
-        self.run.reset(path)
-        self.text_path.setText(path)
+        
+        # begin python 2 -> python 2 + 3
+        path_Qstr = path
+        if sys.version_info[0] < 3:
+            path_Qstr = QtCore.QString.fromLocal8Bit(path)
+        # end
+        
+        self.showMsg(path_Qstr + " open")
+        self.text_path.setText(path_Qstr)
+
+        self.run.reset(path)     
         self.updateTable()
         self.pcr_yorn = True
         self.window_order.init(self.run.job)
