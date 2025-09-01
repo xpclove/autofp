@@ -16,7 +16,6 @@ jobs_s = []
 (1) Rwp dynamic image
 """
 
-
 def update(data, axes1, run_set, cycle):
 
     if len(data) > 0:
@@ -94,10 +93,11 @@ def data_gen_queue(stop_event, queue, cycle):
             # print("com.mp_queue: empty")
             yield old_data
         time.sleep(0.01)
-    max = 5
+    max = 1
     while max > 0:
         yield old_data
-        time.sleep(0.2)
+        # time.sleep(0.2)
+        time.sleep(0.05)
         max -= 1
 
 
