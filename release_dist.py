@@ -12,6 +12,7 @@ if __name__ == "__main__":
     shutil.copytree("example", "autofp_pkg/example")
     shutil.copytree("imageformats", "autofp_pkg/dist/imageformats")
     shutil.copy("readme.txt", "autofp_pkg/readme.txt")
+    shutil.copy("README.html", "README_MD.html")
     shutil.copy("README_MD.html", "autofp_pkg/README.html")
     shutil.copy("fp2k.exe", "autofp_pkg/dist/fp2k.exe")
     shutil.copy("convert.exe", "autofp_pkg/dist/")
