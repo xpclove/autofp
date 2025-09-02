@@ -46,6 +46,7 @@ class Ui(QtGui.QMainWindow):
         self.button_refineall = self.ui.buttonrefineall
         self.button_clearall = self.ui.buttonclearall
         self.button_output = self.ui.buttonoutput
+
         self.button_fold_paramstable = self.ui.buttonfold
         self.textshow = self.ui.texteditshow
         self.textrwp = self.ui.textrwp
@@ -63,9 +64,12 @@ class Ui(QtGui.QMainWindow):
         self.table.append(self.tableatombiso)
         self.table.append(self.tableother)
         self.table.append(self.tableocc)
+
         self.buttonopen = self.ui.buttonopen
         self.window_order = Ui_order()
         self.window_output = Ui_output_Form()
+        self.window_makepcr = Ui_makepcr()
+
         self.text_path = self.ui.text_path
         self.table_phase = self.ui.spinbox_phase.value()
         icon = QtGui.QIcon()
@@ -144,8 +148,10 @@ class Ui(QtGui.QMainWindow):
         QtCore.QObject.connect(
             self.ui.button_stop, QtCore.SIGNAL(_fromUtf8("clicked()")), self.stop_autofp
         )
+        QtCore.QObject.connect(
+            self.ui.pushButton_makpcr, QtCore.SIGNAL(_fromUtf8("clicked()")), self.open_makepcr
+        )
         self.txt_signal.connect(self.showMsg)
-
         # connect the global signal to the uiset method
         self.autofp_done_signal.connect(self.autorunfp_result)  #
         self.status_signal.connect(self.showMsg)
@@ -182,6 +188,9 @@ class Ui(QtGui.QMainWindow):
 
     def open_order(self):
         self.window_order.show()
+    
+    def open_makepcr(self):
+        self.window_makepcr.show()
 
     def auto_select(self):
         j = 0
@@ -395,9 +404,17 @@ class Ui(QtGui.QMainWindow):
     def open(self, path):
         self.state = 1
         self.run = Run()  # get a new Run()
-        self.showMsg(path + " open")
-        self.run.reset(path)
-        self.text_path.setText(path)
+        
+        # begin python 2 -> python 2 + 3
+        path_Qstr = path
+        if sys.version_info[0] < 3:
+            path_Qstr = QtCore.QString.fromLocal8Bit(path)
+        # end
+        
+        self.showMsg(path_Qstr + " open")
+        self.text_path.setText(path_Qstr)
+
+        self.run.reset(path)     
         self.updateTable()
         self.pcr_yorn = True
         self.window_order.init(self.run.job)

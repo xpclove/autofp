@@ -34,6 +34,8 @@ class log_type(object):
 class autofp_log:
     def __init__(self):
         self.clear()
+        # log_SAR_enabled: whether to log SAR-related information
+        self.log_SAR_enabled = False
         return
 
     def clear(self):
@@ -57,9 +59,10 @@ class autofp_log:
 
     def log(self, tp, context, cycle=com.cycle):
         log = self.get_log_handle(cycle)
-        context = {tp: context}
-        msg = {"msg": context, "cycle": cycle}
-        log["log"].append(msg)
+        if self.log_SAR_enabled == True:
+            context = {tp: context}
+            msg = {"msg": context, "cycle": cycle}
+            log["log"].append(msg)
         self.current_cycle = cycle
 
     def log_write_queue(self):
@@ -261,7 +264,7 @@ def autorun(
     for i in rwplist:
         rwplist_out.write(str(i) + "\n")
     rwplist_out.close()
-    numpy.savetxt("OK.txt", rwplist)
+    # numpy.savetxt("OK.txt", rwplist)
 
     if rwplist != []:
         if abs(rwplist[-1] - rwplist[0]) < setting.run_set.eps:

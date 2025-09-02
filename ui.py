@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui.ui'
 #
-# Created: Fri Aug  1 15:41:08 2025
+# Created: Fri Aug  8 11:23:04 2025
 #      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
@@ -34,7 +34,7 @@ class Ui_Form(object):
         Form.setSizePolicy(sizePolicy)
         Form.setAcceptDrops(True)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("C:/Users/xp/.designer/backup/AutoFP.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../Users/xp/.designer/backup/AutoFP.ico")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
         Form.setStyleSheet(_fromUtf8(""))
         self.splitter = QtGui.QSplitter(Form)
@@ -371,7 +371,7 @@ class Ui_Form(object):
         self.labelpar.setText(_fromUtf8(""))
         self.labelpar.setObjectName(_fromUtf8("labelpar"))
         self.button_stop = QtGui.QToolButton(self.widget)
-        self.button_stop.setGeometry(QtCore.QRect(477, 500, 51, 21))
+        self.button_stop.setGeometry(QtCore.QRect(475, 498, 51, 25))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Noto Sans SC"))
         self.button_stop.setFont(font)
@@ -439,14 +439,15 @@ class Ui_Form(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Noto Sans SC\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">AutoFP</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Website: <a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/autofp.html</span></a></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Authors: Xiaopeng Cui ...o Jincang Zhang </p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Institute: Shanghai University</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">--------------------------------------------------</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Current version : 1.3.x</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Feedback Email : autofp@163.com</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">LICENSE: GPL v3</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">All copyright reversed 2014-2025</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Website: </span><a href=\"http://physiworld.vipsinaapp.com/\"><span style=\" font-size:10pt; text-decoration: underline; color:#0000ff;\">http://physiworld.vipsinaapp.com/autofp.html</span></a></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; text-decoration: underline; color:#0000ff;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Authors: Xiaopeng Cui ...o Jincang Zhang </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Institute: Shanghai University</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">--------------------------------------------------</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Current version : 1.3.x</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Feedback Email : autofp@163.com</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">LICENSE: GPL v3</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">All copyright reversed 2014-2025</span></p></body></html>", None))
         self.tabwidget_run.setTabText(self.tabwidget_run.indexOf(self.tab_7), _translate("Form", "About", None))
         self.buttonfold.setText(_translate("Form", ">", None))
         self.check_show_rwp.setText(_translate("Form", "Show Rwp curve", None))
