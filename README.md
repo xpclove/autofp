@@ -66,12 +66,12 @@ Program setting (Windows, Linux)
 For more detailed documentation, check out this URL <http://physiworld.vipsinaapp.com/document.html>
 
 Python2.7 Autofp UI Video tutorial:  
-[1) Y2O3 Xray demo @ Windows](http://physiworld.vipsinaapp.com/demo.html)   
-[2) PbSO4 Neutron CW demo @ Windows](http://physiworld.vipsinaapp.com/demo_pbso4_cw.html)
+[1) Y2O3 Xray demo @ Windows](https://yun.baidu.com/s/15clky?fid=410847280290602&fpath=%2FAutoFP%2Flearning_video%2FY2O3_Demo.mp4)
+[2) PbSO4 Neutron CW demo @ Windows](https://yun.baidu.com/s/15clky?fid=12898505734654&fpath=%2FAutoFP%2Flearning_video%2FPbSO4_Demo.mp4)
 
 Example:  
 The examples are in the Program folder (such as C:\Program Files(x86)\AutoFP\) with the directory bane example.zip. At present, the refined results of all the examples have reached the level of the original Fullprof examples.
 
 ## Reference:
-1. [Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )](http://webfile.sinacloud.net/autofp/kc5011.pdf)  
+1. [Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )](https://journals.iucr.org/paper?kc5011)  
 2. [Xiaopeng Cui, etc. Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm ( 2016 )](http://webfile.sinacloud.net/autofp/autofp.pdf)
