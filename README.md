@@ -75,5 +75,5 @@ Example:
 The examples are in the Program folder (such as C:\Program Files(x86)\AutoFP\) with the directory bane example.zip. At present, the refined results of all the examples have reached the level of the original Fullprof examples.
 
 ## Reference:
-1. [Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )](https://journals.iucr.org/paper?kc5011)  
+1. [Xiaopeng Cui, etc. A GUI for highly automated Rietveld refinement using an expert system algorithm based on FullProf ( 2015 )](https://journals.iucr.org/paper?kc5011).  [J. Appl. Cryst. (2015). 48, 1581-1586](https://journals.iucr.org/paper?kc5011) 
 2. [Xiaopeng Cui, etc. Design and Application of AutoFP: A Program for High-Throughput and Automated Rietveld Refinement Based on AI Algorithm ( 2016 )](https://yun.baidu.com/s/15clky#list/path=%2FAutoFP%2Fdoc)
