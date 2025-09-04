@@ -17,7 +17,7 @@ Citation : [J. Appl. Cryst. (2015). 48, 1581-1586](https://journals.iucr.org/pap
 - [Python 3+ / Python 2.7](https://www.python.org/downloads/) (https://www.python.org/downloads/)  
 - [PyQT4](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/) (https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/)
 - [Numpy](http://www.scipy.org/scipylib/download.html) (http://www.scipy.org/scipylib/download.html)
-- [Matplotlib](http://matplotlib.org/) （http://matplotlib.org/) 
+- [Matplotlib](http://matplotlib.org/) (http://matplotlib.org/) 
 - `future` (install via `pip install future`, enables AutoFP support for both Python 2.7 and Python 3+ )
 
 Some configurations of key Python library that have passed the AutoFP demo test:
