@@ -1,9 +1,10 @@
 # AutoFP
-AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and Neutron diffraction patterns.  Now, AutoFP support Python 3 !
+AutoFP is an automated Fullprof refinement software that supports UI interfaces, as well as command-line and high-throughput modes. With it, you can efficiently solve the crystal structure analysis of X-ray diffraction and Neutron diffraction patterns.  Now, AutoFP support Python 3 !   
 AutoFP Website: <http://physiworld.vipsinaapp.com/autofp.html>.  Shanghai University, Department of Physics  
 GitHub: <https://github.com/xpclove/autofp>, Gitee: <https://gitee.com/xpclove/autofp>  
 Email : autofp@163.com  
 Authors : Xiaopeng Cui, etc.  
+Citation : [J. Appl. Cryst. (2015). 48, 1581-1586](https://journals.iucr.org/paper?kc5011) 
 
 ## Requirement
 
