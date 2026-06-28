@@ -6,11 +6,11 @@ Email : autofp@163.com
 Authors : Xiaopeng Cui, etc.  
 Citation : [J. Appl. Cryst. (2015). 48, 1581-1586](https://journals.iucr.org/paper?kc5011) 
 
-## 🧠 v1.7 beta (2026-06-28)
-
-Major upgrades: **RL-FP Deep Learning refinement engine** · **PyQt5 migration** · **TOF mode** · **UI enhancements** · **prf2fig plotting**
-
-➡️ [Download](https://github.com/xpclove/autofp/releases/tag/v1.7b15)
+> ## 🧠 v1.7 beta (2026-06-28)
+> 
+> Major upgrades: **RL-FP Deep Learning refinement engine** · **PyQt5 migration** · **TOF mode** · **UI enhancements** · **prf2fig plotting**
+> 
+> ➡️ [Download](https://github.com/xpclove/autofp/releases/tag/v1.7b15)
 
 ## Requirement
 
