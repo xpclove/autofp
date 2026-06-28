@@ -10,7 +10,7 @@ Citation : [J. Appl. Cryst. (2015). 48, 1581-1586](https://journals.iucr.org/pap
 > 
 > 🧠 **RL-FP** Deep Learning refinement engine · 🔄 **PyQt5** migration · ⏱ **TOF** mode · 🎨 **UI** enhancements · 📊 **prf2fig** plotting
 > 
-> 📖 [查看文档和下载使用](https://github.com/xpclove/autofp/releases/tag/v1.7b15)
+> 📖 **v1.7 beta15** → [Release Notes & Downloads](https://github.com/xpclove/autofp/releases/tag/v1.7b15)
 
 ## Requirement
 
