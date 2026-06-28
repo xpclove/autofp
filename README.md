@@ -4,9 +4,9 @@ AutoFP Website: <http://physiworld.vipsinaapp.com/autofp.html>.  Shanghai Univer
 GitHub: <https://github.com/xpclove/autofp>, Gitee: <https://gitee.com/xpclove/autofp>  
 Email : autofp@163.com  
 Authors : Xiaopeng Cui, etc.  
-Citation :
-[1] Cui, X. et al. (2015). *AutoFP: A software for automated Rietveld refinement*. J. Appl. Cryst. 48, 1581-1586. [DOI](https://journals.iucr.org/paper?kc5011)
-[2] AutoFP GitHub Repository. https://github.com/xpclove/autofp 
+> **Citation**: If you use AutoFP in your research, please cite:
+> [1] [Cui, X. et al. (2015). *AutoFP: A software for automated Rietveld refinement*. J. Appl. Cryst. 48, 1581-1586.](https://journals.iucr.org/paper?kc5011)
+> [2] [AutoFP](https://github.com/xpclove/autofp) GitHub Repository.
 
 > ## 🧠 [v1.7 beta](https://github.com/xpclove/autofp/releases/tag/v1.7b15) (2026-06-28) — major upgrade over [v1.5 stable](https://github.com/xpclove/autofp/releases/tag/v_1.5.1)
 > 
