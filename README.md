@@ -6,7 +6,7 @@ Email : autofp@163.com
 Authors : Xiaopeng Cui, etc.  
 Citation : [J. Appl. Cryst. (2015). 48, 1581-1586](https://journals.iucr.org/paper?kc5011) 
 
-> ## 🧠 v1.7 beta (2026-06-28) — major upgrade over [v1.5 stable](https://github.com/xpclove/autofp/releases/tag/v_1.5.1)
+> ## 🧠 [v1.7 beta](https://github.com/xpclove/autofp/releases/tag/v1.7b15) (2026-06-28) — major upgrade over [v1.5 stable](https://github.com/xpclove/autofp/releases/tag/v_1.5.1)
 > 
 > 🧠 **RL-FP** Deep Learning refinement engine · 🔄 **PyQt5** migration · ⏱ **TOF** mode · 🎨 **UI** enhancements · 📊 **prf2fig** plotting
 > 
