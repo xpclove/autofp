@@ -1,5 +1,5 @@
 #Used successfully in PythonXY2.7.3 with py2exe ,wxPython 2.8.12 and matplotlib 1.2.0 
-from distutils.core import setup
+from setuptools import setup
 import  matplotlib
 import py2exe
 
